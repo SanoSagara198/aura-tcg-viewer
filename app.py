@@ -31,6 +31,7 @@ COMIC_CSS = """<style>
   background-size: 18px 18px, 100% 100%;
   font-family: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif;
 }
+.block-container { max-width: 100% !important; padding-left: 2rem !important; padding-right: 2rem !important; }
 .aura-banner {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
   background: #1a1e2b; border: 4px solid var(--ink); box-shadow: 6px 6px 0 var(--ink);
@@ -55,8 +56,8 @@ COMIC_CSS = """<style>
   padding: 5px 12px; transform: skewX(-5deg);
 }
 .aura-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
-  gap: 2rem 1.55rem; padding: 10px 4px 28px;
+  width: 100%; display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1.85rem 1.45rem; padding: 10px 4px 28px;
 }
 .card-scene {
   display: block; perspective: 1100px; min-height: 422px; cursor: pointer; user-select: none;
@@ -67,14 +68,16 @@ COMIC_CSS = """<style>
   transform-style: preserve-3d; transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .flip-chk:checked ~ .card-flipper { transform: rotateY(180deg); }
+.card-scene:hover .card-flipper { transform: translate(-3px, -5px); }
+.card-scene:hover .flip-chk:checked ~ .card-flipper { transform: translate(-3px, -5px) rotateY(180deg); }
 .card-face {
   position: relative; width: 100%; min-height: 422px;
   backface-visibility: hidden; -webkit-backface-visibility: hidden;
   border-radius: 12px; border: 4px solid var(--ink); box-shadow: 7px 8px 0 var(--ink);
-  transition: transform 0.14s ease, box-shadow 0.14s ease;
+  transition: box-shadow 0.14s ease;
   display: flex; flex-direction: column; overflow: visible; box-sizing: border-box;
 }
-.card-scene:hover .card-face { transform: translate(-3px, -5px); box-shadow: 11px 13px 0 var(--ink); }
+.card-scene:hover .card-face { box-shadow: 11px 13px 0 var(--ink); }
 .card-front {
   --c-bg1: #fff3b0; --c-bg2: #f4c430; --c-art1: #fef08a; --c-art2: #d97706;
   --c-tag-bg: #ffe24a; --c-tag-ink: #0a0b10; --c-dot: rgba(10, 11, 16, 0.14);
