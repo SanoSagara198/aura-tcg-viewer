@@ -1,15 +1,18 @@
 from __future__ import annotations
 
 import html
+import json
 import math
+import random
 import re
+from collections import Counter
 from pathlib import Path
 
 import pandas as pd
 import streamlit as st
 
 st.set_page_config(
-    page_title="AURA! TCG — Comic Edition Card Viewer",
+    page_title="AURA! TCG — Comic Edition Card Viewer & Deck Editor",
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -17,10 +20,68 @@ st.set_page_config(
 
 ROOT = Path(__file__).parent
 CSV_FILES = [
-    ("Alpha", ROOT / "aura_alpha_set.csv"),
-    ("Beta", ROOT / "aura_beta_set.csv"),
-    ("Delta", ROOT / "aura_delta_set.csv"),
+    ("Alpha", "A", ROOT / "aura_alpha_set.csv"),
+    ("Beta", "B", ROOT / "aura_beta_set.csv"),
+    ("Delta", "D", ROOT / "aura_delta_set.csv"),
 ]
+
+# Exact Basic Lands from src/shared/BasicLands.luau (unlimited copies in any deck)
+BASIC_LANDS = [
+    {
+        "id": "L-W", "set": "Core", "set_number": 1, "name": "Sunfield", "color": "Land",
+        "rarity": "common", "energy_cost": "", "card_type": "Basic Land — Sunfield",
+        "power": "", "toughness": "", "rules_text": "{TURN}: Add {W} to your Energy pool.",
+        "flavor_text": "Where the dawn first touches the world.", "basic": True, "produces": "W",
+    },
+    {
+        "id": "L-U", "set": "Core", "set_number": 2, "name": "Tidepool", "color": "Land",
+        "rarity": "common", "energy_cost": "", "card_type": "Basic Land — Tidepool",
+        "power": "", "toughness": "", "rules_text": "{TURN}: Add {U} to your Energy pool.",
+        "flavor_text": "Every current remembers where it came from.", "basic": True, "produces": "U",
+    },
+    {
+        "id": "L-B", "set": "Core", "set_number": 3, "name": "Gloomfen", "color": "Land",
+        "rarity": "common", "energy_cost": "", "card_type": "Basic Land — Gloomfen",
+        "power": "", "toughness": "", "rules_text": "{TURN}: Add {B} to your Energy pool.",
+        "flavor_text": "Nothing sinks here that doesn't come back changed.", "basic": True, "produces": "B",
+    },
+    {
+        "id": "L-R", "set": "Core", "set_number": 4, "name": "Cinderpeak", "color": "Land",
+        "rarity": "common", "energy_cost": "", "card_type": "Basic Land — Cinderpeak",
+        "power": "", "toughness": "", "rules_text": "{TURN}: Add {R} to your Energy pool.",
+        "flavor_text": "The mountain never stopped burning; it just learned patience.", "basic": True, "produces": "R",
+    },
+    {
+        "id": "L-G", "set": "Core", "set_number": 5, "name": "Wildgrove", "color": "Land",
+        "rarity": "common", "energy_cost": "", "card_type": "Basic Land — Wildgrove",
+        "power": "", "toughness": "", "rules_text": "{TURN}: Add {G} to your Energy pool.",
+        "flavor_text": "Roots older than any kingdom.", "basic": True, "produces": "G",
+    },
+]
+
+COLOR_TO_BASIC_ID = {
+    "White": "L-W",
+    "Blue": "L-U",
+    "Black": "L-B",
+    "Red": "L-R",
+    "Green": "L-G",
+}
+
+COLOR_CHIP_STYLE = {
+    "White": ("#f5e6a8", "#ffffff"),
+    "Blue": ("#2563eb", "#ffffff"),
+    "Black": ("#4c1d95", "#ffffff"),
+    "Red": ("#dc2626", "#ffffff"),
+    "Green": ("#16a34a", "#ffffff"),
+    "Multicolor": ("linear-gradient(135deg, #fde047, #ec4899)", "#ffffff"),
+    "Artifact": ("#64748b", "#ffffff"),
+    "Land": ("#b45309", "#ffffff"),
+}
+
+MIN_DECK = 40
+MAX_DECK = 200
+MAX_COPIES = 4
+OPENING_HAND = 7
 
 COMIC_CSS = """<style>
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=Chakra+Petch:ital,wght@0,500;0,600;0,700;1,600&family=Comic+Neue:ital,wght@0,700;1,700&display=swap');
@@ -32,6 +93,40 @@ COMIC_CSS = """<style>
   font-family: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif;
 }
 .block-container { max-width: 100% !important; padding-left: 2rem !important; padding-right: 2rem !important; }
+/* ==================== LEGIBLE COLOR-CODED MULTISELECT CHIPS ==================== */
+[data-baseweb="tag"] {
+  background-color: #263047 !important;
+  border: 2px solid #0a0b10 !important;
+  box-shadow: 2px 2px 0 #0a0b10 !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+[data-baseweb="tag"] span, [data-baseweb="tag"] svg {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  text-shadow: -1.2px -1.2px 0 #000, 1.2px -1.2px 0 #000, -1.2px 1.2px 0 #000, 1.2px 1.2px 0 #000, 0 1.5px 0 #000 !important;
+}
+[data-baseweb="tag"]:has([title="White"])      { background: #f5e6a8 !important; }
+[data-baseweb="tag"]:has([title="Blue"])       { background: #2563eb !important; }
+[data-baseweb="tag"]:has([title="Black"])      { background: #4c1d95 !important; }
+[data-baseweb="tag"]:has([title="Red"])        { background: #dc2626 !important; }
+[data-baseweb="tag"]:has([title="Green"])      { background: #16a34a !important; }
+[data-baseweb="tag"]:has([title="Artifact"])   { background: #64748b !important; }
+[data-baseweb="tag"]:has([title="Land"])       { background: #b45309 !important; }
+[data-baseweb="tag"]:has([title="Multicolor"]) { background: linear-gradient(135deg, #fde047, #ec4899) !important; }
+[data-baseweb="tag"]:has([title="common"])     { background: #334155 !important; }
+[data-baseweb="tag"]:has([title="uncommon"])   { background: #0284c7 !important; }
+[data-baseweb="tag"]:has([title="rare"])       { background: #d97706 !important; }
+.color-summary-bar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 4px 0 12px;
+}
+.color-pill-stat {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px;
+  border-radius: 6px; border: 2.5px solid #0a0b10; box-shadow: 2.5px 2.5px 0 #0a0b10;
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.88rem;
+  letter-spacing: 0.05em; text-transform: uppercase; color: #ffffff;
+  text-shadow: -1.3px -1.3px 0 #000, 1.3px -1.3px 0 #000, -1.3px 1.3px 0 #000, 1.3px 1.3px 0 #000, 0 2px 0 #000;
+}
 .aura-banner {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
   background: #1a1e2b; border: 4px solid var(--ink); box-shadow: 6px 6px 0 var(--ink);
@@ -106,16 +201,18 @@ COMIC_CSS = """<style>
 .energy-burst.empty { display: none; }
 .pip {
   display: inline-flex; align-items: center; justify-content: center; width: 21px; height: 21px;
-  border-radius: 50%; font-family: 'Barlow Condensed', Impact, sans-serif; font-size: 0.82rem; font-weight: 800;
-  border: 2px solid var(--ink); box-shadow: inset -1px -2px 0 rgba(0, 0, 0, 0.28), inset 1px 1px 0 rgba(255, 255, 255, 0.55); line-height: 1;
+  border-radius: 50%; font-family: 'Barlow Condensed', Impact, sans-serif; font-size: 0.84rem; font-weight: 800;
+  border: 2px solid var(--ink); box-shadow: inset -1px -2px 0 rgba(0, 0, 0, 0.28), inset 1px 1px 0 rgba(255, 255, 255, 0.55);
+  line-height: 1; color: #ffffff;
+  text-shadow: -1.1px -1.1px 0 #000, 1.1px -1.1px 0 #000, -1.1px 1.1px 0 #000, 1.1px 1.1px 0 #000;
 }
-.pip-W { background: #fff4b8; color: #1c1404; }
-.pip-U { background: #38bdf8; color: #082f49; }
-.pip-B { background: #9333ea; color: #ffffff; }
-.pip-R { background: #ef4444; color: #ffffff; }
-.pip-G { background: #22c55e; color: #052e16; }
-.pip-N { background: #e2e8f0; color: #0f172a; }
-.pip-T { background: #ffe24a; color: #0a0b10; font-size: 0.78rem; }
+.pip-W { background: #f5e6a8; }
+.pip-U { background: #2563eb; }
+.pip-B { background: #6d28d9; }
+.pip-R { background: #dc2626; }
+.pip-G { background: #16a34a; }
+.pip-N { background: #94a3b8; }
+.pip-T { background: #f59e0b; font-size: 0.78rem; }
 .title-plate {
   flex: 1; min-width: 0; background: var(--ink); border: 2.5px solid #ffffff;
   outline: 2.5px solid var(--ink); box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.45);
@@ -123,7 +220,8 @@ COMIC_CSS = """<style>
 }
 .card-name {
   display: block; font-family: 'Bangers', Impact, sans-serif; font-size: 1.28rem;
-  letter-spacing: 0.055em; line-height: 1.05; color: #ffffff; text-shadow: 2px 2px 0 #000000;
+  letter-spacing: 0.055em; line-height: 1.05; color: #ffffff;
+  text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000, 2px 2px 0 #000;
   transform: skewX(6deg); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .art-panel {
@@ -135,18 +233,26 @@ COMIC_CSS = """<style>
 }
 .art-burst {
   width: 82px; height: 82px; background: rgba(255, 255, 255, 0.24);
-  border: 3px solid rgba(10, 11, 16, 0.55); transform: rotate(45deg);
+  border: 3px solid rgba(10, 11, 16, 0.65); transform: rotate(45deg);
   display: flex; align-items: center; justify-content: center; box-shadow: 4px 4px 0 rgba(10, 11, 16, 0.35);
 }
 .art-burst span {
-  transform: rotate(-45deg); font-family: 'Bangers', sans-serif; font-size: 0.92rem;
-  letter-spacing: 0.08em; color: var(--ink); text-align: center; line-height: 1.05;
+  transform: rotate(-45deg); font-family: 'Bangers', sans-serif; font-size: 0.96rem;
+  letter-spacing: 0.08em; color: #ffffff; text-align: center; line-height: 1.05;
+  text-shadow: -1.3px -1.3px 0 #000, 1.3px -1.3px 0 #000, -1.3px 1.3px 0 #000, 1.3px 1.3px 0 #000;
 }
 .annex-stamp {
   position: absolute; top: 7px; right: 7px; width: 26px; height: 26px; border-radius: 50%;
   background: var(--yellow); color: var(--ink); border: 2.5px solid var(--ink);
   box-shadow: 2px 2px 0 var(--ink); font-family: 'Bangers', sans-serif; font-size: 1rem;
   display: flex; align-items: center; justify-content: center; z-index: 2;
+}
+.deck-count-pill {
+  position: absolute; top: 7px; left: 7px; padding: 2px 8px; border-radius: 999px;
+  background: #16a34a; color: #ffffff; border: 2.5px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink); font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800; font-size: 0.8rem; letter-spacing: 0.04em; z-index: 2;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .comic-type-strip {
   position: relative; z-index: 4; display: flex; justify-content: space-between; align-items: center; gap: 6px;
@@ -158,11 +264,12 @@ COMIC_CSS = """<style>
 .rarity-stamp {
   font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.72rem;
   letter-spacing: 0.07em; text-transform: uppercase; padding: 1px 7px;
-  border: 2px solid var(--ink); border-radius: 3px; box-shadow: 2px 2px 0 var(--ink);
+  border: 2px solid var(--ink); border-radius: 3px; box-shadow: 2px 2px 0 var(--ink); color: #ffffff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
-.rarity-stamp.common   { background: #334155; color: #f8fafc; }
-.rarity-stamp.uncommon { background: #38bdf8; color: #082f49; }
-.rarity-stamp.rare     { background: #f59e0b; color: #0a0b10; }
+.rarity-stamp.common   { background: #334155; }
+.rarity-stamp.uncommon { background: #0284c7; }
+.rarity-stamp.rare     { background: #d97706; }
 .comic-rules-box {
   position: relative; flex: 1; background-color: var(--paper);
   background-image: radial-gradient(rgba(10, 11, 16, 0.055) 1.2px, transparent 1.2px);
@@ -193,12 +300,13 @@ COMIC_CSS = """<style>
 .stat-badge {
   display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
   min-width: 38px; padding: 2px 7px 1px; border: 3px solid var(--ink);
-  box-shadow: 3px 3px 0 var(--ink); line-height: 1; transform: skewX(-7deg);
+  box-shadow: 3px 3px 0 var(--ink); line-height: 1; transform: skewX(-7deg); color: #ffffff;
+  text-shadow: -1.3px -1.3px 0 #000, 1.3px -1.3px 0 #000, -1.3px 1.3px 0 #000, 1.3px 1.3px 0 #000;
 }
 .stat-badge .lbl { font-family: 'Barlow Condensed', sans-serif; font-size: 0.56rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; transform: skewX(7deg); }
 .stat-badge .val { font-family: 'Bangers', Impact, sans-serif; font-size: 1.32rem; letter-spacing: 0.04em; transform: skewX(7deg); }
-.stat-pow { background: #ef4444; color: #ffffff; text-shadow: 1.5px 1.5px 0 var(--ink); }
-.stat-tgh { background: #38bdf8; color: #082f49; }
+.stat-pow { background: #ef4444; }
+.stat-tgh { background: #0ea5e9; }
 .card-back {
   position: absolute; inset: 0; transform: rotateY(180deg); background-color: #13182b;
   background-image: repeating-conic-gradient(from 8deg at 50% 50%, rgba(255, 226, 74, 0.1) 0deg 9deg, transparent 9deg 20deg), radial-gradient(rgba(255, 255, 255, 0.11) 1.5px, transparent 1.5px), radial-gradient(circle at 50% 50%, #2b3564 0%, #0f1324 72%);
@@ -246,28 +354,62 @@ def safe_int(val: str) -> int:
     return int(s) if s.lstrip("-").isdigit() else -1
 
 
+def card_category(card_type: str) -> str:
+    t = str(card_type)
+    if "Land" in t:
+        return "Land"
+    if "Creature" in t or "Casting" in t:
+        return "Creature"
+    if "Mudra" in t:
+        return "Mudra"
+    if "Mantra" in t:
+        return "Mantra"
+    if "Seal" in t:
+        return "Seal"
+    if "Artifact" in t:
+        return "Artifact"
+    return "Other"
+
+
 @st.cache_data(show_spinner=False)
 def load_cards() -> pd.DataFrame:
     frames: list[pd.DataFrame] = []
-    for set_name, path in CSV_FILES:
+    for set_name, prefix, path in CSV_FILES:
         if path.exists():
             df = pd.read_csv(path, dtype=str, encoding="utf-8-sig").fillna("")
             if "set" not in df.columns:
                 df.insert(0, "set", set_name)
-            df["set_number"] = range(1, len(df) + 1)
+            nums = list(range(1, len(df) + 1))
+            df["set_number"] = nums
+            df["id"] = [f"{prefix}{n:03d}" for n in nums]
+            df["basic"] = False
+            df["produces"] = ""
             frames.append(df)
-    if not frames:
-        return pd.DataFrame(
-            columns=[
-                "set", "name", "color", "rarity", "energy_cost",
-                "card_type", "power", "toughness", "rules_text", "flavor_text", "set_number",
-            ]
-        )
+
+    basic_df = pd.DataFrame(BASIC_LANDS)
+    frames.append(basic_df)
+
     all_df = pd.concat(frames, ignore_index=True)
     all_df["energy_value"] = all_df["energy_cost"].map(energy_value)
     all_df["atk_num"] = all_df["power"].map(safe_int)
     all_df["base_type"] = all_df["card_type"].map(lambda t: str(t).split("—")[0].strip())
+    all_df["category"] = all_df["card_type"].map(card_category)
     return all_df
+
+
+def interleave_by_color(df: pd.DataFrame, colors: list[str]) -> pd.DataFrame:
+    """Round-robin interleave rows across selected colors so multi-color queries show all chosen colors on page 1."""
+    buckets = [df[df["color"] == c] for c in colors]
+    buckets = [b for b in buckets if len(b) > 0]
+    if len(buckets) <= 1:
+        return df
+    indices: list[int] = []
+    max_len = max(len(b) for b in buckets)
+    for i in range(max_len):
+        for b in buckets:
+            if i < len(b):
+                indices.append(b.index[i])
+    return df.loc[indices]
 
 
 def render_pips(text: str) -> str:
@@ -295,7 +437,7 @@ def render_rules(raw: str) -> str:
         escaped = html.escape(line)
         with_pips = render_pips(escaped)
         styled = re.sub(
-            r"^([A-Za-z][A-Za-z0-9 \-]+?(?:\s+<span class=\"pip[^\"]*\">[^<]+</span>)*)\s+(\([^)]+\)\.?)",
+            r'^([A-Za-z][A-Za-z0-9 \-]+?(?:\s+<span class="pip[^"]*">[^<]+</span>)*)\s+(\([^)]+\)\.?)',
             r'<span class="kw">\1</span> <span class="rem">\2</span>',
             with_pips,
         )
@@ -303,13 +445,13 @@ def render_rules(raw: str) -> str:
     return "".join(paragraphs)
 
 
-def render_card_html(row: pd.Series, flip_all: bool, uid: str) -> str:
+def render_card_html(row: pd.Series, flip_all: bool, uid: str, in_deck_qty: int = 0) -> str:
     name = html.escape(str(row["name"]))
     color = html.escape(str(row["color"]))
     rarity = html.escape(str(row["rarity"]).lower())
     card_type = html.escape(str(row["card_type"]))
+    card_id = html.escape(str(row["id"]))
     set_label = html.escape(str(row["set"] or "ALPHA").upper())
-    num = f"{int(row['set_number']):03d}"
     pips_html = render_pips(html.escape(str(row["energy_cost"])))
     rar_icon = "★" if rarity == "rare" else ("◆" if rarity == "uncommon" else "●")
     rules_html = render_rules(str(row["rules_text"]))
@@ -327,6 +469,7 @@ def render_card_html(row: pd.Series, flip_all: bool, uid: str) -> str:
             "</div>"
         )
 
+    qty_pill = f'<div class="deck-count-pill">IN DECK ×{in_deck_qty}</div>' if in_deck_qty > 0 else ""
     checked_attr = "checked" if flip_all else ""
     empty_cls = "" if pips_html else " empty"
 
@@ -340,6 +483,7 @@ def render_card_html(row: pd.Series, flip_all: bool, uid: str) -> str:
         f'<div class="title-plate"><span class="card-name" title="{name}">{name}</span></div>'
         "</div>"
         '<div class="art-panel">'
+        f"{qty_pill}"
         f'<div class="art-burst"><span>{color}<br/>ART</span></div>'
         '<div class="annex-stamp" title="Card Info">?</div>'
         "</div>"
@@ -352,7 +496,7 @@ def render_card_html(row: pd.Series, flip_all: bool, uid: str) -> str:
         f"{flavor_html}"
         "</div>"
         '<div class="comic-footer">'
-        f'<span class="issue-stamp">{set_label} #{num}</span>'
+        f'<span class="issue-stamp">{set_label} · {card_id}</span>'
         f"{stats_html}"
         "</div>"
         "</article>"
@@ -377,68 +521,224 @@ def render_card_html(row: pd.Series, flip_all: bool, uid: str) -> str:
     )
 
 
-# ==================== APP LAYOUT ====================
+def validate_deck(deck_cards: dict[str, int], id_map: dict[str, pd.Series]) -> tuple[bool, int, list[str]]:
+    problems: list[str] = []
+    total = 0
+    for cid, count in deck_cards.items():
+        if cid not in id_map:
+            problems.append(f"Unknown card ID: {cid}")
+            continue
+        card = id_map[cid]
+        if count < 1:
+            problems.append(f"Invalid count for {card['name']}: {count}")
+            continue
+        if not bool(card["basic"]) and count > MAX_COPIES:
+            problems.append(f"{card['name']} ({cid}): max {MAX_COPIES} copies (has {count})")
+        total += count
+    if total < MIN_DECK:
+        problems.append(f"Deck needs at least {MIN_DECK} cards (currently {total}).")
+    if total > MAX_DECK:
+        problems.append(f"Deck can have at most {MAX_DECK} cards (currently {total}).")
+    return len(problems) == 0, total, problems
+
+
+def auto_generate_deck(
+    all_df: pd.DataFrame,
+    colors: list[str],
+    sets: list[str],
+    target_size: int,
+    archetype: str,
+    seed: int | None = None,
+) -> dict[str, int]:
+    rng = random.Random(seed)
+    chosen_colors = [c for c in colors if c in COLOR_TO_BASIC_ID]
+    if not chosen_colors:
+        chosen_colors = ["White", "Blue"]
+
+    pool = all_df[~all_df["basic"]].copy()
+    if sets:
+        pool = pool[pool["set"].isin(sets)]
+
+    allowed_colors = set(chosen_colors) | {"Artifact"}
+    if len(chosen_colors) >= 2:
+        allowed_colors.add("Multicolor")
+    pool = pool[pool["color"].isin(allowed_colors)]
+
+    # Split ratios by archetype
+    if archetype == "Aggro (Low Curve)":
+        land_ratio, creature_ratio, max_mv = 0.35, 0.45, 4
+    elif archetype == "Control (Mudra / Mantra / Seal)":
+        land_ratio, creature_ratio, max_mv = 0.42, 0.22, 6
+    elif archetype == "Midrange":
+        land_ratio, creature_ratio, max_mv = 0.40, 0.38, 6
+    else:  # Balanced
+        land_ratio, creature_ratio, max_mv = 0.38, 0.37, 5
+
+    land_target = round(target_size * land_ratio)
+    nonland_target = target_size - land_target
+    creature_target = round(nonland_target * creature_ratio / max(1e-6, (1 - land_ratio)))
+    spell_target = nonland_target - creature_target
+
+    creatures = pool[(pool["category"] == "Creature") & (pool["energy_value"] <= max_mv)]
+    if len(creatures) < 8:
+        creatures = pool[pool["category"] == "Creature"]
+    spells = pool[pool["category"].isin(["Mudra", "Mantra", "Seal", "Artifact"])]
+
+    deck: dict[str, int] = {}
+
+    def pick_cards(sub_df: pd.DataFrame, need: int) -> None:
+        if sub_df.empty or need <= 0:
+            return
+        candidates = list(sub_df.to_dict("records"))
+        rng.shuffle(candidates)
+        # Prefer smoother curve (lower/mid energy costs first)
+        candidates.sort(key=lambda r: (abs(int(r["energy_value"]) - (2 if "Aggro" in archetype else 3)) + rng.uniform(0, 2.2)))
+        added = 0
+        for rec in candidates:
+            if added >= need:
+                break
+            cid = rec["id"]
+            if cid in deck:
+                continue
+            copies = 2 if rec["rarity"] == "rare" else rng.choice([2, 3, 4])
+            copies = min(copies, MAX_COPIES, need - added)
+            if copies > 0:
+                deck[cid] = copies
+                added += copies
+
+    pick_cards(creatures, creature_target)
+    pick_cards(spells, spell_target)
+
+    # Top up any remaining nonland slots from combined pool
+    current_nonland = sum(deck.values())
+    if current_nonland < nonland_target:
+        pick_cards(pool[pool["category"] != "Land"], nonland_target - current_nonland)
+
+    # Distribute Basic Lands proportional to colored pip symbols in the deck
+    id_lookup = {row["id"]: row for _, row in all_df.iterrows()}
+    sym_counts = Counter()
+    sym_to_color = {"W": "White", "U": "Blue", "B": "Black", "R": "Red", "G": "Green"}
+    for cid, cnt in deck.items():
+        cost = str(id_lookup[cid]["energy_cost"])
+        for sym in re.findall(r"\{([WUBRG])\}", cost):
+            if sym_to_color[sym] in chosen_colors:
+                sym_counts[sym_to_color[sym]] += cnt
+
+    total_syms = sum(sym_counts.values())
+    lands_added = 0
+    for idx, col in enumerate(chosen_colors):
+        lid = COLOR_TO_BASIC_ID[col]
+        if idx == len(chosen_colors) - 1:
+            qty = max(1, land_target - lands_added)
+        elif total_syms > 0:
+            qty = max(1, round(land_target * (sym_counts[col] / total_syms)))
+        else:
+            qty = max(1, land_target // len(chosen_colors))
+        qty = min(qty, max(0, land_target - lands_added))
+        if qty > 0:
+            deck[lid] = qty
+            lands_added += qty
+
+    return deck
+
+
+def deck_to_luau(deck_name: str, deck_cards: dict[str, int]) -> str:
+    safe_name = deck_name.replace("\\", "\\\\").replace('"', '\\"')
+    lines = [
+        "-- Aura TCG Deck (compatible with DeckRules.luau & CardDatabase.luau)",
+        "return {",
+        f'\tname = "{safe_name}",',
+        "\tcards = {",
+    ]
+    for cid in sorted(deck_cards.keys()):
+        lines.append(f'\t\t["{cid}"] = {deck_cards[cid]},')
+    lines.append("\t},")
+    lines.append("}")
+    return "\n".join(lines)
+
+
+# ==================== INIT STATE & LOAD DATA ====================
 st.html(COMIC_CSS)
 df = load_cards()
+id_map = {row["id"]: row for _, row in df.iterrows()}
+
+if "deck_name" not in st.session_state:
+    st.session_state.deck_name = "My Aura Deck"
+if "deck_cards" not in st.session_state:
+    st.session_state.deck_cards = {}
+if "test_hand" not in st.session_state:
+    st.session_state.test_hand = []
 
 st.html(
     """<div class="aura-banner">
       <div class="aura-banner-left">
         <div class="aura-logo">AURA!</div>
         <div class="aura-title">
-          <h1>Comic Edition · Alpha · Beta · Delta</h1>
-          <p>1,050 Original Cards · Pop-Art Ink Frame · Energy · Mudra · Mantra · Seal</p>
+          <h1>Comic Edition · Card Viewer &amp; Deck Editor</h1>
+          <p>1,055 Cards (Alpha · Beta · Delta + 5 Basic Lands) · Pop-Art Ink Frame · Roblox Deck Export</p>
         </div>
       </div>
       <div class="aura-tip">Click any card to flip Front ↔ Back</div>
     </div>"""
 )
 
-# Sidebar Filters
+# ==================== SIDEBAR MULTI-FILTERS ====================
 with st.sidebar:
     st.markdown("### ⚡ Filter Cards")
-    search = st.text_input("Search", placeholder="Name, type, rules, or flavor...")
-    set_choice = st.selectbox("Set", ["All", "Alpha", "Beta", "Delta"])
+    search = st.text_input("Search", placeholder="Name, ID, type, rules, or flavor...")
+    selected_sets = st.multiselect(
+        "Sets",
+        ["Alpha", "Beta", "Delta", "Core"],
+        default=["Alpha", "Beta", "Delta"],
+        placeholder="All sets",
+    )
     color_options = ["White", "Blue", "Black", "Red", "Green", "Multicolor", "Artifact", "Land"]
     selected_colors = st.multiselect("Colors", color_options, placeholder="All colors")
-    type_choice = st.selectbox(
-        "Card Type",
-        ["All", "Creature", "Mudra", "Mantra", "Seal", "Artifact", "Land"],
+    selected_types = st.multiselect(
+        "Card Types",
+        ["Creature", "Mudra", "Mantra", "Seal", "Artifact", "Land"],
+        placeholder="All types",
     )
-    rarity_choice = st.selectbox("Rarity", ["All", "common", "uncommon", "rare"])
+    selected_rarities = st.multiselect(
+        "Rarities",
+        ["common", "uncommon", "rare"],
+        placeholder="All rarities",
+    )
     sort_choice = st.selectbox(
         "Sort By",
-        ["Set Order", "Energy: Low → High", "Energy: High → Low", "Name: A → Z", "ATK: High → Low"],
+        ["Set Order (Color Mix)", "Set Order (Sequential)", "Energy: Low → High", "Energy: High → Low", "Name: A → Z", "ATK: High → Low"],
     )
 
     st.divider()
     flip_all = st.toggle("Show Card Backs", value=False)
     page_size = st.select_slider("Cards per Page", options=[24, 48, 96, 200], value=48)
 
-# Apply Filters
+# ==================== APPLY MULTI-FILTERS ====================
 filtered = df.copy()
-if set_choice != "All":
-    filtered = filtered[filtered["set"] == set_choice]
+if selected_sets:
+    filtered = filtered[filtered["set"].isin(selected_sets)]
 if selected_colors:
     filtered = filtered[filtered["color"].isin(selected_colors)]
-if type_choice != "All":
-    if type_choice == "Creature":
-        filtered = filtered[filtered["card_type"].str.contains("Creature|Casting", case=False, na=False)]
-    else:
-        filtered = filtered[filtered["card_type"].str.contains(type_choice, case=False, na=False)]
-if rarity_choice != "All":
-    filtered = filtered[filtered["rarity"].str.lower() == rarity_choice]
+if selected_types:
+    filtered = filtered[filtered["category"].isin(selected_types)]
+if selected_rarities:
+    filtered = filtered[filtered["rarity"].str.lower().isin(selected_rarities)]
 if search.strip():
     q = search.strip()
     mask = (
         filtered["name"].str.contains(q, case=False, na=False)
+        | filtered["id"].str.contains(q, case=False, na=False)
         | filtered["card_type"].str.contains(q, case=False, na=False)
         | filtered["rules_text"].str.contains(q, case=False, na=False)
         | filtered["flavor_text"].str.contains(q, case=False, na=False)
     )
     filtered = filtered[mask]
 
-if sort_choice == "Energy: Low → High":
+if sort_choice == "Set Order (Color Mix)":
+    mix_colors = selected_colors if len(selected_colors) > 1 else []
+    if mix_colors:
+        filtered = interleave_by_color(filtered, mix_colors)
+elif sort_choice == "Energy: Low → High":
     filtered = filtered.sort_values(["energy_value", "name"], ascending=[True, True])
 elif sort_choice == "Energy: High → Low":
     filtered = filtered.sort_values(["energy_value", "name"], ascending=[False, True])
@@ -448,30 +748,47 @@ elif sort_choice == "ATK: High → Low":
     filtered = filtered.sort_values(["atk_num", "name"], ascending=[False, True])
 
 total_shown = len(filtered)
+deck_total = sum(st.session_state.deck_cards.values())
+
+export_cols = [
+    "id", "set", "name", "color", "rarity", "energy_cost",
+    "card_type", "power", "toughness", "rules_text", "flavor_text",
+]
+
 with st.sidebar:
     st.divider()
-    st.caption(f"Showing **{total_shown:,}** of **{len(df):,}** cards")
-    export_cols = [
-        "set", "name", "color", "rarity", "energy_cost",
-        "card_type", "power", "toughness", "rules_text", "flavor_text",
-    ]
+    st.caption(f"Showing **{total_shown:,}** of **{len(df):,}** cards · Deck: **{deck_total}** cards")
     st.download_button(
         "⬇ Download Filtered CSV",
         data=filtered[export_cols].to_csv(index=False).encode("utf-8"),
-        file_name=f"aura_filtered_{set_choice.lower()}.csv",
+        file_name="aura_filtered_cards.csv",
         mime="text/csv",
         use_container_width=True,
     )
 
-# Main Tabs
-tab_gallery, tab_analytics, tab_table = st.tabs(
-    [f"🃏 Comic Gallery ({total_shown})", "📊 Set Analytics", "📋 CSV Table"]
-)
+# ==================== MAIN TABS ====================
+tab_gallery, tab_deck, tab_analytics, tab_table = st.tabs([
+    f"🃏 Comic Gallery ({total_shown})",
+    f"🛠️ Deck Editor ({deck_total})",
+    "📊 Set Analytics",
+    "📋 CSV Table",
+])
 
+# -------------------- TAB 1: COMIC GALLERY --------------------
 with tab_gallery:
     if total_shown == 0:
         st.info("No cards match your current filters.")
     else:
+        # Color breakdown summary pills with matching color backgrounds & black outlined text
+        color_counts = filtered["color"].value_counts()
+        pills = []
+        for col_name in color_options:
+            cnt = int(color_counts.get(col_name, 0))
+            if cnt > 0:
+                bg, _ = COLOR_CHIP_STYLE[col_name]
+                pills.append(f'<span class="color-pill-stat" style="background:{bg};">{col_name}: {cnt}</span>')
+        st.html(f'<div class="color-summary-bar">{"".join(pills)}</div>')
+
         total_pages = max(1, math.ceil(total_shown / page_size))
         col_info, col_page = st.columns([3, 1])
         with col_page:
@@ -494,11 +811,269 @@ with tab_gallery:
 
         page_df = filtered.iloc[start:end]
         cards_html = "".join(
-            render_card_html(row, flip_all=flip_all, uid=f"c_{page_num}_{idx}")
+            render_card_html(
+                row,
+                flip_all=flip_all,
+                uid=f"c_{page_num}_{idx}",
+                in_deck_qty=st.session_state.deck_cards.get(row["id"], 0),
+            )
             for idx, (_, row) in enumerate(page_df.iterrows())
         )
         st.html(f'<div class="aura-grid">{cards_html}</div>')
 
+# -------------------- TAB 2: DECK EDITOR & AUTO-GENERATOR --------------------
+with tab_deck:
+    is_valid, total_cards, problems = validate_deck(st.session_state.deck_cards, id_map)
+
+    top_left, top_right = st.columns([2, 3])
+    with top_left:
+        st.session_state.deck_name = st.text_input("Deck Name", value=st.session_state.deck_name)
+    with top_right:
+        if is_valid:
+            st.success(f"✅ Valid Aura Deck — **{total_cards}** cards (Rules: {MIN_DECK}–{MAX_DECK} cards, max {MAX_COPIES} per non-basic)")
+        else:
+            st.warning(f"⚠️ **{total_cards}** / {MIN_DECK} min cards — " + " · ".join(problems[:3]))
+
+    # --- Auto-Generate Balanced Deck ---
+    with st.expander("⚡ Auto-Generate a Playable Deck", expanded=(total_cards == 0)):
+        g1, g2, g3, g4 = st.columns([2, 1.4, 1.1, 1.3])
+        with g1:
+            gen_colors = st.multiselect(
+                "Deck Colors",
+                ["White", "Blue", "Black", "Red", "Green"],
+                default=[c for c in selected_colors if c in COLOR_TO_BASIC_ID] or ["White", "Blue"],
+                key="gen_colors",
+            )
+        with g2:
+            gen_archetype = st.selectbox(
+                "Archetype",
+                ["Balanced", "Aggro (Low Curve)", "Midrange", "Control (Mudra / Mantra / Seal)"],
+                key="gen_arch",
+            )
+        with g3:
+            gen_size = st.selectbox("Deck Size", [40, 60], index=1, key="gen_size")
+        with g4:
+            gen_sets = st.multiselect(
+                "Pool Sets",
+                ["Alpha", "Beta", "Delta"],
+                default=[s for s in selected_sets if s != "Core"] or ["Alpha", "Beta", "Delta"],
+                key="gen_sets",
+            )
+
+        b_gen, b_clear, b_hand = st.columns([1.4, 1, 1.4])
+        with b_gen:
+            if st.button("⚡ Auto-Generate Deck", type="primary", use_container_width=True):
+                st.session_state.deck_cards = auto_generate_deck(
+                    df, gen_colors, gen_sets, int(gen_size), gen_archetype
+                )
+                st.session_state.deck_name = f"{'/'.join(gen_colors or ['White', 'Blue'])} {gen_archetype.split(' ')[0]}"
+                st.session_state.test_hand = []
+                st.rerun()
+        with b_clear:
+            if st.button("🗑️ Clear Deck", use_container_width=True):
+                st.session_state.deck_cards = {}
+                st.session_state.test_hand = []
+                st.rerun()
+        with b_hand:
+            if st.button(f"🎲 Pick Up {OPENING_HAND}-Card Hand", use_container_width=True, disabled=(total_cards < OPENING_HAND)):
+                expanded = [cid for cid, qty in st.session_state.deck_cards.items() for _ in range(qty)]
+                random.shuffle(expanded)
+                st.session_state.test_hand = expanded[:OPENING_HAND]
+
+    # --- Add / Edit Cards Panel + Live Decklist ---
+    ed_left, ed_right = st.columns([1.25, 1.55])
+
+    with ed_left:
+        st.markdown("#### ➕ Add Cards to Deck")
+        add_pool = filtered if len(filtered) > 0 else df
+        card_labels = {
+            f"{r['id']} · {r['name']} ({r['color']} · {r['energy_cost'] or '0'} · {r['card_type']})": r["id"]
+            for _, r in add_pool.iterrows()
+        }
+        chosen_label = st.selectbox(
+            f"Pick from filtered pool ({len(add_pool)} cards)",
+            options=list(card_labels.keys()),
+            key="deck_add_select",
+        )
+        chosen_id = card_labels[chosen_label]
+        chosen_card = id_map[chosen_id]
+        max_allowed = 40 if bool(chosen_card["basic"]) else MAX_COPIES
+        cur_qty = st.session_state.deck_cards.get(chosen_id, 0)
+
+        q_col, add_col, rem_col = st.columns([1, 1, 1])
+        with q_col:
+            add_qty = int(st.number_input("Copies", min_value=1, max_value=max_allowed, value=min(4, max_allowed), step=1))
+        with add_col:
+            st.markdown("<div style='height:27px'></div>", unsafe_allow_html=True)
+            if st.button("➕ Set / Add", use_container_width=True):
+                new_qty = min(max_allowed, cur_qty + add_qty)
+                st.session_state.deck_cards[chosen_id] = new_qty
+                st.rerun()
+        with rem_col:
+            st.markdown("<div style='height:27px'></div>", unsafe_allow_html=True)
+            if st.button("➖ Remove", use_container_width=True, disabled=(cur_qty == 0)):
+                if cur_qty <= 1:
+                    st.session_state.deck_cards.pop(chosen_id, None)
+                else:
+                    st.session_state.deck_cards[chosen_id] = cur_qty - 1
+                st.rerun()
+
+        # Preview the currently selected card right inside the editor!
+        st.html(
+            '<div style="max-width:300px;margin:10px auto;">'
+            + render_card_html(chosen_card, flip_all=False, uid="editor_preview", in_deck_qty=cur_qty)
+            + "</div>"
+        )
+
+        # Basic Lands Quick-Add Bar
+        st.markdown("#### 🌿 Quick-Add Basic Lands (Unlimited)")
+        land_cols = st.columns(5)
+        for col_widget, (cname, lid) in zip(land_cols, COLOR_TO_BASIC_ID.items()):
+            land_card = id_map[lid]
+            l_qty = st.session_state.deck_cards.get(lid, 0)
+            with col_widget:
+                if st.button(f"+2 {land_card['name']}\n({l_qty})", key=f"add_{lid}", use_container_width=True):
+                    st.session_state.deck_cards[lid] = l_qty + 2
+                    st.rerun()
+
+        # Import Deck JSON
+        st.markdown("#### 📤 Import Deck (JSON)")
+        uploaded = st.file_uploader("Load saved deck .json", type=["json"], label_visibility="collapsed")
+        if uploaded is not None:
+            try:
+                payload = json.load(uploaded)
+                if isinstance(payload, dict) and isinstance(payload.get("cards"), dict):
+                    valid_cards = {k: int(v) for k, v in payload["cards"].items() if k in id_map and int(v) > 0}
+                    if st.button("Apply Imported Deck", use_container_width=True):
+                        st.session_state.deck_name = str(payload.get("name", "Imported Deck"))
+                        st.session_state.deck_cards = valid_cards
+                        st.rerun()
+                else:
+                    st.error("JSON must contain `{ \"name\": ..., \"cards\": { \"A001\": 4 } }`.")
+            except Exception as exc:
+                st.error(f"Could not parse JSON: {exc}")
+
+    with ed_right:
+        st.markdown(f"#### 📜 Decklist — {st.session_state.deck_name} ({total_cards} cards)")
+        if not st.session_state.deck_cards:
+            st.info("Your deck is empty. Use **⚡ Auto-Generate Deck** above or add cards on the left!")
+        else:
+            deck_rows = []
+            for cid, qty in st.session_state.deck_cards.items():
+                if cid in id_map:
+                    c = id_map[cid]
+                    deck_rows.append({
+                        "Qty": qty,
+                        "ID": cid,
+                        "Name": c["name"],
+                        "Color": c["color"],
+                        "Cost": c["energy_cost"],
+                        "Energy": int(c["energy_value"]),
+                        "Type": c["category"],
+                        "Rarity": c["rarity"],
+                        "Basic": bool(c["basic"]),
+                    })
+            deck_df = pd.DataFrame(deck_rows).sort_values(["Type", "Energy", "Name"])
+
+            # Interactive editable quantity table!
+            edited_df = st.data_editor(
+                deck_df[["Qty", "ID", "Name", "Color", "Cost", "Type", "Rarity"]],
+                column_config={
+                    "Qty": st.column_config.NumberColumn("Qty", min_value=0, max_value=60, step=1),
+                    "ID": st.column_config.TextColumn("ID", disabled=True),
+                    "Name": st.column_config.TextColumn("Name", disabled=True),
+                    "Color": st.column_config.TextColumn("Color", disabled=True),
+                    "Cost": st.column_config.TextColumn("Cost", disabled=True),
+                    "Type": st.column_config.TextColumn("Type", disabled=True),
+                    "Rarity": st.column_config.TextColumn("Rarity", disabled=True),
+                },
+                use_container_width=True,
+                hide_index=True,
+                height=340,
+                key="deck_table_editor",
+            )
+            if st.button("💾 Apply Quantity Changes (set Qty=0 to remove)", use_container_width=True):
+                updated: dict[str, int] = {}
+                for _, erow in edited_df.iterrows():
+                    q_new = int(erow["Qty"])
+                    cid = str(erow["ID"])
+                    if q_new > 0:
+                        cap = 200 if bool(id_map[cid]["basic"]) else MAX_COPIES
+                        updated[cid] = min(q_new, cap)
+                st.session_state.deck_cards = updated
+                st.rerun()
+
+            # Deck Metrics & Energy Curve
+            dm1, dm2, dm3, dm4 = st.columns(4)
+            n_creatures = int(deck_df[deck_df["Type"] == "Creature"]["Qty"].sum())
+            n_spells = int(deck_df[deck_df["Type"].isin(["Mudra", "Mantra", "Seal", "Artifact"])]["Qty"].sum())
+            n_lands = int(deck_df[deck_df["Type"] == "Land"]["Qty"].sum())
+            nonland_df = deck_df[deck_df["Type"] != "Land"]
+            avg_cost = (
+                (nonland_df["Energy"] * nonland_df["Qty"]).sum() / nonland_df["Qty"].sum()
+                if nonland_df["Qty"].sum() > 0 else 0.0
+            )
+            dm1.metric("Creatures", n_creatures)
+            dm2.metric("Techniques / Art.", n_spells)
+            dm3.metric("Lands", n_lands)
+            dm4.metric("Avg Cost", f"{avg_cost:.2f}")
+
+            if nonland_df["Qty"].sum() > 0:
+                curve_series = nonland_df.groupby("Energy")["Qty"].sum().sort_index()
+                st.caption("Non-Land Energy Curve")
+                st.bar_chart(curve_series, height=180)
+
+            # Export Buttons (Roblox Luau / JSON / CSV)
+            st.markdown("#### 💾 Export Deck")
+            ex1, ex2, ex3 = st.columns(3)
+            safe_slug = re.sub(r"[^a-zA-Z0-9_-]+", "_", st.session_state.deck_name).strip("_") or "aura_deck"
+            luau_src = deck_to_luau(st.session_state.deck_name, st.session_state.deck_cards)
+            json_src = json.dumps({"name": st.session_state.deck_name, "cards": st.session_state.deck_cards}, indent=2)
+            full_csv_rows = []
+            for cid, qty in st.session_state.deck_cards.items():
+                if cid in id_map:
+                    rec = id_map[cid][export_cols].to_dict()
+                    rec["count"] = qty
+                    full_csv_rows.append(rec)
+            csv_src = pd.DataFrame(full_csv_rows).to_csv(index=False)
+
+            with ex1:
+                st.download_button(
+                    "🎮 Roblox Luau",
+                    data=luau_src.encode("utf-8"),
+                    file_name=f"{safe_slug}.luau",
+                    mime="text/plain",
+                    use_container_width=True,
+                )
+            with ex2:
+                st.download_button(
+                    "📄 Deck JSON",
+                    data=json_src.encode("utf-8"),
+                    file_name=f"{safe_slug}.json",
+                    mime="application/json",
+                    use_container_width=True,
+                )
+            with ex3:
+                st.download_button(
+                    "📊 Deck CSV",
+                    data=csv_src.encode("utf-8"),
+                    file_name=f"{safe_slug}.csv",
+                    mime="text/csv",
+                    use_container_width=True,
+                )
+
+    # Opening 7-Card Hand Simulator Preview
+    if st.session_state.test_hand:
+        st.divider()
+        st.markdown(f"#### 🎲 Opening {OPENING_HAND}-Card Hand Preview")
+        hand_html = "".join(
+            render_card_html(id_map[cid], flip_all=False, uid=f"hand_{i}")
+            for i, cid in enumerate(st.session_state.test_hand)
+            if cid in id_map
+        )
+        st.html(f'<div class="aura-grid">{hand_html}</div>')
+
+# -------------------- TAB 3: SET ANALYTICS --------------------
 with tab_analytics:
     if total_shown == 0:
         st.info("No cards to analyze for the current filter.")
@@ -507,29 +1082,25 @@ with tab_analytics:
         m1.metric("Matching Cards", f"{total_shown:,}")
         m2.metric("Avg Energy Cost", f"{filtered['energy_value'].mean():.2f}")
         m3.metric("Rares", int((filtered["rarity"].str.lower() == "rare").sum()))
-        m4.metric(
-            "Creatures",
-            int(filtered["card_type"].str.contains("Creature|Casting", case=False, na=False).sum()),
-        )
+        m4.metric("Creatures", int((filtered["category"] == "Creature").sum()))
 
         c1, c2 = st.columns(2)
         with c1:
             st.subheader("Energy Cost Curve")
-            curve = filtered["energy_value"].value_counts().sort_index()
-            st.bar_chart(curve)
+            st.bar_chart(filtered["energy_value"].value_counts().sort_index())
         with c2:
             st.subheader("Color Distribution")
-            colors = filtered["color"].value_counts()
-            st.bar_chart(colors)
+            st.bar_chart(filtered["color"].value_counts())
 
         c3, c4 = st.columns(2)
         with c3:
-            st.subheader("Base Card Types")
-            st.bar_chart(filtered["base_type"].value_counts())
+            st.subheader("Card Categories")
+            st.bar_chart(filtered["category"].value_counts())
         with c4:
             st.subheader("Rarity Breakdown")
             st.bar_chart(filtered["rarity"].str.capitalize().value_counts())
 
+# -------------------- TAB 4: CSV TABLE --------------------
 with tab_table:
     st.dataframe(
         filtered[export_cols],
