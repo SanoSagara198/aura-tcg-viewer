@@ -116,30 +116,31 @@ COMIC_CSS = """<style>
   font-family: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif;
 }
 .block-container { max-width: 100% !important; padding-left: 2rem !important; padding-right: 2rem !important; }
-/* ==================== LEGIBLE COLOR-CODED MULTISELECT CHIPS ==================== */
-[data-baseweb="tag"] {
+/* ==================== LEGIBLE COLOR-CODED MULTISELECT CHIPS (BaseWeb + React Aria) ==================== */
+[data-tag], [data-baseweb="tag"] {
+  background: #263047 !important;
   background-color: #263047 !important;
   border: 2px solid #0a0b10 !important;
   box-shadow: 2px 2px 0 #0a0b10 !important;
   color: #ffffff !important;
   font-weight: 800 !important;
 }
-[data-baseweb="tag"] span, [data-baseweb="tag"] svg {
+[data-tag] *, [data-baseweb="tag"] * {
   color: #ffffff !important;
   fill: #ffffff !important;
-  text-shadow: -1.2px -1.2px 0 #000, 1.2px -1.2px 0 #000, -1.2px 1.2px 0 #000, 1.2px 1.2px 0 #000, 0 1.5px 0 #000 !important;
+  text-shadow: -1.3px -1.3px 0 #000, 1.3px -1.3px 0 #000, -1.3px 1.3px 0 #000, 1.3px 1.3px 0 #000, 0 1.8px 0 #000 !important;
 }
-[data-baseweb="tag"]:has([title="White"]),      [data-baseweb="tag"][aria-label^="White,"]      { background: #f5e6a8 !important; }
-[data-baseweb="tag"]:has([title="Blue"]),       [data-baseweb="tag"][aria-label^="Blue,"]       { background: #2563eb !important; }
-[data-baseweb="tag"]:has([title="Black"]),      [data-baseweb="tag"][aria-label^="Black,"]      { background: #4c1d95 !important; }
-[data-baseweb="tag"]:has([title="Red"]),        [data-baseweb="tag"][aria-label^="Red,"]        { background: #dc2626 !important; }
-[data-baseweb="tag"]:has([title="Green"]),      [data-baseweb="tag"][aria-label^="Green,"]      { background: #16a34a !important; }
-[data-baseweb="tag"]:has([title="Artifact"]),   [data-baseweb="tag"][aria-label^="Artifact,"]   { background: #64748b !important; }
-[data-baseweb="tag"]:has([title="Land"]),       [data-baseweb="tag"][aria-label^="Land,"]       { background: #b45309 !important; }
-[data-baseweb="tag"]:has([title="Multicolor"]), [data-baseweb="tag"][aria-label^="Multicolor,"] { background: linear-gradient(135deg, #fde047, #ec4899) !important; }
-[data-baseweb="tag"]:has([title="common"]),     [data-baseweb="tag"][aria-label^="common,"]     { background: #334155 !important; }
-[data-baseweb="tag"]:has([title="uncommon"]),   [data-baseweb="tag"][aria-label^="uncommon,"]   { background: #0284c7 !important; }
-[data-baseweb="tag"]:has([title="rare"]),       [data-baseweb="tag"][aria-label^="rare,"]       { background: #d97706 !important; }
+[data-tag][aria-label="White"],      [data-tag]:has([title="White"]),      [data-baseweb="tag"]:has([title="White"]),      [data-baseweb="tag"][aria-label^="White,"]      { background: #f5e6a8 !important; }
+[data-tag][aria-label="Blue"],       [data-tag]:has([title="Blue"]),       [data-baseweb="tag"]:has([title="Blue"]),       [data-baseweb="tag"][aria-label^="Blue,"]       { background: #2563eb !important; }
+[data-tag][aria-label="Black"],      [data-tag]:has([title="Black"]),      [data-baseweb="tag"]:has([title="Black"]),      [data-baseweb="tag"][aria-label^="Black,"]      { background: #4c1d95 !important; }
+[data-tag][aria-label="Red"],        [data-tag]:has([title="Red"]),        [data-baseweb="tag"]:has([title="Red"]),        [data-baseweb="tag"][aria-label^="Red,"]        { background: #dc2626 !important; }
+[data-tag][aria-label="Green"],      [data-tag]:has([title="Green"]),      [data-baseweb="tag"]:has([title="Green"]),      [data-baseweb="tag"][aria-label^="Green,"]      { background: #16a34a !important; }
+[data-tag][aria-label="Artifact"],   [data-tag]:has([title="Artifact"]),   [data-baseweb="tag"]:has([title="Artifact"]),   [data-baseweb="tag"][aria-label^="Artifact,"]   { background: #64748b !important; }
+[data-tag][aria-label="Land"],       [data-tag]:has([title="Land"]),       [data-baseweb="tag"]:has([title="Land"]),       [data-baseweb="tag"][aria-label^="Land,"]       { background: #b45309 !important; }
+[data-tag][aria-label="Multicolor"], [data-tag]:has([title="Multicolor"]), [data-baseweb="tag"]:has([title="Multicolor"]), [data-baseweb="tag"][aria-label^="Multicolor,"] { background: linear-gradient(135deg, #fde047, #ec4899) !important; }
+[data-tag][aria-label="common"],     [data-tag]:has([title="common"]),     [data-baseweb="tag"]:has([title="common"]),     [data-baseweb="tag"][aria-label^="common,"]     { background: #334155 !important; }
+[data-tag][aria-label="uncommon"],   [data-tag]:has([title="uncommon"]),   [data-baseweb="tag"]:has([title="uncommon"]),   [data-baseweb="tag"][aria-label^="uncommon,"]   { background: #0284c7 !important; }
+[data-tag][aria-label="rare"],       [data-tag]:has([title="rare"]),       [data-baseweb="tag"]:has([title="rare"]),       [data-baseweb="tag"][aria-label^="rare,"]       { background: #d97706 !important; }
 .selected-filter-pane {
   display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 10px 14px;
   border-radius: 10px; border: 3.5px solid #0a0b10; box-shadow: 5px 5px 0 #0a0b10;
@@ -659,25 +660,57 @@ def auto_generate_deck(
 
     deck: dict[str, int] = {}
 
+    # Authentic multi-cost energy curve buckets (1-drop through 5+ drop)
+    if archetype == "Aggro (Low Curve)":
+        curve_weights = {1: 0.34, 2: 0.36, 3: 0.22, 4: 0.08}
+    elif archetype == "Control (Mudra / Mantra / Seal)":
+        curve_weights = {1: 0.14, 2: 0.28, 3: 0.26, 4: 0.18, 5: 0.14}
+    elif archetype == "Midrange":
+        curve_weights = {1: 0.14, 2: 0.26, 3: 0.26, 4: 0.20, 5: 0.14}
+    else:  # Balanced
+        curve_weights = {1: 0.20, 2: 0.30, 3: 0.25, 4: 0.15, 5: 0.10}
+
     def pick_cards(sub_df: pd.DataFrame, need: int) -> None:
         if sub_df.empty or need <= 0:
             return
-        candidates = list(sub_df.to_dict("records"))
-        rng.shuffle(candidates)
-        # Prefer smoother curve (lower/mid energy costs first)
-        candidates.sort(key=lambda r: (abs(int(r["energy_value"]) - (2 if "Aggro" in archetype else 3)) + rng.uniform(0, 2.2)))
         added = 0
-        for rec in candidates:
-            if added >= need:
-                break
-            cid = rec["id"]
-            if cid in deck:
-                continue
-            copies = 2 if rec["rarity"] == "rare" else rng.choice([2, 3, 4])
-            copies = min(copies, MAX_COPIES, need - added)
-            if copies > 0:
-                deck[cid] = copies
-                added += copies
+        # First pass: fill each energy-cost curve bucket
+        for cost_slot, weight in curve_weights.items():
+            slot_need = max(2, round(need * weight))
+            if cost_slot >= 5:
+                slot_df = sub_df[sub_df["energy_value"] >= 5]
+            else:
+                slot_df = sub_df[sub_df["energy_value"] == cost_slot]
+            recs = list(slot_df.to_dict("records"))
+            rng.shuffle(recs)
+            slot_added = 0
+            for rec in recs:
+                if slot_added >= slot_need or added >= need:
+                    break
+                cid = rec["id"]
+                if cid in deck:
+                    continue
+                copies = 2 if rec["rarity"] == "rare" else rng.choice([2, 3, 4])
+                copies = min(copies, MAX_COPIES, slot_need - slot_added, need - added)
+                if copies > 0:
+                    deck[cid] = copies
+                    slot_added += copies
+                    added += copies
+        # Second pass: top up any remainder across the full sub_df
+        if added < need:
+            recs = list(sub_df.to_dict("records"))
+            rng.shuffle(recs)
+            for rec in recs:
+                if added >= need:
+                    break
+                cid = rec["id"]
+                if cid in deck:
+                    continue
+                copies = 2 if rec["rarity"] == "rare" else rng.choice([2, 3])
+                copies = min(copies, MAX_COPIES, need - added)
+                if copies > 0:
+                    deck[cid] = copies
+                    added += copies
 
     pick_cards(creatures, creature_target)
     pick_cards(spells, spell_target)
@@ -814,7 +847,8 @@ if selected_colors:
         section[data-testid="stSidebar"] > div:first-child {{
           background: {sidebar_tint} !important;
         }}
-        section[data-testid="stSidebar"] [data-testid="stMultiSelect"]:has([aria-label*="Colors"]) [data-baseweb="select"] > div {{
+        section[data-testid="stSidebar"] [data-testid="stMultiSelect"]:has([aria-label*="Colors"]) [data-baseweb="select"] > div,
+        section[data-testid="stSidebar"] [data-testid="stMultiSelect"]:has(input[aria-label*="Colors"]) > div > div {{
           background: {pane_bg} !important;
           border: 2.5px solid #0a0b10 !important;
           box-shadow: 3px 3px 0 #0a0b10 !important;
@@ -1032,16 +1066,18 @@ with tab_deck:
             + "</div>"
         )
 
-        # Basic Lands Quick-Add Bar
+        # Basic Lands Quick-Add Bar (2 clean rows so labels never truncate!)
         st.markdown("#### 🌿 Quick-Add Basic Lands (Unlimited)")
-        land_cols = st.columns(5)
-        for col_widget, (cname, lid) in zip(land_cols, COLOR_TO_BASIC_ID.items()):
-            land_card = id_map[lid]
-            l_qty = st.session_state.deck_cards.get(lid, 0)
-            with col_widget:
-                if st.button(f"+2 {land_card['name']}\n({l_qty})", key=f"add_{lid}", use_container_width=True):
-                    st.session_state.deck_cards[lid] = l_qty + 2
-                    st.rerun()
+        land_items = list(COLOR_TO_BASIC_ID.items())
+        for row_slice in (land_items[:3], land_items[3:]):
+            l_cols = st.columns(len(row_slice))
+            for col_widget, (cname, lid) in zip(l_cols, row_slice):
+                land_card = id_map[lid]
+                l_qty = st.session_state.deck_cards.get(lid, 0)
+                with col_widget:
+                    if st.button(f"+2 {land_card['name']} ({l_qty})", key=f"add_{lid}", use_container_width=True):
+                        st.session_state.deck_cards[lid] = l_qty + 2
+                        st.rerun()
 
         # Import Deck JSON
         st.markdown("#### 📤 Import Deck (JSON)")
@@ -1146,7 +1182,7 @@ with tab_deck:
 
             with ex1:
                 st.download_button(
-                    "🎮 Roblox Luau",
+                    "🎮 Luau",
                     data=luau_src.encode("utf-8"),
                     file_name=f"{safe_slug}.luau",
                     mime="text/plain",
@@ -1154,7 +1190,7 @@ with tab_deck:
                 )
             with ex2:
                 st.download_button(
-                    "📄 Deck JSON",
+                    "📄 JSON",
                     data=json_src.encode("utf-8"),
                     file_name=f"{safe_slug}.json",
                     mime="application/json",
@@ -1162,7 +1198,7 @@ with tab_deck:
                 )
             with ex3:
                 st.download_button(
-                    "📊 Deck CSV",
+                    "📊 CSV",
                     data=csv_src.encode("utf-8"),
                     file_name=f"{safe_slug}.csv",
                     mime="text/csv",
