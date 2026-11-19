@@ -22,589 +22,211 @@ CSV_FILES = [
     ("Delta", ROOT / "aura_delta_set.csv"),
 ]
 
-COMIC_CSS = """
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=Chakra+Petch:ital,wght@0,500;0,600;0,700;1,600&family=Comic+Neue:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --ink: #0a0b10;
-    --paper: #fffdf4;
-    --yellow: #ffe24a;
-  }
-
-  .stApp {
-    background-color: #11131b;
-    background-image:
-      radial-gradient(rgba(255, 226, 74, 0.06) 1.5px, transparent 1.5px),
-      radial-gradient(circle at top, #1f2538 0%, #0d0f17 65%);
-    background-size: 18px 18px, 100% 100%;
-    font-family: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif;
-  }
-
-  .aura-banner {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    background: #1a1e2b;
-    border: 4px solid var(--ink);
-    box-shadow: 6px 6px 0 var(--ink);
-    border-radius: 10px;
-    padding: 14px 20px;
-    margin-bottom: 18px;
-  }
-
-  .aura-banner-left {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .aura-logo {
-    font-family: 'Bangers', Impact, sans-serif;
-    font-size: 2.2rem;
-    letter-spacing: 0.08em;
-    color: var(--yellow);
-    background: #e11d48;
-    padding: 4px 16px 2px;
-    border: 3px solid var(--ink);
-    box-shadow: 4px 4px 0 var(--ink);
-    transform: skewX(-7deg) rotate(-1.5deg);
-    text-shadow: 2px 2px 0 var(--ink);
-    line-height: 1.05;
-  }
-
-  .aura-title h1 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.45rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #f3f5fa;
-    margin: 0;
-    line-height: 1.15;
-  }
-
-  .aura-title p {
-    font-size: 0.86rem;
-    color: #a6afc4;
-    margin: 3px 0 0;
-  }
-
-  .aura-tip {
-    background: var(--yellow);
-    color: var(--ink);
-    border: 2.5px solid var(--ink);
-    box-shadow: 3px 3px 0 var(--ink);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 800;
-    font-size: 0.85rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 5px 12px;
-    transform: skewX(-5deg);
-  }
-
-  /* ==================== COMIC GRID & PURE-CSS 3D FLIP ==================== */
-  .aura-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
-    gap: 2rem 1.55rem;
-    padding: 10px 4px 28px;
-  }
-
-  .card-scene {
-    display: block;
-    perspective: 1100px;
-    min-height: 422px;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .flip-chk {
-    display: none;
-  }
-
-  .card-flipper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 422px;
-    transform-style: preserve-3d;
-    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  .flip-chk:checked ~ .card-flipper {
-    transform: rotateY(180deg);
-  }
-
-  .card-face {
-    position: relative;
-    width: 100%;
-    min-height: 422px;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    border-radius: 12px;
-    border: 4px solid var(--ink);
-    box-shadow: 7px 8px 0 var(--ink);
-    transition: transform 0.14s ease, box-shadow 0.14s ease;
-    display: flex;
-    flex-direction: column;
-    overflow: visible;
-  }
-
-  .card-scene:hover .card-face {
-    transform: translate(-3px, -5px);
-    box-shadow: 11px 13px 0 var(--ink);
-  }
-
-  .card-front {
-    --c-bg1: #fff3b0;
-    --c-bg2: #f4c430;
-    --c-art1: #fef08a;
-    --c-art2: #d97706;
-    --c-tag-bg: #ffe24a;
-    --c-tag-ink: #0a0b10;
-    --c-dot: rgba(10, 11, 16, 0.14);
-    padding: 10px 10px 12px;
-    background-color: var(--c-bg1);
-    background-image:
-      radial-gradient(var(--c-dot) 1.6px, transparent 1.6px),
-      linear-gradient(155deg, var(--c-bg1) 0%, var(--c-bg2) 100%);
-    background-size: 9px 9px, 100% 100%;
-    color: var(--ink);
-  }
-
-  .card-front.White      { --c-bg1: #fff6cc; --c-bg2: #eab308; --c-art1: #fef9c3; --c-art2: #ca8a04; --c-tag-bg: #ffe24a; }
-  .card-front.Blue       { --c-bg1: #38bdf8; --c-bg2: #1d4ed8; --c-art1: #7dd3fc; --c-art2: #1e3a8a; --c-tag-bg: #ffe24a; --c-dot: rgba(255,255,255,0.16); }
-  .card-front.Black      { --c-bg1: #7c3aed; --c-bg2: #2e1065; --c-art1: #a78bfa; --c-art2: #1e1b4b; --c-tag-bg: #e879f9; --c-dot: rgba(255,255,255,0.14); }
-  .card-front.Red        { --c-bg1: #fb7185; --c-bg2: #dc2626; --c-art1: #fdba74; --c-art2: #991b1b; --c-tag-bg: #ffe24a; --c-dot: rgba(10,11,16,0.16); }
-  .card-front.Green      { --c-bg1: #4ade80; --c-bg2: #15803d; --c-art1: #bef264; --c-art2: #14532d; --c-tag-bg: #ffe24a; --c-dot: rgba(10,11,16,0.16); }
-  .card-front.Artifact   { --c-bg1: #cbd5e1; --c-bg2: #475569; --c-art1: #e2e8f0; --c-art2: #334155; --c-tag-bg: #38bdf8; --c-dot: rgba(10,11,16,0.15); }
-  .card-front.Land       { --c-bg1: #fdba74; --c-bg2: #9a3412; --c-art1: #fde68a; --c-art2: #78350f; --c-tag-bg: #fef08a; --c-dot: rgba(10,11,16,0.16); }
-  .card-front.Multicolor { --c-bg1: #fde047; --c-bg2: #ec4899; --c-art1: #f9a8d4; --c-art2: #7e22ce; --c-tag-bg: #ffe24a; --c-dot: rgba(255,255,255,0.2); }
-
-  .card-front.rarity-rare::before {
-    content: "";
-    position: absolute;
-    inset: 3px;
-    border-radius: 7px;
-    border: 2.5px dashed rgba(255, 250, 205, 0.72);
-    pointer-events: none;
-  }
-
-  .comic-header {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    margin-bottom: 8px;
-    position: relative;
-    z-index: 3;
-  }
-
-  .energy-burst {
-    display: inline-flex;
-    align-items: center;
-    gap: 3px;
-    background: var(--ink);
-    border: 2.5px solid var(--ink);
-    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.45);
-    padding: 3px 5px;
-    border-radius: 8px;
-    transform: rotate(-3deg);
-    flex-shrink: 0;
-  }
-
-  .energy-burst.empty { display: none; }
-
-  .pip {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 21px;
-    height: 21px;
-    border-radius: 50%;
-    font-family: 'Barlow Condensed', Impact, sans-serif;
-    font-size: 0.82rem;
-    font-weight: 800;
-    border: 2px solid var(--ink);
-    box-shadow: inset -1px -2px 0 rgba(0, 0, 0, 0.28), inset 1px 1px 0 rgba(255, 255, 255, 0.55);
-    line-height: 1;
-  }
-
-  .pip-W { background: #fff4b8; color: #1c1404; }
-  .pip-U { background: #38bdf8; color: #082f49; }
-  .pip-B { background: #9333ea; color: #ffffff; }
-  .pip-R { background: #ef4444; color: #ffffff; }
-  .pip-G { background: #22c55e; color: #052e16; }
-  .pip-N { background: #e2e8f0; color: #0f172a; }
-  .pip-T { background: #ffe24a; color: #0a0b10; font-size: 0.78rem; }
-
-  .title-plate {
-    flex: 1;
-    min-width: 0;
-    background: var(--ink);
-    border: 2.5px solid #ffffff;
-    outline: 2.5px solid var(--ink);
-    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.45);
-    padding: 4px 10px 3px;
-    transform: skewX(-6deg);
-  }
-
-  .card-name {
-    display: block;
-    font-family: 'Bangers', Impact, sans-serif;
-    font-size: 1.28rem;
-    letter-spacing: 0.055em;
-    line-height: 1.05;
-    color: #ffffff;
-    text-shadow: 2px 2px 0 #000000;
-    transform: skewX(6deg);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .art-panel {
-    position: relative;
-    height: 146px;
-    border: 3.5px solid var(--ink);
-    border-radius: 6px;
-    background:
-      repeating-conic-gradient(
-        from 0deg at 50% 48%,
-        rgba(255, 255, 255, 0.18) 0deg 8deg,
-        transparent 8deg 18deg
-      ),
-      radial-gradient(circle at 50% 48%, var(--c-art1) 0%, var(--c-art2) 78%, #090b12 100%);
-    overflow: hidden;
-    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: -14px;
-    clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
-  }
-
-  .art-burst {
-    width: 82px;
-    height: 82px;
-    background: rgba(255, 255, 255, 0.24);
-    border: 3px solid rgba(10, 11, 16, 0.55);
-    transform: rotate(45deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 4px 4px 0 rgba(10, 11, 16, 0.35);
-  }
-
-  .art-burst span {
-    transform: rotate(-45deg);
-    font-family: 'Bangers', sans-serif;
-    font-size: 0.92rem;
-    letter-spacing: 0.08em;
-    color: var(--ink);
-    text-align: center;
-    line-height: 1.05;
-  }
-
-  .annex-stamp {
-    position: absolute;
-    top: 7px;
-    right: 7px;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background: var(--yellow);
-    color: var(--ink);
-    border: 2.5px solid var(--ink);
-    box-shadow: 2px 2px 0 var(--ink);
-    font-family: 'Bangers', sans-serif;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-  }
-
-  .comic-type-strip {
-    position: relative;
-    z-index: 4;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 6px;
-    margin: 0 4px 8px;
-    padding: 4px 9px;
-    background: var(--c-tag-bg);
-    color: var(--c-tag-ink);
-    border: 3px solid var(--ink);
-    box-shadow: 4px 4px 0 var(--ink);
-    transform: skewX(-6deg) rotate(-1deg);
-  }
-
-  .comic-type-strip > * {
-    transform: skewX(6deg);
-  }
-
-  .type-text {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 800;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .rarity-stamp {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 800;
-    font-size: 0.72rem;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    padding: 1px 7px;
-    border: 2px solid var(--ink);
-    border-radius: 3px;
-    box-shadow: 2px 2px 0 var(--ink);
-  }
-  .rarity-stamp.common   { background: #334155; color: #f8fafc; }
-  .rarity-stamp.uncommon { background: #38bdf8; color: #082f49; }
-  .rarity-stamp.rare     { background: #f59e0b; color: #0a0b10; }
-
-  .comic-rules-box {
-    position: relative;
-    flex: 1;
-    background-color: var(--paper);
-    background-image: radial-gradient(rgba(10, 11, 16, 0.055) 1.2px, transparent 1.2px);
-    background-size: 8px 8px;
-    border: 3px solid var(--ink);
-    border-radius: 6px;
-    box-shadow: 4px 4px 0 var(--ink);
-    padding: 9px 10px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 7px;
-    color: #14161f;
-  }
-
-  .rules-lines {
-    font-family: 'Comic Neue', 'Chakra Petch', sans-serif;
-    font-size: 0.83rem;
-    font-weight: 700;
-    line-height: 1.32;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .rules-lines p { margin: 0; }
-
-  .rules-lines .pip {
-    width: 17px;
-    height: 17px;
-    font-size: 0.68rem;
-    vertical-align: -2px;
-    margin: 0 1px;
-  }
-
-  .rules-lines .kw {
-    font-family: 'Barlow Condensed', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    color: #b91c1c;
-    font-weight: 800;
-  }
-
-  .rules-lines .rem {
-    font-weight: 700;
-    color: #475569;
-    font-style: italic;
-  }
-
-  .flavor-caption {
-    background: #fef08a;
-    border: 2px solid var(--ink);
-    box-shadow: 2px 2px 0 var(--ink);
-    padding: 4px 7px;
-    font-family: 'Comic Neue', serif;
-    font-style: italic;
-    font-weight: 700;
-    font-size: 0.74rem;
-    line-height: 1.25;
-    color: #1c1917;
-    transform: rotate(-0.6deg);
-  }
-
-  .comic-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: 8px;
-    gap: 8px;
-    position: relative;
-    z-index: 4;
-  }
-
-  .issue-stamp {
-    background: var(--ink);
-    color: #ffffff;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 800;
-    font-size: 0.74rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 3px 8px;
-    border-radius: 3px;
-    border: 2px solid rgba(255, 255, 255, 0.35);
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
-  }
-
-  .stat-cluster {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: -4px;
-    margin-right: -2px;
-  }
-
-  .stat-badge {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-width: 38px;
-    padding: 2px 7px 1px;
-    border: 3px solid var(--ink);
-    box-shadow: 3px 3px 0 var(--ink);
-    line-height: 1;
-    transform: skewX(-7deg);
-  }
-
-  .stat-badge .lbl {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.56rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    transform: skewX(7deg);
-  }
-
-  .stat-badge .val {
-    font-family: 'Bangers', Impact, sans-serif;
-    font-size: 1.32rem;
-    letter-spacing: 0.04em;
-    transform: skewX(7deg);
-  }
-
-  .stat-pow {
-    background: #ef4444;
-    color: #ffffff;
-    text-shadow: 1.5px 1.5px 0 var(--ink);
-  }
-
-  .stat-tgh {
-    background: #38bdf8;
-    color: #082f49;
-  }
-
-  /* ==================== COMIC CARD BACK ==================== */
-  .card-back {
-    position: absolute;
-    inset: 0;
-    transform: rotateY(180deg);
-    background-color: #13182b;
-    background-image:
-      repeating-conic-gradient(
-        from 8deg at 50% 50%,
-        rgba(255, 226, 74, 0.1) 0deg 9deg,
-        transparent 9deg 20deg
-      ),
-      radial-gradient(rgba(255, 255, 255, 0.11) 1.5px, transparent 1.5px),
-      radial-gradient(circle at 50% 50%, #2b3564 0%, #0f1324 72%);
-    background-size: 100% 100%, 10px 10px, 100% 100%;
-    padding: 14px;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-  }
-
-  .back-inner {
-    width: 100%;
-    height: 100%;
-    border: 3.5px solid var(--yellow);
-    outline: 3px solid var(--ink);
-    border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 12px;
-  }
-
-  .back-issue {
-    background: var(--yellow);
-    color: var(--ink);
-    border: 2.5px solid var(--ink);
-    box-shadow: 3px 3px 0 var(--ink);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 800;
-    font-size: 0.78rem;
-    letter-spacing: 0.1em;
-    padding: 2px 10px;
-    transform: skewX(-6deg);
-  }
-
-  .back-emblem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-  }
-
-  .back-logo {
-    font-family: 'Bangers', Impact, sans-serif;
-    font-size: 3.3rem;
-    letter-spacing: 0.08em;
-    color: var(--yellow);
-    -webkit-text-stroke: 2.5px var(--ink);
-    text-shadow: 5px 5px 0 #e11d48, 8px 8px 0 var(--ink);
-    transform: rotate(-6deg) skewX(-6deg);
-    line-height: 1;
-  }
-
-  .back-wheel {
-    display: flex;
-    gap: 8px;
-    background: rgba(10, 11, 16, 0.78);
-    border: 3px solid var(--ink);
-    box-shadow: 4px 4px 0 var(--ink);
-    padding: 7px 11px;
-    border-radius: 999px;
-    transform: rotate(-2deg);
-  }
-
-  .back-wheel .pip {
-    width: 24px;
-    height: 24px;
-    font-size: 0.85rem;
-  }
-
-  .back-tagline {
-    background: #e11d48;
-    color: #ffffff;
-    border: 2.5px solid var(--ink);
-    box-shadow: 3px 3px 0 var(--ink);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 800;
-    font-size: 0.8rem;
-    letter-spacing: 0.12em;
-    padding: 3px 12px;
-    transform: skewX(-6deg);
-  }
-</style>
-"""
+COMIC_CSS = """<style>
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=Chakra+Petch:ital,wght@0,500;0,600;0,700;1,600&family=Comic+Neue:ital,wght@0,700;1,700&display=swap');
+:root { --ink: #0a0b10; --paper: #fffdf4; --yellow: #ffe24a; }
+.stApp {
+  background-color: #11131b;
+  background-image: radial-gradient(rgba(255, 226, 74, 0.06) 1.5px, transparent 1.5px), radial-gradient(circle at top, #1f2538 0%, #0d0f17 65%);
+  background-size: 18px 18px, 100% 100%;
+  font-family: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif;
+}
+.aura-banner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+  background: #1a1e2b; border: 4px solid var(--ink); box-shadow: 6px 6px 0 var(--ink);
+  border-radius: 10px; padding: 14px 20px; margin-bottom: 18px;
+}
+.aura-banner-left { display: flex; align-items: center; gap: 16px; }
+.aura-logo {
+  font-family: 'Bangers', Impact, sans-serif; font-size: 2.2rem; letter-spacing: 0.08em;
+  color: var(--yellow); background: #e11d48; padding: 4px 16px 2px;
+  border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink);
+  transform: skewX(-7deg) rotate(-1.5deg); text-shadow: 2px 2px 0 var(--ink); line-height: 1.05;
+}
+.aura-title h1 {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 1.45rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.08em; color: #f3f5fa; margin: 0; line-height: 1.15;
+}
+.aura-title p { font-size: 0.86rem; color: #a6afc4; margin: 3px 0 0; }
+.aura-tip {
+  background: var(--yellow); color: var(--ink); border: 2.5px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink); font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 5px 12px; transform: skewX(-5deg);
+}
+.aura-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+  gap: 2rem 1.55rem; padding: 10px 4px 28px;
+}
+.card-scene {
+  display: block; perspective: 1100px; min-height: 422px; cursor: pointer; user-select: none;
+}
+.flip-chk { display: none !important; }
+.card-flipper {
+  position: relative; width: 100%; height: 100%; min-height: 422px;
+  transform-style: preserve-3d; transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.flip-chk:checked ~ .card-flipper { transform: rotateY(180deg); }
+.card-face {
+  position: relative; width: 100%; min-height: 422px;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden;
+  border-radius: 12px; border: 4px solid var(--ink); box-shadow: 7px 8px 0 var(--ink);
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
+  display: flex; flex-direction: column; overflow: visible; box-sizing: border-box;
+}
+.card-scene:hover .card-face { transform: translate(-3px, -5px); box-shadow: 11px 13px 0 var(--ink); }
+.card-front {
+  --c-bg1: #fff3b0; --c-bg2: #f4c430; --c-art1: #fef08a; --c-art2: #d97706;
+  --c-tag-bg: #ffe24a; --c-tag-ink: #0a0b10; --c-dot: rgba(10, 11, 16, 0.14);
+  padding: 10px 10px 12px; background-color: var(--c-bg1);
+  background-image: radial-gradient(var(--c-dot) 1.6px, transparent 1.6px), linear-gradient(155deg, var(--c-bg1) 0%, var(--c-bg2) 100%);
+  background-size: 9px 9px, 100% 100%; color: var(--ink);
+}
+.card-front.White      { --c-bg1: #fff6cc; --c-bg2: #eab308; --c-art1: #fef9c3; --c-art2: #ca8a04; --c-tag-bg: #ffe24a; }
+.card-front.Blue       { --c-bg1: #38bdf8; --c-bg2: #1d4ed8; --c-art1: #7dd3fc; --c-art2: #1e3a8a; --c-tag-bg: #ffe24a; --c-dot: rgba(255,255,255,0.16); }
+.card-front.Black      { --c-bg1: #7c3aed; --c-bg2: #2e1065; --c-art1: #a78bfa; --c-art2: #1e1b4b; --c-tag-bg: #e879f9; --c-dot: rgba(255,255,255,0.14); }
+.card-front.Red        { --c-bg1: #fb7185; --c-bg2: #dc2626; --c-art1: #fdba74; --c-art2: #991b1b; --c-tag-bg: #ffe24a; --c-dot: rgba(10,11,16,0.16); }
+.card-front.Green      { --c-bg1: #4ade80; --c-bg2: #15803d; --c-art1: #bef264; --c-art2: #14532d; --c-tag-bg: #ffe24a; --c-dot: rgba(10,11,16,0.16); }
+.card-front.Artifact   { --c-bg1: #cbd5e1; --c-bg2: #475569; --c-art1: #e2e8f0; --c-art2: #334155; --c-tag-bg: #38bdf8; --c-dot: rgba(10,11,16,0.15); }
+.card-front.Land       { --c-bg1: #fdba74; --c-bg2: #9a3412; --c-art1: #fde68a; --c-art2: #78350f; --c-tag-bg: #fef08a; --c-dot: rgba(10,11,16,0.16); }
+.card-front.Multicolor { --c-bg1: #fde047; --c-bg2: #ec4899; --c-art1: #f9a8d4; --c-art2: #7e22ce; --c-tag-bg: #ffe24a; --c-dot: rgba(255,255,255,0.2); }
+.card-front.rarity-rare::before {
+  content: ""; position: absolute; inset: 3px; border-radius: 7px;
+  border: 2.5px dashed rgba(255, 250, 205, 0.72); pointer-events: none;
+}
+.comic-header { display: flex; align-items: center; gap: 7px; margin-bottom: 8px; position: relative; z-index: 3; }
+.energy-burst {
+  display: inline-flex; align-items: center; gap: 3px; background: var(--ink);
+  border: 2.5px solid var(--ink); box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.45);
+  padding: 3px 5px; border-radius: 8px; transform: rotate(-3deg); flex-shrink: 0;
+}
+.energy-burst.empty { display: none; }
+.pip {
+  display: inline-flex; align-items: center; justify-content: center; width: 21px; height: 21px;
+  border-radius: 50%; font-family: 'Barlow Condensed', Impact, sans-serif; font-size: 0.82rem; font-weight: 800;
+  border: 2px solid var(--ink); box-shadow: inset -1px -2px 0 rgba(0, 0, 0, 0.28), inset 1px 1px 0 rgba(255, 255, 255, 0.55); line-height: 1;
+}
+.pip-W { background: #fff4b8; color: #1c1404; }
+.pip-U { background: #38bdf8; color: #082f49; }
+.pip-B { background: #9333ea; color: #ffffff; }
+.pip-R { background: #ef4444; color: #ffffff; }
+.pip-G { background: #22c55e; color: #052e16; }
+.pip-N { background: #e2e8f0; color: #0f172a; }
+.pip-T { background: #ffe24a; color: #0a0b10; font-size: 0.78rem; }
+.title-plate {
+  flex: 1; min-width: 0; background: var(--ink); border: 2.5px solid #ffffff;
+  outline: 2.5px solid var(--ink); box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.45);
+  padding: 4px 10px 3px; transform: skewX(-6deg);
+}
+.card-name {
+  display: block; font-family: 'Bangers', Impact, sans-serif; font-size: 1.28rem;
+  letter-spacing: 0.055em; line-height: 1.05; color: #ffffff; text-shadow: 2px 2px 0 #000000;
+  transform: skewX(6deg); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.art-panel {
+  position: relative; height: 146px; border: 3.5px solid var(--ink); border-radius: 6px;
+  background: repeating-conic-gradient(from 0deg at 50% 48%, rgba(255, 255, 255, 0.18) 0deg 8deg, transparent 8deg 18deg), radial-gradient(circle at 50% 48%, var(--c-art1) 0%, var(--c-art2) 78%, #090b12 100%);
+  overflow: hidden; box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
+  display: flex; align-items: center; justify-content: center; margin-bottom: -14px;
+  clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
+}
+.art-burst {
+  width: 82px; height: 82px; background: rgba(255, 255, 255, 0.24);
+  border: 3px solid rgba(10, 11, 16, 0.55); transform: rotate(45deg);
+  display: flex; align-items: center; justify-content: center; box-shadow: 4px 4px 0 rgba(10, 11, 16, 0.35);
+}
+.art-burst span {
+  transform: rotate(-45deg); font-family: 'Bangers', sans-serif; font-size: 0.92rem;
+  letter-spacing: 0.08em; color: var(--ink); text-align: center; line-height: 1.05;
+}
+.annex-stamp {
+  position: absolute; top: 7px; right: 7px; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--yellow); color: var(--ink); border: 2.5px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink); font-family: 'Bangers', sans-serif; font-size: 1rem;
+  display: flex; align-items: center; justify-content: center; z-index: 2;
+}
+.comic-type-strip {
+  position: relative; z-index: 4; display: flex; justify-content: space-between; align-items: center; gap: 6px;
+  margin: 0 4px 8px; padding: 4px 9px; background: var(--c-tag-bg); color: var(--c-tag-ink);
+  border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); transform: skewX(-6deg) rotate(-1deg);
+}
+.comic-type-strip > * { transform: skewX(6deg); }
+.type-text { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.rarity-stamp {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.72rem;
+  letter-spacing: 0.07em; text-transform: uppercase; padding: 1px 7px;
+  border: 2px solid var(--ink); border-radius: 3px; box-shadow: 2px 2px 0 var(--ink);
+}
+.rarity-stamp.common   { background: #334155; color: #f8fafc; }
+.rarity-stamp.uncommon { background: #38bdf8; color: #082f49; }
+.rarity-stamp.rare     { background: #f59e0b; color: #0a0b10; }
+.comic-rules-box {
+  position: relative; flex: 1; background-color: var(--paper);
+  background-image: radial-gradient(rgba(10, 11, 16, 0.055) 1.2px, transparent 1.2px);
+  background-size: 8px 8px; border: 3px solid var(--ink); border-radius: 6px;
+  box-shadow: 4px 4px 0 var(--ink); padding: 9px 10px 10px;
+  display: flex; flex-direction: column; justify-content: space-between; gap: 7px; color: #14161f;
+}
+.rules-lines {
+  font-family: 'Comic Neue', 'Chakra Petch', sans-serif; font-size: 0.83rem; font-weight: 700;
+  line-height: 1.32; display: flex; flex-direction: column; gap: 5px;
+}
+.rules-lines p { margin: 0; color: #14161f; }
+.rules-lines .pip { width: 17px; height: 17px; font-size: 0.68rem; vertical-align: -2px; margin: 0 1px; }
+.rules-lines .kw { font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; letter-spacing: 0.03em; color: #b91c1c; font-weight: 800; }
+.rules-lines .rem { font-weight: 700; color: #475569; font-style: italic; }
+.flavor-caption {
+  background: #fef08a; border: 2px solid var(--ink); box-shadow: 2px 2px 0 var(--ink);
+  padding: 4px 7px; font-family: 'Comic Neue', serif; font-style: italic; font-weight: 700;
+  font-size: 0.74rem; line-height: 1.25; color: #1c1917; transform: rotate(-0.6deg);
+}
+.comic-footer { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 8px; gap: 8px; position: relative; z-index: 4; }
+.issue-stamp {
+  background: var(--ink); color: #ffffff; font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800; font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 3px; border: 2px solid rgba(255, 255, 255, 0.35); box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+.stat-cluster { display: flex; align-items: center; gap: 5px; margin-bottom: -4px; margin-right: -2px; }
+.stat-badge {
+  display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+  min-width: 38px; padding: 2px 7px 1px; border: 3px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink); line-height: 1; transform: skewX(-7deg);
+}
+.stat-badge .lbl { font-family: 'Barlow Condensed', sans-serif; font-size: 0.56rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; transform: skewX(7deg); }
+.stat-badge .val { font-family: 'Bangers', Impact, sans-serif; font-size: 1.32rem; letter-spacing: 0.04em; transform: skewX(7deg); }
+.stat-pow { background: #ef4444; color: #ffffff; text-shadow: 1.5px 1.5px 0 var(--ink); }
+.stat-tgh { background: #38bdf8; color: #082f49; }
+.card-back {
+  position: absolute; inset: 0; transform: rotateY(180deg); background-color: #13182b;
+  background-image: repeating-conic-gradient(from 8deg at 50% 50%, rgba(255, 226, 74, 0.1) 0deg 9deg, transparent 9deg 20deg), radial-gradient(rgba(255, 255, 255, 0.11) 1.5px, transparent 1.5px), radial-gradient(circle at 50% 50%, #2b3564 0%, #0f1324 72%);
+  background-size: 100% 100%, 10px 10px, 100% 100%; padding: 14px; align-items: center; justify-content: space-between; overflow: hidden;
+}
+.back-inner {
+  width: 100%; height: 100%; border: 3.5px solid var(--yellow); outline: 3px solid var(--ink);
+  border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 16px 12px;
+}
+.back-issue {
+  background: var(--yellow); color: var(--ink); border: 2.5px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink); font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800; font-size: 0.78rem; letter-spacing: 0.1em; padding: 2px 10px; transform: skewX(-6deg);
+}
+.back-emblem { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.back-logo {
+  font-family: 'Bangers', Impact, sans-serif; font-size: 3.3rem; letter-spacing: 0.08em;
+  color: var(--yellow); -webkit-text-stroke: 2.5px var(--ink);
+  text-shadow: 5px 5px 0 #e11d48, 8px 8px 0 var(--ink); transform: rotate(-6deg) skewX(-6deg); line-height: 1;
+}
+.back-wheel {
+  display: flex; gap: 8px; background: rgba(10, 11, 16, 0.78); border: 3px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink); padding: 7px 11px; border-radius: 999px; transform: rotate(-2deg);
+}
+.back-wheel .pip { width: 24px; height: 24px; font-size: 0.85rem; }
+.back-tagline {
+  background: #e11d48; color: #ffffff; border: 2.5px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink); font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800; font-size: 0.8rem; letter-spacing: 0.12em; padding: 3px 12px; transform: skewX(-6deg);
+}
+</style>"""
 
 
 def energy_value(cost: str) -> int:
@@ -753,12 +375,11 @@ def render_card_html(row: pd.Series, flip_all: bool, uid: str) -> str:
 
 
 # ==================== APP LAYOUT ====================
-st.markdown(COMIC_CSS, unsafe_allow_html=True)
+st.html(COMIC_CSS)
 df = load_cards()
 
-st.markdown(
-    """
-    <div class="aura-banner">
+st.html(
+    """<div class="aura-banner">
       <div class="aura-banner-left">
         <div class="aura-logo">AURA!</div>
         <div class="aura-title">
@@ -767,9 +388,7 @@ st.markdown(
         </div>
       </div>
       <div class="aura-tip">Click any card to flip Front ↔ Back</div>
-    </div>
-    """,
-    unsafe_allow_html=True,
+    </div>"""
 )
 
 # Sidebar Filters
@@ -875,7 +494,7 @@ with tab_gallery:
             render_card_html(row, flip_all=flip_all, uid=f"c_{page_num}_{idx}")
             for idx, (_, row) in enumerate(page_df.iterrows())
         )
-        st.markdown(f'<div class="aura-grid">{cards_html}</div>', unsafe_allow_html=True)
+        st.html(f'<div class="aura-grid">{cards_html}</div>')
 
 with tab_analytics:
     if total_shown == 0:
