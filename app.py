@@ -116,6 +116,11 @@ COMIC_CSS = """<style>
   font-family: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif;
 }
 .block-container { max-width: 100% !important; padding-left: 2rem !important; padding-right: 2rem !important; }
+button[kind="primary"], button[data-testid="stBaseButton-primary"] {
+  color: #0a0b10 !important; font-weight: 800 !important;
+  border: 2.5px solid #0a0b10 !important; box-shadow: 3px 3px 0 #0a0b10 !important;
+}
+button[kind="primary"] *, button[data-testid="stBaseButton-primary"] * { color: #0a0b10 !important; }
 /* ==================== LEGIBLE COLOR-CODED MULTISELECT CHIPS (BaseWeb + React Aria) ==================== */
 [data-tag], [data-baseweb="tag"] {
   background: #263047 !important;
@@ -915,10 +920,10 @@ with st.sidebar:
         use_container_width=True,
     )
 
-# ==================== MAIN TABS ====================
+# ==================== MAIN TABS (STATIC LABELS SO STREAMLIT NEVER RESETS ACTIVE TAB ON RERUN!) ====================
 tab_gallery, tab_deck, tab_analytics, tab_table = st.tabs([
-    f"🃏 Comic Gallery ({total_shown})",
-    f"🛠️ Deck Editor ({deck_total})",
+    "🃏 Comic Gallery",
+    "🛠️ Deck Editor",
     "📊 Set Analytics",
     "📋 CSV Table",
 ])
@@ -1017,11 +1022,12 @@ def render_interactive_card_grid(
                 )
                 if qty == 0:
                     st.button(
-                        f"➕ Add {row['name']}",
+                        "➕ Add (+1)",
                         key=f"{key_prefix}_add0_{cid}_{row_start + col_idx}",
                         on_click=adjust_deck_card,
                         args=(cid, 1),
                         use_container_width=True,
+                        help=f"Add 1 copy of {row['name']}",
                     )
                 else:
                     b1, b2, b3 = st.columns([1, 1.35, 1])
@@ -1131,7 +1137,7 @@ with tab_deck:
         )
         st.session_state.deck_view_mode = chosen_view
     with c_col:
-        grid_cols = st.select_slider("Cards / Row", options=[3, 4], value=4, key="deck_grid_cols")
+        grid_cols = st.select_slider("Cards / Row", options=[2, 3, 4], value=3, key="deck_grid_cols")
 
     # ==================== MODE 1: TAP-TO-ADD VISUAL CARD GALLERY ====================
     if chosen_view == "➕ Tap Cards to Add":
