@@ -78,6 +78,29 @@ COLOR_CHIP_STYLE = {
     "Land": ("#b45309", "#ffffff"),
 }
 
+COLOR_SOLID_HEX = {
+    "White": "#f5e6a8",
+    "Blue": "#2563eb",
+    "Black": "#5b21b6",
+    "Red": "#dc2626",
+    "Green": "#16a34a",
+    "Multicolor": "#ec4899",
+    "Artifact": "#64748b",
+    "Land": "#b45309",
+}
+
+COLOR_CARD_TONE = {
+    "White": ("#fff6cc", "#eab308"),
+    "Blue": ("#38bdf8", "#1d4ed8"),
+    "Black": ("#7c3aed", "#2e1065"),
+    "Red": ("#fb7185", "#dc2626"),
+    "Green": ("#4ade80", "#15803d"),
+    "Artifact": ("#cbd5e1", "#475569"),
+    "Land": ("#fdba74", "#9a3412"),
+}
+
+SYM_TO_COLOR = {"W": "White", "U": "Blue", "B": "Black", "R": "Red", "G": "Green"}
+
 MIN_DECK = 40
 MAX_DECK = 200
 MAX_COPIES = 4
@@ -106,17 +129,27 @@ COMIC_CSS = """<style>
   fill: #ffffff !important;
   text-shadow: -1.2px -1.2px 0 #000, 1.2px -1.2px 0 #000, -1.2px 1.2px 0 #000, 1.2px 1.2px 0 #000, 0 1.5px 0 #000 !important;
 }
-[data-baseweb="tag"]:has([title="White"])      { background: #f5e6a8 !important; }
-[data-baseweb="tag"]:has([title="Blue"])       { background: #2563eb !important; }
-[data-baseweb="tag"]:has([title="Black"])      { background: #4c1d95 !important; }
-[data-baseweb="tag"]:has([title="Red"])        { background: #dc2626 !important; }
-[data-baseweb="tag"]:has([title="Green"])      { background: #16a34a !important; }
-[data-baseweb="tag"]:has([title="Artifact"])   { background: #64748b !important; }
-[data-baseweb="tag"]:has([title="Land"])       { background: #b45309 !important; }
-[data-baseweb="tag"]:has([title="Multicolor"]) { background: linear-gradient(135deg, #fde047, #ec4899) !important; }
-[data-baseweb="tag"]:has([title="common"])     { background: #334155 !important; }
-[data-baseweb="tag"]:has([title="uncommon"])   { background: #0284c7 !important; }
-[data-baseweb="tag"]:has([title="rare"])       { background: #d97706 !important; }
+[data-baseweb="tag"]:has([title="White"]),      [data-baseweb="tag"][aria-label^="White,"]      { background: #f5e6a8 !important; }
+[data-baseweb="tag"]:has([title="Blue"]),       [data-baseweb="tag"][aria-label^="Blue,"]       { background: #2563eb !important; }
+[data-baseweb="tag"]:has([title="Black"]),      [data-baseweb="tag"][aria-label^="Black,"]      { background: #4c1d95 !important; }
+[data-baseweb="tag"]:has([title="Red"]),        [data-baseweb="tag"][aria-label^="Red,"]        { background: #dc2626 !important; }
+[data-baseweb="tag"]:has([title="Green"]),      [data-baseweb="tag"][aria-label^="Green,"]      { background: #16a34a !important; }
+[data-baseweb="tag"]:has([title="Artifact"]),   [data-baseweb="tag"][aria-label^="Artifact,"]   { background: #64748b !important; }
+[data-baseweb="tag"]:has([title="Land"]),       [data-baseweb="tag"][aria-label^="Land,"]       { background: #b45309 !important; }
+[data-baseweb="tag"]:has([title="Multicolor"]), [data-baseweb="tag"][aria-label^="Multicolor,"] { background: linear-gradient(135deg, #fde047, #ec4899) !important; }
+[data-baseweb="tag"]:has([title="common"]),     [data-baseweb="tag"][aria-label^="common,"]     { background: #334155 !important; }
+[data-baseweb="tag"]:has([title="uncommon"]),   [data-baseweb="tag"][aria-label^="uncommon,"]   { background: #0284c7 !important; }
+[data-baseweb="tag"]:has([title="rare"]),       [data-baseweb="tag"][aria-label^="rare,"]       { background: #d97706 !important; }
+.selected-filter-pane {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 10px 14px;
+  border-radius: 10px; border: 3.5px solid #0a0b10; box-shadow: 5px 5px 0 #0a0b10;
+  margin: 4px 0 14px;
+}
+.selected-filter-title {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.92rem;
+  letter-spacing: 0.08em; text-transform: uppercase; color: #ffffff; margin-right: 4px;
+  text-shadow: -1.4px -1.4px 0 #000, 1.4px -1.4px 0 #000, -1.4px 1.4px 0 #000, 1.4px 1.4px 0 #000, 0 2px 0 #000;
+}
 .color-summary-bar {
   display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 4px 0 12px;
 }
@@ -371,6 +404,20 @@ def card_category(card_type: str) -> str:
     return "Other"
 
 
+def extract_colors(color_field: str, energy_cost: str) -> list[str]:
+    """Return every color a card belongs to. Multicolor cards count as all of their component colors simultaneously."""
+    c = str(color_field).strip()
+    if c != "Multicolor":
+        return [c] if c else []
+    found: list[str] = []
+    for sym in re.findall(r"\{([WUBRG])\}", str(energy_cost)):
+        cname = SYM_TO_COLOR[sym]
+        if cname not in found:
+            found.append(cname)
+    found.append("Multicolor")
+    return found
+
+
 @st.cache_data(show_spinner=False)
 def load_cards() -> pd.DataFrame:
     frames: list[pd.DataFrame] = []
@@ -394,22 +441,33 @@ def load_cards() -> pd.DataFrame:
     all_df["atk_num"] = all_df["power"].map(safe_int)
     all_df["base_type"] = all_df["card_type"].map(lambda t: str(t).split("—")[0].strip())
     all_df["category"] = all_df["card_type"].map(card_category)
+    all_df["color_list"] = [
+        extract_colors(c, cost) for c, cost in zip(all_df["color"], all_df["energy_cost"])
+    ]
     return all_df
 
 
 def interleave_by_color(df: pd.DataFrame, colors: list[str]) -> pd.DataFrame:
     """Round-robin interleave rows across selected colors so multi-color queries show all chosen colors on page 1."""
-    buckets = [df[df["color"] == c] for c in colors]
-    buckets = [b for b in buckets if len(b) > 0]
+    seen: set[int] = set()
+    buckets: list[list[int]] = []
+    for c in colors:
+        idxs = [i for i, cl in zip(df.index, df["color_list"]) if c in cl]
+        if idxs:
+            buckets.append(idxs)
     if len(buckets) <= 1:
         return df
-    indices: list[int] = []
+    ordered: list[int] = []
     max_len = max(len(b) for b in buckets)
     for i in range(max_len):
         for b in buckets:
-            if i < len(b):
-                indices.append(b.index[i])
-    return df.loc[indices]
+            if i < len(b) and b[i] not in seen:
+                ordered.append(b[i])
+                seen.add(b[i])
+    for i in df.index:
+        if i not in seen:
+            ordered.append(i)
+    return df.loc[ordered]
 
 
 def render_pips(text: str) -> str:
@@ -473,18 +531,30 @@ def render_card_html(row: pd.Series, flip_all: bool, uid: str, in_deck_qty: int 
     checked_attr = "checked" if flip_all else ""
     empty_cls = "" if pips_html else " empty"
 
+    # For Multicolor cards, blend their actual 2+ component colors simultaneously!
+    multi_style = ""
+    art_label = color
+    c_list = [c for c in row["color_list"] if c != "Multicolor"] if "color_list" in row else [color]
+    if color == "Multicolor" and len(c_list) >= 2:
+        t1 = COLOR_CARD_TONE.get(c_list[0], ("#fde047", "#eab308"))
+        t2 = COLOR_CARD_TONE.get(c_list[1], ("#ec4899", "#9d174d"))
+        multi_style = (
+            f' style="--c-bg1:{t1[0]};--c-bg2:{t2[1]};--c-art1:{t1[0]};--c-art2:{t2[1]};"'
+        )
+        art_label = " / ".join(c_list[:2])
+
     return (
         f'<label class="card-scene" for="{uid}">'
         f'<input class="flip-chk" type="checkbox" id="{uid}" {checked_attr} />'
         '<div class="card-flipper">'
-        f'<article class="card-face card-front {color} rarity-{rarity}">'
+        f'<article class="card-face card-front {color} rarity-{rarity}"{multi_style}>'
         '<div class="comic-header">'
         f'<div class="energy-burst{empty_cls}">{pips_html}</div>'
         f'<div class="title-plate"><span class="card-name" title="{name}">{name}</span></div>'
         "</div>"
         '<div class="art-panel">'
         f"{qty_pill}"
-        f'<div class="art-burst"><span>{color}<br/>ART</span></div>'
+        f'<div class="art-burst"><span>{html.escape(art_label)}<br/>ART</span></div>'
         '<div class="annex-stamp" title="Card Info">?</div>'
         "</div>"
         '<div class="comic-type-strip">'
@@ -560,9 +630,12 @@ def auto_generate_deck(
         pool = pool[pool["set"].isin(sets)]
 
     allowed_colors = set(chosen_colors) | {"Artifact"}
-    if len(chosen_colors) >= 2:
-        allowed_colors.add("Multicolor")
-    pool = pool[pool["color"].isin(allowed_colors)]
+    pool = pool[
+        pool["color_list"].map(
+            lambda cl: len([c for c in cl if c != "Multicolor"]) > 0
+            and all(c in allowed_colors for c in cl if c != "Multicolor")
+        )
+    ]
 
     # Split ratios by archetype
     if archetype == "Aggro (Low Curve)":
@@ -718,11 +791,38 @@ filtered = df.copy()
 if selected_sets:
     filtered = filtered[filtered["set"].isin(selected_sets)]
 if selected_colors:
-    filtered = filtered[filtered["color"].isin(selected_colors)]
+    sel_set = set(selected_colors)
+    filtered = filtered[filtered["color_list"].map(lambda cl: bool(sel_set.intersection(cl)))]
 if selected_types:
     filtered = filtered[filtered["category"].isin(selected_types)]
 if selected_rarities:
     filtered = filtered[filtered["rarity"].str.lower().isin(selected_rarities)]
+
+# Paint the sidebar Colors filter pane dynamically with the selected color(s)
+if selected_colors:
+    hexes = [COLOR_SOLID_HEX.get(c, "#263047") for c in selected_colors]
+    if len(hexes) == 1:
+        pane_bg = hexes[0]
+        sidebar_tint = f"linear-gradient(180deg, {hexes[0]}33 0%, #1a1e2b 42%)"
+    else:
+        stops = ", ".join(hexes)
+        pane_bg = f"linear-gradient(135deg, {stops})"
+        tint_stops = ", ".join(f"{h}38" for h in hexes)
+        sidebar_tint = f"linear-gradient(160deg, {tint_stops}, #1a1e2b 58%)"
+    st.html(
+        f"""<style>
+        section[data-testid="stSidebar"] > div:first-child {{
+          background: {sidebar_tint} !important;
+        }}
+        section[data-testid="stSidebar"] [data-testid="stMultiSelect"]:has([aria-label*="Colors"]) [data-baseweb="select"] > div {{
+          background: {pane_bg} !important;
+          border: 2.5px solid #0a0b10 !important;
+          box-shadow: 3px 3px 0 #0a0b10 !important;
+        }}
+        </style>"""
+    )
+else:
+    pane_bg = "#1a1e2b"
 if search.strip():
     q = search.strip()
     mask = (
@@ -779,15 +879,22 @@ with tab_gallery:
     if total_shown == 0:
         st.info("No cards match your current filters.")
     else:
-        # Color breakdown summary pills with matching color backgrounds & black outlined text
-        color_counts = filtered["color"].value_counts()
+        # Selected Filter Pane with selected color(s) as background + black-outlined labels!
         pills = []
         for col_name in color_options:
-            cnt = int(color_counts.get(col_name, 0))
+            cnt = int(filtered["color_list"].map(lambda cl, cn=col_name: cn in cl).sum())
             if cnt > 0:
                 bg, _ = COLOR_CHIP_STYLE[col_name]
                 pills.append(f'<span class="color-pill-stat" style="background:{bg};">{col_name}: {cnt}</span>')
-        st.html(f'<div class="color-summary-bar">{"".join(pills)}</div>')
+        filter_label = (
+            f"ACTIVE COLORS ({' + '.join(selected_colors)})"
+            if selected_colors else "ALL COLORS"
+        )
+        st.html(
+            f'<div class="selected-filter-pane" style="background:{pane_bg};">'
+            f'<span class="selected-filter-title">{html.escape(filter_label)}:</span>'
+            f'{"".join(pills)}</div>'
+        )
 
         total_pages = max(1, math.ceil(total_shown / page_size))
         col_info, col_page = st.columns([3, 1])
