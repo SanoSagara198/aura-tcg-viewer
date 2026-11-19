@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" width="750" height="1050">
+  <defs>
+    <!-- Outer Card Obsidian Base -->
+    <linearGradient id="obsidianBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181b24"/>
+      <stop offset="50%" stop-color="#0e1017"/>
+      <stop offset="100%" stop-color="#161922"/>
+    </linearGradient>
+
+    <!-- Color Identity Frame Gradient (White / Radiant Ivory-Gold theme; swap stops per CSV color) -->
+    <linearGradient id="frameTheme" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5efdc"/>
+      <stop offset="45%" stop-color="#e3d7b8"/>
+      <stop offset="100%" stop-color="#cbb98f"/>
+    </linearGradient>
+
+    <!-- Rare Foil Metallic Rim -->
+    <linearGradient id="rareGoldStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff0b8"/>
+      <stop offset="28%" stop-color="#d4af37"/>
+      <stop offset="55%" stop-color="#8c6b1c"/>
+      <stop offset="80%" stop-color="#f2d57e"/>
+      <stop offset="100%" stop-color="#b88e28"/>
+    </linearGradient>
+
+    <!-- Dark Beveled Bar Gradient -->
+    <linearGradient id="barSurface" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#222736"/>
+      <stop offset="100%" stop-color="#131620"/>
+    </linearGradient>
+
+    <!-- Energy Bar Accent Slash (Evolution of original card's slanted chrome header) -->
+    <linearGradient id="chromeSlash" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f7e3a1"/>
+      <stop offset="50%" stop-color="#c9a23b"/>
+      <stop offset="100%" stop-color="#7c5d19"/>
+    </linearGradient>
+
+    <!-- Art Placeholder Cosmic Seraph Glow -->
+    <radialGradient id="artBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#fff4cc"/>
+      <stop offset="28%" stop-color="#d4af37" stop-opacity="0.75"/>
+      <stop offset="65%" stop-color="#293148"/>
+      <stop offset="100%" stop-color="#0d1018"/>
+    </radialGradient>
+
+    <!-- Art Bottom Vignette -->
+    <linearGradient id="artVignette" x1="0%" y1="65%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d1018" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0d1018" stop-opacity="0.78"/>
+    </linearGradient>
+
+    <!-- Rules Box High-Contrast Parchment -->
+    <linearGradient id="rulesBoxBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbf8ef"/>
+      <stop offset="100%" stop-color="#efe8d5"/>
+    </linearGradient>
+
+    <!-- Pip Gradients -->
+    <radialGradient id="pipGeneric" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#e5e7eb"/>
+      <stop offset="100%" stop-color="#8b93a1"/>
+    </radialGradient>
+    <radialGradient id="pipWhite" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#fffdf4"/>
+      <stop offset="100%" stop-color="#dfd09e"/>
+    </radialGradient>
+
+    <!-- Rarity Gem (Rare Gold) -->
+    <linearGradient id="rarityRare" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff2b2"/>
+      <stop offset="45%" stop-color="#e5b83b"/>
+      <stop offset="100%" stop-color="#8c6111"/>
+    </linearGradient>
+
+    <!-- PT Shield Gradient -->
+    <linearGradient id="ptShieldBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#252b3b"/>
+      <stop offset="100%" stop-color="#11141d"/>
+    </linearGradient>
+
+    <!-- Soft Drop Shadow -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+
+    <clipPath id="artClip">
+      <rect x="44" y="124" width="662" height="442" rx="10"/>
+    </clipPath>
+  </defs>
+
+  <!-- 1. OUTER OBSIDIAN CARD BODY -->
+  <g id="CardBase">
+    <rect x="0" y="0" width="750" height="1050" rx="34" fill="url(#obsidianBase)"/>
+    <!-- Outer Metallic Rim -->
+    <rect x="8" y="8" width="734" height="1034" rx="28" fill="none" stroke="url(#rareGoldStroke)" stroke-width="3" opacity="0.85"/>
+    <!-- Inner Color-Identity Frame -->
+    <rect x="24" y="24" width="702" height="944" rx="20" fill="url(#frameTheme)" stroke="url(#rareGoldStroke)" stroke-width="2.5"/>
+    <!-- Corner Geometric Accents -->
+    <path d="M24 64 L24 44 Q24 24 44 24 L64 24" fill="none" stroke="#fff6d6" stroke-width="2" opacity="0.7"/>
+    <path d="M686 24 L706 24 Q726 24 726 44 L726 64" fill="none" stroke="#fff6d6" stroke-width="2" opacity="0.7"/>
+  </g>
+
+  <!-- 2. TOP HEADER BAR (Name + Slanted Energy Cost Tray) -->
+  <g id="HeaderBar" filter="url(#dropShadow)">
+    <!-- Main Dark Plate -->
+    <rect x="38" y="38" width="674" height="72" rx="12" fill="url(#barSurface)" stroke="url(#rareGoldStroke)" stroke-width="2"/>
+    <!-- Slanted Energy Accent Wing (Evolved from original Ash Cutter angled header) -->
+    <polygon points="548,39 700,39 711,50 711,98 700,109 524,109" fill="#1d2230" opacity="0.95"/>
+    <line x1="548" y1="39" x2="524" y2="109" stroke="url(#chromeSlash)" stroke-width="3"/>
+
+    <!-- Card Name -->
+    <text id="TitleName" x="58" y="85" font-family="'Segoe UI', Georgia, serif" font-size="33" font-weight="800" fill="#fbf7eb" letter-spacing="0.6">Haloed Seraph</text>
+
+    <!-- Energy Cost Pips ({2}{W}) -->
+    <g id="EnergyCost">
+      <!-- {2} Generic Pip -->
+      <circle cx="614" cy="74" r="22" fill="url(#pipGeneric)" stroke="#0d1017" stroke-width="2.5"/>
+      <circle cx="614" cy="74" r="18.5" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.45"/>
+      <text x="614" y="83" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="25" font-weight="800" fill="#11141d">2</text>
+
+      <!-- {W} White Aura Pip -->
+      <circle cx="670" cy="74" r="22" fill="url(#pipWhite)" stroke="#0d1017" stroke-width="2.5"/>
+      <circle cx="670" cy="74" r="18.5" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.7"/>
+      <!-- Sunburst Vector Glyph for White Aura -->
+      <g transform="translate(670,74)" fill="#7a5b14">
+        <circle cx="0" cy="0" r="6.5"/>
+        <path d="M0,-13 L2.2,-8.2 L-2.2,-8.2 Z M0,13 L2.2,8.2 L-2.2,8.2 Z M-13,0 L-8.2,2.2 L-8.2,-2.2 Z M13,0 L8.2,2.2 L8.2,-2.2 Z M-9.2,-9.2 L-4.5,-7.2 L-7.2,-4.5 Z M9.2,-9.2 L7.2,-4.5 L4.5,-7.2 Z M-9.2,9.2 L-7.2,4.5 L-4.5,7.2 Z M9.2,9.2 L4.5,7.2 L7.2,4.5 Z"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- 3. ARTWORK WINDOW -->
+  <g id="ArtWindow">
+    <!-- Outer Bevel -->
+    <rect x="40" y="120" width="670" height="450" rx="12" fill="#0d1018" stroke="url(#rareGoldStroke)" stroke-width="2.5"/>
+    <!-- Clipped Art Content (Placeholder Vector Illustration of Haloed Seraph) -->
+    <g clip-path="url(#artClip)">
+      <rect x="44" y="124" width="662" height="442" fill="url(#artBg)"/>
+      <!-- Atmospheric Rays -->
+      <g opacity="0.22" fill="#fff7d6">
+        <polygon points="375,280 120,124 220,124"/>
+        <polygon points="375,280 530,124 630,124"/>
+        <polygon points="375,280 44,240 44,330"/>
+        <polygon points="375,280 706,240 706,330"/>
+      </g>
+      <!-- Halo Rings -->
+      <circle cx="375" cy="272" r="118" fill="none" stroke="#fff3c4" stroke-width="3" opacity="0.75"/>
+      <circle cx="375" cy="272" r="96" fill="none" stroke="#f2cf6d" stroke-width="1.5" stroke-dasharray="10 7" opacity="0.8"/>
+      <!-- Stylized Seraph Wings Silhouette -->
+      <path d="M375,320 C315,245 205,215 115,245 C175,275 210,315 245,355 C195,340 155,345 125,370 C190,388 265,400 340,385 Z" fill="#f7eed3" opacity="0.9"/>
+      <path d="M375,320 C435,245 545,215 635,245 C575,275 540,315 505,355 C555,340 595,345 625,370 C560,388 485,400 410,385 Z" fill="#f7eed3" opacity="0.9"/>
+      <!-- Core Seraph Figure -->
+      <path d="M375,215 L402,295 L375,470 L348,295 Z" fill="#1b2030" stroke="#f2cf6d" stroke-width="2"/>
+      <circle cx="375" cy="240" r="18" fill="#fff9e6"/>
+      <!-- Ground Mist & Bottom Vignette -->
+      <rect x="44" y="124" width="662" height="442" fill="url(#artVignette)"/>
+      <text x="375" y="548" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="600" fill="#e5d9b6" opacity="0.65" letter-spacing="2">CARD ARTWORK VIEWPORT (662 × 442 · SCALE: CROP)</text>
+    </g>
+
+    <!-- Floating AnnexInfo '?' Quick-Inspect Button (Preserved from original card!) -->
+    <g id="AnnexInfoBtn" filter="url(#dropShadow)">
+      <circle cx="678" cy="154" r="20" fill="#121621" fill-opacity="0.82" stroke="url(#rareGoldStroke)" stroke-width="2"/>
+      <text x="678" y="162" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="23" font-weight="800" fill="#f7e3a1">?</text>
+    </g>
+  </g>
+
+  <!-- 4. TYPE LINE & RARITY EMBLEM BAR -->
+  <g id="TypeBar" filter="url(#dropShadow)">
+    <rect x="38" y="578" width="674" height="54" rx="10" fill="url(#barSurface)" stroke="url(#rareGoldStroke)" stroke-width="2"/>
+    <!-- Type Line Text -->
+    <text id="CardType" x="58" y="613" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="700" fill="#f3eee0" letter-spacing="0.4">Casting — Spirit</text>
+
+    <!-- Set + Rarity Emblem (Right side) -->
+    <g id="RarityEmblem">
+      <!-- Set Pill -->
+      <rect x="554" y="590" width="90" height="30" rx="6" fill="#2b3245" stroke="#d4af37" stroke-width="1.2"/>
+      <text x="599" y="611" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="800" fill="#f2d57e" letter-spacing="1.4">ALPHA</text>
+      <!-- Rarity Prism Gem (Rare = Gold, Uncommon = Silver, Common = Slate) -->
+      <polygon points="676,586 694,605 676,624 658,605" fill="url(#rarityRare)" stroke="#0d1017" stroke-width="2"/>
+      <polygon points="676,593 686,605 676,617 666,605" fill="#fff7d1" opacity="0.65"/>
+    </g>
+  </g>
+
+  <!-- 5. HIGH-CONTRAST RULES & FLAVOR TEXT BOX -->
+  <g id="RulesBox">
+    <rect x="42" y="642" width="666" height="306" rx="12" fill="url(#rulesBoxBg)" stroke="#b39a62" stroke-width="2.5"/>
+    <!-- Subtle Inner Frame Rule -->
+    <rect x="50" y="650" width="650" height="290" rx="8" fill="none" stroke="#c8b382" stroke-width="1" opacity="0.6"/>
+
+    <!-- Subtle Aura Watermark Behind Text -->
+    <g transform="translate(375,785)" opacity="0.065" fill="none" stroke="#7a5b14" stroke-width="5">
+      <circle cx="0" cy="0" r="88"/>
+      <polygon points="0,-105 28,-28 105,0 28,28 0,105 -28,28 -105,0 -28,-28"/>
+      <circle cx="0" cy="0" r="24"/>
+    </g>
+
+    <!-- Rules Text (High Contrast Dark Ink on Warm Parchment) -->
+    <g id="RulesText" font-family="'Segoe UI', system-ui, sans-serif" font-size="22.5" fill="#181612">
+      <text x="66" y="688" font-weight="600">This Casting can only be responded to by Castings</text>
+      <text x="66" y="717" font-weight="600">that can fly.</text>
+
+      <text x="66" y="760">Whenever you gain <tspan font-weight="700" fill="#7c560d">Aura</tspan>, this Casting gets <tspan font-weight="700">+1/+0</tspan></text>
+      <text x="66" y="789">until end of Round.</text>
+
+      <text x="66" y="832">When this Casting enters play, <tspan font-weight="700">Turn</tspan> target Casting</text>
+      <text x="66" y="861">an opponent controls.</text>
+    </g>
+
+    <!-- Divider between Rules & Flavor -->
+    <line x1="68" y1="882" x2="556" y2="882" stroke="#b9a474" stroke-width="1.5" opacity="0.75"/>
+
+    <!-- Flavor Text -->
+    <text id="FlavorText" x="66" y="914" font-family="Georgia, 'Times New Roman', serif" font-size="18.5" font-style="italic" fill="#524938">“Light endures long after the banner falls.”</text>
+  </g>
+
+  <!-- 6. POWER / TOUGHNESS SHIELD (Bottom-Right Corner, Hidden for Non-Castings) -->
+  <g id="PTBadge" filter="url(#dropShadow)">
+    <polygon points="576,906 694,906 716,928 716,972 694,992 576,992 554,970 554,928" fill="url(#ptShieldBg)" stroke="url(#rareGoldStroke)" stroke-width="3"/>
+    <polygon points="581,913 689,913 707,931 707,967 689,985 581,985 563,967 563,931" fill="none" stroke="#fff3c4" stroke-width="1" opacity="0.35"/>
+    <text id="PTValue" x="635" y="964" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="40" font-weight="900" fill="#fff9e6" letter-spacing="2">3 / 3</text>
+  </g>
+
+  <!-- 7. BOTTOM COLLECTOR METADATA FOOTER -->
+  <g id="FooterBar">
+    <!-- Color Dot -->
+    <circle cx="48" cy="1002" r="7" fill="url(#pipWhite)" stroke="#d4af37" stroke-width="1.5"/>
+    <text id="EditionNumber" x="66" y="1008" font-family="'Segoe UI', sans-serif" font-size="17" font-weight="700" fill="#c7ccd9" letter-spacing="1.2">ALPHA · 1ST EDITION · RARE</text>
+    <text id="CardNumber" x="524" y="1008" text-anchor="end" font-family="'Segoe UI', monospace" font-size="18" font-weight="700" fill="#f2d57e" letter-spacing="0.8">008 / 350</text>
+  </g>
+</svg>

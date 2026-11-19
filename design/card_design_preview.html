@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aura TCG — Card Design System (SVG Blueprint)</title>
+  <style>
+    :root {
+      --bg: #0b0e15;
+      --panel: #131722;
+      --border: #252c3f;
+      --text: #eef1f7;
+      --muted: #9aa3b8;
+      --gold: #d4af37;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at top, #171d2e 0%, var(--bg) 60%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 28px 24px 64px;
+    }
+    .container { max-width: 1220px; margin: 0 auto; }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+    h1 { font-size: 1.55rem; color: var(--gold); letter-spacing: 0.04em; }
+    .subtitle { color: var(--muted); font-size: 0.9rem; margin-top: 4px; }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      padding: 14px 16px;
+      border-radius: 12px;
+      margin-bottom: 28px;
+      align-items: center;
+    }
+    .control-group { display: flex; align-items: center; gap: 6px; }
+    label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    select, button {
+      background: #0d1018;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 7px 11px;
+      font-size: 0.88rem;
+      cursor: pointer;
+    }
+    select:focus, button:hover { border-color: var(--gold); }
+    .stage {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 32px;
+      align-items: start;
+      justify-items: center;
+    }
+    .card-slot {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      max-width: 440px;
+    }
+    .slot-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+    .svg-wrap {
+      width: 100%;
+      aspect-ratio: 5 / 7;
+      border-radius: 18px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.72), 0 0 0 1px rgba(212, 175, 55, 0.16);
+      overflow: hidden;
+      background: #0d1017;
+    }
+    .svg-wrap svg, .svg-wrap object { width: 100%; height: 100%; display: block; }
+    .palette-grid {
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+      gap: 10px;
+    }
+    .swatch {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      cursor: pointer;
+      transition: transform 0.12s ease, border-color 0.12s ease;
+    }
+    .swatch:hover, .swatch.active { transform: translateY(-2px); border-color: var(--gold); }
+    .swatch-bar { height: 26px; border-radius: 6px; margin-bottom: 8px; border: 1px solid rgba(255,255,255,0.18); }
+    .swatch-name { font-size: 0.84rem; font-weight: 700; }
+    .swatch-hex { font-size: 0.72rem; color: var(--muted); font-family: monospace; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>AURA TCG — Card Frame Design System</h1>
+        <p class="subtitle">750 × 1050 (5:7 Standard TCG Ratio) · Figma-ready Vector Layers · Direct 1:1 Roblox SurfaceGui Blueprint</p>
+      </div>
+    </header>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="preset">Sample CSV Card</label>
+        <select id="preset">
+          <option value="seraph">Haloed Seraph (White · Rare · Casting)</option>
+          <option value="manta">Horizon Manta (Blue · Uncommon · Long 346-char Rules)</option>
+          <option value="jaguar">Timber Jaguar (Green · Uncommon · Casting)</option>
+          <option value="ember">Cinder Surge (Red · Common · Mudra / Spell)</option>
+          <option value="void">Umbral Pact (Black · Rare · Seal)</option>
+          <option value="relic">Chrono Astrolabe (Artifact · Rare · Artifact)</option>
+          <option value="land">Sunlit Sanctuary (Land · Common · Land)</option>
+          <option value="multi">Prismatic Archon (Multicolor · Rare · Casting)</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="rarity">Rarity</label>
+        <select id="rarity">
+          <option value="rare">Rare (Gold Foil)</option>
+          <option value="uncommon">Uncommon (Silver Chrome)</option>
+          <option value="common">Common (Obsidian Iron)</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="setSel">Set</label>
+        <select id="setSel">
+          <option value="ALPHA">ALPHA</option>
+          <option value="BETA">BETA</option>
+          <option value="DELTA">DELTA</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="card-slot">
+        <div class="slot-label">Front Face (Top SurfaceGui · 750×1050)</div>
+        <div class="svg-wrap" id="frontHost"></div>
+      </div>
+      <div class="card-slot">
+        <div class="slot-label">Rear Face (Bottom SurfaceGui · 750×1050)</div>
+        <div class="svg-wrap">
+          <object type="image/svg+xml" data="card_rear.svg" aria-label="Aura TCG Card Back"></object>
+        </div>
+      </div>
+    </div>
+
+    <div class="palette-grid" id="paletteGrid"></div>
+  </div>
+
+  <script>
+    const THEMES = {
+      White:      { frame: ['#f5efdc','#e3d7b8','#cbb98f'], box: ['#fbf8ef','#efe8d5'], ink: '#181612', accent: '#d4af37', art: ['#fff4cc','#d4af37','#293148'] },
+      Blue:       { frame: ['#2a5c8f','#193b61','#0f243d'], box: ['#ebf3fc','#d7e5f5'], ink: '#101a28', accent: '#60a5fa', art: ['#bae6fd','#2563eb','#0c1930'] },
+      Black:      { frame: ['#3f344d','#261f30','#16111c'], box: ['#ede9f2','#dcd4e6'], ink: '#16121d', accent: '#a78bfa', art: ['#c4b5fd','#5b21b6','#0f0a17'] },
+      Red:        { frame: ['#8f3328','#631e17','#3d110d'], box: ['#fcf0ed','#f2dcd6'], ink: '#22100d', accent: '#f87171', art: ['#fed7aa','#dc2626','#260b09'] },
+      Green:      { frame: ['#29633c','#1a4227','#102b18'], box: ['#edf7f0','#d8ebde'], ink: '#0f1f14', accent: '#4ade80', art: ['#bbf7d0','#16a34a','#0b1f12'] },
+      Artifact:   { frame: ['#737d8c','#4c5461','#323842'], box: ['#f1f3f6','#dfe4eb'], ink: '#14181f', accent: '#cbd5e1', art: ['#e2e8f0','#64748b','#171c24'] },
+      Land:       { frame: ['#7a654a','#524330','#33291d'], box: ['#f5efe6','#e6dac8'], ink: '#1f1912', accent: '#d6b47e', art: ['#fde68a','#92400e','#1c150e'] },
+      Multicolor: { frame: ['#b89232','#7a5d1c','#47350e'], box: ['#fcf8ec','#efe6cc'], ink: '#1c170b', accent: '#f5d061', art: ['#fef08a','#c084fc','#1c1429'] }
+    };
+
+    const RARITIES = {
+      common:   { rim: ['#6b7280','#4b5563','#374151'], gem: ['#9ca3af','#4b5563','#1f2937'], label: 'COMMON' },
+      uncommon: { rim: ['#f1f5f9','#94a3b8','#475569'], gem: ['#e0f2fe','#7dd3fc','#0284c7'], label: 'UNCOMMON' },
+      rare:     { rim: ['#fff0b8','#d4af37','#8c6b1c'], gem: ['#fff2b2','#e5b83b','#8c6111'], label: 'RARE' }
+    };
+
+    const CARDS = {
+      seraph: {
+        name: 'Haloed Seraph', color: 'White', rarity: 'rare', set: 'ALPHA', num: '008 / 350',
+        cost: ['2','W'], type: 'Casting — Spirit', pt: '3 / 3',
+        rules: [
+          'This Casting can only be responded to by Castings that can fly.',
+          'Whenever you gain Aura, this Casting gets +1/+0 until end of Round.',
+          'When this Casting enters play, Turn target Casting an opponent controls.'
+        ],
+        flavor: '“Light endures long after the banner falls.”'
+      },
+      manta: {
+        name: 'Horizon Manta', color: 'Blue', rarity: 'uncommon', set: 'BETA', num: '064 / 350',
+        cost: ['2','U','U'], type: 'Creature — Leviathan', pt: '3 / 4',
+        rules: [
+          'This creature cannot be the target of Techniques your opponents play during your Round.',
+          'When this creature enters play, look at the top two cards of your deck, put one on top and the other on the bottom.',
+          'Remove this card in your graveyard from the game and pay {1}{U}: Return target creature to its owner’s hand. Play only during your Main phase.'
+        ],
+        flavor: ''
+      },
+      jaguar: {
+        name: 'Timber Jaguar', color: 'Green', rarity: 'uncommon', set: 'DELTA', num: '214 / 350',
+        cost: ['2','G','G'], type: 'Creature — Feline', pt: '4 / 3',
+        rules: [
+          'This creature cannot be the target of Blue or Black Techniques during your Round.',
+          'When this creature dies, search your deck for a basic Land card, reveal it, put it into your hand, then shuffle.',
+          'Remove this card in your graveyard and pay {2}{G}: Target creature gets +3/+3 until end of Round.'
+        ],
+        flavor: '“Silent as moss, swift as the falling branch.”'
+      },
+      ember: {
+        name: 'Cinder Surge', color: 'Red', rarity: 'common', set: 'ALPHA', num: '172 / 350',
+        cost: ['1','R'], type: 'Mudra', pt: '',
+        rules: [
+          'Cinder Surge deals 3 damage to target Casting or player.',
+          'If this is an Odd Round, you may Pick Up a card, then Fumble a card.'
+        ],
+        flavor: '“Spark first; ask what remains after.”'
+      },
+      void: {
+        name: 'Umbral Pact', color: 'Black', rarity: 'rare', set: 'BETA', num: '119 / 350',
+        cost: ['1','B','B'], type: 'Seal', pt: '',
+        rules: [
+          'At the beginning of your Maintenance phase, you lose 1 Aura and Pick Up an additional card.',
+          'Whenever a Casting an opponent controls Folds, Farm +1 Aura.'
+        ],
+        flavor: '“Power always keeps a ledger.”'
+      },
+      relic: {
+        name: 'Chrono Astrolabe', color: 'Artifact', rarity: 'rare', set: 'DELTA', num: '302 / 350',
+        cost: ['3'], type: 'Artifact', pt: '',
+        rules: [
+          '{TURN}: Add one Energy of any color to your pool.',
+          '{2}, {TURN}: Unturn another target Artifact or Land you control.'
+        ],
+        flavor: '“Time bends to those who chart its tides.”'
+      },
+      land: {
+        name: 'Sunlit Sanctuary', color: 'Land', rarity: 'common', set: 'ALPHA', num: '341 / 350',
+        cost: [], type: 'Land', pt: '',
+        rules: [
+          'Sunlit Sanctuary enters play Turned.',
+          '{TURN}: Add {W} or {G} to your Energy pool.'
+        ],
+        flavor: '“Where marble pillars meet the ancient canopy.”'
+      },
+      multi: {
+        name: 'Prismatic Archon', color: 'Multicolor', rarity: 'rare', set: 'DELTA', num: '328 / 350',
+        cost: ['2','W','U'], type: 'Creature — Archon', pt: '4 / 5',
+        rules: [
+          'This creature can only be responded to by creatures that can fly.',
+          'Whenever Prismatic Archon confronts, Pick Up a card and Farm +2 Aura.'
+        ],
+        flavor: '“Five streams of Aura, bound into a single vow.”'
+      }
+    };
+
+    const PIP_COLORS = {
+      W: ['#fffdf4','#dfd09e','#523d0c'],
+      U: ['#93c5fd','#1d4ed8','#ffffff'],
+      B: ['#c4b5fd','#3b2667','#f5f3ff'],
+      R: ['#fca5a5','#b91c1c','#ffffff'],
+      G: ['#86efac','#15803d','#ffffff']
+    };
+
+    let currentColor = 'White';
+
+    function wrapLines(text, maxChars) {
+      const words = text.split(' ');
+      const lines = [];
+      let cur = '';
+      for (const w of words) {
+        if ((cur + ' ' + w).trim().length > maxChars) {
+          lines.push(cur.trim());
+          cur = w;
+        } else {
+          cur = (cur + ' ' + w).trim();
+        }
+      }
+      if (cur) lines.push(cur.trim());
+      return lines;
+    }
+
+    function renderCard() {
+      const card = CARDS[document.getElementById('preset').value];
+      const rarityKey = document.getElementById('rarity').value;
+      const setCode = document.getElementById('setSel').value;
+      const theme = THEMES[currentColor];
+      const rar = RARITIES[rarityKey];
+
+      const totalChars = card.rules.join(' ').length + (card.flavor ? card.flavor.length : 0);
+      const fontSize = totalChars > 260 ? 18.5 : totalChars > 180 ? 20.5 : 22.5;
+      const maxChars = totalChars > 260 ? 58 : totalChars > 180 ? 52 : 47;
+      const lineStep = fontSize * 1.28;
+
+      let y = 682;
+      let rulesSvg = '';
+      card.rules.forEach((para, idx) => {
+        const lines = wrapLines(para, maxChars);
+        lines.forEach(line => {
+          rulesSvg += `<text x="64" y="${y}" font-size="${fontSize}" font-weight="${idx === 0 ? 600 : 400}" fill="${theme.ink}">${line}</text>`;
+          y += lineStep;
+        });
+        y += 8;
+      });
+
+      let flavorSvg = '';
+      if (card.flavor) {
+        const fy = Math.max(y + 6, 892);
+        flavorSvg = `
+          <line x1="66" y1="${fy - 22}" x2="${card.pt ? 544 : 684}" y2="${fy - 22}" stroke="${theme.accent}" stroke-width="1.4" opacity="0.55"/>
+          <text x="64" y="${fy + 6}" font-family="Georgia, serif" font-size="18" font-style="italic" fill="${theme.ink}" opacity="0.72">${card.flavor}</text>
+        `;
+      }
+
+      // Render Energy Pips right-to-left
+      let pipsSvg = '';
+      const count = card.cost.length;
+      const startX = 678 - (count - 1) * 50;
+      card.cost.forEach((sym, i) => {
+        const cx = startX + i * 50;
+        const pc = PIP_COLORS[sym] || ['#e5e7eb','#8b93a1','#11141d'];
+        pipsSvg += `
+          <circle cx="${cx}" cy="74" r="21" fill="${pc[1]}" stroke="#0d1017" stroke-width="2.5"/>
+          <circle cx="${cx}" cy="74" r="17.5" fill="none" stroke="${pc[0]}" stroke-width="1.5" opacity="0.75"/>
+          <text x="${cx}" y="82" text-anchor="middle" font-size="22" font-weight="800" fill="${pc[2]}">${sym}</text>
+        `;
+      });
+
+      const ptSvg = card.pt ? `
+        <g id="PTBadge" filter="url(#ds)">
+          <polygon points="576,906 694,906 716,928 716,972 694,992 576,992 554,970 554,928" fill="#171b26" stroke="url(#rimGrad)" stroke-width="3"/>
+          <text x="635" y="964" text-anchor="middle" font-size="40" font-weight="900" fill="#fff9e6" letter-spacing="2">${card.pt}</text>
+        </g>` : '';
+
+      const slashX = Math.min(548, startX - 54);
+      const svg = `
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" font-family="'Segoe UI', system-ui, sans-serif">
+        <defs>
+          <linearGradient id="frameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="${theme.frame[0]}"/>
+            <stop offset="50%" stop-color="${theme.frame[1]}"/>
+            <stop offset="100%" stop-color="${theme.frame[2]}"/>
+          </linearGradient>
+          <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="${rar.rim[0]}"/>
+            <stop offset="50%" stop-color="${rar.rim[1]}"/>
+            <stop offset="100%" stop-color="${rar.rim[2]}"/>
+          </linearGradient>
+          <linearGradient id="boxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="${theme.box[0]}"/>
+            <stop offset="100%" stop-color="${theme.box[1]}"/>
+          </linearGradient>
+          <radialGradient id="artGrad" cx="50%" cy="42%" r="65%">
+            <stop offset="0%" stop-color="${theme.art[0]}"/>
+            <stop offset="38%" stop-color="${theme.art[1]}" stop-opacity="0.78"/>
+            <stop offset="100%" stop-color="${theme.art[2]}"/>
+          </radialGradient>
+          <linearGradient id="gemGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="${rar.gem[0]}"/>
+            <stop offset="50%" stop-color="${rar.gem[1]}"/>
+            <stop offset="100%" stop-color="${rar.gem[2]}"/>
+          </linearGradient>
+          <filter id="ds" x="-10%" y="-10%" width="125%" height="125%">
+            <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.45"/>
+          </filter>
+        </defs>
+        <rect x="0" y="0" width="750" height="1050" rx="34" fill="#10131c"/>
+        <rect x="8" y="8" width="734" height="1034" rx="28" fill="none" stroke="url(#rimGrad)" stroke-width="3" opacity="0.9"/>
+        <rect x="24" y="24" width="702" height="944" rx="20" fill="url(#frameGrad)" stroke="url(#rimGrad)" stroke-width="2.5"/>
+
+        <g filter="url(#ds)">
+          <rect x="38" y="38" width="674" height="72" rx="12" fill="#171c28" stroke="url(#rimGrad)" stroke-width="2"/>
+          ${count ? `<line x1="${slashX}" y1="39" x2="${slashX - 24}" y2="109" stroke="url(#rimGrad)" stroke-width="2.5" opacity="0.8"/>` : ''}
+          <text x="56" y="85" font-size="32" font-weight="800" fill="#fbf7eb">${card.name}</text>
+          ${pipsSvg}
+        </g>
+
+        <rect x="40" y="120" width="670" height="450" rx="12" fill="#0d1018" stroke="url(#rimGrad)" stroke-width="2.5"/>
+        <rect x="44" y="124" width="662" height="442" rx="10" fill="url(#artGrad)"/>
+        <circle cx="375" cy="310" r="108" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.35"/>
+        <polygon points="375,188 410,275 498,310 410,345 375,432 340,345 252,310 340,275" fill="#ffffff" opacity="0.22"/>
+        <text x="375" y="544" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff" opacity="0.65" letter-spacing="2">${currentColor.toUpperCase()} ARTWORK · 662 × 442</text>
+
+        <g filter="url(#ds)">
+          <circle cx="678" cy="154" r="20" fill="#121621" fill-opacity="0.82" stroke="url(#rimGrad)" stroke-width="2"/>
+          <text x="678" y="162" text-anchor="middle" font-size="22" font-weight="800" fill="${rar.rim[0]}">?</text>
+        </g>
+
+        <g filter="url(#ds)">
+          <rect x="38" y="578" width="674" height="54" rx="10" fill="#171c28" stroke="url(#rimGrad)" stroke-width="2"/>
+          <text x="56" y="613" font-size="23" font-weight="700" fill="#f3eee0">${card.type}</text>
+          <rect x="554" y="590" width="90" height="30" rx="6" fill="#262d40" stroke="url(#rimGrad)" stroke-width="1.2"/>
+          <text x="599" y="611" text-anchor="middle" font-size="15" font-weight="800" fill="${rar.rim[0]}" letter-spacing="1.4">${setCode}</text>
+          <polygon points="676,586 694,605 676,624 658,605" fill="url(#gemGrad)" stroke="#0d1017" stroke-width="2"/>
+        </g>
+
+        <rect x="42" y="642" width="666" height="306" rx="12" fill="url(#boxGrad)" stroke="${theme.accent}" stroke-width="2"/>
+        ${rulesSvg}
+        ${flavorSvg}
+        ${ptSvg}
+
+        <circle cx="48" cy="1002" r="7" fill="${theme.accent}"/>
+        <text x="66" y="1008" font-size="17" font-weight="700" fill="#c7ccd9" letter-spacing="1.1">${setCode} · 1ST EDITION · ${rar.label}</text>
+        <text x="${card.pt ? 524 : 706}" y="1008" text-anchor="end" font-size="18" font-weight="700" fill="${rar.rim[0]}">${card.num}</text>
+      </svg>`;
+
+      document.getElementById('frontHost').innerHTML = svg;
+    }
+
+    function buildSwatches() {
+      const grid = document.getElementById('paletteGrid');
+      grid.innerHTML = '';
+      Object.entries(THEMES).forEach(([name, t]) => {
+        const div = document.createElement('div');
+        div.className = 'swatch' + (name === currentColor ? ' active' : '');
+        div.innerHTML = `
+          <div class="swatch-bar" style="background: linear-gradient(135deg, ${t.frame[0]}, ${t.frame[2]})"></div>
+          <div class="swatch-name">${name}</div>
+          <div class="swatch-hex">${t.frame[0]} → ${t.frame[2]}</div>
+        `;
+        div.onclick = () => { currentColor = name; buildSwatches(); renderCard(); };
+        grid.appendChild(div);
+      });
+    }
+
+    document.getElementById('preset').onchange = (e) => {
+      const c = CARDS[e.target.value];
+      currentColor = c.color;
+      document.getElementById('rarity').value = c.rarity;
+      document.getElementById('setSel').value = c.set;
+      buildSwatches();
+      renderCard();
+    };
+    document.getElementById('rarity').onchange = renderCard;
+    document.getElementById('setSel').onchange = renderCard;
+
+    buildSwatches();
+    renderCard();
+  </script>
+</body>
+</html>

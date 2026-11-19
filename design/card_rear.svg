@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 1050" width="750" height="1050">
+  <defs>
+    <!-- Outer Obsidian Rim -->
+    <linearGradient id="rearBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141824"/>
+      <stop offset="50%" stop-color="#0a0c14"/>
+      <stop offset="100%" stop-color="#131722"/>
+    </linearGradient>
+
+    <!-- Inner Cosmic Radial Glow -->
+    <radialGradient id="cosmicGlow" cx="50%" cy="50%" r="58%">
+      <stop offset="0%" stop-color="#283252"/>
+      <stop offset="42%" stop-color="#151b30"/>
+      <stop offset="80%" stop-color="#0d111f"/>
+      <stop offset="100%" stop-color="#090b12"/>
+    </radialGradient>
+
+    <!-- Gold Filigree Metallic Gradient -->
+    <linearGradient id="goldFiligree" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff2bd"/>
+      <stop offset="25%" stop-color="#d8b243"/>
+      <stop offset="52%" stop-color="#8b691c"/>
+      <stop offset="78%" stop-color="#f3d67e"/>
+      <stop offset="100%" stop-color="#a88022"/>
+    </linearGradient>
+
+    <!-- Center Radiant Core -->
+    <radialGradient id="auraCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff9db"/>
+      <stop offset="40%" stop-color="#e5bd4b"/>
+      <stop offset="80%" stop-color="#8c6216" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#1c2238" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- 5 Aura Energy Node Gradients -->
+    <radialGradient id="orbW" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#fffdf4"/>
+      <stop offset="100%" stop-color="#dfd09e"/>
+    </radialGradient>
+    <radialGradient id="orbU" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </radialGradient>
+    <radialGradient id="orbB" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#c4b5fd"/>
+      <stop offset="100%" stop-color="#3b2667"/>
+    </radialGradient>
+    <radialGradient id="orbR" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#fca5a5"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </radialGradient>
+    <radialGradient id="orbG" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#86efac"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </radialGradient>
+
+    <!-- Glow Filter -->
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 1. OUTER CARD BODY -->
+  <g id="RearCardBase">
+    <rect x="0" y="0" width="750" height="1050" rx="34" fill="url(#rearBase)"/>
+    <!-- Outer Gold Hairline -->
+    <rect x="14" y="14" width="722" height="1022" rx="26" fill="none" stroke="url(#goldFiligree)" stroke-width="2.5" opacity="0.85"/>
+    <!-- Inner Cosmic Panel -->
+    <rect x="30" y="30" width="690" height="990" rx="18" fill="url(#cosmicGlow)" stroke="url(#goldFiligree)" stroke-width="3.5"/>
+    <!-- Recessed Inner Decorative Border -->
+    <rect x="46" y="46" width="658" height="958" rx="12" fill="none" stroke="url(#goldFiligree)" stroke-width="1.2" opacity="0.55"/>
+  </g>
+
+  <!-- 2. SYMMETRICAL CORNER FILIGREE BRACKETS -->
+  <g id="CornerFiligree" fill="none" stroke="url(#goldFiligree)" stroke-width="2.5">
+    <!-- Top-Left -->
+    <path d="M46,136 L46,60 L136,60 M56,112 L56,70 L112,70"/>
+    <polygon points="74,74 88,88 74,102 60,88" fill="url(#goldFiligree)" opacity="0.85"/>
+    <!-- Top-Right -->
+    <path d="M704,136 L704,60 L614,60 M694,112 L694,70 L638,70"/>
+    <polygon points="676,74 690,88 676,102 662,88" fill="url(#goldFiligree)" opacity="0.85"/>
+    <!-- Bottom-Left -->
+    <path d="M46,914 L46,990 L136,990 M56,938 L56,980 L112,980"/>
+    <polygon points="74,976 88,962 74,948 60,962" fill="url(#goldFiligree)" opacity="0.85"/>
+    <!-- Bottom-Right -->
+    <path d="M704,914 L704,990 L614,990 M694,938 L694,980 L638,980"/>
+    <polygon points="676,976 690,962 676,948 662,962" fill="url(#goldFiligree)" opacity="0.85"/>
+  </g>
+
+  <!-- 3. SUBTLE GEOMETRIC BACKGROUND LATTICE -->
+  <g id="ArcaneLattice" fill="none" stroke="#d4af37" opacity="0.16">
+    <ellipse cx="375" cy="525" rx="285" ry="410" stroke-width="1.5"/>
+    <ellipse cx="375" cy="525" rx="265" ry="390" stroke-width="1" stroke-dasharray="6 8"/>
+    <line x1="375" y1="90" x2="375" y2="960" stroke-width="1"/>
+    <line x1="85" y1="525" x2="665" y2="525" stroke-width="1"/>
+  </g>
+
+  <!-- 4. CENTRAL AURA SIGIL & 5-COLOR WHEEL -->
+  <g id="AuraCenterpiece" transform="translate(375, 525)">
+    <!-- Ambient Radial Aura -->
+    <circle cx="0" cy="0" r="240" fill="url(#auraCore)" opacity="0.55"/>
+
+    <!-- Concentric Arcane Rings -->
+    <circle cx="0" cy="0" r="218" fill="none" stroke="url(#goldFiligree)" stroke-width="2.5" opacity="0.85"/>
+    <circle cx="0" cy="0" r="204" fill="none" stroke="url(#goldFiligree)" stroke-width="1" stroke-dasharray="14 6" opacity="0.7"/>
+    <circle cx="0" cy="0" r="144" fill="#0d111e" fill-opacity="0.75" stroke="url(#goldFiligree)" stroke-width="2"/>
+
+    <!-- Connecting Star Pentagram Lines between 5 Aura Orbs (radius = 186) -->
+    <!-- Angles: -90 (W), -18 (U), 54 (B), 126 (R), 198 (G) -->
+    <polygon points="0,-186 109.3,150.5 -176.9,-57.5 176.9,-57.5 -109.3,150.5"
+             fill="none" stroke="url(#goldFiligree)" stroke-width="1.6" opacity="0.45"/>
+    <polygon points="0,-186 176.9,-57.5 109.3,150.5 -109.3,150.5 -176.9,-57.5"
+             fill="none" stroke="url(#goldFiligree)" stroke-width="1.2" opacity="0.35"/>
+
+    <!-- Central Radiant 8-Point Aura Crystal Crest -->
+    <g filter="url(#softGlow)">
+      <!-- Secondary Diagonal Rays -->
+      <polygon points="0,-112 24,-24 112,0 24,24 0,112 -24,24 -112,0 -24,-24"
+               fill="url(#goldFiligree)" opacity="0.92"/>
+      <!-- Inner Diagonal Rays -->
+      <polygon points="-68,-68 0,-18 68,-68 18,0 68,68 0,18 -68,68 -18,0"
+               fill="#f3d67e" opacity="0.55"/>
+      <!-- Center Obsidian & Gold Prism -->
+      <polygon points="0,-54 42,0 0,54 -42,0" fill="#101422" stroke="#fff3c4" stroke-width="2.5"/>
+      <polygon points="0,-32 24,0 0,32 -24,0" fill="url(#goldFiligree)"/>
+      <circle cx="0" cy="0" r="9" fill="#fffdf2"/>
+    </g>
+
+    <!-- 5 Aura Energy Orbs (W, U, B, R, G) -->
+    <g id="FiveColorWheel">
+      <!-- White (Top: 0, -186) -->
+      <circle cx="0" cy="-186" r="24" fill="#0d111e" stroke="url(#goldFiligree)" stroke-width="2.5"/>
+      <circle cx="0" cy="-186" r="18" fill="url(#orbW)"/>
+
+      <!-- Blue (Top-Right: 177, -57) -->
+      <circle cx="177" cy="-57" r="24" fill="#0d111e" stroke="url(#goldFiligree)" stroke-width="2.5"/>
+      <circle cx="177" cy="-57" r="18" fill="url(#orbU)"/>
+
+      <!-- Black (Bottom-Right: 109, 150) -->
+      <circle cx="109" cy="150" r="24" fill="#0d111e" stroke="url(#goldFiligree)" stroke-width="2.5"/>
+      <circle cx="109" cy="150" r="18" fill="url(#orbB)"/>
+
+      <!-- Red (Bottom-Left: -109, 150) -->
+      <circle cx="-109" cy="150" r="24" fill="#0d111e" stroke="url(#goldFiligree)" stroke-width="2.5"/>
+      <circle cx="-109" cy="150" r="18" fill="url(#orbR)"/>
+
+      <!-- Green (Top-Left: -177, -57) -->
+      <circle cx="-177" cy="-57" r="24" fill="#0d111e" stroke="url(#goldFiligree)" stroke-width="2.5"/>
+      <circle cx="-177" cy="-57" r="18" fill="url(#orbG)"/>
+    </g>
+  </g>
+
+  <!-- 5. TOP & BOTTOM BRAND EMBLEM PLAQUES -->
+  <g id="BrandPlaques">
+    <!-- Top Banner -->
+    <polygon points="180,126 570,126 594,158 570,190 180,190 156,158" fill="#101422" stroke="url(#goldFiligree)" stroke-width="2.5"/>
+    <text x="375" y="172" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" fill="url(#goldFiligree)" letter-spacing="14">AURA</text>
+
+    <!-- Bottom Banner -->
+    <polygon points="210,866 540,866 560,892 540,918 210,918 190,892" fill="#101422" stroke="url(#goldFiligree)" stroke-width="2"/>
+    <text x="375" y="899" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="700" fill="#d8c383" letter-spacing="6">TRADING CARD GAME</text>
+  </g>
+</svg>

@@ -1,0 +1,566 @@
+"set","name","color","rarity","energy_cost","card_type","power","toughness","rules_text","flavor_text"
+"Alpha","Gilded Scarab","White","rare","{W}","Creature — Insect","1","1","Speedblitz (deals fighting damage first).
+When this creature Pulls Up, Farm +2 Aura.
+At the beginning of your Maintenance phase, if your Squad has 3 or more creatures, Farm +1 Aura.",""
+"Alpha","Pure Crane","White","common","{W}","Creature — Avian","1","1","Airborne (can only be responded to by Airborne creatures).
+When this creature Dips, straighten target Land you control.","Stand together, and the storm breaks around you."
+"Alpha","Steadfast Panther","White","common","{1}{W}","Creature — Feline","1","1","{1}{W}, {TURN}: Prevent the next 2 damage that would be dealt to target creature this Round.",""
+"Alpha","Dawn Panther","White","uncommon","{W}{W}","Creature — Feline","2","1","Ten Toes (confronting does not cause this creature to Turn).
+At the beginning of your Maintenance phase, if your Squad has 3 or more creatures, Farm +1 Aura.",""
+"Alpha","Aegis Shieldbearer","White","common","{1}{W}","Creature — Warrior","1","1","Ten Toes (confronting does not cause this creature to Turn).
+At the beginning of your Maintenance phase, if your Squad has 3 or more creatures, Farm +1 Aura.","The dawn asks no permission to rise."
+"Alpha","Spire Mastiff","White","common","{2}{W}","Creature — Canine","3","2","When this creature Pulls Up, Turn target creature an opponent controls.","Stand together, and the storm breaks around you."
+"Alpha","Lumen Moth","White","uncommon","{2}{W}","Creature — Insect","2","2","Ten Toes (confronting does not cause this creature to Turn).
+Whenever you Farm Aura, this creature gets +1/+0 until end of Round.",""
+"Alpha","Haloed Seraph","White","rare","{2}{W}","Creature — Spirit","3","3","Airborne (can only be responded to by Airborne creatures).
+Whenever you Farm Aura, this creature gets +1/+0 until end of Round.
+When this creature Pulls Up, Turn target creature an opponent controls.",""
+"Alpha","Silver Templar","White","common","{3}{W}","Creature — Warrior","4","3","Ten Toes (confronting does not cause this creature to Turn).
+When this creature Pulls Up, Farm +2 Aura.",""
+"Alpha","Ivory Hound","White","uncommon","{2}{W}{W}","Creature — Canine","3","4","Ten Toes (confronting does not cause this creature to Turn).
+Whenever you Farm Aura, this creature gets +1/+0 until end of Round.","The dawn asks no permission to rise."
+"Alpha","Oathbound Crane","White","common","{4}{W}","Creature — Avian","5","5","Airborne (can only be responded to by Airborne creatures).
+When this creature Dips, straighten target Land you control.","Light endures long after the banner falls."
+"Alpha","Steadfast Scarab","White","common","{5}{W}","Creature — Insect","5","5","Speedblitz (deals fighting damage first).
+At the beginning of your Maintenance phase, if your Squad has 3 or more creatures, Farm +1 Aura.","Order is not tyranny; it is the shelter where the weak grow strong."
+"Alpha","Pure Owl","White","uncommon","{W}","Creature — Avian","1","1","Airborne (can only be responded to by Airborne creatures).
+When this creature Pulls Up, Farm +2 Aura.","Order is not tyranny; it is the shelter where the weak grow strong."
+"Alpha","Chalice Owl","White","common","{W}","Creature — Avian","1","1","Airborne (can only be responded to by Airborne creatures).
+When this creature Pulls Up, Turn target creature an opponent controls.","Every vow carries weight on the field."
+"Alpha","Gleaming Wisp","White","rare","{1}{W}","Creature — Spirit","2","3","Ten Toes (confronting does not cause this creature to Turn).
+{2}{W}: Glaze target creature you control (+0/+2 until end of Round).","Every vow carries weight on the field."
+"Alpha","Marble Seraph","White","uncommon","{W}{W}","Creature — Spirit","2","2","Airborne (can only be responded to by Airborne creatures).
+When this creature Pulls Up, Farm +2 Aura.",""
+"Alpha","Lumen Hart","White","common","{1}{W}","Creature — Beast","2","1","When this creature Pulls Up, Farm +2 Aura.","The dawn asks no permission to rise."
+"Alpha","Sunmane Owl","White","common","{2}{W}","Creature — Avian","2","3","Airborne (can only be responded to by Airborne creatures).
+When this creature Pulls Up, Farm +2 Aura.",""
+"Alpha","Dawn Mastiff","White","uncommon","{2}{W}","Creature — Canine","2","3","Ten Toes (confronting does not cause this creature to Turn).
+{2}{W}: Glaze target creature you control (+0/+2 until end of Round).","Light endures long after the banner falls."
+"Alpha","Dawn Eagle","White","common","{2}{W}","Creature — Avian","2","2","Airborne (can only be responded to by Airborne creatures).
+When this creature Dips, straighten target Land you control.",""
+"Alpha","Vigilant Falcon","White","common","{3}{W}","Creature — Avian","4","4","Airborne (can only be responded to by Airborne creatures).
+Whenever you Farm Aura, this creature gets +1/+0 until end of Round.","The dawn asks no permission to rise."
+"Alpha","Lumen Templar","White","rare","{2}{W}{W}","Creature — Warrior","4","5","Damage dealt by this creature also causes you to Farm that much Aura.
+At the beginning of your Maintenance phase, if your Squad has 3 or more creatures, Farm +1 Aura.
+When this creature Pulls Up, Turn target creature an opponent controls.","Stand together, and the storm breaks around you."
+"Alpha","Marble Ram","White","common","{4}{W}","Creature — Beast","4","4","Ten Toes (confronting does not cause this creature to Turn).
+When this creature Pulls Up, Farm +2 Aura.",""
+"Alpha","Oathbound Shieldbearer","White","common","{5}{W}","Creature — Warrior","5","5","Ten Toes (confronting does not cause this creature to Turn).
+When this creature Pulls Up, Turn target creature an opponent controls.","Stand together, and the storm breaks around you."
+"Alpha","Marble Hart","White","uncommon","{W}","Creature — Beast","1","1","Ten Toes (confronting does not cause this creature to Turn).
+Whenever you Farm Aura, this creature gets +1/+0 until end of Round.",""
+"Alpha","Ivory Wisp","White","common","{W}","Creature — Spirit","1","1","Ten Toes (confronting does not cause this creature to Turn).
+When this creature Pulls Up, Turn target creature an opponent controls.",""
+"Alpha","Haloed Scarab","White","common","{1}{W}","Creature — Insect","2","2","Whenever you Farm Aura, this creature gets +1/+0 until end of Round.","The dawn asks no permission to rise."
+"Alpha","Haloed Eagle","White","uncommon","{W}{W}","Creature — Avian","2","1","Airborne (can only be responded to by Airborne creatures).
+{1}{W}, {TURN}: Prevent the next 2 damage that would be dealt to target creature this Round.","Light endures long after the banner falls."
+"Alpha","Spire Panther","White","rare","{1}{W}","Creature — Feline","2","3","Damage dealt by this creature also causes you to Farm that much Aura.
+At the beginning of your Maintenance phase, if your Squad has 3 or more creatures, Farm +1 Aura.
+{1}{W}, {TURN}: Prevent the next 2 damage that would be dealt to target creature this Round.",""
+"Alpha","Gleaming Bolt","White","uncommon","{W}","Mudra","","","Extinguish target confronting creature. Its controller Picks Up a card at the beginning of the next Maintenance phase.","Every vow carries weight on the field."
+"Alpha","Just Twist","White","common","{1}{W}","Mudra","","","Glaze target creature you control (+2/+2 until end of Round). Straighten it.","The dawn asks no permission to rise."
+"Alpha","Lantern Wave","White","common","{1}{W}","Mudra","","","Eliminate target Artifact or Seal. Farm +2 Aura.","Every vow carries weight on the field."
+"Alpha","Gleaming Rebuke","White","uncommon","{2}{W}","Mudra","","","Prevent all fighting damage creatures you do not control would deal this Round. Pick Up a card at the next Maintenance phase.","Light endures long after the banner falls."
+"Alpha","Bright Snare","White","common","{W}","Mudra","","","Prevent the next 3 damage that would be dealt to target creature or player this Round, and straighten that creature.","The dawn asks no permission to rise."
+"Alpha","Ivory Rupture","White","rare","{1}{W}{W}","Mudra","","","Extinguish target Turned creature. Farm +Aura equal to its toughness.","Stand together, and the storm breaks around you."
+"Alpha","Sovereign Shatter","White","common","{2}{W}","Mudra","","","Turn up to two target creatures. Farm +2 Aura.","Light endures long after the banner falls."
+"Alpha","Oathbound Strike","White","uncommon","{1}{W}","Mudra","","","Target creature you control gains Unbothered (cannot be targeted by opponents' Techniques) until end of Round. Pick Up a card.","Order is not tyranny; it is the shelter where the weak grow strong."
+"Alpha","Bellwing Rebuke","White","rare","{3}{W}","Mudra","","","Creatures you control get +2/+1 and gain Ten Toes (confronting does not Turn them) until end of Round.","Stand together, and the storm breaks around you."
+"Alpha","Steadfast Snare","White","common","{W}","Mudra","","","Glaze target creature (+1/+3 until end of Round). If it is responding, Farm +2 Aura.","Every vow carries weight on the field."
+"Alpha","Silver Twist","White","uncommon","{1}{W}","Mudra","","","Extinguish target confronting creature. Its controller Picks Up a card at the beginning of the next Maintenance phase. Pick Up a card at the beginning of the next Maintenance phase.","Every vow carries weight on the field."
+"Alpha","Radiant Verdict","White","rare","{2}{W}{W}","Mantra","","","Eliminate all creatures with attack 3 or greater. Farm +1 Aura for each creature eliminated this way.","Light endures long after the banner falls."
+"Alpha","Gleaming Convergence","White","rare","{3}{W}{W}","Mantra","","","Eliminate all creatures and Seals. Each player Farms +3 Aura.","Light endures long after the banner falls."
+"Alpha","Sunmane Convergence","White","common","{1}{W}","Mantra","","","Pull a Binding or Artifact costing 2 or less from your deck, Flex it, put it into your hand, then shuffle.","Every vow carries weight on the field."
+"Alpha","Gleaming Harvest","White","uncommon","{2}{W}","Mantra","","","Return target creature card with Energy cost 3 or less from your Pit to play Turned.","Order is not tyranny; it is the shelter where the weak grow strong."
+"Alpha","Marble Reckoning","White","common","{1}{W}","Mantra","","","Farm +5 Aura. Scope 2 (look at the top 2 cards of your deck and reorder them).","Stand together, and the storm breaks around you."
+"Alpha","Morning Awakening","White","uncommon","{3}{W}","Mantra","","","Eliminate target Artifact, Seal, or Turned creature. Farm +3 Aura.","Order is not tyranny; it is the shelter where the weak grow strong."
+"Alpha","Bellwing Awakening","White","rare","{2}{W}{W}","Mantra","","","Each player chooses two creatures they control and Extinguishes the rest.","Order is not tyranny; it is the shelter where the weak grow strong."
+"Alpha","Sovereign Collapse","White","rare","{3}{W}{W}","Mantra","","","Eliminate all creatures with attack 3 or greater. Farm +1 Aura for each creature eliminated this way. Pick Up a card at the beginning of the next Maintenance phase.","Stand together, and the storm breaks around you."
+"Alpha","Silver Tether","White","common","{1}{W}","Seal — Binding","","","Bind to target creature. Bound creature cannot confront or respond, and its controller Farms +1 Aura during their Maintenance phase.","Stand together, and the storm breaks around you."
+"Alpha","Just Blessing","White","common","{W}","Seal — Binding","","","Bind to target creature. Bound creature gets +1/+2 and gains Ten Toes (confronting does not Turn it).","Order is not tyranny; it is the shelter where the weak grow strong."
+"Alpha","Gilded Banner","White","rare","{1}{W}{W}","Seal","","","Creatures you control get +1/+1.
+Whenever a creature Pulls Up under your control, Farm +1 Aura.","The dawn asks no permission to rise."
+"Alpha","Steadfast Tether","White","uncommon","{2}{W}","Seal","","","When this Seal Pulls Up, Extinguish target nonland permanent an opponent controls until this Dips.","Stand together, and the storm breaks around you."
+"Alpha","Crowned Blessing","White","uncommon","{2}{W}","Seal","","","At the beginning of your Maintenance phase, if an opponent controls more Lands than you, Pull a Land from your deck, put it into your hand, then shuffle.","The dawn asks no permission to rise."
+"Alpha","Silver Dominion","White","common","{1}{W}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+1 and gains Speedblitz (deals fighting damage first).","Every vow carries weight on the field."
+"Alpha","Just Beacon","White","rare","{3}{W}","Seal","","","Creatures cannot confront you unless their controller pays {2} for each creature they confront with.","The dawn asks no permission to rise."
+"Alpha","Mist Eel","Blue","rare","{U}","Creature — Aquatic","1","2","Pop Out (you may cast this any time you could play a Mudra).
+When this creature Pulls Up, target creature gets -2/-0 until your next Round.
+{1}{U}, {TURN}: Return another target creature you control to its owner's hand.",""
+"Alpha","Astral Mirage","Blue","common","{U}","Creature — Spirit","1","2","Pop Out (you may cast this any time you could play a Mudra).
+When this creature Pulls Up, target creature gets -2/-0 until your next Round.","The tide takes what is offered and returns what it chooses."
+"Alpha","Ripple Nautilus","Blue","common","{1}{U}","Creature — Aquatic","1","3","Whenever you play a Mudra, this creature gets +1/+0 until end of Round.",""
+"Alpha","Aether Heron","Blue","uncommon","{U}{U}","Creature — Avian","1","3","Airborne (can only be responded to by Airborne creatures).
+{1}{U}, {TURN}: Return another target creature you control to its owner's hand.","A single ripple unravels the grandest design."
+"Alpha","Crystal Mirage","Blue","common","{1}{U}","Creature — Spirit","1","3","This creature cannot be responded to unless the responding player pays {1}.
+{U}, {TURN}: Turn or straighten target Artifact.",""
+"Alpha","Mirror Heron","Blue","common","{2}{U}","Creature — Avian","1","4","Airborne (can only be responded to by Airborne creatures).
+{U}, {TURN}: Turn or straighten target Artifact.",""
+"Alpha","Whispering Moth","Blue","uncommon","{2}{U}","Creature — Insect","2","3","Airborne (can only be responded to by Airborne creatures).
+When this creature Pulls Up, Pick Up a card, then Fumble a card.",""
+"Alpha","Chrono Drake","Blue","rare","{2}{U}","Creature — Reptile","2","5","Airborne (can only be responded to by Airborne creatures).
+When this creature Pulls Up, Scope 2 (look at the top 2 cards of your deck, put one on top and one on the bottom).
+Whenever you play a Mudra, this creature gets +1/+0 until end of Round.",""
+"Alpha","Sunken Tideweaver","Blue","common","{3}{U}","Creature — Wizard","2","4","This creature cannot be responded to unless the responding player pays {1}.
+{1}{U}, {TURN}: Return another target creature you control to its owner's hand.",""
+"Alpha","Cerulean Seer","Blue","uncommon","{2}{U}{U}","Creature — Wizard","3","4","Pop Out (you may cast this any time you could play a Mudra).
+{U}, {TURN}: Turn or straighten target Artifact.","A single ripple unravels the grandest design."
+"Alpha","Horizon Crab","Blue","common","{4}{U}","Creature — Aquatic","4","5","Pop Out (you may cast this any time you could play a Mudra).
+When this creature Pulls Up, Scope 2 (look at the top 2 cards of your deck, put one on top and one on the bottom).","Still water remembers every shadow."
+"Alpha","Frost Heron","Blue","common","{5}{U}","Creature — Avian","4","6","Airborne (can only be responded to by Airborne creatures).
+{1}{U}, {TURN}: Return another target creature you control to its owner's hand.","The tide takes what is offered and returns what it chooses."
+"Alpha","Ripple Drake","Blue","uncommon","{U}","Creature — Reptile","1","2","This creature cannot be responded to unless the responding player pays {1}.
+When this creature Pulls Up, target creature gets -2/-0 until your next Round.","To know the next move is to already hold victory."
+"Alpha","Frost Manta","Blue","common","{U}","Creature — Aquatic","1","1","This creature cannot be responded to unless the responding player pays {1}.
+During even Rounds, this creature cannot be responded to unless the responding player pays {2}.",""
+"Alpha","Still Mirage","Blue","rare","{1}{U}","Creature — Spirit","1","4","Unbothered (cannot be targeted by opponents' Techniques during your Round).
+{1}{U}, {TURN}: Return another target creature you control to its owner's hand.
+{U}, {TURN}: Turn or straighten target Artifact.","The tide takes what is offered and returns what it chooses."
+"Alpha","Whispering Owl","Blue","uncommon","{U}{U}","Creature — Avian","1","3","Airborne (can only be responded to by Airborne creatures).
+Whenever you play a Mudra, this creature gets +1/+0 until end of Round.","Curiosity is the sharpest current in the sea."
+"Alpha","Cerulean Echo","Blue","common","{1}{U}","Creature — Spirit","1","2","Unbothered (cannot be targeted by opponents' Techniques during your Round).
+Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.",""
+"Alpha","Chrono Tideweaver","Blue","common","{2}{U}","Creature — Wizard","1","4","Pop Out (you may cast this any time you could play a Mudra).
+When this creature Pulls Up, target creature gets -2/-0 until your next Round.","Curiosity is the sharpest current in the sea."
+"Alpha","Astral Serpent","Blue","uncommon","{2}{U}","Creature — Reptile","2","4","Unbothered (cannot be targeted by opponents' Techniques during your Round).
+Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.",""
+"Alpha","Arcane Dragonfly","Blue","common","{2}{U}","Creature — Insect","2","4","Unbothered (cannot be targeted by opponents' Techniques during your Round).
+Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.",""
+"Alpha","Lucid Albatross","Blue","common","{3}{U}","Creature — Avian","3","5","Airborne (can only be responded to by Airborne creatures).
+During even Rounds, this creature cannot be responded to unless the responding player pays {2}.","The tide takes what is offered and returns what it chooses."
+"Alpha","Mist Leviathan","Blue","rare","{2}{U}{U}","Creature — Aquatic","4","5","This creature cannot be responded to unless the responding player pays {1}.
+When this creature Pulls Up, Scope 2 (look at the top 2 cards of your deck, put one on top and one on the bottom).
+When this creature Pulls Up, Pick Up a card, then Fumble a card.","To know the next move is to already hold victory."
+"Alpha","Horizon Wisp","Blue","common","{4}{U}","Creature — Spirit","3","6","When this creature Pulls Up, Pick Up a card, then Fumble a card.",""
+"Alpha","Aether Tideweaver","Blue","common","{5}{U}","Creature — Wizard","4","7","Pop Out (you may cast this any time you could play a Mudra).
+When this creature Pulls Up, target creature gets -2/-0 until your next Round.","Still water remembers every shadow."
+"Alpha","Drifting Owl","Blue","uncommon","{U}","Creature — Avian","1","2","Airborne (can only be responded to by Airborne creatures).
+{1}{U}, {TURN}: Return another target creature you control to its owner's hand.","To know the next move is to already hold victory."
+"Alpha","Drifting Coyote","Blue","common","{U}","Creature — Canine","1","1","During even Rounds, this creature cannot be responded to unless the responding player pays {2}.",""
+"Alpha","Ink Manta","Blue","common","{1}{U}","Creature — Aquatic","1","3","This creature cannot be responded to unless the responding player pays {1}.
+Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.","To know the next move is to already hold victory."
+"Alpha","Horizon Seer","Blue","uncommon","{U}{U}","Creature — Wizard","1","3","This creature cannot be responded to unless the responding player pays {1}.
+During even Rounds, this creature cannot be responded to unless the responding player pays {2}.","A single ripple unravels the grandest design."
+"Alpha","Horizon Leviathan","Blue","rare","{1}{U}","Creature — Aquatic","1","4","Unbothered (cannot be targeted by opponents' Techniques during your Round).
+Whenever you play a Mudra, this creature gets +1/+0 until end of Round.",""
+"Alpha","Still Gesture","Blue","common","{U}{U}","Mudra","","","Ratio target Technique. Scope 1 (look at the top card of your deck).","The tide takes what is offered and returns what it chooses."
+"Alpha","Mirror Bolt","Blue","common","{1}{U}","Mudra","","","Ratio target Technique unless its controller pays {2}.
+During even Rounds, they must pay {4} instead.","To know the next move is to already hold victory."
+"Alpha","Glass Shatter","Blue","common","{U}","Mudra","","","Look at the top three cards of your deck. Put one into your hand, one on top, and one on the bottom.","The tide takes what is offered and returns what it chooses."
+"Alpha","Ripple Deflection","Blue","common","{1}{U}","Mudra","","","Return target creature or Artifact to its owner's hand. Scope 1 (look at the top card of your deck).","Still water remembers every shadow."
+"Alpha","Sunken Spark","Blue","common","{2}{U}","Mudra","","","Pick Up two cards, then put a card from your hand on the bottom of your deck.","To know the next move is to already hold victory."
+"Alpha","Astral Gesture","Blue","uncommon","{1}{U}{U}","Mudra","","","Ratio target Mudra or Mantra. Straighten up to two Lands you control.","To know the next move is to already hold victory."
+"Alpha","Azure Gesture","Blue","uncommon","{2}{U}","Mudra","","","Change the target of target Technique with a single target to another legal target of your choice. Pick Up a card.","To know the next move is to already hold victory."
+"Alpha","Tidal Flash","Blue","common","{U}","Mudra","","","Turn or straighten target permanent. If it is a creature, it gets -2/-0 until end of Round.","To know the next move is to already hold victory."
+"Alpha","Crystal Deflection","Blue","rare","{3}{U}","Mudra","","","Pick Up three cards, then Fumble a card unless you control four or more Lands.","A single ripple unravels the grandest design."
+"Alpha","Echoing Break","Blue","uncommon","{1}{U}","Mudra","","","Humble target player attempting to generate target creature Technique by cancelling that Technique unless its controller pays {3}.","To know the next move is to already hold victory."
+"Alpha","Horizon Break","Blue","rare","{2}{U}{U}","Mudra","","","Return up to two target nonland permanents to their owners' hands.
+During odd Rounds, straighten two Lands you control.","To know the next move is to already hold victory."
+"Alpha","Echoing Pact","Blue","common","{2}{U}","Mantra","","","Pick Up two cards, then Fumble a card unless you played no other Techniques this Round.","Still water remembers every shadow."
+"Alpha","Mist Harvest","Blue","rare","{3}{U}{U}","Mantra","","","Return all Turned creatures to their owners' hands. Pick Up a card.","Curiosity is the sharpest current in the sea."
+"Alpha","Arcane Cataclysm","Blue","common","{1}{U}","Mantra","","","Look at the top four cards of your deck. Put a Mudra or Mantra from among them into your hand and the rest on the bottom.","Curiosity is the sharpest current in the sea."
+"Alpha","Still Renewal","Blue","rare","{4}{U}","Mantra","","","Pick Up three cards and straighten up to two Lands you control.","The tide takes what is offered and returns what it chooses."
+"Alpha","Deep Chant","Blue","uncommon","{2}{U}","Mantra","","","Exchange control of target Artifact you control and target Artifact an opponent controls.","The tide takes what is offered and returns what it chooses."
+"Alpha","Tidal Convergence","Blue","common","{1}{U}","Mantra","","","Target player Shreds 4 (sends the top 4 cards of their deck to their Pit). Pick Up a card.","Curiosity is the sharpest current in the sea."
+"Alpha","Skyward Tide","Blue","uncommon","{3}{U}","Mantra","","","Each player Picks Up two cards if this is an even Round; otherwise look at target opponent's hand and return a permanent they control to their hand.","To know the next move is to already hold victory."
+"Alpha","Chrono Omen","Blue","common","{3}{U}","Mantra","","","Pick Up two cards, then Fumble a card unless you played no other Techniques this Round. Pick Up a card at the beginning of the next Maintenance phase.","To know the next move is to already hold victory."
+"Alpha","Astral Pact","Blue","common","{1}{U}","Seal — Binding","","","Bind to target creature. Bound creature does not straighten during its controller's Straighten phase unless they pay {2}.","The tide takes what is offered and returns what it chooses."
+"Alpha","Lucid Beacon","Blue","rare","{2}{U}{U}","Seal — Binding","","","Bind to target creature with Energy cost 4 or less. You Finesse bound creature.","Curiosity is the sharpest current in the sea."
+"Alpha","Sunken Tether","Blue","uncommon","{1}{U}","Seal","","","Whenever you Ratio a Technique, Pick Up a card, then Fumble a card.","Still water remembers every shadow."
+"Alpha","Horizon Mark","Blue","uncommon","{2}{U}","Seal","","","During even Rounds, Mudra Techniques cost {1} less for all players to play.","The tide takes what is offered and returns what it chooses."
+"Alpha","Ripple Field","Blue","common","{U}","Seal — Binding","","","Bind to target creature. Bound creature gets +1/+0 and gains Airborne (can only be responded to by Airborne creatures).","To know the next move is to already hold victory."
+"Alpha","Glass Field","Blue","rare","{3}{U}","Seal","","","At the beginning of each even Round's Maintenance phase, the active player Picks Up an additional card.","The tide takes what is offered and returns what it chooses."
+"Alpha","Glimmering Shroud","Blue","common","{2}{U}","Seal — Binding","","","Bind to target creature. Bound creature does not straighten during its controller's Straighten phase unless they pay {2}. Pick Up a card at the beginning of the next Maintenance phase.","The tide takes what is offered and returns what it chooses."
+"Alpha","Blight Caracal","Black","rare","{B}","Creature — Feline","1","1","One-Shot (any damage this deals to a creature eliminates it).
+{1}{B}, Sacrifice another creature: Pick Up a card.
+When this creature Folds, target opponent Fumbles a card.","Survival favors those willing to pay the toll."
+"Alpha","Cursed Locust","Black","common","{B}","Creature — Insect","1","1","One-Shot (any damage this deals to a creature eliminates it).
+{B}, Pay 1 Aura: This creature gets +1/+0 until end of Round.","Survival favors those willing to pay the toll."
+"Alpha","Sable Wraith","Black","common","{1}{B}","Creature — Undead","2","2","When this creature Pulls Up, each opponent loses 1 Aura and Farm +1 Aura.","Survival favors those willing to pay the toll."
+"Alpha","Fading Widow","Black","uncommon","{B}{B}","Creature — Insect","1","2","Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
+When this creature Pulls Up, you may Shred 2 (send the top 2 cards of your deck to your Pit).",""
+"Alpha","Night Raven","Black","common","{1}{B}","Creature — Avian","1","2","Airborne (can only be responded to by Airborne creatures).
+{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.","Nothing is truly free; some prices are simply paid later."
+"Alpha","Mourning Devourer","Black","common","{2}{B}","Creature — Fiend","3","2","When this creature Pulls Up, each opponent loses 1 Aura and Farm +1 Aura.","Nothing is truly free; some prices are simply paid later."
+"Alpha","Blight Crow","Black","uncommon","{2}{B}","Creature — Avian","2","3","Airborne (can only be responded to by Airborne creatures).
+Whenever another creature Folds, Farm +1 Aura.",""
+"Alpha","Blight Devourer","Black","rare","{2}{B}","Creature — Fiend","4","3","One-Shot (any damage this deals to a creature eliminates it).
+Whenever this creature deals fighting damage to a player, that player loses 1 additional Aura.
+When this creature Folds, target opponent Fumbles a card.","Survival favors those willing to pay the toll."
+"Alpha","Umbral Widow","Black","common","{3}{B}","Creature — Insect","3","3","{1}{B}, Sacrifice another creature: Pick Up a card.","Ash remembers the fire that made it."
+"Alpha","Shadow Caiman","Black","uncommon","{2}{B}{B}","Creature — Reptile","4","4","Heavy Aura (must be responded to by two or more creatures).
+Whenever another creature Folds, Farm +1 Aura.",""
+"Alpha","Night Caiman","Black","common","{4}{B}","Creature — Reptile","5","4","{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.",""
+"Alpha","Silent Raven","Black","common","{5}{B}","Creature — Avian","5","5","Airborne (can only be responded to by Airborne creatures).
+{1}{B}, Sacrifice another creature: Pick Up a card.","What falls is seldom finished."
+"Alpha","Gloom Binder","Black","uncommon","{B}","Creature — Wizard","1","1","Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
+When this creature Folds, target opponent Fumbles a card.",""
+"Alpha","Umbral Wraith","Black","common","{B}","Creature — Undead","1","1","{1}{B}, Sacrifice another creature: Pick Up a card.",""
+"Alpha","Ebon Lich","Black","rare","{1}{B}","Creature — Undead","3","2","Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
+Whenever this creature deals fighting damage to a player, that player loses 1 additional Aura.
+When this creature Pulls Up, each opponent loses 1 Aura and Farm +1 Aura.","Survival favors those willing to pay the toll."
+"Alpha","Fading Raven","Black","uncommon","{B}{B}","Creature — Avian","2","1","Airborne (can only be responded to by Airborne creatures).
+When this creature Pulls Up, each opponent loses 1 Aura and Farm +1 Aura.",""
+"Alpha","Blight Vulture","Black","common","{1}{B}","Creature — Avian","2","2","Airborne (can only be responded to by Airborne creatures).
+{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.","In the quiet dark, every ambition grows teeth."
+"Alpha","Pale Widow","Black","common","{2}{B}","Creature — Insect","2","3","Heavy Aura (must be responded to by two or more creatures).
+{1}{B}, Sacrifice another creature: Pick Up a card.",""
+"Alpha","Nocturne Caiman","Black","uncommon","{2}{B}","Creature — Reptile","3","3","Airborne (can only be responded to by Airborne creatures).
+{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.",""
+"Alpha","Silent Binder","Black","common","{2}{B}","Creature — Wizard","3","2","Heavy Aura (must be responded to by two or more creatures).
+Whenever another creature Folds, Farm +1 Aura.",""
+"Alpha","Cindered Shade","Black","common","{3}{B}","Creature — Undead","4","3","Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
+{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.",""
+"Alpha","Gloom Hexer","Black","rare","{2}{B}{B}","Creature — Wizard","4","4","One-Shot (any damage this deals to a creature eliminates it).
+Whenever another creature Folds, Farm +1 Aura.
+{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.",""
+"Alpha","Shadow Hyena","Black","common","{4}{B}","Creature — Canine","5","4","Heavy Aura (must be responded to by two or more creatures).
+{B}, Pay 1 Aura: This creature gets +1/+0 until end of Round.",""
+"Alpha","Blight Hexer","Black","common","{5}{B}","Creature — Wizard","5","5","{B}, Pay 1 Aura: This creature gets +1/+0 until end of Round.","Survival favors those willing to pay the toll."
+"Alpha","Ash Caiman","Black","uncommon","{B}","Creature — Reptile","1","1","Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
+{1}{B}, Sacrifice another creature: Pick Up a card.",""
+"Alpha","Ruinous Devourer","Black","common","{B}","Creature — Fiend","1","1","Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
+When this creature Pulls Up, you may Shred 2 (send the top 2 cards of your deck to your Pit).",""
+"Alpha","Mire Locust","Black","common","{1}{B}","Creature — Insect","2","1","Heavy Aura (must be responded to by two or more creatures).
+When this creature Folds, target opponent Fumbles a card.","Nothing is truly free; some prices are simply paid later."
+"Alpha","Bleak Dreadlord","Black","uncommon","{B}{B}","Creature — Fiend","1","1","Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
+{B}, Pay 1 Aura: This creature gets +1/+0 until end of Round.","What falls is seldom finished."
+"Alpha","Grim Jackal","Black","rare","{1}{B}","Creature — Canine","2","3","Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
+{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.
+When this creature Folds, target opponent Fumbles a card.","Ash remembers the fire that made it."
+"Alpha","Ruinous Gesture","Black","common","{1}{B}","Mudra","","","Eliminate target nonblack creature. You lose 1 Aura.","Survival favors those willing to pay the toll."
+"Alpha","Mire Riposte","Black","common","{B}","Mudra","","","Target creature gets -2/-2 until end of Round. If it Folds this Round, Farm +1 Aura.","Survival favors those willing to pay the toll."
+"Alpha","Mourning Glimpse","Black","uncommon","{B}","Mudra","","","Add {B}{B}{B} to your Energy pool. You lose 2 Aura.","Nothing is truly free; some prices are simply paid later."
+"Alpha","Nocturne Gesture","Black","uncommon","{2}{B}","Mudra","","","Eliminate target creature with attack 3 or greater. Its controller loses 1 Aura.","Ash remembers the fire that made it."
+"Alpha","Umbral Gesture","Black","common","{1}{B}","Mudra","","","Target player sacrifices a creature with the lowest attack among creatures they control.","Survival favors those willing to pay the toll."
+"Alpha","Obsidian Snare","Black","rare","{1}{B}{B}","Mudra","","","Eliminate target creature. It cannot be regenerated. Pick Up a card and lose 2 Aura.","What falls is seldom finished."
+"Alpha","Ruinous Riposte","Black","common","{2}{B}","Mudra","","","Target creature gets -3/-3 until end of Round. Scope 1 (look at the top card of your deck).","In the quiet dark, every ambition grows teeth."
+"Alpha","Obsidian Twist","Black","common","{B}","Mudra","","","Return target creature card from your Pit to your hand. You lose 1 Aura.","What falls is seldom finished."
+"Alpha","Sable Pulse","Black","uncommon","{1}{B}","Mudra","","","Target opponent loses 2 Aura and Farm +2 Aura. If a creature Folded this Round, Pick Up a card.","Nothing is truly free; some prices are simply paid later."
+"Alpha","Cindered Surge","Black","common","{2}{B}","Mudra","","","Eliminate target nonblack creature. You lose 1 Aura. Pick Up a card at the beginning of the next Maintenance phase.","Nothing is truly free; some prices are simply paid later."
+"Alpha","Blight Flash","Black","common","{1}{B}","Mudra","","","Target creature gets -2/-2 until end of Round. If it Folds this Round, Farm +1 Aura. Pick Up a card at the beginning of the next Maintenance phase.","Survival favors those willing to pay the toll."
+"Alpha","Pale Verdict","Black","common","{B}","Mantra","","","Vibe Check target opponent (they reveal their hand; choose a noncreature, nonland card and they Fumble it and lose 1 Aura).","In the quiet dark, every ambition grows teeth."
+"Alpha","Crypt Renewal","Black","uncommon","{1}{B}","Mantra","","","Target opponent Fumbles two cards unless they pay 3 Aura.","Nothing is truly free; some prices are simply paid later."
+"Alpha","Veiled Tide","Black","uncommon","{2}{B}","Mantra","","","Return target creature card from your Pit to play. You lose 2 Aura and it Pulls Up Turned.","Survival favors those willing to pay the toll."
+"Alpha","Cindered Collapse","Black","common","{1}{B}","Mantra","","","Pick Up two cards and lose 2 Aura. You may put a card from your hand into your Pit to Farm +2 Aura.","Ash remembers the fire that made it."
+"Alpha","Pale Tide","Black","rare","{2}{B}{B}","Mantra","","","All creatures get -3/-3 until end of Round. Farm +1 Aura for each creature that Folds this way.","Nothing is truly free; some prices are simply paid later."
+"Alpha","Fading Command","Black","uncommon","{3}{B}","Mantra","","","Pull a card from your deck, put it into your Pit, then Pick Up a card.","What falls is seldom finished."
+"Alpha","Grim Renewal","Black","rare","{1}{B}{B}","Mantra","","","Pull any card from your deck, Flex it, put it into your hand, and lose 3 Aura. Then shuffle.","What falls is seldom finished."
+"Alpha","Shadow Decree","Black","common","{2}{B}","Mantra","","","Eliminate target creature. Shred 2 (send the top 2 cards of your deck to your Pit).","Nothing is truly free; some prices are simply paid later."
+"Alpha","Ash Vow","Black","common","{1}{B}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+1.
+At the beginning of your Maintenance phase, you lose 1 Aura.","Survival favors those willing to pay the toll."
+"Alpha","Pale Crest","Black","uncommon","{2}{B}","Seal","","","At the beginning of your Maintenance phase, Pick Up an additional card and lose 2 Aura.","Nothing is truly free; some prices are simply paid later."
+"Alpha","Shadow Vow","Black","uncommon","{1}{B}","Seal","","","Whenever an opponent Fumbles a card, that player loses 1 Aura and Farm +1 Aura.","Ash remembers the fire that made it."
+"Alpha","Mire Beacon","Black","rare","{2}{B}","Seal","","","Whenever a nontoken creature Folds, each opponent loses 1 Aura.","Ash remembers the fire that made it."
+"Alpha","Silent Vow","Black","common","{B}","Seal — Binding","","","Bind to target creature. Bound creature gets -1/-1 and cannot be regenerated.","In the quiet dark, every ambition grows teeth."
+"Alpha","Withered Presence","Black","rare","{3}{B}","Seal","","","{2}{B}, Pay 2 Aura: Return target creature card from your Pit to your hand.","In the quiet dark, every ambition grows teeth."
+"Alpha","Veiled Sanctuary","Black","common","{2}{B}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+1.
+At the beginning of your Maintenance phase, you lose 1 Aura. Pick Up a card at the beginning of the next Maintenance phase.","In the quiet dark, every ambition grows teeth."
+"Alpha","Magma Stormcaller","Red","rare","{R}","Creature — Wizard","2","1","On Sight (can confront and Turn the Round it Pulls Up).
+{1}{R}, {TURN}: This creature deals 1 damage to target creature or player.
+{R}, Fumble a card: Pick Up a card.",""
+"Alpha","Cinder Dingo","Red","common","{R}","Creature — Canine","1","1","Speedblitz (deals fighting damage first).
+When this creature Pulls Up, it deals 1 damage to target opponent.","Spark becomes flame; flame becomes legend."
+"Alpha","Scarlet Toad","Red","common","{1}{R}","Creature — Reptile","2","1","Airborne (can only be responded to by Airborne creatures).
+{R}, Fumble a card: Pick Up a card.",""
+"Alpha","Roaring Cinderwisp","Red","uncommon","{R}{R}","Creature — Spirit","3","1","On Sight (can confront and Turn the Round it Pulls Up).
+When this creature Folds, it deals 1 damage to target creature or player.","Hesitation is just another word for defeat."
+"Alpha","Iron Wyvern","Red","common","{1}{R}","Creature — Reptile","2","1","Heavy Aura (must be responded to by two or more creatures).
+When this creature confronts, target creature cannot respond this Round if its attack is 2 or less.",""
+"Alpha","Cinder Brawler","Red","common","{2}{R}","Creature — Warrior","4","2","When this creature Folds, it deals 1 damage to target creature or player.","Strike first, and leave the planning to the ashes."
+"Alpha","Blazing Condor","Red","uncommon","{2}{R}","Creature — Avian","3","1","Airborne (can only be responded to by Airborne creatures).
+When this creature confronts, target creature cannot respond this Round if its attack is 2 or less.",""
+"Alpha","Blazing Hound","Red","rare","{2}{R}","Creature — Canine","4","3","Speedblitz (deals fighting damage first).
+{R}: This creature gets +1/+0 until end of Round.
+When this creature Pulls Up, it deals 1 damage to target opponent.",""
+"Alpha","Kiln Spark","Red","common","{3}{R}","Creature — Spirit","4","3","Heavy Aura (must be responded to by two or more creatures).
+Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round.",""
+"Alpha","Spark Dingo","Red","uncommon","{2}{R}{R}","Creature — Canine","5","3","On Sight (can confront and Turn the Round it Pulls Up).
+When this creature Pulls Up, it deals 1 damage to target opponent.",""
+"Alpha","Scorching Stormcaller","Red","common","{4}{R}","Creature — Wizard","6","3","When this creature Folds, it deals 1 damage to target creature or player.",""
+"Alpha","Blazing Beetle","Red","common","{5}{R}","Creature — Insect","6","4","Airborne (can only be responded to by Airborne creatures).
+Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round.","Spark becomes flame; flame becomes legend."
+"Alpha","Storm Cinderwisp","Red","uncommon","{R}","Creature — Spirit","2","1","On Sight (can confront and Turn the Round it Pulls Up).
+{1}{R}, {TURN}: This creature deals 1 damage to target creature or player.","Strike first, and leave the planning to the ashes."
+"Alpha","Brimstone Bison","Red","common","{R}","Creature — Beast","2","1","Heavy Aura (must be responded to by two or more creatures).
+{R}, Fumble a card: Pick Up a card.","Strike first, and leave the planning to the ashes."
+"Alpha","Scorching Lynx","Red","rare","{1}{R}","Creature — Feline","3","2","Heavy Aura (must be responded to by two or more creatures).
+{1}{R}, {TURN}: This creature deals 1 damage to target creature or player.
+When this creature Pulls Up, it deals 1 damage to target opponent.",""
+"Alpha","Feral Puma","Red","uncommon","{R}{R}","Creature — Feline","3","1","Heavy Aura (must be responded to by two or more creatures).
+When this creature confronts, target creature cannot respond this Round if its attack is 2 or less.",""
+"Alpha","Magma Wyvern","Red","common","{1}{R}","Creature — Reptile","2","1","{R}, Fumble a card: Pick Up a card.",""
+"Alpha","Volcanic Salamander","Red","common","{2}{R}","Creature — Reptile","3","1","When this creature confronts, target creature cannot respond this Round if its attack is 2 or less.","Hesitation is just another word for defeat."
+"Alpha","Crackling Stormcaller","Red","uncommon","{2}{R}","Creature — Wizard","4","2","Speedblitz (deals fighting damage first).
+{R}, Fumble a card: Pick Up a card.","Hesitation is just another word for defeat."
+"Alpha","Crimson Hornet","Red","common","{2}{R}","Creature — Insect","4","1","During odd Rounds, this creature gets +1/+0 and gains On Sight (can confront and Turn the Round it Pulls Up).","Hesitation is just another word for defeat."
+"Alpha","Blazing Wyvern","Red","common","{3}{R}","Creature — Reptile","4","2","On Sight (can confront and Turn the Round it Pulls Up).
+Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round.",""
+"Alpha","Ignited Beetle","Red","rare","{2}{R}{R}","Creature — Insect","6","4","Airborne (can only be responded to by Airborne creatures).
+When this creature Folds, it deals 1 damage to target creature or player.
+When this creature Pulls Up, it deals 1 damage to target opponent.","Strike first, and leave the planning to the ashes."
+"Alpha","Feral Dingo","Red","common","{4}{R}","Creature — Canine","6","4","Speedblitz (deals fighting damage first).
+When this creature Folds, it deals 1 damage to target creature or player.","The mountain does not ask before it erupts."
+"Alpha","Molten Cinderwisp","Red","common","{5}{R}","Creature — Spirit","7","5","On Sight (can confront and Turn the Round it Pulls Up).
+{R}, Fumble a card: Pick Up a card.",""
+"Alpha","Cinder Hound","Red","uncommon","{R}","Creature — Canine","1","1","Speedblitz (deals fighting damage first).
+{R}: This creature gets +1/+0 until end of Round.","Freedom burns brightest when cornered."
+"Alpha","Blazing Dingo","Red","common","{R}","Creature — Canine","2","1","{R}: This creature gets +1/+0 until end of Round.","Hesitation is just another word for defeat."
+"Alpha","Searing Lynx","Red","common","{1}{R}","Creature — Feline","2","1","Speedblitz (deals fighting damage first).
+During odd Rounds, this creature gets +1/+0 and gains On Sight (can confront and Turn the Round it Pulls Up).","Strike first, and leave the planning to the ashes."
+"Alpha","Roaring Firebird","Red","uncommon","{R}{R}","Creature — Avian","3","1","Airborne (can only be responded to by Airborne creatures).
+Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round.","Spark becomes flame; flame becomes legend."
+"Alpha","Pyre Hawk","Red","rare","{1}{R}","Creature — Avian","4","2","Airborne (can only be responded to by Airborne creatures).
+Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round.","The mountain does not ask before it erupts."
+"Alpha","Pyre Strike","Red","common","{R}","Mudra","","","This Mudra deals 3 damage to target creature, or 2 damage to target player.","Freedom burns brightest when cornered."
+"Alpha","Spark Twist","Red","common","{1}{R}","Mudra","","","This Mudra deals 2 damage to target creature or player.
+During even Rounds, it deals 3 damage instead.","Freedom burns brightest when cornered."
+"Alpha","Crackling Spark","Red","common","{1}{R}","Mudra","","","Eliminate target Artifact. This Mudra deals 1 damage to its controller.","Strike first, and leave the planning to the ashes."
+"Alpha","Cinder Spark","Red","common","{R}","Mudra","","","Target creature gets +3/+0 and gains Speedblitz (deals fighting damage first) until end of Round.","The mountain does not ask before it erupts."
+"Alpha","Ignited Bolt","Red","uncommon","{2}{R}","Mudra","","","This Mudra deals 4 damage to target creature or 3 damage to target player.","Spark becomes flame; flame becomes legend."
+"Alpha","Scarlet Spark","Red","common","{1}{R}","Mudra","","","Fumble a card, then Pick Up two cards. If you Fumbled a Red card, deal 1 damage to target opponent.","Hesitation is just another word for defeat."
+"Alpha","Spark Veil","Red","uncommon","{2}{R}","Mudra","","","This Mudra deals 2 damage divided as you choose among one or two targets.","Strike first, and leave the planning to the ashes."
+"Alpha","Crackling Flash","Red","uncommon","{R}","Mudra","","","This Mudra deals 2 damage to target creature. That creature cannot respond this Round.","The mountain does not ask before it erupts."
+"Alpha","Ember Snare","Red","rare","{1}{R}{R}","Mudra","","","Copy target Mudra or Mantra. You may choose new targets for the copy.","Hesitation is just another word for defeat."
+"Alpha","Feral Veil","Red","rare","{3}{R}","Mudra","","","This Mudra deals 5 damage to target creature. Excess damage is dealt to that creature's controller.","Hesitation is just another word for defeat."
+"Alpha","Feral Shatter","Red","common","{1}{R}","Mudra","","","This Mudra deals 3 damage to target creature, or 2 damage to target player. Pick Up a card at the beginning of the next Maintenance phase.","The mountain does not ask before it erupts."
+"Alpha","Molten Reckoning","Red","uncommon","{2}{R}","Mantra","","","This Mantra deals 2 damage to each creature and 1 damage to each player.","Freedom burns brightest when cornered."
+"Alpha","Feral Command","Red","uncommon","{2}{R}","Mantra","","","Eliminate target nonbasic Land. Its controller takes 1 damage.","The mountain does not ask before it erupts."
+"Alpha","Molten Harvest","Red","common","{1}{R}","Mantra","","","This Mantra deals 3 damage to target creature.
+During odd Rounds, creatures with toughness 1 cannot respond this Round.","Spark becomes flame; flame becomes legend."
+"Alpha","Magma Tempest","Red","rare","{3}{R}{R}","Mantra","","","This Mantra deals 4 damage to each creature without Airborne.","Freedom burns brightest when cornered."
+"Alpha","Scorching Harvest","Red","common","{2}{R}","Mantra","","","Finesse target creature until end of Round. Straighten it. It gains On Sight (can confront and Turn the Round it Pulls Up) until end of Round.","Spark becomes flame; flame becomes legend."
+"Alpha","Thunder Tempest","Red","common","{1}{R}","Mantra","","","Eliminate up to one target Artifact and deal 2 damage to target player.","Strike first, and leave the planning to the ashes."
+"Alpha","Ignited Command","Red","uncommon","{3}{R}","Mantra","","","Each player Fumbles their hand and Picks Up three cards.
+During odd Rounds, deal 2 damage to each opponent.","Spark becomes flame; flame becomes legend."
+"Alpha","Storm Omen","Red","rare","{4}{R}","Mantra","","","This Mantra deals 6 damage to target creature or 4 damage to target player.","The mountain does not ask before it erupts."
+"Alpha","Molten Banner","Red","common","{1}{R}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+0 and gains On Sight (can confront and Turn the Round it Pulls Up).","The mountain does not ask before it erupts."
+"Alpha","Crackling Field","Red","uncommon","{2}{R}","Seal","","","During odd Rounds, all creatures gain On Sight (can confront and Turn the Round they Pull Up).
+During even Rounds, confronting creatures get +1/+0.","Hesitation is just another word for defeat."
+"Alpha","Feral Blessing","Red","rare","{1}{R}{R}","Seal","","","At the beginning of each player's Maintenance phase, that player Extinguishes the top card of their deck and may play it this Round.","Freedom burns brightest when cornered."
+"Alpha","Brimstone Binding","Red","rare","{2}{R}","Seal","","","During odd Rounds, if any source would deal damage to a player, it deals that much damage plus 1 instead.","Freedom burns brightest when cornered."
+"Alpha","Flash Beacon","Red","common","{R}","Seal — Binding","","","Bind to target creature. {R}: Bound creature gets +1/+0 until end of Round.","Spark becomes flame; flame becomes legend."
+"Alpha","Cinder Covenant","Red","common","{2}{R}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+0 and gains On Sight (can confront and Turn the Round it Pulls Up). Pick Up a card at the beginning of the next Maintenance phase.","Freedom burns brightest when cornered."
+"Alpha","Crackling Covenant","Red","uncommon","{3}{R}","Seal","","","During odd Rounds, all creatures gain On Sight (can confront and Turn the Round they Pull Up).
+During even Rounds, confronting creatures get +1/+0. Pick Up a card at the beginning of the next Maintenance phase.","Spark becomes flame; flame becomes legend."
+"Alpha","Heartwood Sapling","Green","rare","{G}","Creature — Flora","2","2","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+When this creature Folds, Pull a basic Land card from your deck, Flex it, put it into your hand, then shuffle.
+{1}{G}: This creature gets +1/+1 until end of Round. Play this ability only once each Round.","Strength grows deepest where the canopy is oldest."
+"Alpha","Overgrown Grizzly","Green","common","{G}","Creature — Beast","2","2","When this creature Pulls Up, Farm +2 Aura and straighten target Land.",""
+"Alpha","Vine Jaguar","Green","common","{1}{G}","Creature — Feline","2","3","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+{1}{G}: This creature gets +1/+1 until end of Round. Play this ability only once each Round.",""
+"Alpha","Vine Grovekeeper","Green","uncommon","{G}{G}","Creature — Spirit","3","3","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+Whenever this creature responds, it gets +0/+2 until end of Round.",""
+"Alpha","Deepwood Treant","Green","common","{1}{G}","Creature — Flora","2","3","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+Whenever this creature responds, it gets +0/+2 until end of Round.","The wild does not hate the wall; it simply outlives it."
+"Alpha","Grove Elk","Green","common","{2}{G}","Creature — Beast","4","3","Ten Toes (confronting does not cause this creature to Turn).
+{TURN}: Add {G} to your Energy pool.","Roots split stone given enough seasons."
+"Alpha","Deepwood Tracker","Green","uncommon","{2}{G}","Creature — Warrior","3","3","Skycheck (can respond to Airborne creatures).
+{1}{G}: This creature gets +1/+1 until end of Round. Play this ability only once each Round.",""
+"Alpha","Rootbound Elk","Green","rare","{2}{G}","Creature — Beast","4","4","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
+Whenever a Land Pulls Up under your control, this creature gets +1/+1 until end of Round.
+When this creature Pulls Up, put an Aura Stack (+1/+1) on another target creature you control.",""
+"Alpha","Ancient Jaguar","Green","common","{3}{G}","Creature — Feline","4","4","{2}{G}, {TURN}: Glaze target creature (+2/+2 until end of Round).",""
+"Alpha","Dew Tracker","Green","uncommon","{2}{G}{G}","Creature — Warrior","4","4","Ten Toes (confronting does not cause this creature to Turn).
+{TURN}: Add {G} to your Energy pool.",""
+"Alpha","Primal Dewspirit","Green","common","{4}{G}","Creature — Spirit","6","5","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
+Whenever this creature responds, it gets +0/+2 until end of Round.",""
+"Alpha","Moss Elk","Green","common","{5}{G}","Creature — Beast","6","6","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+{2}{G}, {TURN}: Glaze target creature (+2/+2 until end of Round).","Strength grows deepest where the canopy is oldest."
+"Alpha","Sunbark Beetle","Green","uncommon","{G}","Creature — Insect","2","2","Skycheck (can respond to Airborne creatures).
+When this creature Pulls Up, put an Aura Stack (+1/+1) on another target creature you control.","Every predator is eventually outgrown."
+"Alpha","Verdant Grovekeeper","Green","common","{G}","Creature — Spirit","1","2","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+{2}{G}, {TURN}: Glaze target creature (+2/+2 until end of Round).",""
+"Alpha","Wild Bear","Green","rare","{1}{G}","Creature — Beast","4","3","Skycheck (can respond to Airborne creatures).
+Whenever a Land Pulls Up under your control, this creature gets +1/+1 until end of Round.
+When this creature Pulls Up, put an Aura Stack (+1/+1) on another target creature you control.",""
+"Alpha","Oaken Tracker","Green","uncommon","{G}{G}","Creature — Warrior","2","2","Ten Toes (confronting does not cause this creature to Turn).
+{TURN}: Add {G} to your Energy pool.",""
+"Alpha","Bramble Yaguareté","Green","common","{1}{G}","Creature — Feline","2","2","Ten Toes (confronting does not cause this creature to Turn).
+Whenever a Land Pulls Up under your control, this creature gets +1/+1 until end of Round.","Every predator is eventually outgrown."
+"Alpha","Verdant Mantis","Green","common","{2}{G}","Creature — Insect","4","4","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+Whenever a Land Pulls Up under your control, this creature gets +1/+1 until end of Round.","The wild does not hate the wall; it simply outlives it."
+"Alpha","Overgrown Sapling","Green","uncommon","{2}{G}","Creature — Flora","3","3","Skycheck (can respond to Airborne creatures).
+{TURN}: Add {G} to your Energy pool.","Listen to the forest, and you will never run dry."
+"Alpha","Briar Jaguar","Green","common","{2}{G}","Creature — Feline","3","3","Ten Toes (confronting does not cause this creature to Turn).
+{TURN}: Add {G} to your Energy pool.",""
+"Alpha","Fern Wolf","Green","common","{3}{G}","Creature — Canine","4","5","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+When this creature Folds, Pull a basic Land card from your deck, Flex it, put it into your hand, then shuffle.",""
+"Alpha","Canopy Briar","Green","rare","{2}{G}{G}","Creature — Flora","6","6","Ten Toes (confronting does not cause this creature to Turn).
+When this creature Folds, Pull a basic Land card from your deck, Flex it, put it into your hand, then shuffle.","Every predator is eventually outgrown."
+"Alpha","Fern Briar","Green","common","{4}{G}","Creature — Flora","6","6","{1}{G}: This creature gets +1/+1 until end of Round. Play this ability only once each Round.",""
+"Alpha","Emerald Tortoise","Green","common","{5}{G}","Creature — Reptile","6","7","When this creature Pulls Up, put an Aura Stack (+1/+1) on another target creature you control.",""
+"Alpha","Timber Tracker","Green","uncommon","{G}","Creature — Warrior","1","1","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+When this creature Pulls Up, Farm +2 Aura and straighten target Land.",""
+"Alpha","Rootbound Elderwood","Green","common","{G}","Creature — Flora","2","2","When this creature Pulls Up, Farm +2 Aura and straighten target Land.",""
+"Alpha","Emerald Basilisk","Green","common","{1}{G}","Creature — Reptile","3","3","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
+Whenever a Land Pulls Up under your control, this creature gets +1/+1 until end of Round.","Every predator is eventually outgrown."
+"Alpha","Canopy Dewspirit","Green","uncommon","{G}{G}","Creature — Spirit","2","3","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
+{TURN}: Add {G} to your Energy pool.",""
+"Alpha","Rootbound Badger","Green","rare","{1}{G}","Creature — Beast","4","3","Ten Toes (confronting does not cause this creature to Turn).
+{2}{G}, {TURN}: Glaze target creature (+2/+2 until end of Round).
+When this creature Pulls Up, put an Aura Stack (+1/+1) on another target creature you control.","Strength grows deepest where the canopy is oldest."
+"Alpha","Thorn Shift","Green","common","{G}","Mudra","","","Glaze target creature (+3/+3 until end of Round). If it responds to an Airborne creature, straighten it.","Every predator is eventually outgrown."
+"Alpha","Briar Shift","Green","common","{1}{G}","Mudra","","","Eliminate target Artifact or Seal. Scope 1 (look at the top card of your deck).","Listen to the forest, and you will never run dry."
+"Alpha","Wild Surge","Green","common","{1}{G}","Mudra","","","Target creature you control deals damage equal to its attack to target creature you do not control.","Roots split stone given enough seasons."
+"Alpha","Fern Bolt","Green","uncommon","{2}{G}","Mudra","","","Glaze target creature (+4/+4 until end of Round). If it gains Walk Down (excess fighting damage hits the responding player).","Listen to the forest, and you will never run dry."
+"Alpha","Primal Snare","Green","common","{G}","Mudra","","","Straighten target creature you control. It gets +1/+2 and gains Skycheck (can respond to Airborne creatures) until end of Round.","Strength grows deepest where the canopy is oldest."
+"Alpha","Verdant Break","Green","uncommon","{1}{G}","Mudra","","","Prevent all fighting damage that would be dealt this Round. Farm +2 Aura.","Roots split stone given enough seasons."
+"Alpha","Wild Pulse","Green","rare","{2}{G}","Mudra","","","Pick Up cards equal to the greatest attack among creatures you control, then Fumble a card.","The wild does not hate the wall; it simply outlives it."
+"Alpha","Heartwood Wave","Green","common","{1}{G}","Mudra","","","Glaze target creature (+3/+3 until end of Round). If it responds to an Airborne creature, straighten it. Pick Up a card at the beginning of the next Maintenance phase.","Listen to the forest, and you will never run dry."
+"Alpha","Heartwood Rupture","Green","common","{2}{G}","Mudra","","","Eliminate target Artifact or Seal. Scope 1 (look at the top card of your deck). Pick Up a card at the beginning of the next Maintenance phase.","The wild does not hate the wall; it simply outlives it."
+"Alpha","Grove Twist","Green","common","{2}{G}","Mudra","","","Target creature you control deals damage equal to its attack to target creature you do not control. Pick Up a card at the beginning of the next Maintenance phase.","Roots split stone given enough seasons."
+"Alpha","Dew Twist","Green","uncommon","{3}{G}","Mudra","","","Glaze target creature (+4/+4 until end of Round). If it gains Walk Down (excess fighting damage hits the responding player). Pick Up a card at the beginning of the next Maintenance phase.","Strength grows deepest where the canopy is oldest."
+"Alpha","Bramble Reckoning","Green","common","{1}{G}","Mantra","","","Pull a basic Land card from your deck, put it into play Turned, then shuffle. Farm +1 Aura.","Listen to the forest, and you will never run dry."
+"Alpha","Vine Ascent","Green","common","{2}{G}","Mantra","","","Pull up to two Land cards from your deck, put one into play Turned and one into your hand, then shuffle.","Strength grows deepest where the canopy is oldest."
+"Alpha","Thorn Omen","Green","uncommon","{1}{G}","Mantra","","","Return target permanent card from your Pit to your hand. Farm +1 Aura.","Strength grows deepest where the canopy is oldest."
+"Alpha","Ancient Cataclysm","Green","common","{2}{G}","Mantra","","","Look at the top four cards of your deck. Flex a creature or Land from among them, put it into your hand, and the rest on the bottom.","Listen to the forest, and you will never run dry."
+"Alpha","Oaken Chant","Green","rare","{3}{G}","Mantra","","","Put two Aura Stacks (+1/+1) on each of up to two target creatures you control.","Listen to the forest, and you will never run dry."
+"Alpha","Bramble Ascent","Green","common","{1}{G}","Mantra","","","Target creature you control gets +2/+2 until end of Round, then deals damage equal to its attack to target creature an opponent controls.","The wild does not hate the wall; it simply outlives it."
+"Alpha","Rootbound Pact","Green","rare","{3}{G}{G}","Mantra","","","Pull a creature card from your deck, put it into your hand, then shuffle. Creatures you control get +2/+2 until end of Round.","Listen to the forest, and you will never run dry."
+"Alpha","Thorn Invocation","Green","common","{2}{G}","Mantra","","","Pull a basic Land card from your deck, put it into play Turned, then shuffle. Farm +1 Aura. Pick Up a card at the beginning of the next Maintenance phase.","The wild does not hate the wall; it simply outlives it."
+"Alpha","Verdant Pact","Green","common","{G}","Seal — Binding","","","Bind to target Land.
+Whenever bound Land is Turned for Energy, add an additional {G} to your Energy pool.","Every predator is eventually outgrown."
+"Alpha","Emerald Beacon","Green","uncommon","{G}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+0.
+When this Seal Dips from the field, return it to your hand.","Listen to the forest, and you will never run dry."
+"Alpha","Deepwood Crest","Green","uncommon","{2}{G}","Seal","","","Whenever a creature with attack 4 or greater Pulls Up under your control, Pick Up a card.","Listen to the forest, and you will never run dry."
+"Alpha","Sunbark Shroud","Green","common","{1}{G}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+2 and gains Skycheck (can respond to Airborne creatures).","Every predator is eventually outgrown."
+"Alpha","Blooming Decree","Green","rare","{2}{G}{G}","Seal","","","You may play an additional Land on each of your Rounds.
+Whenever a Land Pulls Up under your control, Farm +1 Aura.","The wild does not hate the wall; it simply outlives it."
+"Alpha","Emerald Field","Green","uncommon","{1}{G}","Seal","","","At the beginning of your Maintenance phase, you may pay {1}. If you do, put an Aura Stack (+1/+1) on target creature you control.","The wild does not hate the wall; it simply outlives it."
+"Alpha","Moss Presence","Green","common","{1}{G}","Seal — Binding","","","Bind to target Land.
+Whenever bound Land is Turned for Energy, add an additional {G} to your Energy pool. Pick Up a card at the beginning of the next Maintenance phase.","Every predator is eventually outgrown."
+"Alpha","Cogwork Strider","Artifact","rare","{1}","Artifact Creature — Construct","1","2","Ten Toes (confronting does not cause this creature to Turn).
+At the beginning of your Maintenance phase, if you control three or more Artifacts, this creature gets +1/+1 until end of Round.","Precision is its own kind of craft."
+"Alpha","Resonant Watcher","Artifact","common","{2}","Artifact Creature — Construct","2","2","At the beginning of your Maintenance phase, if you control three or more Artifacts, this creature gets +1/+1 until end of Round.","A quiet hum marks a steady conduit."
+"Alpha","Kinetic Owl","Artifact","common","{3}","Artifact Creature — Construct","3","4","Ten Toes (confronting does not cause this creature to Turn).
+{TURN}: Add {1} to your Energy pool.","A quiet hum marks a steady conduit."
+"Alpha","Votive Hound","Artifact","uncommon","{4}","Artifact Creature — Construct","3","4","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+{TURN}: Add {1} to your Energy pool.","A quiet hum marks a steady conduit."
+"Alpha","Resonant Moth","Artifact","common","{5}","Artifact Creature — Construct","5","5","On Sight (can confront and Turn the Round it Pulls Up).
+{1}, {TURN}: Turn target Artifact or creature with attack 1 or less.","Precision is its own kind of craft."
+"Alpha","Voltaic Moth","Artifact","common","{6}","Artifact Creature — Construct","5","7","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+When this creature Folds, Pick Up a card.","Built to outlast the hands that shaped it."
+"Alpha","Etched Colossus","Artifact","rare","{1}","Artifact Creature — Construct","1","2","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+At the beginning of your Maintenance phase, if you control three or more Artifacts, this creature gets +1/+1 until end of Round.
+{2}: This creature gets +1/+1 until end of Round.","A quiet hum marks a steady conduit."
+"Alpha","Starforged Spider","Artifact","common","{2}","Artifact Creature — Construct","2","3","{TURN}: Add {1} to your Energy pool.","Built to outlast the hands that shaped it."
+"Alpha","Iron Spider","Artifact","common","{3}","Artifact Creature — Construct","2","3","On Sight (can confront and Turn the Round it Pulls Up).
+At the beginning of your Maintenance phase, if you control three or more Artifacts, this creature gets +1/+1 until end of Round.","Built to outlast the hands that shaped it."
+"Alpha","Arcane Owl","Artifact","uncommon","{4}","Artifact Creature — Construct","3","4","On Sight (can confront and Turn the Round it Pulls Up).
+{TURN}: Add {1} to your Energy pool.","No pulse, no fear, no fatigue."
+"Alpha","Votive Strider","Artifact","common","{5}","Artifact Creature — Construct","4","6","Ten Toes (confronting does not cause this creature to Turn).
+When this creature Pulls Up, Scope 1 (look at the top card of your deck).","Precision is its own kind of craft."
+"Alpha","Aether Strider","Artifact","common","{6}","Artifact Creature — Construct","6","7","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+{2}: This creature gets +1/+1 until end of Round.","Precision is its own kind of craft."
+"Alpha","Gear Watcher","Artifact","rare","{1}","Artifact Creature — Construct","1","1","On Sight (can confront and Turn the Round it Pulls Up).
+{1}, {TURN}: Turn target Artifact or creature with attack 1 or less.
+{TURN}: Add {1} to your Energy pool.","Crafted from brass, bound by geometry."
+"Alpha","Kinetic Colossus","Artifact","common","{2}","Artifact Creature — Construct","2","2","On Sight (can confront and Turn the Round it Pulls Up).
+At the beginning of your Maintenance phase, if you control three or more Artifacts, this creature gets +1/+1 until end of Round.","A quiet hum marks a steady conduit."
+"Alpha","Glass Sentinel","Artifact","common","{3}","Artifact Creature — Construct","3","3","{2}: This creature gets +1/+1 until end of Round.","Crafted from brass, bound by geometry."
+"Alpha","Kinetic Watcher","Artifact","uncommon","{4}","Artifact Creature — Construct","4","5","Skycheck (can respond to Airborne creatures).
+At the beginning of your Maintenance phase, if you control three or more Artifacts, this creature gets +1/+1 until end of Round.","Precision is its own kind of craft."
+"Alpha","Aether Conduit","Artifact","common","{1}","Artifact","","","{1}, {TURN}: Add one Energy of any color to your Energy pool. Farm +1 Aura if this is Round 5 or later.","A quiet hum marks a steady conduit."
+"Alpha","Cogwork Scepter","Artifact","uncommon","{2}","Artifact","","","{TURN}: Add {1} to your Energy pool.
+{2}, Sacrifice this: Pick Up a card.","No pulse, no fear, no fatigue."
+"Alpha","Clockwork Censer","Artifact","rare","{3}","Artifact","","","As long as this artifact is Straightened, players cannot straighten more than two permanents during their Straighten phases.","Crafted from brass, bound by geometry."
+"Alpha","Resonant Monolith","Artifact","uncommon","{1}","Artifact","","","{1}, {TURN}: Scope 2 (look at the top 2 cards of your deck and reorder them).","Crafted from brass, bound by geometry."
+"Alpha","Arcane Lens","Artifact","common","{2}","Artifact","","","{2}, {TURN}: Glaze target creature (+1/+1 until end of Round).","Precision is its own kind of craft."
+"Alpha","Runic Scepter","Artifact","uncommon","{3}","Artifact","","","{TURN}: Add one Energy of any color to your Energy pool.","A quiet hum marks a steady conduit."
+"Alpha","Voltaic Dynamo","Artifact","rare","{4}","Artifact","","","At the beginning of your Maintenance phase, Pick Up an additional card. Skip your Pick Up phase if you have five or more cards in hand.","Crafted from brass, bound by geometry."
+"Alpha","Lattice Relic","Artifact","uncommon","{2}","Artifact","","","Techniques your opponents play during your Round cost {1} more to play.","A quiet hum marks a steady conduit."
+"Alpha","Kinetic Monolith","Artifact","rare","{4}","Artifact","","","{3}, {TURN}: This artifact deals 2 damage to target creature or player if you have two or fewer cards in hand.","Crafted from brass, bound by geometry."
+"Alpha","Resonant Vault","Artifact","common","{2}","Artifact","","","{TURN}, Sacrifice this: Extinguish target card in a Pit. Pick Up a card.","Built to outlast the hands that shaped it."
+"Alpha","Arcane Scepter","Artifact","common","{3}","Artifact","","","Whenever a creature Pulls Up under your control, you may pay {1}. If you do, Farm +2 Aura.","Precision is its own kind of craft."
+"Alpha","Opal Vault","Artifact","rare","{5}","Artifact","","","{TURN}: Straighten target Artifact or Land. Play this ability only during your Round.","Crafted from brass, bound by geometry."
+"Alpha","Runic Relic","Artifact","uncommon","{4}","Artifact","","","Creatures you control get +1/+0 as long as you control three or more Artifacts.","Precision is its own kind of craft."
+"Alpha","Kinetic Relic","Artifact","uncommon","{3}","Artifact","","","{1}, {TURN}: Prevent the next 1 damage that would be dealt to any target this Round.","Built to outlast the hands that shaped it."
+"Alpha","Voltaic Lens","Artifact","rare","{6}","Artifact","","","At the beginning of your End phase, straighten all Lands you control.","Built to outlast the hands that shaped it."
+"Alpha","Glass Idol","Artifact","common","{2}","Artifact","","","{1}, {TURN}: Add one Energy of any color to your Energy pool. Farm +1 Aura if this is Round 5 or later.","Built to outlast the hands that shaped it."
+"Alpha","Opal Chalice","Artifact","uncommon","{3}","Artifact","","","{TURN}: Add {1} to your Energy pool.
+{2}, Sacrifice this: Pick Up a card.","A quiet hum marks a steady conduit."
+"Alpha","Voltaic Core","Artifact","rare","{4}","Artifact","","","As long as this artifact is Straightened, players cannot straighten more than two permanents during their Straighten phases.","Crafted from brass, bound by geometry."
+"Alpha","Iron Dynamo","Artifact","uncommon","{2}","Artifact","","","{1}, {TURN}: Scope 2 (look at the top 2 cards of your deck and reorder them).","Crafted from brass, bound by geometry."
+"Alpha","Brass Lantern","Artifact","common","{3}","Artifact","","","{2}, {TURN}: Glaze target creature (+1/+1 until end of Round).","A quiet hum marks a steady conduit."
+"Alpha","Opal Core","Artifact","uncommon","{4}","Artifact","","","{TURN}: Add one Energy of any color to your Energy pool.","Precision is its own kind of craft."
+"Alpha","Brass Idol","Artifact","rare","{5}","Artifact","","","At the beginning of your Maintenance phase, Pick Up an additional card. Skip your Pick Up phase if you have five or more cards in hand.","Built to outlast the hands that shaped it."
+"Alpha","Brass Spire","Artifact","uncommon","{3}","Artifact","","","Techniques your opponents play during your Round cost {1} more to play.","Crafted from brass, bound by geometry."
+"Alpha","Brass Vault","Artifact","rare","{5}","Artifact","","","{3}, {TURN}: This artifact deals 2 damage to target creature or player if you have two or fewer cards in hand.","Precision is its own kind of craft."
+"Alpha","Clockwork Conduit","Artifact","common","{3}","Artifact","","","{TURN}, Sacrifice this: Extinguish target card in a Pit. Pick Up a card.","Crafted from brass, bound by geometry."
+"Alpha","Etched Conduit","Artifact","common","{4}","Artifact","","","Whenever a creature Pulls Up under your control, you may pay {1}. If you do, Farm +2 Aura.","Built to outlast the hands that shaped it."
+"Alpha","Bellframe Vault","Artifact","rare","{6}","Artifact","","","{TURN}: Straighten target Artifact or Land. Play this ability only during your Round.","Built to outlast the hands that shaped it."
+"Alpha","Arcane Spire","Artifact","uncommon","{5}","Artifact","","","Creatures you control get +1/+0 as long as you control three or more Artifacts.","Built to outlast the hands that shaped it."
+"Alpha","Gilded Censer","Artifact","uncommon","{4}","Artifact","","","{1}, {TURN}: Prevent the next 1 damage that would be dealt to any target this Round.","Precision is its own kind of craft."
+"Alpha","Whispering Vault","Land","rare","","Land","","","This land Pulls Up Turned. When it Pulls Up, Farm +1 Aura.
+{TURN}: Add {W} or {U} to your Energy pool.","Where the currents gather, power lingers."
+"Alpha","Gilded Stronghold","Land","rare","","Land","","","This land Pulls Up Turned. When it Pulls Up, Farm +1 Aura.
+{TURN}: Add {U} or {B} to your Energy pool.","The horizon shifts with those who claim it."
+"Alpha","Sunspire Mire","Land","rare","","Land","","","This land Pulls Up Turned. When it Pulls Up, Farm +1 Aura.
+{TURN}: Add {B} or {R} to your Energy pool.","Where the currents gather, power lingers."
+"Alpha","Emberpeak Crag","Land","rare","","Land","","","This land Pulls Up Turned. When it Pulls Up, Farm +1 Aura.
+{TURN}: Add {R} or {G} to your Energy pool.","Old stones hold older energy."
+"Alpha","Whispering Expanse","Land","rare","","Land","","","This land Pulls Up Turned. When it Pulls Up, Farm +1 Aura.
+{TURN}: Add {G} or {W} to your Energy pool.","Where the currents gather, power lingers."
+"Alpha","Starlit Stronghold","Land","rare","","Land","","","This land Pulls Up Turned. When it Pulls Up, Farm +1 Aura.
+{TURN}: Add {W} or {B} to your Energy pool.","Draw deeply, for the earth remembers."
+"Alpha","Emberpeak Expanse","Land","rare","","Land","","","This land Pulls Up Turned. When it Pulls Up, Farm +1 Aura.
+{TURN}: Add {U} or {R} to your Energy pool.","Old stones hold older energy."
+"Alpha","Crystal Basin","Land","rare","","Land","","","This land Pulls Up Turned. When it Pulls Up, Farm +1 Aura.
+{TURN}: Add {B} or {G} to your Energy pool.","The horizon shifts with those who claim it."
+"Alpha","Glimmer Stronghold","Land","rare","","Land","","","This land Pulls Up Turned. When it Pulls Up, Farm +1 Aura.
+{TURN}: Add {R} or {W} to your Energy pool.","The horizon shifts with those who claim it."
+"Alpha","Verdant Citadel","Land","rare","","Land","","","This land Pulls Up Turned. When it Pulls Up, Farm +1 Aura.
+{TURN}: Add {G} or {U} to your Energy pool.","Draw deeply, for the earth remembers."
+"Alpha","Starlit Terrace","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{3}, {TURN}: Glaze target creature (+1/+1 until end of Round).","Old stones hold older energy."
+"Alpha","Crystal Crag","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{2}, {TURN}, Sacrifice this: Eliminate target nonbasic Land.","Where the currents gather, power lingers."
+"Alpha","Ancient Nexus","Land","uncommon","","Land","","","{TURN}: Add {1} to your Energy pool.
+{1}, {TURN}: Extinguish target card in a Pit.","Old stones hold older energy."
+"Alpha","Tidewall Stronghold","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{3}, {TURN}: This land becomes a 3/3 Construct creature until end of Round.","Draw deeply, for the earth remembers."
+"Alpha","Sovereign Outpost","Land","uncommon","","Land","","","{TURN}: Add {1} to your Energy pool.
+{2}, {TURN}: Farm +1 Aura.","Where the currents gather, power lingers."
+"Alpha","Windswept Crossing","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{1}, Pay 1 Aura, {TURN}: Add one Energy of any color to your Energy pool.","Draw deeply, for the earth remembers."
+"Alpha","Sovereign Shrine","Land","uncommon","","Land","","","{TURN}: Add {1} to your Energy pool.
+{2}, {TURN}: Scope 1 (look at the top card of your deck).","Every path across the realm leaves a trace."
+"Alpha","Tidewall Citadel","Land","uncommon","","Land","","","{TURN}: Add {1} to your Energy pool.
+{1}, {TURN}, Sacrifice this: Pick Up a card.","Where the currents gather, power lingers."
+"Alpha","Windswept Basin","Land","rare","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {R} to your Energy pool.
+{3}, {TURN}: Glaze target creature (+1/+1 until end of Round).","Old stones hold older energy."
+"Alpha","Stormfront Crossing","Land","rare","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {G} to your Energy pool.
+{2}, {TURN}, Sacrifice this: Eliminate target nonbasic Land.","Old stones hold older energy."
+"Alpha","Craggy Spire","Land","uncommon","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {W} to your Energy pool.
+{1}, {TURN}: Extinguish target card in a Pit.","Every path across the realm leaves a trace."
+"Alpha","Solstice Basin","Land","rare","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {U} to your Energy pool.
+{3}, {TURN}: This land becomes a 3/3 Construct creature until end of Round.","Draw deeply, for the earth remembers."
+"Alpha","Shattered Nexus","Land","uncommon","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {B} to your Energy pool.
+{2}, {TURN}: Farm +1 Aura.","Where the currents gather, power lingers."
+"Alpha","Verdant Refuge","Land","rare","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {R} to your Energy pool.
+{1}, Pay 1 Aura, {TURN}: Add one Energy of any color to your Energy pool.","Every path across the realm leaves a trace."
+"Alpha","Tidewall Reach","Land","uncommon","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {G} to your Energy pool.
+{2}, {TURN}: Scope 1 (look at the top card of your deck).","Old stones hold older energy."
+"Alpha","Verdant Grove","Land","uncommon","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {W} to your Energy pool.
+{1}, {TURN}, Sacrifice this: Pick Up a card.","The horizon shifts with those who claim it."
+"Alpha","Sunken Shrine","Land","rare","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {U} to your Energy pool.
+{3}, {TURN}: Glaze target creature (+1/+1 until end of Round).","The horizon shifts with those who claim it."
+"Alpha","Whispering Hollow","Land","rare","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {B} to your Energy pool.
+{2}, {TURN}, Sacrifice this: Eliminate target nonbasic Land.","Old stones hold older energy."
+"Alpha","Misty Atoll","Land","uncommon","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {R} to your Energy pool.
+{1}, {TURN}: Extinguish target card in a Pit.","Old stones hold older energy."
+"Alpha","Quiet Expanse","Land","rare","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {G} to your Energy pool.
+{3}, {TURN}: This land becomes a 3/3 Construct creature until end of Round.","Every path across the realm leaves a trace."

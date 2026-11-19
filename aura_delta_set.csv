@@ -1,0 +1,716 @@
+"set","name","color","rarity","energy_cost","card_type","power","toughness","rules_text","flavor_text"
+"Delta","Gilded Ram","White","rare","{W}","Creature — Beast","2","2","Ten Toes (confronting does not cause this creature to Turn).
+{1}{W}, {TURN}: Prevent the next 2 damage that would be dealt to target creature this Round.
+When this creature Dips, straighten target Land you control.",""
+"Delta","Sunmane Panther","White","common","{W}","Creature — Feline","1","1","Speedblitz (deals fighting damage first).
+Whenever you Farm Aura, this creature gets +1/+0 until end of Round.",""
+"Delta","Chalice Stag","White","common","{1}{W}","Creature — Beast","2","1","Speedblitz (deals fighting damage first).
+When this creature Pulls Up, Farm +2 Aura.","The dawn asks no permission to rise."
+"Delta","Crowned Ram","White","uncommon","{W}{W}","Creature — Beast","2","2","Damage dealt by this creature also causes you to Farm that much Aura.
+At the beginning of your Maintenance phase, if your Squad has 3 or more creatures, Farm +1 Aura.","The dawn asks no permission to rise."
+"Delta","Just Stag","White","common","{1}{W}","Creature — Beast","2","1","At the beginning of your Maintenance phase, if your Squad has 3 or more creatures, Farm +1 Aura.","The dawn asks no permission to rise."
+"Delta","Sovereign Crane","White","common","{2}{W}","Creature — Avian","2","2","Airborne (can only be responded to by Airborne creatures).
+When this creature Dips, straighten target Land you control.
+Scope 1 (look at the top card of your deck).","Order is not tyranny; it is the shelter where the weak grow strong."
+"Delta","Oathbound Owl","White","uncommon","{2}{W}","Creature — Avian","3","2","Airborne (can only be responded to by Airborne creatures).
+{2}{W}: Glaze target creature you control (+0/+2 until end of Round).",""
+"Delta","Oathbound Hart","White","rare","{2}{W}","Creature — Beast","3","3","Speedblitz (deals fighting damage first).
+When this creature Pulls Up, Turn target creature an opponent controls.
+{2}{W}: Glaze target creature you control (+0/+2 until end of Round).",""
+"Delta","Pure Moth","White","common","{3}{W}","Creature — Insect","3","4","Whenever you Farm Aura, this creature gets +1/+0 until end of Round.",""
+"Delta","Morning Yaguareté","White","uncommon","{2}{W}{W}","Creature — Feline","3","3","Damage dealt by this creature also causes you to Farm that much Aura.
+When this creature Pulls Up, Turn target creature an opponent controls.",""
+"Delta","Lumen Mastiff","White","common","{4}{W}","Creature — Canine","4","5","Damage dealt by this creature also causes you to Farm that much Aura.
+{2}{W}: Glaze target creature you control (+0/+2 until end of Round).",""
+"Delta","Solstice Wisp","White","common","{5}{W}","Creature — Spirit","6","6","Speedblitz (deals fighting damage first).
+At the beginning of your Maintenance phase, if your Squad has 3 or more creatures, Farm +1 Aura.","Light endures long after the banner falls."
+"Delta","Dawn Templar","White","uncommon","{W}","Creature — Warrior","1","1","Ten Toes (confronting does not cause this creature to Turn).
+{1}{W}, {TURN}: Prevent the next 2 damage that would be dealt to target creature this Round.",""
+"Delta","Morning Ram","White","common","{W}","Creature — Beast","1","1","Damage dealt by this creature also causes you to Farm that much Aura.
+{2}{W}: Glaze target creature you control (+0/+2 until end of Round).",""
+"Delta","Bright Moth","White","rare","{1}{W}","Creature — Insect","3","2","Airborne (can only be responded to by Airborne creatures).
+Whenever you Farm Aura, this creature gets +1/+0 until end of Round.
+{2}{W}: Glaze target creature you control (+0/+2 until end of Round).","Every vow carries weight on the field."
+"Delta","Radiant Yaguareté","White","uncommon","{W}{W}","Creature — Feline","1","2","Damage dealt by this creature also causes you to Farm that much Aura.
+When this creature Pulls Up, another Glaze target creature you control (+1/+1 until end of Round).",""
+"Delta","Sunmane Crane","White","common","{1}{W}","Creature — Avian","1","1","Airborne (can only be responded to by Airborne creatures).
+{1}{W}, {TURN}: Prevent the next 2 damage that would be dealt to target creature this Round.",""
+"Delta","Radiant Hart","White","common","{2}{W}","Creature — Beast","2","3","When this creature Pulls Up, another Glaze target creature you control (+1/+1 until end of Round).","Every vow carries weight on the field."
+"Delta","Ivory Eagle","White","uncommon","{2}{W}","Creature — Avian","3","3","Airborne (can only be responded to by Airborne creatures).
+{2}{W}: Glaze target creature you control (+0/+2 until end of Round).","The dawn asks no permission to rise."
+"Delta","Bright Lion","White","common","{2}{W}","Creature — Feline","3","3","Whenever you Farm Aura, this creature gets +1/+0 until end of Round.",""
+"Delta","Sovereign Moth","White","common","{3}{W}","Creature — Insect","4","4","When this creature Dips, straighten target Land you control.","Stand together, and the storm breaks around you."
+"Delta","Bellwing Owl","White","rare","{2}{W}{W}","Creature — Avian","5","5","Airborne (can only be responded to by Airborne creatures).
+When this creature Dips, straighten target Land you control.",""
+"Delta","Steadfast Crane","White","common","{4}{W}","Creature — Avian","5","4","Airborne (can only be responded to by Airborne creatures).
+{2}{W}: Glaze target creature you control (+0/+2 until end of Round).","Light endures long after the banner falls."
+"Delta","Dawn Twist","White","uncommon","{W}","Mudra","","","Extinguish target confronting creature. Its controller Picks Up a card at the beginning of the next Maintenance phase.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Light endures long after the banner falls."
+"Delta","Bellwing Rupture","White","common","{1}{W}","Mudra","","","Glaze target creature you control (+2/+2 until end of Round). Straighten it.
+If you control two or more nonbasic Lands, Farm +2 Aura.","Stand together, and the storm breaks around you."
+"Delta","Haloed Bolt","White","common","{1}{W}","Mudra","","","Eliminate target Artifact or Seal. Farm +2 Aura.
+If you control an Artifact, this Technique costs {1} less to play.","Stand together, and the storm breaks around you."
+"Delta","Spire Twist","White","uncommon","{2}{W}","Mudra","","","Prevent all fighting damage creatures you do not control would deal this Round. Pick Up a card at the next Maintenance phase. Look at the top card of your deck; you may put it into your Pit.","The dawn asks no permission to rise."
+"Delta","Marble Pulse","White","common","{W}","Mudra","","","Prevent the next 3 damage that would be dealt to target creature or player this Round, and straighten that creature.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","The dawn asks no permission to rise."
+"Delta","Silver Pulse","White","rare","{1}{W}{W}","Mudra","","","Extinguish target Turned creature. Farm +Aura equal to its toughness.
+If you control two or more nonbasic Lands, Farm +2 Aura.","Light endures long after the banner falls."
+"Delta","Vigilant Wave","White","common","{2}{W}","Mudra","","","Turn up to two target creatures. Farm +2 Aura.
+If you control an Artifact, this Technique costs {1} less to play.","Stand together, and the storm breaks around you."
+"Delta","Dawn Break","White","uncommon","{1}{W}","Mudra","","","Target creature you control gains Unbothered (cannot be targeted by opponents' Techniques) until end of Round. Pick Up a card. Look at the top card of your deck; you may put it into your Pit.","Every vow carries weight on the field."
+"Delta","Vigilant Pulse","White","rare","{3}{W}","Mudra","","","Creatures you control get +2/+1 and gain Ten Toes (confronting does not Turn them) until end of Round.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Light endures long after the banner falls."
+"Delta","Aegis Decree","White","rare","{2}{W}{W}","Mantra","","","Eliminate all creatures with attack 3 or greater. Farm +1 Aura for each creature eliminated this way.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","The dawn asks no permission to rise."
+"Delta","Bright Harvest","White","rare","{3}{W}{W}","Mantra","","","Eliminate all creatures and Seals. Each player Farms +3 Aura.
+If you control two or more nonbasic Lands, Farm +2 Aura.","Every vow carries weight on the field."
+"Delta","Sovereign Harvest","White","common","{1}{W}","Mantra","","","Pull a Binding or Artifact costing 2 or less from your deck, Flex it, put it into your hand, then shuffle.
+If you control an Artifact, this Technique costs {1} less to play.","Stand together, and the storm breaks around you."
+"Delta","Dawn Decree","White","uncommon","{2}{W}","Mantra","","","Return target creature card with Energy cost 3 or less from your Pit to play Turned. Look at the top card of your deck; you may put it into your Pit.","Order is not tyranny; it is the shelter where the weak grow strong."
+"Delta","Chalice Decree","White","common","{1}{W}","Mantra","","","Farm +5 Aura. Scope 2 (look at the top 2 cards of your deck and reorder them).
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Stand together, and the storm breaks around you."
+"Delta","Silver Command","White","uncommon","{3}{W}","Mantra","","","Eliminate target Artifact, Seal, or Turned creature. Farm +3 Aura.
+If you control two or more nonbasic Lands, Farm +2 Aura.","The dawn asks no permission to rise."
+"Delta","Aegis Convergence","White","rare","{2}{W}{W}","Mantra","","","Each player chooses two creatures they control and Extinguishes the rest.
+If you control an Artifact, this Technique costs {1} less to play.","Stand together, and the storm breaks around you."
+"Delta","Gilded Covenant","White","common","{1}{W}","Seal — Binding","","","Bind to target creature. Bound creature cannot confront or respond, and its controller Farms +1 Aura during their Maintenance phase.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Order is not tyranny; it is the shelter where the weak grow strong."
+"Delta","Lumen Blessing","White","common","{W}","Seal — Binding","","","Bind to target creature. Bound creature gets +1/+2 and gains Ten Toes (confronting does not Turn it).
+If you control two or more nonbasic Lands, Farm +2 Aura.","The dawn asks no permission to rise."
+"Delta","Steadfast Vow","White","rare","{1}{W}{W}","Seal","","","Creatures you control get +1/+1.
+Whenever a creature Pulls Up under your control, Farm +1 Aura.
+If you control an Artifact, this Technique costs {1} less to play.","The dawn asks no permission to rise."
+"Delta","Morning Banner","White","uncommon","{2}{W}","Seal","","","When this Seal Pulls Up, Extinguish target nonland permanent an opponent controls until this Dips. Look at the top card of your deck; you may put it into your Pit.","Light endures long after the banner falls."
+"Delta","Oathbound Ward","White","uncommon","{2}{W}","Seal","","","At the beginning of your Maintenance phase, if an opponent controls more Lands than you, Pull a Land from your deck, put it into your hand, then shuffle.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Every vow carries weight on the field."
+"Delta","Silver Ward","White","common","{1}{W}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+1 and gains Speedblitz (deals fighting damage first).
+If you control two or more nonbasic Lands, Farm +2 Aura.","Light endures long after the banner falls."
+"Delta","Still Owl","Blue","rare","{U}","Creature — Avian","1","2","Airborne (can only be responded to by Airborne creatures).
+Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.","To know the next move is to already hold victory."
+"Delta","Echoing Albatross","Blue","common","{U}","Creature — Avian","1","2","Airborne (can only be responded to by Airborne creatures).
+When this creature Pulls Up, target creature gets -2/-0 until your next Round.","Curiosity is the sharpest current in the sea."
+"Delta","Skyward Moth","Blue","common","{1}{U}","Creature — Insect","1","2","Airborne (can only be responded to by Airborne creatures).
+When this creature Pulls Up, Pick Up a card, then Fumble a card.",""
+"Delta","Still Wisp","Blue","uncommon","{U}{U}","Creature — Spirit","1","3","This creature cannot be responded to unless the responding player pays {1}.
+During even Rounds, this creature cannot be responded to unless the responding player pays {2}.","A single ripple unravels the grandest design."
+"Delta","Chrono Fox","Blue","common","{1}{U}","Creature — Canine","1","3","Whenever you play a Mudra, this creature gets +1/+0 until end of Round.","The tide takes what is offered and returns what it chooses."
+"Delta","Aether Albatross","Blue","common","{2}{U}","Creature — Avian","2","4","Airborne (can only be responded to by Airborne creatures).
+Whenever you play a Mudra, this creature gets +1/+0 until end of Round.","To know the next move is to already hold victory."
+"Delta","Crystal Echo","Blue","uncommon","{2}{U}","Creature — Spirit","2","4","Airborne (can only be responded to by Airborne creatures).
+{U}, {TURN}: Turn or straighten target Artifact.","The tide takes what is offered and returns what it chooses."
+"Delta","Crystal Drake","Blue","rare","{2}{U}","Creature — Reptile","3","5","Pop Out (you may cast this any time you could play a Mudra).
+During even Rounds, this creature cannot be responded to unless the responding player pays {2}.
+When this creature Pulls Up, target creature gets -2/-0 until your next Round.",""
+"Delta","Ink Echo","Blue","common","{3}{U}","Creature — Spirit","2","4","Pop Out (you may cast this any time you could play a Mudra).
+Whenever you play a Mudra, this creature gets +1/+0 until end of Round.","The tide takes what is offered and returns what it chooses."
+"Delta","Glass Moth","Blue","uncommon","{2}{U}{U}","Creature — Insect","3","4","Airborne (can only be responded to by Airborne creatures).
+When this creature Pulls Up, Scope 2 (look at the top 2 cards of your deck, put one on top and one on the bottom).","A single ripple unravels the grandest design."
+"Delta","Vapor Coyote","Blue","common","{4}{U}","Creature — Canine","3","6","Unbothered (cannot be targeted by opponents' Techniques during your Round).
+{U}, {TURN}: Turn or straighten target Artifact.",""
+"Delta","Arcane Wisp","Blue","common","{5}{U}","Creature — Spirit","4","6","This creature cannot be responded to unless the responding player pays {1}.
+When this creature Pulls Up, target creature gets -2/-0 until your next Round.","A single ripple unravels the grandest design."
+"Delta","Glimmering Seer","Blue","uncommon","{U}","Creature — Wizard","1","1","This creature cannot be responded to unless the responding player pays {1}.
+Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.",""
+"Delta","Ink Owl","Blue","common","{U}","Creature — Avian","1","1","Airborne (can only be responded to by Airborne creatures).
+{1}{U}, {TURN}: Return another target creature you control to its owner's hand.","Still water remembers every shadow."
+"Delta","Frost Nautilus","Blue","rare","{1}{U}","Creature — Aquatic","1","4","Pop Out (you may cast this any time you could play a Mudra).
+During even Rounds, this creature cannot be responded to unless the responding player pays {2}.
+When this creature Pulls Up, Pick Up a card, then Fumble a card.","To know the next move is to already hold victory."
+"Delta","Tidal Owl","Blue","uncommon","{U}{U}","Creature — Avian","1","2","Airborne (can only be responded to by Airborne creatures).
+{1}{U}, {TURN}: Return another target creature you control to its owner's hand.",""
+"Delta","Horizon Eel","Blue","common","{1}{U}","Creature — Aquatic","1","2","Unbothered (cannot be targeted by opponents' Techniques during your Round).
+When this creature Pulls Up, Pick Up a card, then Fumble a card.","Still water remembers every shadow."
+"Delta","Arcane Albatross","Blue","common","{2}{U}","Creature — Avian","1","3","Airborne (can only be responded to by Airborne creatures).
+When this creature Pulls Up, target creature gets -2/-0 until your next Round.","To know the next move is to already hold victory."
+"Delta","Drifting Scholar","Blue","uncommon","{2}{U}","Creature — Wizard","1","4","This creature cannot be responded to unless the responding player pays {1}.
+When this creature Pulls Up, Pick Up a card, then Fumble a card.",""
+"Delta","Frost Moth","Blue","common","{2}{U}","Creature — Insect","2","3","Airborne (can only be responded to by Airborne creatures).
+When this creature Pulls Up, Pick Up a card, then Fumble a card.
+Scope 1 (look at the top card of your deck).","The tide takes what is offered and returns what it chooses."
+"Delta","Horizon Mirage","Blue","common","{3}{U}","Creature — Spirit","2","5","This creature cannot be responded to unless the responding player pays {1}.
+Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.","To know the next move is to already hold victory."
+"Delta","Frost Wisp","Blue","rare","{2}{U}{U}","Creature — Spirit","3","5","Unbothered (cannot be targeted by opponents' Techniques during your Round).
+Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.","To know the next move is to already hold victory."
+"Delta","Horizon Owl","Blue","common","{4}{U}","Creature — Avian","3","5","Airborne (can only be responded to by Airborne creatures).
+When this creature Pulls Up, Pick Up a card, then Fumble a card.","Still water remembers every shadow."
+"Delta","Crystal Shatter","Blue","common","{U}{U}","Mudra","","","Ratio target Technique. Scope 1 (look at the top card of your deck).
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","The tide takes what is offered and returns what it chooses."
+"Delta","Frost Snare","Blue","common","{1}{U}","Mudra","","","Ratio target Technique unless its controller pays {2}.
+During even Rounds, they must pay {4} instead.
+If you control two or more nonbasic Lands, Farm +2 Aura.","Curiosity is the sharpest current in the sea."
+"Delta","Glimmering Riposte","Blue","common","{U}","Mudra","","","Look at the top three cards of your deck. Put one into your hand, one on top, and one on the bottom.
+If you control an Artifact, this Technique costs {1} less to play.","A single ripple unravels the grandest design."
+"Delta","Horizon Spark","Blue","common","{1}{U}","Mudra","","","Return target creature or Artifact to its owner's hand. Scope 1 (look at the top card of your deck). Look at the top card of your deck; you may put it into your Pit.","A single ripple unravels the grandest design."
+"Delta","Skyward Gesture","Blue","common","{2}{U}","Mudra","","","Pick Up two cards, then put a card from your hand on the bottom of your deck.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Curiosity is the sharpest current in the sea."
+"Delta","Tidal Rupture","Blue","uncommon","{1}{U}{U}","Mudra","","","Ratio target Mudra or Mantra. Straighten up to two Lands you control.
+If you control two or more nonbasic Lands, Farm +2 Aura.","A single ripple unravels the grandest design."
+"Delta","Crystal Veil","Blue","uncommon","{2}{U}","Mudra","","","Change the target of target Technique with a single target to another legal target of your choice. Pick Up a card.
+If you control an Artifact, this Technique costs {1} less to play.","The tide takes what is offered and returns what it chooses."
+"Delta","Ink Riposte","Blue","common","{U}","Mudra","","","Turn or straighten target permanent. If it is a creature, it gets -2/-0 until end of Round. Look at the top card of your deck; you may put it into your Pit.","Still water remembers every shadow."
+"Delta","Cerulean Snare","Blue","rare","{3}{U}","Mudra","","","Pick Up three cards, then Fumble a card unless you control four or more Lands.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Still water remembers every shadow."
+"Delta","Whispering Rite","Blue","common","{2}{U}","Mantra","","","Pick Up two cards, then Fumble a card unless you played no other Techniques this Round.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","A single ripple unravels the grandest design."
+"Delta","Deep Tempest","Blue","rare","{3}{U}{U}","Mantra","","","Return all Turned creatures to their owners' hands. Pick Up a card.
+If you control two or more nonbasic Lands, Farm +2 Aura.","A single ripple unravels the grandest design."
+"Delta","Vapor Cataclysm","Blue","common","{1}{U}","Mantra","","","Look at the top four cards of your deck. Put a Mudra or Mantra from among them into your hand and the rest on the bottom.
+If you control an Artifact, this Technique costs {1} less to play.","Curiosity is the sharpest current in the sea."
+"Delta","Astral Omen","Blue","rare","{4}{U}","Mantra","","","Pick Up three cards and straighten up to two Lands you control. Look at the top card of your deck; you may put it into your Pit.","A single ripple unravels the grandest design."
+"Delta","Ink Rite","Blue","uncommon","{2}{U}","Mantra","","","Exchange control of target Artifact you control and target Artifact an opponent controls.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","To know the next move is to already hold victory."
+"Delta","Tidal Ascent","Blue","common","{1}{U}","Mantra","","","Target player Shreds 4 (sends the top 4 cards of their deck to their Pit). Pick Up a card.
+If you control two or more nonbasic Lands, Farm +2 Aura.","To know the next move is to already hold victory."
+"Delta","Glimmering Convergence","Blue","uncommon","{3}{U}","Mantra","","","Each player Picks Up two cards if this is an even Round; otherwise look at target opponent's hand and return a permanent they control to their hand.
+If you control an Artifact, this Technique costs {1} less to play.","Curiosity is the sharpest current in the sea."
+"Delta","Ink Decree","Blue","common","{1}{U}","Seal — Binding","","","Bind to target creature. Bound creature does not straighten during its controller's Straighten phase unless they pay {2}.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Still water remembers every shadow."
+"Delta","Vapor Oath","Blue","rare","{2}{U}{U}","Seal — Binding","","","Bind to target creature with Energy cost 4 or less. You Finesse bound creature.
+If you control two or more nonbasic Lands, Farm +2 Aura.","A single ripple unravels the grandest design."
+"Delta","Drifting Dominion","Blue","uncommon","{1}{U}","Seal","","","Whenever you Ratio a Technique, Pick Up a card, then Fumble a card.
+If you control an Artifact, this Technique costs {1} less to play.","A single ripple unravels the grandest design."
+"Delta","Glimmering Pact","Blue","uncommon","{2}{U}","Seal","","","During even Rounds, Mudra Techniques cost {1} less for all players to play. Look at the top card of your deck; you may put it into your Pit.","To know the next move is to already hold victory."
+"Delta","Chrono Tether","Blue","common","{U}","Seal — Binding","","","Bind to target creature. Bound creature gets +1/+0 and gains Airborne (can only be responded to by Airborne creatures).
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","The tide takes what is offered and returns what it chooses."
+"Delta","Still Presence","Blue","rare","{3}{U}","Seal","","","At the beginning of each even Round's Maintenance phase, the active player Picks Up an additional card.
+If you control two or more nonbasic Lands, Farm +2 Aura.","The tide takes what is offered and returns what it chooses."
+"Delta","Umbral Devourer","Black","rare","{B}","Creature — Fiend","1","1","One-Shot (any damage this deals to a creature eliminates it).
+When this creature Folds, target opponent Fumbles a card.
+When this creature Pulls Up, each opponent loses 1 Aura and Farm +1 Aura.",""
+"Delta","Night Wraith","Black","common","{B}","Creature — Undead","1","1","When this creature Pulls Up, you may Shred 2 (send the top 2 cards of your deck to your Pit).","Ash remembers the fire that made it."
+"Delta","Grim Hyena","Black","common","{1}{B}","Creature — Canine","1","2","Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
+{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.","What falls is seldom finished."
+"Delta","Gloom Devourer","Black","uncommon","{B}{B}","Creature — Fiend","2","1","Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
+Whenever this creature deals fighting damage to a player, that player loses 1 additional Aura.",""
+"Delta","Pale Shade","Black","common","{1}{B}","Creature — Undead","1","2","Airborne (can only be responded to by Airborne creatures).
+{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.",""
+"Delta","Dusk Dreadlord","Black","common","{2}{B}","Creature — Fiend","3","3","Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
+When this creature Folds, target opponent Fumbles a card.","Nothing is truly free; some prices are simply paid later."
+"Delta","Pale Locust","Black","uncommon","{2}{B}","Creature — Insect","2","2","Heavy Aura (must be responded to by two or more creatures).
+When this creature Pulls Up, you may Shred 2 (send the top 2 cards of your deck to your Pit).","Nothing is truly free; some prices are simply paid later."
+"Delta","Sable Devourer","Black","rare","{2}{B}","Creature — Fiend","4","3","Heavy Aura (must be responded to by two or more creatures).
+When this creature Pulls Up, you may Shred 2 (send the top 2 cards of your deck to your Pit).
+{1}{B}, Sacrifice another creature: Pick Up a card.","What falls is seldom finished."
+"Delta","Bleak Devourer","Black","common","{3}{B}","Creature — Fiend","4","4","When this creature Pulls Up, each opponent loses 1 Aura and Farm +1 Aura.",""
+"Delta","Umbral Crow","Black","uncommon","{2}{B}{B}","Creature — Avian","4","4","Airborne (can only be responded to by Airborne creatures).
+{B}, Pay 1 Aura: This creature gets +1/+0 until end of Round.",""
+"Delta","Crypt Dreadlord","Black","common","{4}{B}","Creature — Fiend","4","5","When this creature Folds, target opponent Fumbles a card.","In the quiet dark, every ambition grows teeth."
+"Delta","Gloom Widow","Black","common","{5}{B}","Creature — Insect","5","5","When this creature Pulls Up, each opponent loses 1 Aura and Farm +1 Aura.","Survival favors those willing to pay the toll."
+"Delta","Ash Shade","Black","uncommon","{B}","Creature — Undead","1","1","Heavy Aura (must be responded to by two or more creatures).
+Whenever another creature Folds, Farm +1 Aura.","What falls is seldom finished."
+"Delta","Dusk Locust","Black","common","{B}","Creature — Insect","1","1","Whenever this creature deals fighting damage to a player, that player loses 1 additional Aura.","Ash remembers the fire that made it."
+"Delta","Obsidian Caiman","Black","rare","{1}{B}","Creature — Reptile","2","3","One-Shot (any damage this deals to a creature eliminates it).
+{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.","In the quiet dark, every ambition grows teeth."
+"Delta","Ash Widow","Black","uncommon","{B}{B}","Creature — Insect","1","2","One-Shot (any damage this deals to a creature eliminates it).
+When this creature Folds, target opponent Fumbles a card.",""
+"Delta","Ebon Shade","Black","common","{1}{B}","Creature — Undead","1","2","One-Shot (any damage this deals to a creature eliminates it).
+When this creature Pulls Up, you may Shred 2 (send the top 2 cards of your deck to your Pit).","In the quiet dark, every ambition grows teeth."
+"Delta","Hollow Devourer","Black","common","{2}{B}","Creature — Fiend","2","3","One-Shot (any damage this deals to a creature eliminates it).
+When this creature Pulls Up, each opponent loses 1 Aura and Farm +1 Aura.","Survival favors those willing to pay the toll."
+"Delta","Bleak Jackal","Black","uncommon","{2}{B}","Creature — Canine","3","3","Heavy Aura (must be responded to by two or more creatures).
+Whenever another creature Folds, Farm +1 Aura.",""
+"Delta","Cursed Leech","Black","common","{2}{B}","Creature — Insect","2","3","{B}, Pay 1 Aura: This creature gets +1/+0 until end of Round.",""
+"Delta","Grim Shade","Black","common","{3}{B}","Creature — Undead","4","3","Airborne (can only be responded to by Airborne creatures).
+Whenever this creature deals fighting damage to a player, that player loses 1 additional Aura.","What falls is seldom finished."
+"Delta","Withered Raven","Black","rare","{2}{B}{B}","Creature — Avian","4","4","Airborne (can only be responded to by Airborne creatures).
+{1}{B}, Sacrifice another creature: Pick Up a card.","In the quiet dark, every ambition grows teeth."
+"Delta","Mire Viper","Black","common","{4}{B}","Creature — Reptile","4","5","{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.","In the quiet dark, every ambition grows teeth."
+"Delta","Shadow Glimpse","Black","common","{1}{B}","Mudra","","","Eliminate target nonblack creature. You lose 1 Aura.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Nothing is truly free; some prices are simply paid later."
+"Delta","Mourning Rupture","Black","common","{B}","Mudra","","","Target creature gets -2/-2 until end of Round. If it Folds this Round, Farm +1 Aura.
+If you control two or more nonbasic Lands, Farm +2 Aura.","What falls is seldom finished."
+"Delta","Shadow Break","Black","uncommon","{B}","Mudra","","","Add {B}{B}{B} to your Energy pool. You lose 2 Aura.
+If you control an Artifact, this Technique costs {1} less to play.","Ash remembers the fire that made it."
+"Delta","Ash Rebuke","Black","uncommon","{2}{B}","Mudra","","","Eliminate target creature with attack 3 or greater. Its controller loses 1 Aura. Look at the top card of your deck; you may put it into your Pit.","Nothing is truly free; some prices are simply paid later."
+"Delta","Silent Strike","Black","common","{1}{B}","Mudra","","","Target player sacrifices a creature with the lowest attack among creatures they control.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Survival favors those willing to pay the toll."
+"Delta","Hollow Shift","Black","rare","{1}{B}{B}","Mudra","","","Eliminate target creature. It cannot be regenerated. Pick Up a card and lose 2 Aura.
+If you control two or more nonbasic Lands, Farm +2 Aura.","Ash remembers the fire that made it."
+"Delta","Shadow Gesture","Black","common","{2}{B}","Mudra","","","Target creature gets -3/-3 until end of Round. Scope 1 (look at the top card of your deck).
+If you control an Artifact, this Technique costs {1} less to play.","Ash remembers the fire that made it."
+"Delta","Obsidian Wave","Black","common","{B}","Mudra","","","Return target creature card from your Pit to your hand. You lose 1 Aura. Look at the top card of your deck; you may put it into your Pit.","Survival favors those willing to pay the toll."
+"Delta","Cindered Gesture","Black","uncommon","{1}{B}","Mudra","","","Target opponent loses 2 Aura and Farm +2 Aura. If a creature Folded this Round, Pick Up a card.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","In the quiet dark, every ambition grows teeth."
+"Delta","Hollow Ascent","Black","common","{B}","Mantra","","","Vibe Check target opponent (they reveal their hand; choose a noncreature, nonland card and they Fumble it and lose 1 Aura).
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Ash remembers the fire that made it."
+"Delta","Gloom Invocation","Black","uncommon","{1}{B}","Mantra","","","Target opponent Fumbles two cards unless they pay 3 Aura.
+If you control two or more nonbasic Lands, Farm +2 Aura.","What falls is seldom finished."
+"Delta","Gloom Tide","Black","uncommon","{2}{B}","Mantra","","","Return target creature card from your Pit to play. You lose 2 Aura and it Pulls Up Turned.
+If you control an Artifact, this Technique costs {1} less to play.","What falls is seldom finished."
+"Delta","Fading Harvest","Black","common","{1}{B}","Mantra","","","Pick Up two cards and lose 2 Aura. You may put a card from your hand into your Pit to Farm +2 Aura. Look at the top card of your deck; you may put it into your Pit.","What falls is seldom finished."
+"Delta","Grim Vision","Black","rare","{2}{B}{B}","Mantra","","","All creatures get -3/-3 until end of Round. Farm +1 Aura for each creature that Folds this way.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","What falls is seldom finished."
+"Delta","Silent Renewal","Black","uncommon","{3}{B}","Mantra","","","Pull a card from your deck, put it into your Pit, then Pick Up a card.
+If you control two or more nonbasic Lands, Farm +2 Aura.","Nothing is truly free; some prices are simply paid later."
+"Delta","Nocturne Renewal","Black","rare","{1}{B}{B}","Mantra","","","Pull any card from your deck, Flex it, put it into your hand, and lose 3 Aura. Then shuffle.
+If you control an Artifact, this Technique costs {1} less to play.","Survival favors those willing to pay the toll."
+"Delta","Sable Sanctuary","Black","common","{1}{B}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+1.
+At the beginning of your Maintenance phase, you lose 1 Aura.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Nothing is truly free; some prices are simply paid later."
+"Delta","Ruinous Blessing","Black","uncommon","{2}{B}","Seal","","","At the beginning of your Maintenance phase, Pick Up an additional card and lose 2 Aura.
+If you control two or more nonbasic Lands, Farm +2 Aura.","Ash remembers the fire that made it."
+"Delta","Dusk Dominion","Black","uncommon","{1}{B}","Seal","","","Whenever an opponent Fumbles a card, that player loses 1 Aura and Farm +1 Aura.
+If you control an Artifact, this Technique costs {1} less to play.","Nothing is truly free; some prices are simply paid later."
+"Delta","Mourning Blessing","Black","rare","{2}{B}","Seal","","","Whenever a nontoken creature Folds, each opponent loses 1 Aura. Look at the top card of your deck; you may put it into your Pit.","Ash remembers the fire that made it."
+"Delta","Withered Mark","Black","common","{B}","Seal — Binding","","","Bind to target creature. Bound creature gets -1/-1 and cannot be regenerated.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Nothing is truly free; some prices are simply paid later."
+"Delta","Nocturne Presence","Black","rare","{3}{B}","Seal","","","{2}{B}, Pay 2 Aura: Return target creature card from your Pit to your hand.
+If you control two or more nonbasic Lands, Farm +2 Aura.","In the quiet dark, every ambition grows teeth."
+"Delta","Brimstone Hound","Red","rare","{R}","Creature — Canine","2","1","On Sight (can confront and Turn the Round it Pulls Up).
+When this creature confronts, target creature cannot respond this Round if its attack is 2 or less.
+{1}{R}, {TURN}: This creature deals 1 damage to target creature or player.",""
+"Delta","Pyre Lynx","Red","common","{R}","Creature — Feline","2","1","Heavy Aura (must be responded to by two or more creatures).
+Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round.
+Scope 1 (look at the top card of your deck).",""
+"Delta","Wildfire Hound","Red","common","{1}{R}","Creature — Canine","3","1","On Sight (can confront and Turn the Round it Pulls Up).
+During odd Rounds, this creature gets +1/+0 and gains On Sight (can confront and Turn the Round it Pulls Up).",""
+"Delta","Brimstone Tiger","Red","uncommon","{R}{R}","Creature — Feline","2","1","Heavy Aura (must be responded to by two or more creatures).
+When this creature Folds, it deals 1 damage to target creature or player.",""
+"Delta","Feral Toad","Red","common","{1}{R}","Creature — Reptile","2","1","When this creature confronts, target creature cannot respond this Round if its attack is 2 or less.","Hesitation is just another word for defeat."
+"Delta","Furious Brawler","Red","common","{2}{R}","Creature — Warrior","3","2","On Sight (can confront and Turn the Round it Pulls Up).
+{R}, Fumble a card: Pick Up a card.","The mountain does not ask before it erupts."
+"Delta","Kiln Ram","Red","uncommon","{2}{R}","Creature — Beast","4","2","On Sight (can confront and Turn the Round it Pulls Up).
+Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round.",""
+"Delta","Brimstone Dingo","Red","rare","{2}{R}","Creature — Canine","4","2","Heavy Aura (must be responded to by two or more creatures).
+{R}, Fumble a card: Pick Up a card.
+When this creature Folds, it deals 1 damage to target creature or player.","Freedom burns brightest when cornered."
+"Delta","Molten Toad","Red","common","{3}{R}","Creature — Reptile","5","3","On Sight (can confront and Turn the Round it Pulls Up).
+Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round.","The mountain does not ask before it erupts."
+"Delta","Spark Wyvern","Red","uncommon","{2}{R}{R}","Creature — Reptile","5","2","Heavy Aura (must be responded to by two or more creatures).
+When this creature confronts, target creature cannot respond this Round if its attack is 2 or less.","Hesitation is just another word for defeat."
+"Delta","Roaring Brawler","Red","common","{4}{R}","Creature — Warrior","6","4","{1}{R}, {TURN}: This creature deals 1 damage to target creature or player.","Freedom burns brightest when cornered."
+"Delta","Pyre Dingo","Red","common","{5}{R}","Creature — Canine","6","4","On Sight (can confront and Turn the Round it Pulls Up).
+When this creature confronts, target creature cannot respond this Round if its attack is 2 or less.","Hesitation is just another word for defeat."
+"Delta","Furious Beetle","Red","uncommon","{R}","Creature — Insect","1","1","Heavy Aura (must be responded to by two or more creatures).
+When this creature confronts, target creature cannot respond this Round if its attack is 2 or less.",""
+"Delta","Crackling Bison","Red","common","{R}","Creature — Beast","2","1","Speedblitz (deals fighting damage first).
+During odd Rounds, this creature gets +1/+0 and gains On Sight (can confront and Turn the Round it Pulls Up).","Strike first, and leave the planning to the ashes."
+"Delta","Furious Firebird","Red","rare","{1}{R}","Creature — Avian","3","2","Airborne (can only be responded to by Airborne creatures).
+During odd Rounds, this creature gets +1/+0 and gains On Sight (can confront and Turn the Round it Pulls Up).","Spark becomes flame; flame becomes legend."
+"Delta","Ignited Puma","Red","uncommon","{R}{R}","Creature — Feline","3","1","Speedblitz (deals fighting damage first).
+When this creature confronts, target creature cannot respond this Round if its attack is 2 or less.","Strike first, and leave the planning to the ashes."
+"Delta","Magma Lynx","Red","common","{1}{R}","Creature — Feline","2","1","Heavy Aura (must be responded to by two or more creatures).
+Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round.","Hesitation is just another word for defeat."
+"Delta","Crimson Beetle","Red","common","{2}{R}","Creature — Insect","3","2","Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round.","Freedom burns brightest when cornered."
+"Delta","Volcanic Firebird","Red","uncommon","{2}{R}","Creature — Avian","4","1","Airborne (can only be responded to by Airborne creatures).
+When this creature Folds, it deals 1 damage to target creature or player.","Freedom burns brightest when cornered."
+"Delta","Scarlet Bison","Red","common","{2}{R}","Creature — Beast","3","1","When this creature Folds, it deals 1 damage to target creature or player.",""
+"Delta","Feral Brawler","Red","common","{3}{R}","Creature — Warrior","5","2","Heavy Aura (must be responded to by two or more creatures).
+During odd Rounds, this creature gets +1/+0 and gains On Sight (can confront and Turn the Round it Pulls Up).","Spark becomes flame; flame becomes legend."
+"Delta","Pyre Bison","Red","rare","{2}{R}{R}","Creature — Beast","6","4","On Sight (can confront and Turn the Round it Pulls Up).
+When this creature Pulls Up, it deals 1 damage to target opponent.
+Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round.",""
+"Delta","Magma Raider","Red","common","{4}{R}","Creature — Warrior","6","4","Heavy Aura (must be responded to by two or more creatures).
+{R}, Fumble a card: Pick Up a card.",""
+"Delta","Crackling Glimpse","Red","common","{R}","Mudra","","","This Mudra deals 3 damage to target creature, or 2 damage to target player.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","The mountain does not ask before it erupts."
+"Delta","Brimstone Shift","Red","common","{1}{R}","Mudra","","","This Mudra deals 2 damage to target creature or player.
+During even Rounds, it deals 3 damage instead.
+If you control two or more nonbasic Lands, Farm +2 Aura.","The mountain does not ask before it erupts."
+"Delta","Ignited Guard","Red","common","{1}{R}","Mudra","","","Eliminate target Artifact. This Mudra deals 1 damage to its controller.
+If you control an Artifact, this Technique costs {1} less to play.","Strike first, and leave the planning to the ashes."
+"Delta","Magma Veil","Red","common","{R}","Mudra","","","Target creature gets +3/+0 and gains Speedblitz (deals fighting damage first) until end of Round. Look at the top card of your deck; you may put it into your Pit.","Freedom burns brightest when cornered."
+"Delta","Ember Twist","Red","uncommon","{2}{R}","Mudra","","","This Mudra deals 4 damage to target creature or 3 damage to target player.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Spark becomes flame; flame becomes legend."
+"Delta","Cinder Twist","Red","common","{1}{R}","Mudra","","","Fumble a card, then Pick Up two cards. If you Fumbled a Red card, deal 1 damage to target opponent.
+If you control two or more nonbasic Lands, Farm +2 Aura.","The mountain does not ask before it erupts."
+"Delta","Flash Wave","Red","uncommon","{2}{R}","Mudra","","","This Mudra deals 2 damage divided as you choose among one or two targets.
+If you control an Artifact, this Technique costs {1} less to play.","Spark becomes flame; flame becomes legend."
+"Delta","Cinder Flash","Red","uncommon","{R}","Mudra","","","This Mudra deals 2 damage to target creature. That creature cannot respond this Round. Look at the top card of your deck; you may put it into your Pit.","The mountain does not ask before it erupts."
+"Delta","Scarlet Rebuke","Red","rare","{1}{R}{R}","Mudra","","","Copy target Mudra or Mantra. You may choose new targets for the copy.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Strike first, and leave the planning to the ashes."
+"Delta","Roaring Collapse","Red","uncommon","{2}{R}","Mantra","","","This Mantra deals 2 damage to each creature and 1 damage to each player.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","The mountain does not ask before it erupts."
+"Delta","Crimson Chant","Red","uncommon","{2}{R}","Mantra","","","Eliminate target nonbasic Land. Its controller takes 1 damage.
+If you control two or more nonbasic Lands, Farm +2 Aura.","The mountain does not ask before it erupts."
+"Delta","Pyre Collapse","Red","common","{1}{R}","Mantra","","","This Mantra deals 3 damage to target creature.
+During odd Rounds, creatures with toughness 1 cannot respond this Round.
+If you control an Artifact, this Technique costs {1} less to play.","Strike first, and leave the planning to the ashes."
+"Delta","Iron Awakening","Red","rare","{3}{R}{R}","Mantra","","","This Mantra deals 4 damage to each creature without Airborne. Look at the top card of your deck; you may put it into your Pit.","The mountain does not ask before it erupts."
+"Delta","Furious Ritual","Red","common","{2}{R}","Mantra","","","Finesse target creature until end of Round. Straighten it. It gains On Sight (can confront and Turn the Round it Pulls Up) until end of Round.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Strike first, and leave the planning to the ashes."
+"Delta","Scorching Decree","Red","common","{1}{R}","Mantra","","","Eliminate up to one target Artifact and deal 2 damage to target player.
+If you control two or more nonbasic Lands, Farm +2 Aura.","Spark becomes flame; flame becomes legend."
+"Delta","Wildfire Chant","Red","uncommon","{3}{R}","Mantra","","","Each player Fumbles their hand and Picks Up three cards.
+During odd Rounds, deal 2 damage to each opponent.
+If you control an Artifact, this Technique costs {1} less to play.","Freedom burns brightest when cornered."
+"Delta","Blazing Tether","Red","common","{1}{R}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+0 and gains On Sight (can confront and Turn the Round it Pulls Up).
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Hesitation is just another word for defeat."
+"Delta","Brimstone Banner","Red","uncommon","{2}{R}","Seal","","","During odd Rounds, all creatures gain On Sight (can confront and Turn the Round they Pull Up).
+During even Rounds, confronting creatures get +1/+0.
+If you control two or more nonbasic Lands, Farm +2 Aura.","The mountain does not ask before it erupts."
+"Delta","Feral Field","Red","rare","{1}{R}{R}","Seal","","","At the beginning of each player's Maintenance phase, that player Extinguishes the top card of their deck and may play it this Round.
+If you control an Artifact, this Technique costs {1} less to play.","Strike first, and leave the planning to the ashes."
+"Delta","Magma Crest","Red","rare","{2}{R}","Seal","","","During odd Rounds, if any source would deal damage to a player, it deals that much damage plus 1 instead. Look at the top card of your deck; you may put it into your Pit.","The mountain does not ask before it erupts."
+"Delta","Ignited Shroud","Red","common","{R}","Seal — Binding","","","Bind to target creature. {R}: Bound creature gets +1/+0 until end of Round.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Hesitation is just another word for defeat."
+"Delta","Brimstone Tether","Red","common","{2}{R}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+0 and gains On Sight (can confront and Turn the Round it Pulls Up).
+If you control two or more nonbasic Lands, Farm +2 Aura.","Freedom burns brightest when cornered."
+"Delta","Timber Sapling","Green","rare","{G}","Creature — Flora","2","2","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+{TURN}: Add {G} to your Energy pool.","Listen to the forest, and you will never run dry."
+"Delta","Vine Mantis","Green","common","{G}","Creature — Insect","2","2","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
+When this creature Pulls Up, Farm +2 Aura and straighten target Land.",""
+"Delta","Deepwood Grovekeeper","Green","common","{1}{G}","Creature — Spirit","3","2","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
+{TURN}: Add {G} to your Energy pool.",""
+"Delta","Bramble Treant","Green","uncommon","{G}{G}","Creature — Flora","3","2","Skycheck (can respond to Airborne creatures).
+{2}{G}, {TURN}: Glaze target creature (+2/+2 until end of Round).",""
+"Delta","Oaken Treant","Green","common","{1}{G}","Creature — Flora","3","2","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
+{TURN}: Add {G} to your Energy pool.",""
+"Delta","Blooming Briar","Green","common","{2}{G}","Creature — Flora","4","4","Skycheck (can respond to Airborne creatures).
+{TURN}: Add {G} to your Energy pool.",""
+"Delta","Sunbark Mantis","Green","uncommon","{2}{G}","Creature — Insect","4","4","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
+{2}{G}, {TURN}: Glaze target creature (+2/+2 until end of Round).",""
+"Delta","Rootbound Dewspirit","Green","rare","{2}{G}","Creature — Spirit","5","5","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+Whenever a Land Pulls Up under your control, this creature gets +1/+1 until end of Round.
+{1}{G}: This creature gets +1/+1 until end of Round. Play this ability only once each Round.",""
+"Delta","Blooming Tracker","Green","common","{3}{G}","Creature — Warrior","5","5","Whenever this creature responds, it gets +0/+2 until end of Round.","Every predator is eventually outgrown."
+"Delta","Fern Jaguar","Green","uncommon","{2}{G}{G}","Creature — Feline","5","4","Ten Toes (confronting does not cause this creature to Turn).
+{TURN}: Add {G} to your Energy pool.","Roots split stone given enough seasons."
+"Delta","Ancient Shaper","Green","common","{4}{G}","Creature — Wizard","6","5","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
+When this creature Pulls Up, Farm +2 Aura and straighten target Land.",""
+"Delta","Briar Elk","Green","common","{5}{G}","Creature — Beast","6","7","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
+{2}{G}, {TURN}: Glaze target creature (+2/+2 until end of Round).","The wild does not hate the wall; it simply outlives it."
+"Delta","Verdant Sapling","Green","uncommon","{G}","Creature — Flora","1","2","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+When this creature Pulls Up, put an Aura Stack (+1/+1) on another target creature you control.",""
+"Delta","Rootbound Yaguareté","Green","common","{G}","Creature — Feline","1","2","When this creature Folds, Pull a basic Land card from your deck, Flex it, put it into your hand, then shuffle.","Every predator is eventually outgrown."
+"Delta","Primal Basilisk","Green","rare","{1}{G}","Creature — Reptile","3","4","Ten Toes (confronting does not cause this creature to Turn).
+Whenever this creature responds, it gets +0/+2 until end of Round.
+{TURN}: Add {G} to your Energy pool.",""
+"Delta","Sylvan Treant","Green","uncommon","{G}{G}","Creature — Flora","2","2","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
+When this creature Folds, Pull a basic Land card from your deck, Flex it, put it into your hand, then shuffle.",""
+"Delta","Primal Tracker","Green","common","{1}{G}","Creature — Warrior","2","2","Ten Toes (confronting does not cause this creature to Turn).
+When this creature Folds, Pull a basic Land card from your deck, Flex it, put it into your hand, then shuffle.",""
+"Delta","Sylvan Mantis","Green","common","{2}{G}","Creature — Insect","4","3","Whenever this creature responds, it gets +0/+2 until end of Round.","Every predator is eventually outgrown."
+"Delta","Canopy Elk","Green","uncommon","{2}{G}","Creature — Beast","4","3","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+{1}{G}: This creature gets +1/+1 until end of Round. Play this ability only once each Round.",""
+"Delta","Verdant Tracker","Green","common","{2}{G}","Creature — Warrior","3","4","Ten Toes (confronting does not cause this creature to Turn).
+Whenever this creature responds, it gets +0/+2 until end of Round.","The wild does not hate the wall; it simply outlives it."
+"Delta","Blooming Stag","Green","common","{3}{G}","Creature — Beast","5","5","Ten Toes (confronting does not cause this creature to Turn).
+{1}{G}: This creature gets +1/+1 until end of Round. Play this ability only once each Round.",""
+"Delta","Ancient Wolf","Green","rare","{2}{G}{G}","Creature — Canine","6","6","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+{1}{G}: This creature gets +1/+1 until end of Round. Play this ability only once each Round.
+Whenever this creature responds, it gets +0/+2 until end of Round.",""
+"Delta","Blooming Yaguareté","Green","common","{4}{G}","Creature — Feline","6","5","Ten Toes (confronting does not cause this creature to Turn).
+Whenever a Land Pulls Up under your control, this creature gets +1/+1 until end of Round.",""
+"Delta","Timber Strike","Green","common","{G}","Mudra","","","Glaze target creature (+3/+3 until end of Round). If it responds to an Airborne creature, straighten it.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Roots split stone given enough seasons."
+"Delta","Rootbound Shatter","Green","common","{1}{G}","Mudra","","","Eliminate target Artifact or Seal. Scope 1 (look at the top card of your deck).
+If you control two or more nonbasic Lands, Farm +2 Aura.","Every predator is eventually outgrown."
+"Delta","Rootbound Rebuke","Green","common","{1}{G}","Mudra","","","Target creature you control deals damage equal to its attack to target creature you do not control.
+If you control an Artifact, this Technique costs {1} less to play.","Roots split stone given enough seasons."
+"Delta","Living Surge","Green","uncommon","{2}{G}","Mudra","","","Glaze target creature (+4/+4 until end of Round). If it gains Walk Down (excess fighting damage hits the responding player). Look at the top card of your deck; you may put it into your Pit.","Roots split stone given enough seasons."
+"Delta","Deepwood Strike","Green","common","{G}","Mudra","","","Straighten target creature you control. It gets +1/+2 and gains Skycheck (can respond to Airborne creatures) until end of Round.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Listen to the forest, and you will never run dry."
+"Delta","Briar Twist","Green","uncommon","{1}{G}","Mudra","","","Prevent all fighting damage that would be dealt this Round. Farm +2 Aura.
+If you control two or more nonbasic Lands, Farm +2 Aura.","The wild does not hate the wall; it simply outlives it."
+"Delta","Overgrown Rebuke","Green","rare","{2}{G}","Mudra","","","Pick Up cards equal to the greatest attack among creatures you control, then Fumble a card.
+If you control an Artifact, this Technique costs {1} less to play.","Listen to the forest, and you will never run dry."
+"Delta","Moss Shift","Green","common","{1}{G}","Mudra","","","Glaze target creature (+3/+3 until end of Round). If it responds to an Airborne creature, straighten it. Look at the top card of your deck; you may put it into your Pit.","Listen to the forest, and you will never run dry."
+"Delta","Emerald Rebuke","Green","common","{2}{G}","Mudra","","","Eliminate target Artifact or Seal. Scope 1 (look at the top card of your deck).
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Every predator is eventually outgrown."
+"Delta","Ancient Vision","Green","common","{1}{G}","Mantra","","","Pull a basic Land card from your deck, put it into play Turned, then shuffle. Farm +1 Aura.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","The wild does not hate the wall; it simply outlives it."
+"Delta","Grove Tide","Green","common","{2}{G}","Mantra","","","Pull up to two Land cards from your deck, put one into play Turned and one into your hand, then shuffle.
+If you control two or more nonbasic Lands, Farm +2 Aura.","The wild does not hate the wall; it simply outlives it."
+"Delta","Blooming Command","Green","uncommon","{1}{G}","Mantra","","","Return target permanent card from your Pit to your hand. Farm +1 Aura.
+If you control an Artifact, this Technique costs {1} less to play.","Every predator is eventually outgrown."
+"Delta","Blooming Cataclysm","Green","common","{2}{G}","Mantra","","","Look at the top four cards of your deck. Flex a creature or Land from among them, put it into your hand, and the rest on the bottom. Look at the top card of your deck; you may put it into your Pit.","Roots split stone given enough seasons."
+"Delta","Overgrown Collapse","Green","rare","{3}{G}","Mantra","","","Put two Aura Stacks (+1/+1) on each of up to two target creatures you control.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Every predator is eventually outgrown."
+"Delta","Rootbound Ascent","Green","common","{1}{G}","Mantra","","","Target creature you control gets +2/+2 until end of Round, then deals damage equal to its attack to target creature an opponent controls.
+If you control two or more nonbasic Lands, Farm +2 Aura.","Listen to the forest, and you will never run dry."
+"Delta","Wild Renewal","Green","rare","{3}{G}{G}","Mantra","","","Pull a creature card from your deck, put it into your hand, then shuffle. Creatures you control get +2/+2 until end of Round.
+If you control an Artifact, this Technique costs {1} less to play.","The wild does not hate the wall; it simply outlives it."
+"Delta","Bark Crest","Green","common","{G}","Seal — Binding","","","Bind to target Land.
+Whenever bound Land is Turned for Energy, add an additional {G} to your Energy pool.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","The wild does not hate the wall; it simply outlives it."
+"Delta","Emerald Blessing","Green","uncommon","{G}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+0.
+When this Seal Dips from the field, return it to your hand.
+If you control two or more nonbasic Lands, Farm +2 Aura.","Strength grows deepest where the canopy is oldest."
+"Delta","Bramble Mark","Green","uncommon","{2}{G}","Seal","","","Whenever a creature with attack 4 or greater Pulls Up under your control, Pick Up a card.
+If you control an Artifact, this Technique costs {1} less to play.","The wild does not hate the wall; it simply outlives it."
+"Delta","Overgrown Field","Green","common","{1}{G}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+2 and gains Skycheck (can respond to Airborne creatures). Look at the top card of your deck; you may put it into your Pit.","Strength grows deepest where the canopy is oldest."
+"Delta","Living Mantle","Green","rare","{2}{G}{G}","Seal","","","You may play an additional Land on each of your Rounds.
+Whenever a Land Pulls Up under your control, Farm +1 Aura.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Every predator is eventually outgrown."
+"Delta","Canopy Banner","Green","uncommon","{1}{G}","Seal","","","At the beginning of your Maintenance phase, you may pay {1}. If you do, put an Aura Stack (+1/+1) on target creature you control.
+If you control two or more nonbasic Lands, Farm +2 Aura.","Strength grows deepest where the canopy is oldest."
+"Delta","Prism Crane","Multicolor","uncommon","{W}{U}","Creature — Avian","2","2","When this creature Pulls Up, straighten target Land.
+Whenever you play a Mudra, Farm +2 Aura and Scope 1 (look at the top card of your deck).","At the seam of opposing forces, miracles ignite."
+"Delta","Eclipse Manta","Multicolor","uncommon","{U}{B}","Creature — Aquatic","2","2","When this creature Pulls Up, straighten target Land.
+Whenever an opponent Fumbles a card or has a Technique Ratioed, Pick Up a card and lose 1 Aura.","At the seam of opposing forces, miracles ignite."
+"Delta","Tideforge Crow","Multicolor","uncommon","{B}{R}","Creature — Avian","2","2","When this creature Pulls Up, straighten target Land.
+Whenever a creature an opponent controls Folds, deal 1 damage to that player.","Balance is not compromise; it is mastery."
+"Delta","Mistveil Ram","Multicolor","uncommon","{R}{G}","Creature — Beast","2","2","When this creature Pulls Up, straighten target Land. Creatures you control with attack 4 or greater gain On Sight (can confront and Turn the Round they Pull Up).","Harmony is sharpest at the edge of conflict."
+"Delta","Tideforge Elk","Multicolor","uncommon","{G}{W}","Creature — Beast","2","2","When this creature Pulls Up, straighten target Land.
+Whenever another creature Pulls Up under your control, put an Aura Stack (+1/+1) on it and Farm +1 Aura.","At the seam of opposing forces, miracles ignite."
+"Delta","Mistveil Lion","Multicolor","uncommon","{W}{B}","Creature — Feline","2","2","When this creature Pulls Up, straighten target Land.
+At the beginning of your Maintenance phase, each opponent loses 1 Aura and Farm +1 Aura.","At the seam of opposing forces, miracles ignite."
+"Delta","Frostflame Wave","Multicolor","uncommon","{1}{U}{R}","Mudra","","","Choose one — Deal 3 damage to any target; or Pick Up two cards, then Fumble a card.
+During even Rounds, you may choose both.","Balance is not compromise; it is mastery."
+"Delta","Twilight Guard","Multicolor","uncommon","{1}{B}{G}","Mudra","","","Choose one — Eliminate target nonland permanent with Energy cost 3 or less; or return target creature card from your Pit to your hand and Farm +2 Aura.","Harmony is sharpest at the edge of conflict."
+"Delta","Tidebound Deflection","Multicolor","uncommon","{1}{R}{W}","Mudra","","","Choose one — Deal 3 damage to target confronting or responding creature and Farm +3 Aura; or creatures you control get +2/+0 and gain Speedblitz (deal fighting damage first) this Round.","Harmony is sharpest at the edge of conflict."
+"Delta","Emberlight Rebuke","Multicolor","uncommon","{1}{G}{U}","Mudra","","","Choose one — Return target nonland permanent to its owner's hand; or Pick Up two cards and put a Land card from your hand into play Turned.","Balance is not compromise; it is mastery."
+"Delta","Frostflame Shift","Multicolor","uncommon","{1}{W}{U}","Mudra","","","Choose one — Ratio target Technique unless its controller pays {3}; or Extinguish target confronting creature and Farm +2 Aura.","At the seam of opposing forces, miracles ignite."
+"Delta","Prism Rebuke","Multicolor","uncommon","{1}{U}{B}","Mudra","","","Choose one — Humble target player attempting to generate target creature Technique by cancelling that Technique; or Eliminate target creature with toughness 3 or less and Scope 1 (look at the top card of your deck).","Balance is not compromise; it is mastery."
+"Delta","Skyroot Gesture","Multicolor","uncommon","{1}{B}{R}","Mudra","","","Choose one — Eliminate target creature with attack 3 or less; or deal 3 damage to target opponent and they Fumble a card.","Two currents entwined forge something neither could alone."
+"Delta","Skyroot Guard","Multicolor","uncommon","{1}{R}{G}","Mudra","","","Choose one — Target creature gets +3/+3 and deals excess fighting damage to the responding player this Round; or Eliminate target Artifact and deal 2 damage to its controller.","Harmony is sharpest at the edge of conflict."
+"Delta","Tidebound Pulse","Multicolor","uncommon","{1}{G}{W}","Mudra","","","Choose one — Eliminate target Artifact or Seal and Farm +3 Aura; or creatures you control get +2/+2 until end of Round.","Balance is not compromise; it is mastery."
+"Delta","Dawnbreak Pact","Multicolor","rare","{2}{W}{B}","Seal","","","At the beginning of your Maintenance phase, each opponent loses 1 Aura and Farm +1 Aura.
+At the beginning of your End phase, straighten one Land you control.","Two currents entwined forge something neither could alone."
+"Delta","Prism Shroud","Multicolor","rare","{2}{U}{R}","Seal","","","During odd Rounds, whenever any player plays a Mudra, it deals 1 damage to any target.
+During even Rounds, whenever any player plays a Mantra, that player Picks Up a card and Fumbles a card.
+At the beginning of your End phase, straighten one Land you control.","Two currents entwined forge something neither could alone."
+"Delta","Grovewarden Sanctuary","Multicolor","rare","{2}{B}{G}","Seal","","","At the beginning of your Maintenance phase, Shred 2 (send the top 2 cards of your deck to your Pit); you may return a Land from your Pit to your hand.
+At the beginning of your End phase, straighten one Land you control.","Balance is not compromise; it is mastery."
+"Delta","Dawnbreak Mantle","Multicolor","rare","{2}{R}{W}","Seal","","","Confronting creatures you control get +1/+0 and gain Ten Toes (confronting does not Turn them).
+At the beginning of your End phase, straighten one Land you control.","Two currents entwined forge something neither could alone."
+"Delta","Emberlight Banner","Multicolor","rare","{2}{G}{U}","Seal","","","Whenever a Land Pulls Up under your control, look at the top card of your deck; if it is a Land, you may Flex it and put it into your hand.
+At the beginning of your End phase, straighten one Land you control.","At the seam of opposing forces, miracles ignite."
+"Delta","Starweave Binding","Multicolor","rare","{2}{W}{U}","Seal","","","Whenever you play a Mudra, Farm +2 Aura and Scope 1 (look at the top card of your deck).
+At the beginning of your End phase, straighten one Land you control.","Balance is not compromise; it is mastery."
+"Delta","Tidebound Decree","Multicolor","rare","{2}{U}{B}","Seal","","","Whenever an opponent Fumbles a card or has a Technique Ratioed, Pick Up a card and lose 1 Aura.
+At the beginning of your End phase, straighten one Land you control.","Balance is not compromise; it is mastery."
+"Delta","Duskbloom Blessing","Multicolor","rare","{2}{B}{R}","Seal","","","Whenever a creature an opponent controls Folds, deal 1 damage to that player.
+At the beginning of your End phase, straighten one Land you control.","Harmony is sharpest at the edge of conflict."
+"Delta","Tideforge Dominion","Multicolor","rare","{2}{R}{G}","Seal","","","Creatures you control with attack 4 or greater gain On Sight (can confront and Turn the Round they Pull Up).
+At the beginning of your End phase, straighten one Land you control.","Harmony is sharpest at the edge of conflict."
+"Delta","Grovewarden Decree","Multicolor","rare","{2}{G}{W}","Seal","","","Whenever another creature Pulls Up under your control, put an Aura Stack (+1/+1) on it and Farm +1 Aura.
+At the beginning of your End phase, straighten one Land you control.","Harmony is sharpest at the edge of conflict."
+"Delta","Concord Tether","Multicolor","rare","{2}{W}{B}","Seal","","","At the beginning of your Maintenance phase, each opponent loses 1 Aura and Farm +1 Aura.
+At the beginning of your End phase, straighten one Land you control.
+Scope 1 (look at the top card of your deck).","Harmony is sharpest at the edge of conflict."
+"Delta","Sunash Warden","Multicolor","rare","{3}{U}{R}","Creature — Warrior","5","5","Airborne (can only be responded to by Airborne creatures).
+During odd Rounds, whenever any player plays a Mudra, it deals 1 damage to any target.
+During even Rounds, whenever any player plays a Mantra, that player Picks Up a card and Fumbles a card.","Two currents entwined forge something neither could alone."
+"Delta","Prism Elk","Multicolor","rare","{3}{B}{G}","Creature — Beast","5","5","Airborne (can only be responded to by Airborne creatures).
+At the beginning of your Maintenance phase, Shred 2 (send the top 2 cards of your deck to your Pit); you may return a Land from your Pit to your hand.","Harmony is sharpest at the edge of conflict."
+"Delta","Sunforge Crow","Multicolor","rare","{3}{R}{W}","Creature — Avian","5","5","Airborne (can only be responded to by Airborne creatures). Confronting creatures you control get +1/+0 and gain Ten Toes (confronting does not Turn them).","At the seam of opposing forces, miracles ignite."
+"Delta","Harmonic Stag","Multicolor","rare","{3}{G}{U}","Creature — Beast","5","5","Airborne (can only be responded to by Airborne creatures).
+Whenever a Land Pulls Up under your control, look at the top card of your deck; if it is a Land, you may Flex it and put it into your hand.","Two currents entwined forge something neither could alone."
+"Delta","Eclipse Stag","Multicolor","rare","{3}{W}{U}","Creature — Beast","5","5","Airborne (can only be responded to by Airborne creatures).
+Whenever you play a Mudra, Farm +2 Aura and Scope 1 (look at the top card of your deck).","Balance is not compromise; it is mastery."
+"Delta","Sunforge Fox","Multicolor","rare","{3}{U}{B}","Creature — Canine","5","5","Airborne (can only be responded to by Airborne creatures).
+Whenever an opponent Fumbles a card or has a Technique Ratioed, Pick Up a card and lose 1 Aura.","Balance is not compromise; it is mastery."
+"Delta","Storm Hawk","Multicolor","rare","{3}{B}{R}","Creature — Avian","5","5","Airborne (can only be responded to by Airborne creatures).
+Whenever a creature an opponent controls Folds, deal 1 damage to that player.","Harmony is sharpest at the edge of conflict."
+"Delta","Oathbreaker Elk","Multicolor","rare","{3}{R}{G}","Creature — Beast","5","5","Airborne (can only be responded to by Airborne creatures). Creatures you control with attack 4 or greater gain On Sight (can confront and Turn the Round they Pull Up).","Balance is not compromise; it is mastery."
+"Delta","Skyroot Crow","Multicolor","rare","{3}{G}{W}","Creature — Avian","5","5","Airborne (can only be responded to by Airborne creatures).
+Whenever another creature Pulls Up under your control, put an Aura Stack (+1/+1) on it and Farm +1 Aura.","Balance is not compromise; it is mastery."
+"Delta","Tidebound Stag","Multicolor","rare","{3}{W}{B}","Creature — Beast","5","5","Airborne (can only be responded to by Airborne creatures).
+At the beginning of your Maintenance phase, each opponent loses 1 Aura and Farm +1 Aura.","At the seam of opposing forces, miracles ignite."
+"Delta","Emberlight Sovereign","Multicolor","rare","{3}{U}{R}","Creature — Spirit","5","5","Airborne (can only be responded to by Airborne creatures).
+During odd Rounds, whenever any player plays a Mudra, it deals 1 damage to any target.
+During even Rounds, whenever any player plays a Mantra, that player Picks Up a card and Fumbles a card.","Balance is not compromise; it is mastery."
+"Delta","Sunash Crow","Multicolor","rare","{3}{B}{G}","Creature — Avian","5","5","Airborne (can only be responded to by Airborne creatures).
+At the beginning of your Maintenance phase, Shred 2 (send the top 2 cards of your deck to your Pit); you may return a Land from your Pit to your hand.","At the seam of opposing forces, miracles ignite."
+"Delta","Oathbreaker Seer","Multicolor","rare","{3}{R}{W}","Creature — Wizard","5","5","Airborne (can only be responded to by Airborne creatures). Confronting creatures you control get +1/+0 and gain Ten Toes (confronting does not Turn them).","At the seam of opposing forces, miracles ignite."
+"Delta","Twinfire Lion","Multicolor","rare","{3}{G}{U}","Creature — Feline","5","5","Airborne (can only be responded to by Airborne creatures).
+Whenever a Land Pulls Up under your control, look at the top card of your deck; if it is a Land, you may Flex it and put it into your hand.","At the seam of opposing forces, miracles ignite."
+"Delta","Aether Colossus","Artifact","rare","{1}","Artifact Creature — Construct","1","1","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+{1}, {TURN}: Turn target Artifact or creature with attack 1 or less.
+When this creature Folds, Pick Up a card.","Built to outlast the hands that shaped it."
+"Delta","Prism Sentinel","Artifact","common","{2}","Artifact Creature — Construct","2","3","Skycheck (can respond to Airborne creatures).
+At the beginning of your Maintenance phase, if you control three or more Artifacts, this creature gets +1/+1 until end of Round.","Crafted from brass, bound by geometry."
+"Delta","Resonant Hound","Artifact","common","{3}","Artifact Creature — Construct","2","4","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+At the beginning of your Maintenance phase, if you control three or more Artifacts, this creature gets +1/+1 until end of Round.","A quiet hum marks a steady conduit."
+"Delta","Lattice Owl","Artifact","uncommon","{4}","Artifact Creature — Construct","3","5","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+{TURN}: Add {1} to your Energy pool.","Precision is its own kind of craft."
+"Delta","Gear Owl","Artifact","common","{5}","Artifact Creature — Construct","4","5","Ten Toes (confronting does not cause this creature to Turn).
+When this creature Pulls Up, Scope 1 (look at the top card of your deck).","A quiet hum marks a steady conduit."
+"Delta","Prism Spider","Artifact","common","{6}","Artifact Creature — Construct","6","6","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+When this creature Folds, Pick Up a card.","A quiet hum marks a steady conduit."
+"Delta","Gilded Strider","Artifact","rare","{1}","Artifact Creature — Construct","1","2","On Sight (can confront and Turn the Round it Pulls Up).
+{1}, {TURN}: Turn target Artifact or creature with attack 1 or less.
+At the beginning of your Maintenance phase, if you control three or more Artifacts, this creature gets +1/+1 until end of Round.","Crafted from brass, bound by geometry."
+"Delta","Bellframe Watcher","Artifact","common","{2}","Artifact Creature — Construct","1","3","When this creature Folds, Pick Up a card.","Precision is its own kind of craft."
+"Delta","Prism Owl","Artifact","common","{3}","Artifact Creature — Construct","3","4","Ten Toes (confronting does not cause this creature to Turn).
+{1}, {TURN}: Turn target Artifact or creature with attack 1 or less.","A quiet hum marks a steady conduit."
+"Delta","Resonant Owl","Artifact","uncommon","{4}","Artifact Creature — Construct","4","4","Skycheck (can respond to Airborne creatures).
+{1}, {TURN}: Turn target Artifact or creature with attack 1 or less.","No pulse, no fear, no fatigue."
+"Delta","Voltaic Hound","Artifact","common","{5}","Artifact Creature — Construct","5","5","Ten Toes (confronting does not cause this creature to Turn).
+{1}, {TURN}: Turn target Artifact or creature with attack 1 or less.","A quiet hum marks a steady conduit."
+"Delta","Harmonic Owl","Artifact","common","{6}","Artifact Creature — Construct","5","6","Ten Toes (confronting does not cause this creature to Turn).
+{TURN}: Add {1} to your Energy pool.","Precision is its own kind of craft."
+"Delta","Starforged Owl","Artifact","rare","{1}","Artifact Creature — Construct","1","2","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+When this creature Folds, Pick Up a card.
+{1}, {TURN}: Turn target Artifact or creature with attack 1 or less.","A quiet hum marks a steady conduit."
+"Delta","Iron Strider","Artifact","common","{2}","Artifact Creature — Construct","2","3","Ten Toes (confronting does not cause this creature to Turn).
+When this creature Folds, Pick Up a card.","Precision is its own kind of craft."
+"Delta","Arcane Colossus","Artifact","common","{3}","Artifact Creature — Construct","3","3","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+{TURN}: Add {1} to your Energy pool.","A quiet hum marks a steady conduit."
+"Delta","Opal Moth","Artifact","uncommon","{4}","Artifact Creature — Construct","3","5","On Sight (can confront and Turn the Round it Pulls Up).
+{TURN}: Add {1} to your Energy pool.","No pulse, no fear, no fatigue."
+"Delta","Gilded Conduit","Artifact","common","{1}","Artifact","","","{1}, {TURN}: Add one Energy of any color to your Energy pool. Farm +1 Aura if this is Round 5 or later.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Built to outlast the hands that shaped it."
+"Delta","Cogwork Vault","Artifact","uncommon","{2}","Artifact","","","{TURN}: Add {1} to your Energy pool.
+{2}, Sacrifice this: Pick Up a card.
+If you control two or more nonbasic Lands, Farm +2 Aura.","Precision is its own kind of craft."
+"Delta","Harmonic Orb","Artifact","rare","{3}","Artifact","","","As long as this artifact is Straightened, players cannot straighten more than two permanents during their Straighten phases.
+If you control an Artifact, this Technique costs {1} less to play.","A quiet hum marks a steady conduit."
+"Delta","Tempered Engine","Artifact","uncommon","{1}","Artifact","","","{1}, {TURN}: Scope 2 (look at the top 2 cards of your deck and reorder them). Look at the top card of your deck; you may put it into your Pit.","Built to outlast the hands that shaped it."
+"Delta","Gilded Monolith","Artifact","common","{2}","Artifact","","","{2}, {TURN}: Glaze target creature (+1/+1 until end of Round).
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","A quiet hum marks a steady conduit."
+"Delta","Clockwork Anchor","Artifact","uncommon","{3}","Artifact","","","{TURN}: Add one Energy of any color to your Energy pool.
+If you control two or more nonbasic Lands, Farm +2 Aura.","A quiet hum marks a steady conduit."
+"Delta","Arcane Orb","Artifact","rare","{4}","Artifact","","","At the beginning of your Maintenance phase, Pick Up an additional card. Skip your Pick Up phase if you have five or more cards in hand.
+If you control an Artifact, this Technique costs {1} less to play.","Crafted from brass, bound by geometry."
+"Delta","Gear Anchor","Artifact","uncommon","{2}","Artifact","","","Techniques your opponents play during your Round cost {1} more to play. Look at the top card of your deck; you may put it into your Pit.","A quiet hum marks a steady conduit."
+"Delta","Etched Engine","Artifact","rare","{4}","Artifact","","","{3}, {TURN}: This artifact deals 2 damage to target creature or player if you have two or fewer cards in hand.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","A quiet hum marks a steady conduit."
+"Delta","Clockwork Lens","Artifact","common","{2}","Artifact","","","{TURN}, Sacrifice this: Extinguish target card in a Pit. Pick Up a card.
+If you control two or more nonbasic Lands, Farm +2 Aura.","No pulse, no fear, no fatigue."
+"Delta","Clockwork Monolith","Artifact","common","{3}","Artifact","","","Whenever a creature Pulls Up under your control, you may pay {1}. If you do, Farm +2 Aura.
+If you control an Artifact, this Technique costs {1} less to play.","No pulse, no fear, no fatigue."
+"Delta","Tempered Vault","Artifact","rare","{5}","Artifact","","","{TURN}: Straighten target Artifact or Land. Play this ability only during your Round. Look at the top card of your deck; you may put it into your Pit.","A quiet hum marks a steady conduit."
+"Delta","Votive Relic","Artifact","uncommon","{4}","Artifact","","","Creatures you control get +1/+0 as long as you control three or more Artifacts.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Built to outlast the hands that shaped it."
+"Delta","Resonant Prism","Artifact","uncommon","{3}","Artifact","","","{1}, {TURN}: Prevent the next 1 damage that would be dealt to any target this Round.
+If you control two or more nonbasic Lands, Farm +2 Aura.","A quiet hum marks a steady conduit."
+"Delta","Glass Conduit","Artifact","rare","{6}","Artifact","","","At the beginning of your End phase, straighten all Lands you control.
+If you control an Artifact, this Technique costs {1} less to play.","Crafted from brass, bound by geometry."
+"Delta","Lattice Core","Artifact","common","{2}","Artifact","","","{1}, {TURN}: Add one Energy of any color to your Energy pool. Farm +1 Aura if this is Round 5 or later. Look at the top card of your deck; you may put it into your Pit.","No pulse, no fear, no fatigue."
+"Delta","Runic Lens","Artifact","uncommon","{3}","Artifact","","","{TURN}: Add {1} to your Energy pool.
+{2}, Sacrifice this: Pick Up a card.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Crafted from brass, bound by geometry."
+"Delta","Polished Censer","Artifact","rare","{4}","Artifact","","","As long as this artifact is Straightened, players cannot straighten more than two permanents during their Straighten phases.
+If you control two or more nonbasic Lands, Farm +2 Aura.","Built to outlast the hands that shaped it."
+"Delta","Opal Scepter","Artifact","uncommon","{2}","Artifact","","","{1}, {TURN}: Scope 2 (look at the top 2 cards of your deck and reorder them).
+If you control an Artifact, this Technique costs {1} less to play.","Precision is its own kind of craft."
+"Delta","Iron Monolith","Artifact","common","{3}","Artifact","","","{2}, {TURN}: Glaze target creature (+1/+1 until end of Round). Look at the top card of your deck; you may put it into your Pit.","No pulse, no fear, no fatigue."
+"Delta","Lattice Crown","Artifact","uncommon","{4}","Artifact","","","{TURN}: Add one Energy of any color to your Energy pool.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","A quiet hum marks a steady conduit."
+"Delta","Lattice Orb","Artifact","rare","{5}","Artifact","","","At the beginning of your Maintenance phase, Pick Up an additional card. Skip your Pick Up phase if you have five or more cards in hand.
+If you control two or more nonbasic Lands, Farm +2 Aura.","A quiet hum marks a steady conduit."
+"Delta","Opal Orb","Artifact","uncommon","{3}","Artifact","","","Techniques your opponents play during your Round cost {1} more to play.
+If you control an Artifact, this Technique costs {1} less to play.","Built to outlast the hands that shaped it."
+"Delta","Aether Engine","Artifact","rare","{5}","Artifact","","","{3}, {TURN}: This artifact deals 2 damage to target creature or player if you have two or fewer cards in hand. Look at the top card of your deck; you may put it into your Pit.","No pulse, no fear, no fatigue."
+"Delta","Opal Dynamo","Artifact","common","{3}","Artifact","","","{TURN}, Sacrifice this: Extinguish target card in a Pit. Pick Up a card.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","Built to outlast the hands that shaped it."
+"Delta","Polished Scepter","Artifact","common","{4}","Artifact","","","Whenever a creature Pulls Up under your control, you may pay {1}. If you do, Farm +2 Aura.
+If you control two or more nonbasic Lands, Farm +2 Aura.","A quiet hum marks a steady conduit."
+"Delta","Aether Anchor","Artifact","rare","{6}","Artifact","","","{TURN}: Straighten target Artifact or Land. Play this ability only during your Round.
+If you control an Artifact, this Technique costs {1} less to play.","Built to outlast the hands that shaped it."
+"Delta","Resonant Lantern","Artifact","uncommon","{5}","Artifact","","","Creatures you control get +1/+0 as long as you control three or more Artifacts. Look at the top card of your deck; you may put it into your Pit.","A quiet hum marks a steady conduit."
+"Delta","Opal Censer","Artifact","uncommon","{4}","Artifact","","","{1}, {TURN}: Prevent the next 1 damage that would be dealt to any target this Round.
+If you spent Energy of two or more colors to play this Technique, Pick Up a card.","No pulse, no fear, no fatigue."
+"Delta","Sunken Refuge","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{TURN}: Add {W} or {U} to your Energy pool; this land deals 1 damage to you.","The horizon shifts with those who claim it."
+"Delta","Verdant Vault","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{TURN}: Add {U} or {B} to your Energy pool; this land deals 1 damage to you.","Every path across the realm leaves a trace."
+"Delta","Sunspire Terrace","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{TURN}: Add {B} or {R} to your Energy pool; this land deals 1 damage to you.","The horizon shifts with those who claim it."
+"Delta","Rootvale Atoll","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{TURN}: Add {R} or {G} to your Energy pool; this land deals 1 damage to you.","The horizon shifts with those who claim it."
+"Delta","Whispering Spire","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{TURN}: Add {G} or {W} to your Energy pool; this land deals 1 damage to you.","The horizon shifts with those who claim it."
+"Delta","Tidewall Mire","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{TURN}: Add {W} or {B} to your Energy pool; this land deals 1 damage to you.","Every path across the realm leaves a trace."
+"Delta","Gilded Crag","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{TURN}: Add {U} or {R} to your Energy pool; this land deals 1 damage to you.","The horizon shifts with those who claim it."
+"Delta","Aether Mire","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{TURN}: Add {B} or {G} to your Energy pool; this land deals 1 damage to you.","Old stones hold older energy."
+"Delta","Shattered Refuge","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{TURN}: Add {R} or {W} to your Energy pool; this land deals 1 damage to you.","The horizon shifts with those who claim it."
+"Delta","Whispering Crag","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{TURN}: Add {G} or {U} to your Energy pool; this land deals 1 damage to you.","Where the currents gather, power lingers."
+"Delta","Craggy Hollow","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{1}, {TURN}: Add {W}{U} to your Energy pool.","Draw deeply, for the earth remembers."
+"Delta","Verdant Crag","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{1}, {TURN}: Add {U}{B} to your Energy pool.","Old stones hold older energy."
+"Delta","Verdant Shrine","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{1}, {TURN}: Add {B}{R} to your Energy pool.","Every path across the realm leaves a trace."
+"Delta","Ancient Basin","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{1}, {TURN}: Add {R}{G} to your Energy pool.","The horizon shifts with those who claim it."
+"Delta","Rootvale Stronghold","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{1}, {TURN}: Add {G}{W} to your Energy pool.","Draw deeply, for the earth remembers."
+"Delta","Hollow Reach","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{1}, {TURN}: Add {W}{B} to your Energy pool.","The horizon shifts with those who claim it."
+"Delta","Cinder Reach","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{1}, {TURN}: Add {U}{R} to your Energy pool.","Where the currents gather, power lingers."
+"Delta","Cinder Terrace","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{1}, {TURN}: Add {B}{G} to your Energy pool.","Where the currents gather, power lingers."
+"Delta","Tidewall Refuge","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{1}, {TURN}: Add {R}{W} to your Energy pool.","Where the currents gather, power lingers."
+"Delta","Sovereign Spire","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{1}, {TURN}: Add {G}{U} to your Energy pool.","Where the currents gather, power lingers."
+"Delta","Hollow Stronghold","Land","uncommon","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {W} to your Energy pool.
+{1}, {TURN}: Extinguish target card in a Pit.
+Scope 1 (look at the top card of your deck).
+Straighten up to one Land you control if it is your Main phase.","Draw deeply, for the earth remembers."
+"Delta","Glimmer Basin","Land","rare","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {U} to your Energy pool.
+{3}, {TURN}: This land becomes a 3/3 Construct creature until end of Round.
+Scope 1 (look at the top card of your deck).
+Straighten up to one Land you control if it is your Main phase.","Every path across the realm leaves a trace."
+"Delta","Starlit Citadel","Land","uncommon","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {B} to your Energy pool.
+{2}, {TURN}: Farm +1 Aura.
+Scope 1 (look at the top card of your deck).
+Straighten up to one Land you control if it is your Main phase.","Where the currents gather, power lingers."
+"Delta","Rootvale Nexus","Land","rare","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {R} to your Energy pool.
+{1}, Pay 1 Aura, {TURN}: Add one Energy of any color to your Energy pool.
+Scope 1 (look at the top card of your deck).
+Straighten up to one Land you control if it is your Main phase.","Every path across the realm leaves a trace."
+"Delta","Ancient Outpost","Land","uncommon","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {G} to your Energy pool.
+{2}, {TURN}: Scope 1 (look at the top card of your deck).
+Scope 1 (look at the top card of your deck).
+Straighten up to one Land you control if it is your Main phase.","Draw deeply, for the earth remembers."
+"Delta","Emberpeak Sanctuary","Land","uncommon","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {W} to your Energy pool.
+{1}, {TURN}, Sacrifice this: Pick Up a card.
+Scope 1 (look at the top card of your deck).
+Straighten up to one Land you control if it is your Main phase.","Where the currents gather, power lingers."
+"Delta","Craggy Shrine","Land","rare","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {U} to your Energy pool.
+{3}, {TURN}: Glaze target creature (+1/+1 until end of Round).
+Scope 1 (look at the top card of your deck).
+Straighten up to one Land you control if it is your Main phase.","The horizon shifts with those who claim it."
+"Delta","Sunspire Refuge","Land","rare","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {B} to your Energy pool.
+{2}, {TURN}, Sacrifice this: Eliminate target nonbasic Land.
+Scope 1 (look at the top card of your deck).
+Straighten up to one Land you control if it is your Main phase.","Every path across the realm leaves a trace."
+"Delta","Stormfront Vista","Land","uncommon","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {R} to your Energy pool.
+{1}, {TURN}: Extinguish target card in a Pit.
+Scope 1 (look at the top card of your deck).
+Straighten up to one Land you control if it is your Main phase.","Draw deeply, for the earth remembers."
+"Delta","Quiet Crossing","Land","rare","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {G} to your Energy pool.
+{3}, {TURN}: This land becomes a 3/3 Construct creature until end of Round.
+Scope 1 (look at the top card of your deck).
+Straighten up to one Land you control if it is your Main phase.","Draw deeply, for the earth remembers."
+"Delta","Sunken Stronghold","Land","uncommon","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {W} to your Energy pool.
+{2}, {TURN}: Farm +1 Aura.","The horizon shifts with those who claim it."
+"Delta","Sunken Outpost","Land","rare","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {U} to your Energy pool.
+{1}, Pay 1 Aura, {TURN}: Add one Energy of any color to your Energy pool.","The horizon shifts with those who claim it."
+"Delta","Glimmer Vista","Land","uncommon","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {B} to your Energy pool.
+{2}, {TURN}: Scope 1 (look at the top card of your deck).","Draw deeply, for the earth remembers."
+"Delta","Stormfront Hollow","Land","uncommon","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {R} to your Energy pool.
+{1}, {TURN}, Sacrifice this: Pick Up a card.","Every path across the realm leaves a trace."
+"Delta","Shattered Expanse","Land","rare","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {G} to your Energy pool.
+{3}, {TURN}: Glaze target creature (+1/+1 until end of Round).","Every path across the realm leaves a trace."
+"Delta","Ancient Atoll","Land","rare","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {W} to your Energy pool.
+{2}, {TURN}, Sacrifice this: Eliminate target nonbasic Land.","Where the currents gather, power lingers."
+"Delta","Crystal Vista","Land","uncommon","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {U} to your Energy pool.
+{1}, {TURN}: Extinguish target card in a Pit.","Where the currents gather, power lingers."
+"Delta","Gilded Basin","Land","rare","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {B} to your Energy pool.
+{3}, {TURN}: This land becomes a 3/3 Construct creature until end of Round.","Draw deeply, for the earth remembers."
+"Delta","Aether Nexus","Land","uncommon","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {R} to your Energy pool.
+{2}, {TURN}: Farm +1 Aura.","Old stones hold older energy."
+"Delta","Solstice Expanse","Land","rare","","Land","","","This land Pulls Up Turned.
+{TURN}: Add {G} to your Energy pool.
+{1}, Pay 1 Aura, {TURN}: Add one Energy of any color to your Energy pool.","The horizon shifts with those who claim it."

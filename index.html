@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA! TCG — Comic Edition Card Viewer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=Chakra+Petch:ital,wght@0,500;0,600;0,700;1,600&family=Comic+Neue:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #11131b;
+      --panel: #1a1e2b;
+      --ink: #0a0b10;
+      --paper: #fffdf4;
+      --yellow: #ffe24a;
+      --text: #f3f5fa;
+      --muted: #a6afc4;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif;
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(rgba(255, 226, 74, 0.06) 1.5px, transparent 1.5px),
+        radial-gradient(circle at top, #1f2538 0%, #0d0f17 65%);
+      background-size: 18px 18px, 100% 100%;
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--panel);
+      border-bottom: 4px solid var(--ink);
+      box-shadow: 0 5px 0 rgba(0, 0, 0, 0.55);
+      padding: 1rem 1.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo {
+      font-family: 'Bangers', Impact, sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.08em;
+      color: var(--yellow);
+      background: #e11d48;
+      padding: 4px 14px 2px;
+      border: 3px solid var(--ink);
+      box-shadow: 4px 4px 0 var(--ink);
+      transform: skewX(-7deg) rotate(-1.5deg);
+      text-shadow: 2px 2px 0 var(--ink);
+      line-height: 1.05;
+    }
+
+    .brand-sub h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text);
+    }
+
+    .brand-sub p {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      align-items: center;
+    }
+
+    input[type="search"], select, .btn-toggle {
+      background: #0d1018;
+      color: var(--text);
+      border: 2.5px solid var(--ink);
+      box-shadow: 3px 3px 0 var(--ink);
+      border-radius: 4px;
+      padding: 0.45rem 0.7rem;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 600;
+      font-size: 0.86rem;
+      outline: none;
+    }
+
+    input[type="search"]:focus, select:focus {
+      border-color: var(--yellow);
+    }
+
+    .btn-toggle {
+      background: var(--yellow);
+      color: var(--ink);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+    }
+
+    .btn-toggle:hover {
+      transform: translate(-1px, -1px);
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    .btn-toggle.active {
+      background: #38bdf8;
+    }
+
+    .stats {
+      padding: 0.6rem 1.75rem;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      border-bottom: 2px solid #23283a;
+      background: #131622;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .stats-tip {
+      font-size: 0.78rem;
+      color: var(--yellow);
+      opacity: 0.9;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(292px, 1fr));
+      gap: 2rem 1.65rem;
+      padding: 2rem 1.75rem 4rem;
+      max-width: 1520px;
+      margin: 0 auto;
+    }
+
+    /* ==================== COMIC BOOK TCG CARD ==================== */
+    .card-scene {
+      perspective: 1100px;
+      min-height: 416px;
+      cursor: pointer;
+    }
+
+    .card-flipper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 416px;
+      transform-style: preserve-3d;
+      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .card-scene.is-flipped .card-flipper {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: relative;
+      width: 100%;
+      min-height: 416px;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 12px;
+      border: 4px solid var(--ink);
+      box-shadow: 7px 8px 0 var(--ink);
+      transition: transform 0.14s ease, box-shadow 0.14s ease;
+      display: flex;
+      flex-direction: column;
+      overflow: visible;
+    }
+
+    .card-scene:hover .card-face {
+      transform: translate(-3px, -5px);
+      box-shadow: 11px 13px 0 var(--ink);
+    }
+
+    /* Color Theme Variables (Vibrant Pop-Art Comic Palettes) */
+    .card-front {
+      --c-bg1: #fff3b0;
+      --c-bg2: #f4c430;
+      --c-art1: #fef08a;
+      --c-art2: #d97706;
+      --c-accent: #ffe24a;
+      --c-tag-bg: #ffe24a;
+      --c-tag-ink: #0a0b10;
+      --c-dot: rgba(10, 11, 16, 0.14);
+      padding: 10px 10px 12px;
+      background-color: var(--c-bg1);
+      background-image:
+        radial-gradient(var(--c-dot) 1.6px, transparent 1.6px),
+        linear-gradient(155deg, var(--c-bg1) 0%, var(--c-bg2) 100%);
+      background-size: 9px 9px, 100% 100%;
+      color: var(--ink);
+    }
+
+    .card-front.White {
+      --c-bg1: #fff6cc; --c-bg2: #eab308;
+      --c-art1: #fef9c3; --c-art2: #ca8a04;
+      --c-accent: #ffe24a; --c-tag-bg: #ffe24a; --c-tag-ink: #0a0b10;
+    }
+    .card-front.Blue {
+      --c-bg1: #38bdf8; --c-bg2: #1d4ed8;
+      --c-art1: #7dd3fc; --c-art2: #1e3a8a;
+      --c-accent: #38bdf8; --c-tag-bg: #ffe24a; --c-tag-ink: #0a0b10;
+      --c-dot: rgba(255, 255, 255, 0.16);
+    }
+    .card-front.Black {
+      --c-bg1: #7c3aed; --c-bg2: #2e1065;
+      --c-art1: #a78bfa; --c-art2: #1e1b4b;
+      --c-accent: #c084fc; --c-tag-bg: #e879f9; --c-tag-ink: #0a0b10;
+      --c-dot: rgba(255, 255, 255, 0.14);
+    }
+    .card-front.Red {
+      --c-bg1: #fb7185; --c-bg2: #dc2626;
+      --c-art1: #fdba74; --c-art2: #991b1b;
+      --c-accent: #f97316; --c-tag-bg: #ffe24a; --c-tag-ink: #0a0b10;
+      --c-dot: rgba(10, 11, 16, 0.16);
+    }
+    .card-front.Green {
+      --c-bg1: #4ade80; --c-bg2: #15803d;
+      --c-art1: #bef264; --c-art2: #14532d;
+      --c-accent: #a3e635; --c-tag-bg: #ffe24a; --c-tag-ink: #0a0b10;
+      --c-dot: rgba(10, 11, 16, 0.16);
+    }
+    .card-front.Artifact {
+      --c-bg1: #cbd5e1; --c-bg2: #475569;
+      --c-art1: #e2e8f0; --c-art2: #334155;
+      --c-accent: #94a3b8; --c-tag-bg: #38bdf8; --c-tag-ink: #0a0b10;
+      --c-dot: rgba(10, 11, 16, 0.15);
+    }
+    .card-front.Land {
+      --c-bg1: #fdba74; --c-bg2: #9a3412;
+      --c-art1: #fde68a; --c-art2: #78350f;
+      --c-accent: #f59e0b; --c-tag-bg: #fef08a; --c-tag-ink: #0a0b10;
+      --c-dot: rgba(10, 11, 16, 0.16);
+    }
+    .card-front.Multicolor {
+      --c-bg1: #fde047; --c-bg2: #ec4899;
+      --c-art1: #f9a8d4; --c-art2: #7e22ce;
+      --c-accent: #f472b6; --c-tag-bg: #ffe24a; --c-tag-ink: #0a0b10;
+      --c-dot: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Rarity Border Sheen */
+    .card-front.rarity-rare::before {
+      content: "";
+      position: absolute;
+      inset: 3px;
+      border-radius: 7px;
+      border: 2.5px dashed rgba(255, 250, 205, 0.72);
+      pointer-events: none;
+    }
+
+    /* Top Comic Masthead Row */
+    .comic-header {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 3;
+    }
+
+    /* Floating Top-Left Comic Energy Burst / Issue Cost */
+    .energy-burst {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      background: var(--ink);
+      border: 2.5px solid var(--ink);
+      box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.45);
+      padding: 3px 5px;
+      border-radius: 8px;
+      transform: rotate(-3deg);
+      flex-shrink: 0;
+    }
+
+    .energy-burst.empty { display: none; }
+
+    .pip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 21px;
+      height: 21px;
+      border-radius: 50%;
+      font-family: 'Barlow Condensed', Impact, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 800;
+      border: 2px solid var(--ink);
+      box-shadow: inset -1px -2px 0 rgba(0, 0, 0, 0.28), inset 1px 1px 0 rgba(255, 255, 255, 0.55);
+      line-height: 1;
+    }
+
+    .pip-W { background: #fff4b8; color: #1c1404; }
+    .pip-U { background: #38bdf8; color: #082f49; }
+    .pip-B { background: #9333ea; color: #ffffff; }
+    .pip-R { background: #ef4444; color: #ffffff; }
+    .pip-G { background: #22c55e; color: #052e16; }
+    .pip-N { background: #e2e8f0; color: #0f172a; }
+    .pip-T { background: #ffe24a; color: #0a0b10; font-size: 0.78rem; }
+
+    /* Slanted Comic Title Plate */
+    .title-plate {
+      flex: 1;
+      min-width: 0;
+      background: var(--ink);
+      border: 2.5px solid #ffffff;
+      outline: 2.5px solid var(--ink);
+      box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.45);
+      padding: 4px 10px 3px;
+      transform: skewX(-6deg);
+    }
+
+    .card-name {
+      display: block;
+      font-family: 'Bangers', Impact, sans-serif;
+      font-size: 1.28rem;
+      letter-spacing: 0.055em;
+      line-height: 1.05;
+      color: #ffffff;
+      text-shadow: 2px 2px 0 #000000;
+      transform: skewX(6deg);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Dramatic Comic Action Art Panel */
+    .art-panel {
+      position: relative;
+      height: 146px;
+      border: 3.5px solid var(--ink);
+      border-radius: 6px;
+      background:
+        repeating-conic-gradient(
+          from 0deg at 50% 48%,
+          rgba(255, 255, 255, 0.18) 0deg 8deg,
+          transparent 8deg 18deg
+        ),
+        radial-gradient(circle at 50% 48%, var(--c-art1) 0%, var(--c-art2) 78%, #090b12 100%);
+      overflow: hidden;
+      box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: -14px;
+      clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
+    }
+
+    .art-panel::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(10, 11, 16, 0.22) 1.5px, transparent 1.5px);
+      background-size: 7px 7px;
+      mask-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 55%);
+      -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 55%);
+      pointer-events: none;
+    }
+
+    .art-burst {
+      width: 84px;
+      height: 84px;
+      background: rgba(255, 255, 255, 0.24);
+      border: 3px solid rgba(10, 11, 16, 0.55);
+      transform: rotate(45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 4px 4px 0 rgba(10, 11, 16, 0.35);
+    }
+
+    .art-burst span {
+      transform: rotate(-45deg);
+      font-family: 'Bangers', sans-serif;
+      font-size: 0.92rem;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+      text-align: center;
+    }
+
+    .annex-stamp {
+      position: absolute;
+      top: 7px;
+      right: 7px;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--yellow);
+      color: var(--ink);
+      border: 2.5px solid var(--ink);
+      box-shadow: 2px 2px 0 var(--ink);
+      font-family: 'Bangers', sans-serif;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    /* Skewed Comic Narration Strip (Type + Rarity Stamp) */
+    .comic-type-strip {
+      position: relative;
+      z-index: 4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+      margin: 0 4px 8px;
+      padding: 4px 9px;
+      background: var(--c-tag-bg);
+      color: var(--c-tag-ink);
+      border: 3px solid var(--ink);
+      box-shadow: 4px 4px 0 var(--ink);
+      transform: skewX(-6deg) rotate(-1deg);
+    }
+
+    .comic-type-strip > * {
+      transform: skewX(6deg);
+    }
+
+    .type-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .rarity-stamp {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 0.72rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 1px 7px;
+      border: 2px solid var(--ink);
+      border-radius: 3px;
+      box-shadow: 2px 2px 0 var(--ink);
+    }
+    .rarity-stamp.common   { background: #334155; color: #f8fafc; }
+    .rarity-stamp.uncommon { background: #38bdf8; color: #082f49; }
+    .rarity-stamp.rare     { background: #f59e0b; color: #0a0b10; }
+
+    /* Inked Comic Caption Rules Box */
+    .comic-rules-box {
+      position: relative;
+      flex: 1;
+      background-color: var(--paper);
+      background-image: radial-gradient(rgba(10, 11, 16, 0.055) 1.2px, transparent 1.2px);
+      background-size: 8px 8px;
+      border: 3px solid var(--ink);
+      border-radius: 6px;
+      box-shadow: 4px 4px 0 var(--ink);
+      padding: 9px 10px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 7px;
+      color: #14161f;
+    }
+
+    .rules-lines {
+      font-family: 'Comic Neue', 'Chakra Petch', sans-serif;
+      font-size: 0.83rem;
+      font-weight: 700;
+      line-height: 1.32;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .rules-lines .pip {
+      width: 17px;
+      height: 17px;
+      font-size: 0.68rem;
+      vertical-align: -2px;
+      margin: 0 1px;
+    }
+
+    .rules-lines .kw {
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #b91c1c;
+      font-weight: 800;
+    }
+
+    .rules-lines .rem {
+      font-weight: 700;
+      color: #475569;
+      font-style: italic;
+    }
+
+    .flavor-caption {
+      background: #fef08a;
+      border: 2px solid var(--ink);
+      box-shadow: 2px 2px 0 var(--ink);
+      padding: 4px 7px;
+      font-family: 'Comic Neue', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 0.74rem;
+      line-height: 1.25;
+      color: #1c1917;
+      transform: rotate(-0.6deg);
+    }
+
+    /* Footer: Comic Issue Stamp + Explosive ATK / DEF Badges */
+    .comic-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 8px;
+      gap: 8px;
+      position: relative;
+      z-index: 4;
+    }
+
+    .issue-stamp {
+      background: var(--ink);
+      color: #ffffff;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 0.74rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 3px;
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .stat-cluster {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: -4px;
+      margin-right: -2px;
+    }
+
+    .stat-badge {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 38px;
+      padding: 2px 7px 1px;
+      border: 3px solid var(--ink);
+      box-shadow: 3px 3px 0 var(--ink);
+      line-height: 1;
+      transform: skewX(-7deg);
+    }
+
+    .stat-badge .lbl {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.56rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transform: skewX(7deg);
+    }
+
+    .stat-badge .val {
+      font-family: 'Bangers', Impact, sans-serif;
+      font-size: 1.32rem;
+      letter-spacing: 0.04em;
+      transform: skewX(7deg);
+    }
+
+    .stat-pow {
+      background: #ef4444;
+      color: #ffffff;
+      text-shadow: 1.5px 1.5px 0 var(--ink);
+    }
+
+    .stat-tgh {
+      background: #38bdf8;
+      color: #082f49;
+    }
+
+    /* ==================== COMIC CARD BACK (3D FLIP) ==================== */
+    .card-back {
+      position: absolute;
+      inset: 0;
+      transform: rotateY(180deg);
+      background-color: #13182b;
+      background-image:
+        repeating-conic-gradient(
+          from 8deg at 50% 50%,
+          rgba(255, 226, 74, 0.1) 0deg 9deg,
+          transparent 9deg 20deg
+        ),
+        radial-gradient(rgba(255, 255, 255, 0.11) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 50% 50%, #2b3564 0%, #0f1324 72%);
+      background-size: 100% 100%, 10px 10px, 100% 100%;
+      padding: 14px;
+      align-items: center;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .back-inner {
+      width: 100%;
+      height: 100%;
+      border: 3.5px solid var(--yellow);
+      outline: 3px solid var(--ink);
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 12px;
+      position: relative;
+    }
+
+    .back-issue {
+      background: var(--yellow);
+      color: var(--ink);
+      border: 2.5px solid var(--ink);
+      box-shadow: 3px 3px 0 var(--ink);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      padding: 2px 10px;
+      transform: skewX(-6deg);
+    }
+
+    .back-emblem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .back-logo {
+      font-family: 'Bangers', Impact, sans-serif;
+      font-size: 3.3rem;
+      letter-spacing: 0.08em;
+      color: var(--yellow);
+      -webkit-text-stroke: 2.5px var(--ink);
+      text-shadow: 5px 5px 0 #e11d48, 8px 8px 0 var(--ink);
+      transform: rotate(-6deg) skewX(-6deg);
+      line-height: 1;
+    }
+
+    .back-wheel {
+      display: flex;
+      gap: 8px;
+      background: rgba(10, 11, 16, 0.78);
+      border: 3px solid var(--ink);
+      box-shadow: 4px 4px 0 var(--ink);
+      padding: 7px 11px;
+      border-radius: 999px;
+      transform: rotate(-2deg);
+    }
+
+    .back-wheel .pip {
+      width: 24px;
+      height: 24px;
+      font-size: 0.85rem;
+    }
+
+    .back-tagline {
+      background: #e11d48;
+      color: #ffffff;
+      border: 2.5px solid var(--ink);
+      box-shadow: 3px 3px 0 var(--ink);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      padding: 3px 12px;
+      transform: skewX(-6deg);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="brand-logo">AURA!</div>
+      <div class="brand-sub">
+        <h1>Comic Edition · Alpha · Beta · Delta</h1>
+        <p>1,050 Original Cards · Pop-Art Ink Frame · Energy · Mudra · Mantra · Seal</p>
+      </div>
+    </div>
+    <div class="controls">
+      <input type="search" id="search" placeholder="Search name, type, or rules..." />
+      <select id="setFilter">
+        <option value="All">All Sets (1,050)</option>
+        <option value="Alpha">Alpha (350)</option>
+        <option value="Beta">Beta (350)</option>
+        <option value="Delta">Delta (350)</option>
+      </select>
+      <select id="colorFilter">
+        <option value="All">All Colors</option>
+        <option value="White">White</option>
+        <option value="Blue">Blue</option>
+        <option value="Black">Black</option>
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Multicolor">Multicolor</option>
+        <option value="Artifact">Artifact</option>
+        <option value="Land">Land</option>
+      </select>
+      <select id="typeFilter">
+        <option value="All">All Types</option>
+        <option value="Creature">Creature / Casting</option>
+        <option value="Mudra">Mudra (Fast)</option>
+        <option value="Mantra">Mantra (Main)</option>
+        <option value="Seal">Seal (Persistent)</option>
+        <option value="Artifact">Artifact</option>
+        <option value="Land">Land</option>
+      </select>
+      <select id="rarityFilter">
+        <option value="All">All Rarities</option>
+        <option value="common">Common</option>
+        <option value="uncommon">Uncommon</option>
+        <option value="rare">Rare</option>
+      </select>
+      <select id="sortFilter">
+        <option value="default">Sort: Set Order</option>
+        <option value="costAsc">Energy: Low → High</option>
+        <option value="costDesc">Energy: High → Low</option>
+        <option value="nameAsc">Name: A → Z</option>
+      </select>
+      <button type="button" id="flipAllBtn" class="btn-toggle">Flip All Backs</button>
+    </div>
+  </header>
+
+  <div class="stats">
+    <span id="stats">Loading cards...</span>
+    <span class="stats-tip">Tip: Click any card to flip between Front &amp; Comic Back!</span>
+  </div>
+  <main class="grid" id="grid"></main>
+
+  <script>
+    const FALLBACK_CSV = `set,name,color,rarity,energy_cost,card_type,power,toughness,rules_text,flavor_text
+Alpha,"Haloed Seraph",White,rare,"{2}{W}","Casting — Spirit",3,3,"This Casting can only be responded to by Castings that can fly. Whenever you gain Aura, this Casting gets +1/+0 until end of Round. When this Casting enters play, Turn target Casting an opponent controls.","Light endures long after the banner falls."
+Beta,"Horizon Manta",Blue,uncommon,"{2}{U}{U}","Creature — Leviathan",3,4,"This creature cannot be the target of Techniques your opponents play during your Round. When this creature enters play, look at the top two cards of your deck, put one on top and the other on the bottom. Remove this card in your graveyard from the game and pay {1}{U}: Return target creature to its owner's hand. Play only during your Main phase.",""
+Alpha,"Cinder Surge",Red,common,"{1}{R}","Mudra",,,"Cinder Surge deals 3 damage to target Casting or player. If this is an Odd Round, you may Pick Up a card, then Fumble a card.","Spark first; ask what remains after."
+Delta,"Umbral Pact",Black,rare,"{1}{B}{B}","Seal",,,"At the beginning of your Maintenance phase, you lose 1 Aura and Pick Up an additional card. Whenever a Casting an opponent controls Folds, Farm +1 Aura.","Power always keeps a ledger."
+Delta,"Timber Jaguar",Green,uncommon,"{2}{G}{G}","Creature — Feline",4,3,"This creature cannot be the target of Blue or Black Techniques during your Round. When this creature dies, search your deck for a basic Land card, reveal it, put it into your hand, then shuffle.","Silent as moss, swift as the falling branch."
+Alpha,"Chrono Astrolabe",Artifact,rare,"{3}","Artifact",,,"{TURN}: Add one Energy of any color to your Energy pool.","Time bends to those who chart its tides."
+Alpha,"Sunlit Sanctuary",Land,common,"","Land",,,"Sunlit Sanctuary enters play Turned. {TURN}: Add {W} or {G} to your Energy pool.","Where marble pillars meet the ancient canopy."`;
+
+    function parseCSV(text) {
+      const rows = [];
+      let row = [], val = '', inQuotes = false;
+      for (let i = 0; i < text.length; i++) {
+        const ch = text[i], next = text[i + 1];
+        if (inQuotes) {
+          if (ch === '"' && next === '"') { val += '"'; i++; }
+          else if (ch === '"') { inQuotes = false; }
+          else { val += ch; }
+        } else {
+          if (ch === '"') { inQuotes = true; }
+          else if (ch === ',') { row.push(val); val = ''; }
+          else if (ch === '\n' || (ch === '\r' && next === '\n')) {
+            if (ch === '\r') i++;
+            row.push(val); rows.push(row); row = []; val = '';
+          } else { val += ch; }
+        }
+      }
+      if (val.length || row.length) { row.push(val); rows.push(row); }
+      const headers = rows.shift();
+      return rows.filter(r => r.length === headers.length).map((r, idx) => {
+        const obj = { _idx: idx + 1 };
+        headers.forEach((h, i) => obj[h.trim()] = r[i]);
+        return obj;
+      });
+    }
+
+    function renderPips(str) {
+      if (!str) return '';
+      return str.replace(/\{([^}]+)\}/g, (_, sym) => {
+        if (sym === 'TURN') return `<span class="pip pip-T" title="Turn">↻</span>`;
+        const cls = ['W','U','B','R','G'].includes(sym) ? `pip-${sym}` : 'pip-N';
+        return `<span class="pip ${cls}">${sym}</span>`;
+      });
+    }
+
+    function energyValue(cost) {
+      if (!cost) return 0;
+      let total = 0;
+      const matches = cost.match(/\{([^}]+)\}/g) || [];
+      for (const m of matches) {
+        const inner = m.slice(1, -1);
+        const n = parseInt(inner, 10);
+        total += isNaN(n) ? 1 : n;
+      }
+      return total;
+    }
+
+    function renderRules(str) {
+      if (!str) return '&nbsp;';
+      return str.split(/\r?\n/).filter(l => l.trim()).map(line => {
+        let html = renderPips(line.trim());
+        html = html.replace(/^([A-Za-z][A-Za-z0-9 \-]+?(?:\s+\{[^}]+\})?)\s+(\([^)]+\)\.?)/, '<span class="kw">$1</span> <span class="rem">$2</span>');
+        return `<p>${html}</p>`;
+      }).join('');
+    }
+
+    let allCards = [];
+    let allFlipped = false;
+
+    function render() {
+      const q = document.getElementById('search').value.toLowerCase();
+      const setVal = document.getElementById('setFilter').value;
+      const color = document.getElementById('colorFilter').value;
+      const typeVal = document.getElementById('typeFilter').value;
+      const rarity = document.getElementById('rarityFilter').value;
+      const sortVal = document.getElementById('sortFilter').value;
+
+      let filtered = allCards.filter(c => {
+        if (setVal !== 'All' && c.set !== setVal) return false;
+        if (color !== 'All' && c.color !== color) return false;
+        if (typeVal !== 'All') {
+          if (typeVal === 'Creature') {
+            if (!c.card_type.includes('Creature') && !c.card_type.includes('Casting')) return false;
+          } else if (!c.card_type.includes(typeVal)) {
+            return false;
+          }
+        }
+        if (rarity !== 'All' && c.rarity !== rarity) return false;
+        if (q && !(`${c.name} ${c.card_type} ${c.rules_text}`.toLowerCase().includes(q))) return false;
+        return true;
+      });
+
+      if (sortVal === 'costAsc') filtered.sort((a, b) => energyValue(a.energy_cost) - energyValue(b.energy_cost));
+      else if (sortVal === 'costDesc') filtered.sort((a, b) => energyValue(b.energy_cost) - energyValue(a.energy_cost));
+      else if (sortVal === 'nameAsc') filtered.sort((a, b) => a.name.localeCompare(b.name));
+
+      document.getElementById('stats').textContent = `Showing ${filtered.length} of ${allCards.length} cards`;
+      const grid = document.getElementById('grid');
+
+      grid.innerHTML = filtered.map(c => {
+        const num = String(c._idx || 1).padStart(3, '0');
+        const setLabel = (c.set || 'ALPHA').toUpperCase();
+        const rarIcon = c.rarity === 'rare' ? '★' : c.rarity === 'uncommon' ? '◆' : '●';
+        const pipsHtml = renderPips(c.energy_cost);
+        return `
+        <div class="card-scene ${allFlipped ? 'is-flipped' : ''}" onclick="this.classList.toggle('is-flipped')">
+          <div class="card-flipper">
+            <article class="card-face card-front ${c.color} rarity-${c.rarity}">
+              <div class="comic-header">
+                <div class="energy-burst ${pipsHtml ? '' : 'empty'}">${pipsHtml}</div>
+                <div class="title-plate">
+                  <span class="card-name" title="${c.name}">${c.name}</span>
+                </div>
+              </div>
+
+              <div class="art-panel">
+                <div class="art-burst"><span>${c.color}<br/>ART</span></div>
+                <div class="annex-stamp" title="Card Info">?</div>
+              </div>
+
+              <div class="comic-type-strip">
+                <span class="type-text">${c.card_type}</span>
+                <span class="rarity-stamp ${c.rarity}">${rarIcon} ${c.rarity}</span>
+              </div>
+
+              <div class="comic-rules-box">
+                <div class="rules-lines">${renderRules(c.rules_text)}</div>
+                ${c.flavor_text ? `<div class="flavor-caption">“${c.flavor_text}”</div>` : ''}
+              </div>
+
+              <div class="comic-footer">
+                <span class="issue-stamp">${setLabel} #${num}</span>
+                ${c.power !== '' && c.power !== undefined ? `
+                  <div class="stat-cluster">
+                    <div class="stat-badge stat-pow"><span class="lbl">ATK</span><span class="val">${c.power}</span></div>
+                    <div class="stat-badge stat-tgh"><span class="lbl">DEF</span><span class="val">${c.toughness}</span></div>
+                  </div>
+                ` : ''}
+              </div>
+            </article>
+
+            <div class="card-face card-back">
+              <div class="back-inner">
+                <div class="back-issue">ISSUE № 01 · 1ST ED</div>
+                <div class="back-emblem">
+                  <div class="back-logo">AURA!</div>
+                  <div class="back-wheel">
+                    <span class="pip pip-W">W</span>
+                    <span class="pip pip-U">U</span>
+                    <span class="pip pip-B">B</span>
+                    <span class="pip pip-R">R</span>
+                    <span class="pip pip-G">G</span>
+                  </div>
+                </div>
+                <div class="back-tagline">TRADING CARD GAME</div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    document.getElementById('flipAllBtn').addEventListener('click', (e) => {
+      allFlipped = !allFlipped;
+      e.target.classList.toggle('active', allFlipped);
+      e.target.textContent = allFlipped ? 'Show Card Fronts' : 'Flip All Backs';
+      document.querySelectorAll('.card-scene').forEach(el => el.classList.toggle('is-flipped', allFlipped));
+    });
+
+    Promise.all([
+      fetch('aura_alpha_set.csv?v=' + Date.now()).then(r => r.ok ? r.text() : ''),
+      fetch('aura_beta_set.csv?v=' + Date.now()).then(r => r.ok ? r.text() : ''),
+      fetch('aura_delta_set.csv?v=' + Date.now()).then(r => r.ok ? r.text() : '')
+    ])
+      .then(texts => {
+        const loaded = texts.flatMap(t => t ? parseCSV(t) : []);
+        allCards = loaded.length ? loaded : parseCSV(FALLBACK_CSV);
+        render();
+      })
+      .catch(() => { allCards = parseCSV(FALLBACK_CSV); render(); });
+
+    document.getElementById('search').addEventListener('input', render);
+    document.getElementById('setFilter').addEventListener('change', render);
+    document.getElementById('colorFilter').addEventListener('change', render);
+    document.getElementById('typeFilter').addEventListener('change', render);
+    document.getElementById('rarityFilter').addEventListener('change', render);
+    document.getElementById('sortFilter').addEventListener('change', render);
+  </script>
+</body>
+</html>
