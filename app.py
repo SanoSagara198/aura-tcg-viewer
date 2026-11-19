@@ -206,6 +206,14 @@ COMIC_CSS = """<style>
   transition: box-shadow 0.14s ease;
   display: flex; flex-direction: column; overflow: visible; box-sizing: border-box;
 }
+.card-scene.compact, .card-scene.compact .card-flipper, .card-scene.compact .card-face {
+  min-height: 358px;
+}
+.card-scene.compact .art-panel { height: 112px; }
+.card-scene.compact .card-name { font-size: 1.12rem; }
+.card-scene.compact .rules-lines { font-size: 0.77rem; line-height: 1.26; }
+.card-scene.compact .flavor-caption { font-size: 0.7rem; }
+.card-scene.compact .back-logo { font-size: 2.6rem; }
 .card-scene:hover .card-face { box-shadow: 11px 13px 0 var(--ink); }
 .card-front {
   --c-bg1: #fff3b0; --c-bg2: #f4c430; --c-art1: #fef08a; --c-art2: #d97706;
@@ -504,7 +512,13 @@ def render_rules(raw: str) -> str:
     return "".join(paragraphs)
 
 
-def render_card_html(row: pd.Series, flip_all: bool, uid: str, in_deck_qty: int = 0) -> str:
+def render_card_html(
+    row: pd.Series,
+    flip_all: bool,
+    uid: str,
+    in_deck_qty: int = 0,
+    compact: bool = False,
+) -> str:
     name = html.escape(str(row["name"]))
     color = html.escape(str(row["color"]))
     rarity = html.escape(str(row["rarity"]).lower())
@@ -531,6 +545,7 @@ def render_card_html(row: pd.Series, flip_all: bool, uid: str, in_deck_qty: int 
     qty_pill = f'<div class="deck-count-pill">IN DECK ×{in_deck_qty}</div>' if in_deck_qty > 0 else ""
     checked_attr = "checked" if flip_all else ""
     empty_cls = "" if pips_html else " empty"
+    scene_cls = "card-scene compact" if compact else "card-scene"
 
     # For Multicolor cards, blend their actual 2+ component colors simultaneously!
     multi_style = ""
@@ -545,7 +560,7 @@ def render_card_html(row: pd.Series, flip_all: bool, uid: str, in_deck_qty: int 
         art_label = " / ".join(c_list[:2])
 
     return (
-        f'<label class="card-scene" for="{uid}">'
+        f'<label class="{scene_cls}" for="{uid}">'
         f'<input class="flip-chk" type="checkbox" id="{uid}" {checked_attr} />'
         '<div class="card-flipper">'
         f'<article class="card-face card-front {color} rarity-{rarity}"{multi_style}>'
@@ -962,7 +977,86 @@ with tab_gallery:
         )
         st.html(f'<div class="aura-grid">{cards_html}</div>')
 
-# -------------------- TAB 2: DECK EDITOR & AUTO-GENERATOR --------------------
+# -------------------- TAB 2: VISUAL GALLERY DECK EDITOR & AUTO-GENERATOR --------------------
+def adjust_deck_card(cid: str, delta: int) -> None:
+    cur = st.session_state.deck_cards.get(cid, 0)
+    card = id_map[cid]
+    cap = MAX_DECK if bool(card["basic"]) else MAX_COPIES
+    nxt = max(0, min(cap, cur + delta))
+    if nxt == 0:
+        st.session_state.deck_cards.pop(cid, None)
+    else:
+        st.session_state.deck_cards[cid] = nxt
+
+
+def render_interactive_card_grid(
+    cards_df: pd.DataFrame,
+    key_prefix: str,
+    cols_per_row: int = 4,
+    flip_cards: bool = False,
+) -> None:
+    """Render comic cards in a visual grid with instant 1-tap Add / Remove controls under each card."""
+    records = [row for _, row in cards_df.iterrows()]
+    for row_start in range(0, len(records), cols_per_row):
+        batch = records[row_start : row_start + cols_per_row]
+        cols = st.columns(cols_per_row, gap="medium")
+        for col_idx, row in enumerate(batch):
+            cid = str(row["id"])
+            is_basic = bool(row["basic"])
+            cap = MAX_DECK if is_basic else MAX_COPIES
+            qty = st.session_state.deck_cards.get(cid, 0)
+            with cols[col_idx]:
+                st.html(
+                    render_card_html(
+                        row,
+                        flip_all=flip_cards,
+                        uid=f"{key_prefix}_{cid}_{row_start + col_idx}",
+                        in_deck_qty=qty,
+                        compact=True,
+                    )
+                )
+                if qty == 0:
+                    st.button(
+                        f"➕ Add {row['name']}",
+                        key=f"{key_prefix}_add0_{cid}_{row_start + col_idx}",
+                        on_click=adjust_deck_card,
+                        args=(cid, 1),
+                        use_container_width=True,
+                    )
+                else:
+                    b1, b2, b3 = st.columns([1, 1.35, 1])
+                    with b1:
+                        st.button(
+                            "➖",
+                            key=f"{key_prefix}_sub_{cid}_{row_start + col_idx}",
+                            on_click=adjust_deck_card,
+                            args=(cid, -1),
+                            use_container_width=True,
+                            help="Remove 1 copy",
+                        )
+                    with b2:
+                        limit_txt = "∞" if is_basic else str(cap)
+                        st.markdown(
+                            f"<div style='text-align:center;font-weight:800;padding-top:6px;"
+                            f"font-family:Barlow Condensed,sans-serif;font-size:1.05rem;color:#FFE24A;'>"
+                            f"×{qty} / {limit_txt}</div>",
+                            unsafe_allow_html=True,
+                        )
+                    with b3:
+                        st.button(
+                            "➕",
+                            key=f"{key_prefix}_add_{cid}_{row_start + col_idx}",
+                            on_click=adjust_deck_card,
+                            args=(cid, 1),
+                            disabled=(qty >= cap),
+                            use_container_width=True,
+                            help="Add 1 copy",
+                        )
+
+
+if "deck_view_mode" not in st.session_state:
+    st.session_state.deck_view_mode = "➕ Tap Cards to Add"
+
 with tab_deck:
     is_valid, total_cards, problems = validate_deck(st.session_state.deck_cards, id_map)
 
@@ -975,7 +1069,7 @@ with tab_deck:
         else:
             st.warning(f"⚠️ **{total_cards}** / {MIN_DECK} min cards — " + " · ".join(problems[:3]))
 
-    # --- Auto-Generate Balanced Deck ---
+    # --- Auto-Generate Balanced Deck Bar ---
     with st.expander("⚡ Auto-Generate a Playable Deck", expanded=(total_cards == 0)):
         g1, g2, g3, g4 = st.columns([2, 1.4, 1.1, 1.3])
         with g1:
@@ -1009,6 +1103,7 @@ with tab_deck:
                 )
                 st.session_state.deck_name = f"{'/'.join(gen_colors or ['White', 'Blue'])} {gen_archetype.split(' ')[0]}"
                 st.session_state.test_hand = []
+                st.session_state.deck_view_mode = "🃏 My Deck Gallery"
                 st.rerun()
         with b_clear:
             if st.button("🗑️ Clear Deck", use_container_width=True):
@@ -1020,201 +1115,238 @@ with tab_deck:
                 expanded = [cid for cid, qty in st.session_state.deck_cards.items() for _ in range(qty)]
                 random.shuffle(expanded)
                 st.session_state.test_hand = expanded[:OPENING_HAND]
+                st.session_state.deck_view_mode = "🃏 My Deck Gallery"
 
-    # --- Add / Edit Cards Panel + Live Decklist ---
-    ed_left, ed_right = st.columns([1.25, 1.55])
+    # --- Deck Editor Visual Mode Switcher ---
+    v_col, c_col = st.columns([3.2, 1])
+    with v_col:
+        view_options = ["➕ Tap Cards to Add", "🃏 My Deck Gallery", "📊 Curve, Table & Export"]
+        cur_idx = view_options.index(st.session_state.deck_view_mode) if st.session_state.deck_view_mode in view_options else 0
+        chosen_view = st.radio(
+            "Deck Editor View",
+            options=view_options,
+            index=cur_idx,
+            horizontal=True,
+            label_visibility="collapsed",
+        )
+        st.session_state.deck_view_mode = chosen_view
+    with c_col:
+        grid_cols = st.select_slider("Cards / Row", options=[3, 4], value=4, key="deck_grid_cols")
 
-    with ed_left:
-        st.markdown("#### ➕ Add Cards to Deck")
+    # ==================== MODE 1: TAP-TO-ADD VISUAL CARD GALLERY ====================
+    if chosen_view == "➕ Tap Cards to Add":
+        # Quick-Add Basic Lands Strip (1 tap adds +2, visible right above card pool)
+        st.markdown("##### 🌿 Quick-Add Basic Lands (+2 per tap · Unlimited)")
+        land_cols = st.columns(5)
+        for col_widget, (cname, lid) in zip(land_cols, COLOR_TO_BASIC_ID.items()):
+            land_card = id_map[lid]
+            l_qty = st.session_state.deck_cards.get(lid, 0)
+            with col_widget:
+                st.button(
+                    f"➕ {land_card['name']} ({l_qty})",
+                    key=f"quickland_{lid}",
+                    on_click=adjust_deck_card,
+                    args=(lid, 2),
+                    use_container_width=True,
+                )
+
         add_pool = filtered if len(filtered) > 0 else df
-        card_labels = {
-            f"{r['id']} · {r['name']} ({r['color']} · {r['energy_cost'] or '0'} · {r['card_type']})": r["id"]
-            for _, r in add_pool.iterrows()
-        }
-        chosen_label = st.selectbox(
-            f"Pick from filtered pool ({len(add_pool)} cards)",
-            options=list(card_labels.keys()),
-            key="deck_add_select",
-        )
-        chosen_id = card_labels[chosen_label]
-        chosen_card = id_map[chosen_id]
-        max_allowed = 40 if bool(chosen_card["basic"]) else MAX_COPIES
-        cur_qty = st.session_state.deck_cards.get(chosen_id, 0)
-
-        q_col, add_col, rem_col = st.columns([1, 1, 1])
-        with q_col:
-            add_qty = int(st.number_input("Copies", min_value=1, max_value=max_allowed, value=min(4, max_allowed), step=1))
-        with add_col:
-            st.markdown("<div style='height:27px'></div>", unsafe_allow_html=True)
-            if st.button("➕ Set / Add", use_container_width=True):
-                new_qty = min(max_allowed, cur_qty + add_qty)
-                st.session_state.deck_cards[chosen_id] = new_qty
-                st.rerun()
-        with rem_col:
-            st.markdown("<div style='height:27px'></div>", unsafe_allow_html=True)
-            if st.button("➖ Remove", use_container_width=True, disabled=(cur_qty == 0)):
-                if cur_qty <= 1:
-                    st.session_state.deck_cards.pop(chosen_id, None)
-                else:
-                    st.session_state.deck_cards[chosen_id] = cur_qty - 1
-                st.rerun()
-
-        # Preview the currently selected card right inside the editor!
+        # Active filter color banner so users see active sidebar filters while picking
+        pool_pills = []
+        for col_name in color_options:
+            cnt = int(add_pool["color_list"].map(lambda cl, cn=col_name: cn in cl).sum())
+            if cnt > 0:
+                bg, _ = COLOR_CHIP_STYLE[col_name]
+                pool_pills.append(f'<span class="color-pill-stat" style="background:{bg};">{col_name}: {cnt}</span>')
+        pool_label = f"PICKER POOL ({' + '.join(selected_colors)})" if selected_colors else "PICKER POOL (ALL COLORS)"
         st.html(
-            '<div style="max-width:300px;margin:10px auto;">'
-            + render_card_html(chosen_card, flip_all=False, uid="editor_preview", in_deck_qty=cur_qty)
-            + "</div>"
+            f'<div class="selected-filter-pane" style="background:{pane_bg};">'
+            f'<span class="selected-filter-title">{html.escape(pool_label)}:</span>'
+            f'{"".join(pool_pills)}</div>'
         )
 
-        # Basic Lands Quick-Add Bar (2 clean rows so labels never truncate!)
-        st.markdown("#### 🌿 Quick-Add Basic Lands (Unlimited)")
-        land_items = list(COLOR_TO_BASIC_ID.items())
-        for row_slice in (land_items[:3], land_items[3:]):
-            l_cols = st.columns(len(row_slice))
-            for col_widget, (cname, lid) in zip(l_cols, row_slice):
-                land_card = id_map[lid]
-                l_qty = st.session_state.deck_cards.get(lid, 0)
-                with col_widget:
-                    if st.button(f"+2 {land_card['name']} ({l_qty})", key=f"add_{lid}", use_container_width=True):
-                        st.session_state.deck_cards[lid] = l_qty + 2
-                        st.rerun()
+        p_size_col, p_info_col, p_num_col = st.columns([1.2, 2.5, 1.1])
+        with p_size_col:
+            picker_page_size = st.selectbox("Show per page", [12, 16, 24], index=1, key="picker_ps")
+        picker_pages = max(1, math.ceil(len(add_pool) / picker_page_size))
+        with p_num_col:
+            picker_page = int(
+                st.number_input(
+                    f"Picker Page (1–{picker_pages})",
+                    min_value=1,
+                    max_value=picker_pages,
+                    value=1,
+                    step=1,
+                    key="picker_pg",
+                )
+            )
+        p_start = (picker_page - 1) * picker_page_size
+        p_end = min(p_start + picker_page_size, len(add_pool))
+        with p_info_col:
+            st.markdown(
+                f"<div style='padding-top:30px;'>Tap <b>➕ Add</b> under any card to add a copy · "
+                f"Showing <b>{p_start + 1}–{p_end}</b> of <b>{len(add_pool):,}</b> filtered cards "
+                f"(use sidebar to search/filter)</div>",
+                unsafe_allow_html=True,
+            )
 
-        # Import Deck JSON
-        st.markdown("#### 📤 Import Deck (JSON)")
-        uploaded = st.file_uploader("Load saved deck .json", type=["json"], label_visibility="collapsed")
-        if uploaded is not None:
-            try:
-                payload = json.load(uploaded)
-                if isinstance(payload, dict) and isinstance(payload.get("cards"), dict):
-                    valid_cards = {k: int(v) for k, v in payload["cards"].items() if k in id_map and int(v) > 0}
-                    if st.button("Apply Imported Deck", use_container_width=True):
-                        st.session_state.deck_name = str(payload.get("name", "Imported Deck"))
-                        st.session_state.deck_cards = valid_cards
-                        st.rerun()
-                else:
-                    st.error("JSON must contain `{ \"name\": ..., \"cards\": { \"A001\": 4 } }`.")
-            except Exception as exc:
-                st.error(f"Could not parse JSON: {exc}")
+        render_interactive_card_grid(
+            add_pool.iloc[p_start:p_end],
+            key_prefix=f"pick_p{picker_page}",
+            cols_per_row=grid_cols,
+            flip_cards=flip_all,
+        )
 
-    with ed_right:
-        st.markdown(f"#### 📜 Decklist — {st.session_state.deck_name} ({total_cards} cards)")
+    # ==================== MODE 2: MY DECK VISUAL COMIC GALLERY ====================
+    elif chosen_view == "🃏 My Deck Gallery":
         if not st.session_state.deck_cards:
-            st.info("Your deck is empty. Use **⚡ Auto-Generate Deck** above or add cards on the left!")
+            st.info("Your deck is empty! Click **⚡ Auto-Generate Deck** above or switch to **➕ Tap Cards to Add** to visually pick cards.")
         else:
-            deck_rows = []
-            for cid, qty in st.session_state.deck_cards.items():
-                if cid in id_map:
-                    c = id_map[cid]
-                    deck_rows.append({
-                        "Qty": qty,
-                        "ID": cid,
-                        "Name": c["name"],
-                        "Color": c["color"],
-                        "Cost": c["energy_cost"],
-                        "Energy": int(c["energy_value"]),
-                        "Type": c["category"],
-                        "Rarity": c["rarity"],
-                        "Basic": bool(c["basic"]),
-                    })
-            deck_df = pd.DataFrame(deck_rows).sort_values(["Type", "Energy", "Name"])
+            # Build ordered dataframe of chosen cards
+            chosen_ids = [cid for cid in st.session_state.deck_cards if cid in id_map]
+            deck_cards_df = pd.DataFrame([id_map[cid] for cid in chosen_ids])
+            deck_cards_df["qty"] = deck_cards_df["id"].map(st.session_state.deck_cards)
 
-            # Interactive editable quantity table!
-            edited_df = st.data_editor(
-                deck_df[["Qty", "ID", "Name", "Color", "Cost", "Type", "Rarity"]],
-                column_config={
-                    "Qty": st.column_config.NumberColumn("Qty", min_value=0, max_value=60, step=1),
-                    "ID": st.column_config.TextColumn("ID", disabled=True),
-                    "Name": st.column_config.TextColumn("Name", disabled=True),
-                    "Color": st.column_config.TextColumn("Color", disabled=True),
-                    "Cost": st.column_config.TextColumn("Cost", disabled=True),
-                    "Type": st.column_config.TextColumn("Type", disabled=True),
-                    "Rarity": st.column_config.TextColumn("Rarity", disabled=True),
-                },
-                use_container_width=True,
-                hide_index=True,
-                height=340,
-                key="deck_table_editor",
-            )
-            if st.button("💾 Apply Quantity Changes (set Qty=0 to remove)", use_container_width=True):
-                updated: dict[str, int] = {}
-                for _, erow in edited_df.iterrows():
-                    q_new = int(erow["Qty"])
-                    cid = str(erow["ID"])
-                    if q_new > 0:
-                        cap = 200 if bool(id_map[cid]["basic"]) else MAX_COPIES
-                        updated[cid] = min(q_new, cap)
-                st.session_state.deck_cards = updated
-                st.rerun()
-
-            # Deck Metrics & Energy Curve
-            dm1, dm2, dm3, dm4 = st.columns(4)
-            n_creatures = int(deck_df[deck_df["Type"] == "Creature"]["Qty"].sum())
-            n_spells = int(deck_df[deck_df["Type"].isin(["Mudra", "Mantra", "Seal", "Artifact"])]["Qty"].sum())
-            n_lands = int(deck_df[deck_df["Type"] == "Land"]["Qty"].sum())
-            nonland_df = deck_df[deck_df["Type"] != "Land"]
+            # Summary metrics bar + Quick Export right on top of the visual deck gallery!
+            n_creatures = int(deck_cards_df[deck_cards_df["category"] == "Creature"]["qty"].sum())
+            n_spells = int(deck_cards_df[deck_cards_df["category"].isin(["Mudra", "Mantra", "Seal", "Artifact"])]["qty"].sum())
+            n_lands = int(deck_cards_df[deck_cards_df["category"] == "Land"]["qty"].sum())
+            nonland_df = deck_cards_df[deck_cards_df["category"] != "Land"]
             avg_cost = (
-                (nonland_df["Energy"] * nonland_df["Qty"]).sum() / nonland_df["Qty"].sum()
-                if nonland_df["Qty"].sum() > 0 else 0.0
+                (nonland_df["energy_value"] * nonland_df["qty"]).sum() / nonland_df["qty"].sum()
+                if nonland_df["qty"].sum() > 0 else 0.0
             )
-            dm1.metric("Creatures", n_creatures)
-            dm2.metric("Techniques / Art.", n_spells)
-            dm3.metric("Lands", n_lands)
-            dm4.metric("Avg Cost", f"{avg_cost:.2f}")
+            dm1, dm2, dm3, dm4, dm5 = st.columns([1, 1, 1, 1, 1.3])
+            dm1.metric("Total Cards", total_cards)
+            dm2.metric("Creatures", n_creatures)
+            dm3.metric("Techniques / Art.", n_spells)
+            dm4.metric("Lands", n_lands)
+            dm5.metric("Avg Energy Cost", f"{avg_cost:.2f}")
 
-            if nonland_df["Qty"].sum() > 0:
-                curve_series = nonland_df.groupby("Energy")["Qty"].sum().sort_index()
-                st.caption("Non-Land Energy Curve")
-                st.bar_chart(curve_series, height=180)
-
-            # Export Buttons (Roblox Luau / JSON / CSV)
-            st.markdown("#### 💾 Export Deck")
-            ex1, ex2, ex3 = st.columns(3)
-            safe_slug = re.sub(r"[^a-zA-Z0-9_-]+", "_", st.session_state.deck_name).strip("_") or "aura_deck"
-            luau_src = deck_to_luau(st.session_state.deck_name, st.session_state.deck_cards)
-            json_src = json.dumps({"name": st.session_state.deck_name, "cards": st.session_state.deck_cards}, indent=2)
-            full_csv_rows = []
-            for cid, qty in st.session_state.deck_cards.items():
-                if cid in id_map:
-                    rec = id_map[cid][export_cols].to_dict()
-                    rec["count"] = qty
-                    full_csv_rows.append(rec)
-            csv_src = pd.DataFrame(full_csv_rows).to_csv(index=False)
-
-            with ex1:
-                st.download_button(
-                    "🎮 Luau",
-                    data=luau_src.encode("utf-8"),
-                    file_name=f"{safe_slug}.luau",
-                    mime="text/plain",
-                    use_container_width=True,
-                )
-            with ex2:
-                st.download_button(
-                    "📄 JSON",
-                    data=json_src.encode("utf-8"),
-                    file_name=f"{safe_slug}.json",
-                    mime="application/json",
-                    use_container_width=True,
-                )
-            with ex3:
-                st.download_button(
-                    "📊 CSV",
-                    data=csv_src.encode("utf-8"),
-                    file_name=f"{safe_slug}.csv",
-                    mime="text/csv",
-                    use_container_width=True,
+            # Render chosen cards grouped cleanly by role in full Comic Edition gallery!
+            groups = [
+                ("⚔️ Creatures", deck_cards_df[deck_cards_df["category"] == "Creature"]),
+                ("⚡ Techniques & Artifacts (Mudra · Mantra · Seal · Artifact)", deck_cards_df[deck_cards_df["category"].isin(["Mudra", "Mantra", "Seal", "Artifact"])]),
+                ("🌿 Lands", deck_cards_df[deck_cards_df["category"] == "Land"]),
+            ]
+            for grp_title, grp_df in groups:
+                if grp_df.empty:
+                    continue
+                grp_total = int(grp_df["qty"].sum())
+                grp_sorted = grp_df.sort_values(["energy_value", "name"])
+                st.markdown(f"#### {grp_title} ({grp_total} cards · {len(grp_sorted)} unique)")
+                render_interactive_card_grid(
+                    grp_sorted,
+                    key_prefix=f"deck_{grp_title[:4]}",
+                    cols_per_row=grid_cols,
+                    flip_cards=flip_all,
                 )
 
-    # Opening 7-Card Hand Simulator Preview
-    if st.session_state.test_hand:
-        st.divider()
-        st.markdown(f"#### 🎲 Opening {OPENING_HAND}-Card Hand Preview")
-        hand_html = "".join(
-            render_card_html(id_map[cid], flip_all=False, uid=f"hand_{i}")
-            for i, cid in enumerate(st.session_state.test_hand)
-            if cid in id_map
-        )
-        st.html(f'<div class="aura-grid">{hand_html}</div>')
+        # Opening 7-Card Hand Simulator Preview (also visual comic cards!)
+        if st.session_state.test_hand:
+            st.divider()
+            st.markdown(f"#### 🎲 Opening {OPENING_HAND}-Card Hand Preview")
+            hand_html = "".join(
+                render_card_html(id_map[cid], flip_all=False, uid=f"hand_{i}")
+                for i, cid in enumerate(st.session_state.test_hand)
+                if cid in id_map
+            )
+            st.html(f'<div class="aura-grid">{hand_html}</div>')
+
+    # ==================== MODE 3: CURVE, EDITABLE TABLE, IMPORT & EXPORT ====================
+    else:
+        ex_left, ex_right = st.columns([1.45, 1.25])
+        with ex_left:
+            st.markdown(f"#### 📜 Decklist Table — {st.session_state.deck_name} ({total_cards} cards)")
+            if not st.session_state.deck_cards:
+                st.info("Your deck is empty. Auto-generate a deck or tap cards in **➕ Tap Cards to Add**.")
+            else:
+                deck_rows = []
+                for cid, qty in st.session_state.deck_cards.items():
+                    if cid in id_map:
+                        c = id_map[cid]
+                        deck_rows.append({
+                            "Qty": qty,
+                            "ID": cid,
+                            "Name": c["name"],
+                            "Color": c["color"],
+                            "Cost": c["energy_cost"],
+                            "Energy": int(c["energy_value"]),
+                            "Type": c["category"],
+                            "Rarity": c["rarity"],
+                        })
+                deck_df = pd.DataFrame(deck_rows).sort_values(["Type", "Energy", "Name"])
+                edited_df = st.data_editor(
+                    deck_df[["Qty", "ID", "Name", "Color", "Cost", "Type", "Rarity"]],
+                    column_config={
+                        "Qty": st.column_config.NumberColumn("Qty", min_value=0, max_value=60, step=1),
+                        "ID": st.column_config.TextColumn("ID", disabled=True),
+                        "Name": st.column_config.TextColumn("Name", disabled=True),
+                        "Color": st.column_config.TextColumn("Color", disabled=True),
+                        "Cost": st.column_config.TextColumn("Cost", disabled=True),
+                        "Type": st.column_config.TextColumn("Type", disabled=True),
+                        "Rarity": st.column_config.TextColumn("Rarity", disabled=True),
+                    },
+                    use_container_width=True,
+                    hide_index=True,
+                    height=380,
+                    key="deck_table_editor",
+                )
+                if st.button("💾 Apply Quantity Changes (set Qty=0 to remove)", use_container_width=True):
+                    updated: dict[str, int] = {}
+                    for _, erow in edited_df.iterrows():
+                        q_new = int(erow["Qty"])
+                        cid = str(erow["ID"])
+                        if q_new > 0:
+                            cap = MAX_DECK if bool(id_map[cid]["basic"]) else MAX_COPIES
+                            updated[cid] = min(q_new, cap)
+                    st.session_state.deck_cards = updated
+                    st.rerun()
+
+        with ex_right:
+            if st.session_state.deck_cards:
+                nonland_df = deck_df[deck_df["Type"] != "Land"]
+                st.markdown("#### 📈 Non-Land Energy Curve")
+                if nonland_df["Qty"].sum() > 0:
+                    curve_series = nonland_df.groupby("Energy")["Qty"].sum().sort_index()
+                    st.bar_chart(curve_series, height=220)
+
+                st.markdown("#### 💾 Export Deck")
+                ex1, ex2, ex3 = st.columns(3)
+                safe_slug = re.sub(r"[^a-zA-Z0-9_-]+", "_", st.session_state.deck_name).strip("_") or "aura_deck"
+                luau_src = deck_to_luau(st.session_state.deck_name, st.session_state.deck_cards)
+                json_src = json.dumps({"name": st.session_state.deck_name, "cards": st.session_state.deck_cards}, indent=2)
+                full_csv_rows = []
+                for cid, qty in st.session_state.deck_cards.items():
+                    if cid in id_map:
+                        rec = id_map[cid][export_cols].to_dict()
+                        rec["count"] = qty
+                        full_csv_rows.append(rec)
+                csv_src = pd.DataFrame(full_csv_rows).to_csv(index=False)
+
+                with ex1:
+                    st.download_button("🎮 Luau", data=luau_src.encode("utf-8"), file_name=f"{safe_slug}.luau", mime="text/plain", use_container_width=True)
+                with ex2:
+                    st.download_button("📄 JSON", data=json_src.encode("utf-8"), file_name=f"{safe_slug}.json", mime="application/json", use_container_width=True)
+                with ex3:
+                    st.download_button("📊 CSV", data=csv_src.encode("utf-8"), file_name=f"{safe_slug}.csv", mime="text/csv", use_container_width=True)
+
+            st.markdown("#### 📤 Import Saved Deck (JSON)")
+            uploaded = st.file_uploader("Load saved deck .json", type=["json"], label_visibility="collapsed")
+            if uploaded is not None:
+                try:
+                    payload = json.load(uploaded)
+                    if isinstance(payload, dict) and isinstance(payload.get("cards"), dict):
+                        valid_cards = {k: int(v) for k, v in payload["cards"].items() if k in id_map and int(v) > 0}
+                        if st.button("Apply Imported Deck", use_container_width=True):
+                            st.session_state.deck_name = str(payload.get("name", "Imported Deck"))
+                            st.session_state.deck_cards = valid_cards
+                            st.session_state.deck_view_mode = "🃏 My Deck Gallery"
+                            st.rerun()
+                    else:
+                        st.error('JSON must contain `{ "name": ..., "cards": { "A001": 4 } }`.')
+                except Exception as exc:
+                    st.error(f"Could not parse JSON: {exc}")
 
 # -------------------- TAB 3: SET ANALYTICS --------------------
 with tab_analytics:
