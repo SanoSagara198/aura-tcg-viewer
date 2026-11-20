@@ -130,7 +130,7 @@ def build_ui_texture_css() -> str:
 
 
 COMIC_CSS = """<style>
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=Chakra+Petch:ital,wght@0,500;0,600;0,700;1,600&family=Comic+Neue:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=Chakra+Petch:ital,wght@0,500;0,600;0,700;1,600&family=Comic+Neue:ital,wght@0,700;1,700&family=Montserrat:wght@500;700;800&family=Merriweather:ital@1&display=swap');
 :root { --ink: #0a0b10; --paper: #fffdf4; --yellow: #ffe24a; }
 .stApp {
   background-color: #11131b;
@@ -435,6 +435,36 @@ button[kind="primary"] *, button[data-testid="stBaseButton-primary"] * { color: 
 .aura-type {position:absolute;top:51.4%;left:3.3%;width:93.4%;height:6.7%;background:url('/app/static/brush_header_banner.png') center/100% 100%,#fef8e8;display:flex;align-items:center;justify-content:space-between;padding:0 5%;box-sizing:border-box;gap:2%;font:700 2.8cqw Arial,sans-serif}.aura-type span {overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.aura-type b {background:#161210;color:var(--glow);padding:1% 2%;font:800 2.3cqw Arial,sans-serif;white-space:nowrap}
 .aura-rules {position:absolute;top:58.7%;left:2.7%;width:94.6%;height:30%;background:url('/app/static/brush_rules_wash.png') center/100% 100%;display:flex;align-items:center;justify-content:center}.aura-rules-content {width:82%;max-height:84%;overflow:hidden;font:500 2.7cqw/1.2 Arial,sans-serif;color:#161210}.aura-rules-content p {margin:0 0 .25em;font:inherit;line-height:inherit;color:inherit}.aura-rules-content .pip {display:inline;font:inherit;padding:0;border:0;background:none;box-shadow:none}.aura-rules-content .rem {font-size:.85em;font-style:italic;color:#6b5d48}.aura-rules-content .kw {color:var(--accent);font-weight:800}.aura-flavor {font:italic 2.2cqw/1.15 Georgia,serif;color:#645646;margin-top:.45em}
 .aura-footer {position:absolute;left:3%;top:90%;width:68%;height:7.4%;box-sizing:border-box;padding:2% 5%;background:#17120e url('/app/static/brush_header_banner.png') center/100% 100%;background-blend-mode:multiply;color:#ffe9a6;font:800 2.1cqw Arial,sans-serif;display:flex;justify-content:space-between}.aura-stats {position:absolute;right:1%;bottom:1%;width:24%;height:14%;display:grid;place-items:center;background:url('/app/static/brush_aura_burst.png') center/contain no-repeat;color:#161210;font:7cqw Bangers,cursive}.aura-qty {position:absolute;right:2%;top:15%;background:#161210;color:#ffe9a6;border-radius:1em;padding:.2em .5em;font:800 3cqw Arial,sans-serif}.aura-basic .aura-type {top:82.5%}.aura-basic .aura-rules {top:69%;height:13%}.aura-back {transform:rotateY(180deg);background:#0e0e12}.aura-back img {width:100%;height:100%;object-fit:cover}
+
+/* Roblox CardBuilder: painted masks keep the original texture's feathered alpha. */
+.aura-card-wrap {position:relative;min-width:0}
+.aura-name,.aura-footer,.aura-type {background:none;isolation:isolate}
+.aura-name::before,.aura-footer::before,.aura-type::before,.aura-rules::before,.aura-stats::before,.aura-cost::before {content:"";position:absolute;inset:0;z-index:-1;background:var(--paint,#161210);-webkit-mask: url('/app/static/brush_header_banner.png') center/100% 100% no-repeat;mask:url('/app/static/brush_header_banner.png') center/100% 100% no-repeat;filter:drop-shadow(0 1px 2px var(--glow))}
+.aura-name {width:calc(97% - var(--pip-size)*.55);max-width:93%;padding-left:6%;font-size:6.6cqw}
+.aura-name span {overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.aura-footer {font-family:Montserrat,sans-serif}
+.aura-type {--paint:#fef8e8;font-family:Montserrat,sans-serif}.aura-type b {color:var(--rarity,#c9ced6)}
+.aura-front.rarity-common {--rarity:#c9ced6}.aura-front.rarity-uncommon {--rarity:#6fe0d6}.aura-front.rarity-rare {--rarity:#ffd25c}.aura-front.rarity-mythic {--rarity:#ff8a3d}.aura-front.rarity-basic {--rarity:#eadbc2}
+.aura-halftone {position:absolute;inset:0;background:url('/app/static/comic_halftone_overlay.png') center/cover;opacity:.45;pointer-events:none}.aura-basic .aura-halftone {opacity:.12}
+.aura-frame {filter:drop-shadow(0 0 2px var(--glow));border-image-slice:32 fill}
+.aura-art-placeholder {background:linear-gradient(115deg,var(--a),var(--b))}.aura-art-placeholder i {position:absolute;width:74%;aspect-ratio:1;top:13%;left:13%;background:var(--a);opacity:.45;-webkit-mask:url('/app/static/brush_aura_burst.png') center/contain no-repeat;mask:url('/app/static/brush_aura_burst.png') center/contain no-repeat}.aura-art-placeholder span {position:absolute;top:29%;width:90%;text-align:center;color:var(--a);opacity:.55}
+.aura-costs {z-index:3;gap:0}.aura-cost {position:relative;isolation:isolate;width:var(--pip-size);height:var(--pip-size);margin-left:calc(var(--pip-size)*-.16);background:none;font-size:calc(var(--pip-size)*.38);color:var(--pip-ink,#3a342c)}.aura-cost::before {--paint:var(--pip-fill,#e6e2da);-webkit-mask-image:url('/app/static/brush_aura_burst.png');mask-image:url('/app/static/brush_aura_burst.png')}.aura-cost.pip-W {--pip-fill:#fff4d6;--pip-ink:#9a5b00}.aura-cost.pip-U {--pip-fill:#cdebff;--pip-ink:#1c5fa8}.aura-cost.pip-B {--pip-fill:#d9cde6;--pip-ink:#3a1f57}.aura-cost.pip-R {--pip-fill:#ffd2bd;--pip-ink:#b3300f}.aura-cost.pip-G {--pip-fill:#d3f2c4;--pip-ink:#2f7a26}
+.aura-rules {isolation:isolate;background:none}.aura-rules::before {--paint:#fef8e8;-webkit-mask-image:url('/app/static/brush_rules_wash.png');mask-image:url('/app/static/brush_rules_wash.png');filter:drop-shadow(0 0 3px var(--glow))}.aura-rules-content {font-family:Montserrat,sans-serif;line-height:1.12;max-height:90%}.aura-flavor {font-family:Merriweather,serif}.aura-divider {height:1px;background:linear-gradient(90deg,transparent,var(--glow),transparent);margin:.4em 0}
+.aura-stats {isolation:isolate;background:none;font-size:8.3cqw}.aura-stats::before {--paint:#ffe7a3;-webkit-mask-image:url('/app/static/brush_aura_burst.png');mask-image:url('/app/static/brush_aura_burst.png')}
+.aura-inspect-toggle {position:absolute;opacity:0;pointer-events:none}.aura-inspect-button {position:absolute;right:3%;top:14%;z-index:4;padding:.35em .7em;border-radius:.3em;background:#17120ee8;color:#fff1be;font:700 12px Montserrat,sans-serif;cursor:pointer;opacity:.85}.aura-inspect-button:hover,.aura-inspect-button:focus {opacity:1;background:#6a4b1c}.aura-inspect-overlay {display:none;position:fixed;inset:0;z-index:999999;justify-content:center;align-items:center}.aura-inspect-toggle:checked ~ .aura-inspect-overlay {display:flex}.aura-inspect-dismiss {position:absolute;inset:0;background:#07060beb;cursor:pointer}.aura-inspect-panel {position:relative;height:min(88vh,850px);aspect-ratio:5/7;max-width:90vw}.aura-inspect-card {position:relative;width:100%;height:100%;container-type:inline-size}.aura-inspect-card .card-face {position:absolute;inset:0;width:100%;height:100%;min-height:0;border:0;border-radius:4.3%;overflow:hidden}.aura-inspect-close {position:absolute;z-index:5;right:0;top:-2.5em;color:#fff;background:#302724;padding:.4em .8em;border-radius:.3em;cursor:pointer;font:700 14px Montserrat,sans-serif}.aura-inspect-face .aura-type {top:39.7%}.aura-inspect-face .aura-rules {top:46.6%;height:41.8%}.aura-inspect-face.aura-basic .aura-type {top:82.5%}.aura-inspect-face.aura-basic .aura-rules {top:69%;height:13%}
+
+/* The frame plate is sliced at the same 32 px insets as CardBuilder. */
+.aura-frame {z-index:2; box-sizing:border-box; border:6cqw solid transparent; border-image-source:url('/app/static/brush_frame_9slice.png'); border-image-slice:32; border-image-width:1; border-image-outset:0; border-image-repeat:stretch; filter:sepia(.55) drop-shadow(0 0 .55cqw var(--glow));}
+.aura-name,.aura-type,.aura-footer,.aura-costs,.aura-stats {z-index:4}
+.aura-name {width:var(--name-width);max-width:93.3%;font-size:var(--name-size)}
+.aura-type {overflow:visible}
+.aura-type b {position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;background:none;width:31%;height:73%;padding:0 2%;box-sizing:border-box;font:800 3.3cqw Montserrat,sans-serif;color:var(--rarity,#c9ced6);overflow:visible}
+.aura-type b::before {content:"";position:absolute;inset:0;z-index:-1;background:#161210;-webkit-mask:url('/app/static/brush_header_banner.png') center/100% 100% no-repeat;mask:url('/app/static/brush_header_banner.png') center/100% 100% no-repeat;filter:drop-shadow(.3cqw .3cqw .1cqw #0009)}
+.aura-rules-content .pip {display:inline;width:auto;height:auto;min-width:0;margin:0;padding:0;vertical-align:baseline;line-height:inherit;border-radius:0;transform:none}
+.aura-rules-content .pip {text-shadow:none;color:var(--accent);font-weight:800}
+.aura-rules-content .pip::before {content:"("}.aura-rules-content .pip::after {content:")"}
+.aura-rules-content .pip-W {color:#9a5b00}.aura-rules-content .pip-U {color:#1c5fa8}.aura-rules-content .pip-B {color:#3a1f57}.aura-rules-content .pip-R {color:#b3300f}.aura-rules-content .pip-G {color:#2f7a26}.aura-rules-content .pip-N {color:#3a342c}
+.aura-inspect-face .aura-rules-content {overflow-y:auto;scrollbar-width:thin}
 </style>"""
 
 
@@ -592,28 +622,48 @@ def render_card_html(row: pd.Series, flip_all: bool, uid: str, in_deck_qty: int 
     color = html.escape(str(row["color"]))
     basic = bool(row.get("basic", False))
     art = card_art(row)
-    art_html = f'<img class="aura-art" src="{html.escape(art, quote=True)}" alt="" loading="lazy">' if art else f'<div class="aura-art-placeholder"><span>{html.escape(str(row["category"]).upper())}</span></div>'
+    subtype = str(row["card_type"]).split("—")[-1].strip().upper()
+    art_html = f'<img class="aura-art" src="{html.escape(art, quote=True)}" alt="" loading="lazy">' if art else f'<div class="aura-art-placeholder"><i></i><span>{html.escape(subtype)}</span></div>'
     tokens = re.findall(r"\{([^}]+)\}", str(row["energy_cost"]))
+    pip_sizes = (20.33, 18.33, 15.33, 13.33, 11.67)
+    pip_size = pip_sizes[min(max(len(tokens), 1), 5) - 1]
     pips = "".join(f'<span class="aura-cost pip-{html.escape(t)}">{html.escape(t)}</span>' for t in tokens)
+    cost_width = len(tokens) * pip_size * .84 + (pip_size * .16 if tokens else 0)
+    name_width = max(50, min(93.3, (590 - cost_width * 6 - 14 + 30) / 6))
+    name_size = max(3.67, min(9.33, (name_width * 6 - 68) / (max(1, len(str(row["name"]))) * .48) / 6))
     raw = str(row["rules_text"])
-    size = max(1.5, min(2.7, 2.7 - max(0, len(raw) - 110) / 180))
     flavor = str(row["flavor_text"]).strip()
-    flavor_html = f'<div class="aura-flavor">“{html.escape(flavor)}”</div>' if flavor else ""
+    n = len(raw) + (0 if basic else len(flavor) * .7)
+    body_px, flavor_px = next((body, fl) for limit, body, fl in [(110,27,21), (190,24,19), (280,21,17), (380,19,16), (float("inf"),17,14)] if n < limit)
+    flavor_html = f'<div class="aura-divider"></div><div class="aura-flavor" style="font-size:{flavor_px / 6:.2f}cqw">“{html.escape(flavor)}”</div>' if flavor and not basic else ""
     power = str(row["power"]).strip()
-    stats = f'<div class="aura-stats">{html.escape(power)}/{html.escape(str(row["toughness"]))}</div>' if power else ""
+    stats = f'<div class="aura-stats"><span>{html.escape(power)}/{html.escape(str(row["toughness"]))}</span></div>' if power else ""
     number = f'{int(row["set_number"]):03d}/350' if not basic else ""
     qty = f'<div class="aura-qty">×{in_deck_qty}</div>' if in_deck_qty else ""
     checked = "checked" if flip_all else ""
+    rarity = "basic" if basic else str(row["rarity"]).lower()
+    safe_uid = html.escape(uid, quote=True)
+    def face(inspect: bool = False) -> str:
+        rules = re.sub(r"\(([^()]*)\)", lambda m: m.group(1) if re.match(r"\s*[+-]\d+\s*/\s*[+-]\d+", m.group(1)) else "", raw) if inspect else raw
+        rules = re.sub(r" +([.,;:])", r"\1", rules)
+        text_size = max(2.2, min(6.0, 6.0 - len(rules) / 85)) if inspect and not basic else body_px / 6
+        return (
+            f'<article class="card-face aura-front aura-{color} rarity-{html.escape(rarity)}{" aura-basic" if basic else ""}{" aura-inspect-face" if inspect else ""}" style="--pip-size:{pip_size:.2f}cqw;--name-width:{name_width:.2f}%;--name-size:{name_size:.2f}cqw">'
+            f'{art_html}<div class="aura-halftone"></div><div class="aura-art-shade"></div><div class="aura-frame"></div>'
+            f'<div class="aura-name"><span>{name}</span></div><div class="aura-costs">{pips}</div>'
+            f'<div class="aura-type"><span>{html.escape(str(row["card_type"]).upper())}</span><b>★ {html.escape(rarity.upper())}</b></div>'
+            f'<div class="aura-rules"><div class="aura-rules-content" style="font-size:{text_size:.2f}cqw">{render_rules(rules)}{flavor_html if not inspect else ""}</div></div>'
+            f'<div class="aura-footer"><span>{html.escape(str(row["set"]).upper())} · 1ST ED.</span><span>{number}</span></div>{stats}{qty}</article>'
+        )
     return (
-        f'<label class="card-scene aura-card-scene{" compact" if compact else ""}" for="{html.escape(uid, quote=True)}">'
-        f'<input class="flip-chk" type="checkbox" id="{html.escape(uid, quote=True)}" {checked}><div class="card-flipper">'
-        f'<article class="card-face aura-front aura-{color}{" aura-basic" if basic else ""}">'
-        f'{art_html}<div class="aura-art-shade"></div><div class="aura-frame"></div>'
-        f'<div class="aura-name">{name}</div><div class="aura-costs">{pips}</div>'
-        f'<div class="aura-type"><span>{html.escape(str(row["card_type"]).upper())}</span><b>★ {"BASIC" if basic else html.escape(str(row["rarity"]).upper())}</b></div>'
-        f'<div class="aura-rules"><div class="aura-rules-content" style="font-size:{size:.2f}cqw">{render_rules(raw)}{flavor_html}</div></div>'
-        f'<div class="aura-footer">{html.escape(str(row["set"]).upper())} · 1ST ED. <span>{number}</span></div>{stats}{qty}</article>'
+        f'<div class="aura-card-wrap"><label class="card-scene aura-card-scene{" compact" if compact else ""}" for="{safe_uid}">'
+        f'<input class="flip-chk" type="checkbox" id="{safe_uid}" {checked}><div class="card-flipper">{face()}'
         '<div class="card-face aura-back"><img src="/app/static/aura_card_back_upright.png" alt="Aura card back" loading="lazy"></div></div></label>'
+        f'<input class="aura-inspect-toggle" type="checkbox" id="inspect_{safe_uid}">'
+        f'<label class="aura-inspect-button" for="inspect_{safe_uid}">Inspect</label>'
+        f'<div class="aura-inspect-overlay"><label class="aura-inspect-dismiss" for="inspect_{safe_uid}" aria-label="Close inspection"></label>'
+        f'<div class="aura-inspect-panel"><label class="aura-inspect-close" for="inspect_{safe_uid}">Close ✕</label>'
+        f'<div class="aura-inspect-card">{face(True)}</div></div></div></div>'
     )
 
 
@@ -809,7 +859,7 @@ st.html(
           <p>Alpha · Beta · Delta · Basic Lands · Roblox Deck Export</p>
         </div>
       </div>
-      <div class="aura-tip">Click any card to flip Front ↔ Back</div>
+      <div class="aura-tip">Click a card to flip · Inspect to enlarge</div>
     </div>"""
 )
 
@@ -1394,3 +1444,4 @@ with tab_table:
         hide_index=True,
         height=640,
     )
+
