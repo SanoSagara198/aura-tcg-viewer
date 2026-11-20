@@ -20,6 +20,9 @@ st.set_page_config(
 )
 
 ROOT = Path(__file__).parent
+# Streamlit Cloud can keep a running server with static serving disabled after a deploy.
+# Use the versioned public repository assets so the hosted and local views agree.
+ASSET_BASE = "https://raw.githubusercontent.com/SanoSagara198/aura-tcg-viewer/9e8ca434c22fed899acc0385468d15639e8a91bb/static/"
 CSV_FILES = [
     ("Alpha", "A", ROOT / "aura_alpha_set.csv"),
     ("Beta", "B", ROOT / "aura_beta_set.csv"),
@@ -603,9 +606,9 @@ def card_art(row: pd.Series) -> str:
     card_id = str(row["id"])
     named = {"A001": "gilded_scarab_art.png", "A008": "A008-haloed-seraph.png", "A035": "A035-ivory-rupture-v2.png"}
     if card_id in named:
-        return "/app/static/" + named[card_id]
+        return ASSET_BASE + named[card_id]
     if (ROOT / "static" / "rares" / f"{card_id}.png").exists():
-        return f"/app/static/rares/{card_id}.png"
+        return f"{ASSET_BASE}rares/{card_id}.png"
     if bool(row.get("basic", False)):
         name = str(row["name"]).lower()
         variant = int(row.get("variant", 1) or 1)
@@ -613,7 +616,7 @@ def card_art(row: pd.Series) -> str:
         if name == "cinderpeak" and variant > 2: variant -= 2
         if name == "wildgrove": variant = 1
         if (ROOT / "static" / "lands" / f"{name}_v{variant}.jpg").exists():
-            return f"/app/static/lands/{name}_v{variant}.jpg"
+            return f"{ASSET_BASE}lands/{name}_v{variant}.jpg"
     return ""
 
 
@@ -658,7 +661,7 @@ def render_card_html(row: pd.Series, flip_all: bool, uid: str, in_deck_qty: int 
     return (
         f'<div class="aura-card-wrap"><label class="card-scene aura-card-scene{" compact" if compact else ""}" for="{safe_uid}">'
         f'<input class="flip-chk" type="checkbox" id="{safe_uid}" {checked}><div class="card-flipper">{face()}'
-        '<div class="card-face aura-back"><img src="/app/static/aura_card_back_upright.png" alt="Aura card back" loading="lazy"></div></div></label>'
+        f'<div class="card-face aura-back"><img src="{ASSET_BASE}aura_card_back_upright.png" alt="Aura card back" loading="lazy"></div></div></label>'
         f'<input class="aura-inspect-toggle" type="checkbox" id="inspect_{safe_uid}">'
         f'<label class="aura-inspect-button" for="inspect_{safe_uid}">Inspect</label>'
         f'<div class="aura-inspect-overlay"><label class="aura-inspect-dismiss" for="inspect_{safe_uid}" aria-label="Close inspection"></label>'
@@ -839,7 +842,7 @@ def deck_to_luau(deck_name: str, deck_cards: dict[str, int]) -> str:
 
 
 # ==================== INIT STATE & LOAD DATA ====================
-st.html(build_ui_texture_css() + COMIC_CSS)
+st.html(build_ui_texture_css() + COMIC_CSS.replace("/app/static/", ASSET_BASE))
 df = load_cards()
 id_map = {row["id"]: row for _, row in df.iterrows()}
 
