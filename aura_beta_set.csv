@@ -1,808 +1,808 @@
-"set","name","color","rarity","energy_cost","card_type","power","toughness","rules_text","flavor_text"
-"Beta","Sovereign Owl","White","rare","{W}","Creature — Avian","2","1","Airborne (can only be responded to by Airborne creatures).
-Whenever you Farm Aura, this creature gets +1/+0 until end of Round.
-Extinguish this card from your Pit and pay {2}{W}: Put two Aura Stacks (+1/+1) on target creature you control. Play only during your Main phase.",""
-"Beta","Vigilant Oracle","White","common","{W}","Creature — Wizard","1","1","Damage dealt by this creature also causes you to Farm that much Aura.
-Extinguish this card from your Pit and pay {2}{W}: Put two Aura Stacks (+1/+1) on target creature you control. Play only during your Main phase.",""
-"Beta","Gleaming Seraph","White","common","{1}{W}","Creature — Spirit","2","1","Damage dealt by this creature also causes you to Farm that much Aura.
+﻿set,name,color,rarity,energy_cost,card_type,power,toughness,rules_text,flavor_text
+Beta,Sovereign Owl,White,rare,{W},Creature — Avian,2,1,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+Whenever you gain Aura, this creature gets +1/+0 until end of Round.
+Extinguish this card from your Pit and pay {2}{W}: Put two Aura Stacks (+1/+1) on target creature you control. Play only during your Main phase.",
+Beta,Vigilant Oracle,White,common,{W},Creature — Wizard,1,1,"Damage this deals also gains you that much Aura.
+Extinguish this card from your Pit and pay {2}{W}: Put two Aura Stacks (+1/+1) on target creature you control. Play only during your Main phase.",
+Beta,Gleaming Seraph,White,common,{1}{W},Creature — Spirit,2,1,"Damage this deals also gains you that much Aura.
 
-Cook {2} (you may pay an additional {2} as you cast this creature). If you do, it Pulls Up with an Aura Stack (+1/+1) on it.",""
-"Beta","Pure Falcon","White","uncommon","{W}{W}","Creature — Avian","1","1","Airborne (can only be responded to by Airborne creatures).
-When this creature Pulls Up, another Glaze target creature you control (+1/+1 until end of Round).
-{2}, Fumble this card from your hand: Pick Up a card and Farm +1 Aura.",""
-"Beta","Dawn Stag","White","common","{1}{W}","Creature — Beast","1","1","Ten Toes (confronting does not cause this creature to Turn).
-Extinguish this card from your Pit and pay {2}{W}: Put two Aura Stacks (+1/+1) on target creature you control. Play only during your Main phase.",""
-"Beta","Oathbound Yaguareté","White","common","{2}{W}","Creature — Feline","3","3","{1}{W}, {TURN}: Prevent the next 2 damage that would be dealt to target creature this Round.","Every vow carries weight on the field."
-"Beta","Sovereign Lion","White","uncommon","{2}{W}","Creature — Feline","2","2","Damage dealt by this creature also causes you to Farm that much Aura.
-{2}{W}: Glaze target creature you control (+0/+2 until end of Round).
-{2}, Fumble this card from your hand: Pick Up a card and Farm +1 Aura.",""
-"Beta","Gilded Eagle","White","rare","{2}{W}","Creature — Avian","3","4","Airborne (can only be responded to by Airborne creatures).
-At the beginning of your Maintenance phase, if your Squad has 3 or more creatures, Farm +1 Aura.
+You may pay an extra {2} when playing this. If you do, it comes into play with an Aura Stack (+1/+1) on it.",
+Beta,Pure Falcon,White,uncommon,{W}{W},Creature — Avian,1,1,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+When this creature comes into play, another target creature you control gets +1/+1 until end of Round.
+{2}, Put this card from your hand into the Pit: Pick a card and Gain 1 Aura.",
+Beta,Dawn Stag,White,common,{1}{W},Creature — Beast,1,1,"Confronting does not cause this creature to Turn.
+Extinguish this card from your Pit and pay {2}{W}: Put two Aura Stacks (+1/+1) on target creature you control. Play only during your Main phase.",
+Beta,Oathbound Yaguareté,White,common,{2}{W},Creature — Feline,3,3,"{1}{W}, {TURN}: Prevent the next 2 damage that would be dealt to target creature this Round.",Every vow carries weight on the field.
+Beta,Sovereign Lion,White,uncommon,{2}{W},Creature — Feline,2,2,"Damage this deals also gains you that much Aura.
+{2}{W}: target creature you control gets +0/+2 until end of Round.
+{2}, Put this card from your hand into the Pit: Pick a card and Gain 1 Aura.",
+Beta,Gilded Eagle,White,rare,{2}{W},Creature — Avian,3,4,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+Once your Maintenance phase begins: if you control 3 or more creatures, Gain 1 Aura.
 
-Cook {2} (you may pay an additional {2} as you cast this creature). If you do, it Pulls Up with an Aura Stack (+1/+1) on it.","Order is not tyranny; it is the shelter where the weak grow strong."
-"Beta","Silver Hound","White","common","{3}{W}","Creature — Canine","4","3","Damage dealt by this creature also causes you to Farm that much Aura.
-{1}{W}, {TURN}: Prevent the next 2 damage that would be dealt to target creature this Round.",""
-"Beta","Just Mastiff","White","uncommon","{2}{W}{W}","Creature — Canine","4","4","Ten Toes (confronting does not cause this creature to Turn).
-When this creature Pulls Up, Turn target creature an opponent controls.","Light endures long after the banner falls."
-"Beta","Gleaming Hound","White","common","{4}{W}","Creature — Canine","5","5","Ten Toes (confronting does not cause this creature to Turn).
-When this creature Pulls Up, Turn target creature an opponent controls.","Light endures long after the banner falls."
-"Beta","Pure Wisp","White","common","{5}{W}","Creature — Spirit","5","6","Ten Toes (confronting does not cause this creature to Turn).
-At the beginning of your Maintenance phase, if your Squad has 3 or more creatures, Farm +1 Aura.",""
-"Beta","Aegis Panther","White","uncommon","{W}","Creature — Feline","1","1","Speedblitz (deals fighting damage first).
-Whenever you Farm Aura, this creature gets +1/+0 until end of Round.
-Extinguish this card from your Pit and pay {2}{W}: Put two Aura Stacks (+1/+1) on target creature you control. Play only during your Main phase.","Light endures long after the banner falls."
-"Beta","Morning Moth","White","common","{W}","Creature — Insect","1","1","Speedblitz (deals fighting damage first).
-When this creature Pulls Up, another Glaze target creature you control (+1/+1 until end of Round).","Every vow carries weight on the field."
-"Beta","Lumen Falcon","White","rare","{1}{W}","Creature — Avian","2","2","Airborne (can only be responded to by Airborne creatures).
-Whenever you Farm Aura, this creature gets +1/+0 until end of Round.
-Extinguish this card from your Pit and pay {2}{W}: Put two Aura Stacks (+1/+1) on target creature you control. Play only during your Main phase.",""
-"Beta","Crowned Crane","White","uncommon","{W}{W}","Creature — Avian","1","1","Airborne (can only be responded to by Airborne creatures).
-When this creature Dips, straighten target Land you control.
+You may pay an extra {2} when playing this. If you do, it comes into play with an Aura Stack (+1/+1) on it.",Order is not tyranny; it is the shelter where the weak grow strong.
+Beta,Silver Hound,White,common,{3}{W},Creature — Canine,4,3,"Damage this deals also gains you that much Aura.
+{1}{W}, {TURN}: Prevent the next 2 damage that would be dealt to target creature this Round.",
+Beta,Just Mastiff,White,uncommon,{2}{W}{W},Creature — Canine,4,4,"Confronting does not cause this creature to Turn.
+When this creature comes into play, Turn target creature an opponent controls.",Light endures long after the banner falls.
+Beta,Gleaming Hound,White,common,{4}{W},Creature — Canine,5,5,"Confronting does not cause this creature to Turn.
+When this creature comes into play, Turn target creature an opponent controls.",Light endures long after the banner falls.
+Beta,Pure Wisp,White,common,{5}{W},Creature — Spirit,5,6,"Confronting does not cause this creature to Turn.
+Once your Maintenance phase begins: if you control 3 or more creatures, Gain 1 Aura.",
+Beta,Aegis Panther,White,uncommon,{W},Creature — Feline,1,1,"Deals fighting damage before other creatures.
+Whenever you gain Aura, this creature gets +1/+0 until end of Round.
+Extinguish this card from your Pit and pay {2}{W}: Put two Aura Stacks (+1/+1) on target creature you control. Play only during your Main phase.",Light endures long after the banner falls.
+Beta,Morning Moth,White,common,{W},Creature — Insect,1,1,"Deals fighting damage before other creatures.
+When this creature comes into play, another target creature you control gets +1/+1 until end of Round.",Every vow carries weight on the field.
+Beta,Lumen Falcon,White,rare,{1}{W},Creature — Avian,2,2,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+Whenever you gain Aura, this creature gets +1/+0 until end of Round.
+Extinguish this card from your Pit and pay {2}{W}: Put two Aura Stacks (+1/+1) on target creature you control. Play only during your Main phase.",
+Beta,Crowned Crane,White,uncommon,{W}{W},Creature — Avian,1,1,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+When this creature leaves play, straighten target Land you control.
 
-Cook {2} (you may pay an additional {2} as you cast this creature). If you do, it Pulls Up with an Aura Stack (+1/+1) on it.","The dawn asks no permission to rise."
-"Beta","Radiant Falcon","White","common","{1}{W}","Creature — Avian","2","1","Airborne (can only be responded to by Airborne creatures).
-When this creature Dips, straighten target Land you control.","Every vow carries weight on the field."
-"Beta","Just Eagle","White","common","{2}{W}","Creature — Avian","3","3","Airborne (can only be responded to by Airborne creatures).
-When this creature Pulls Up, another Glaze target creature you control (+1/+1 until end of Round).","The dawn asks no permission to rise."
-"Beta","Sunmane Moth","White","uncommon","{2}{W}","Creature — Insect","2","2","Airborne (can only be responded to by Airborne creatures).
-When this creature Pulls Up, Turn target creature an opponent controls.",""
-"Beta","Just Oracle","White","common","{2}{W}","Creature — Wizard","2","3","Speedblitz (deals fighting damage first).
-Whenever you Farm Aura, this creature gets +1/+0 until end of Round.",""
-"Beta","Silver Shieldbearer","White","common","{3}{W}","Creature — Warrior","3","4","Ten Toes (confronting does not cause this creature to Turn).
-When this creature Pulls Up, Turn target creature an opponent controls.",""
-"Beta","Radiant Eagle","White","rare","{2}{W}{W}","Creature — Avian","4","5","Airborne (can only be responded to by Airborne creatures).
-When this creature Pulls Up, Farm +2 Aura.
-Extinguish this card from your Pit and pay {2}{W}: Put two Aura Stacks (+1/+1) on target creature you control. Play only during your Main phase.",""
-"Beta","Haloed Mastiff","White","common","{4}{W}","Creature — Canine","5","5","When this creature Dips, straighten target Land you control.","Every vow carries weight on the field."
-"Beta","Gleaming Yaguareté","White","common","{5}{W}","Creature — Feline","5","5","{2}{W}: Glaze target creature you control (+0/+2 until end of Round).",""
-"Beta","Gleaming Ram","White","uncommon","{W}","Creature — Beast","1","1","Speedblitz (deals fighting damage first).
-When this creature Dips, straighten target Land you control.",""
-"Beta","Solstice Templar","White","common","{W}","Creature — Warrior","1","1","When this creature Pulls Up, another Glaze target creature you control (+1/+1 until end of Round).","Every vow carries weight on the field."
-"Beta","Ivory Panther","White","common","{1}{W}","Creature — Feline","1","2","Whenever you Farm Aura, this creature gets +1/+0 until end of Round.","Every vow carries weight on the field."
-"Beta","Pure Scarab","White","uncommon","{W}{W}","Creature — Insect","2","1","Damage dealt by this creature also causes you to Farm that much Aura.
-At the beginning of your Maintenance phase, if your Squad has 3 or more creatures, Farm +1 Aura.
+You may pay an extra {2} when playing this. If you do, it comes into play with an Aura Stack (+1/+1) on it.",The dawn asks no permission to rise.
+Beta,Radiant Falcon,White,common,{1}{W},Creature — Avian,2,1,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+When this creature leaves play, straighten target Land you control.",Every vow carries weight on the field.
+Beta,Just Eagle,White,common,{2}{W},Creature — Avian,3,3,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+When this creature comes into play, another target creature you control gets +1/+1 until end of Round.",The dawn asks no permission to rise.
+Beta,Sunmane Moth,White,uncommon,{2}{W},Creature — Insect,2,2,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+When this creature comes into play, Turn target creature an opponent controls.",
+Beta,Just Oracle,White,common,{2}{W},Creature — Wizard,2,3,"Deals fighting damage before other creatures.
+Whenever you gain Aura, this creature gets +1/+0 until end of Round.",
+Beta,Silver Shieldbearer,White,common,{3}{W},Creature — Warrior,3,4,"Confronting does not cause this creature to Turn.
+When this creature comes into play, Turn target creature an opponent controls.",
+Beta,Radiant Eagle,White,rare,{2}{W}{W},Creature — Avian,4,5,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+When this creature comes into play, Gain 2 Aura.
+Extinguish this card from your Pit and pay {2}{W}: Put two Aura Stacks (+1/+1) on target creature you control. Play only during your Main phase.",
+Beta,Haloed Mastiff,White,common,{4}{W},Creature — Canine,5,5,"When this creature leaves play, straighten target Land you control.",Every vow carries weight on the field.
+Beta,Gleaming Yaguareté,White,common,{5}{W},Creature — Feline,5,5,{2}{W}: target creature you control gets +0/+2 until end of Round.,
+Beta,Gleaming Ram,White,uncommon,{W},Creature — Beast,1,1,"Deals fighting damage before other creatures.
+When this creature leaves play, straighten target Land you control.",
+Beta,Solstice Templar,White,common,{W},Creature — Warrior,1,1,"When this creature comes into play, another target creature you control gets +1/+1 until end of Round.",Every vow carries weight on the field.
+Beta,Ivory Panther,White,common,{1}{W},Creature — Feline,1,2,"Whenever you gain Aura, this creature gets +1/+0 until end of Round.",Every vow carries weight on the field.
+Beta,Pure Scarab,White,uncommon,{W}{W},Creature — Insect,2,1,"Damage this deals also gains you that much Aura.
+Once your Maintenance phase begins: if you control 3 or more creatures, Gain 1 Aura.
 
-Cook {2} (you may pay an additional {2} as you cast this creature). If you do, it Pulls Up with an Aura Stack (+1/+1) on it.","Stand together, and the storm breaks around you."
-"Beta","Bellwing Moth","White","rare","{1}{W}","Creature — Insect","2","3","Ten Toes (confronting does not cause this creature to Turn).
-At the beginning of your Maintenance phase, if your Squad has 3 or more creatures, Farm +1 Aura.
-Extinguish this card from your Pit and pay {2}{W}: Put two Aura Stacks (+1/+1) on target creature you control. Play only during your Main phase.","Every vow carries weight on the field."
-"Beta","Gilded Break","White","uncommon","{W}","Mudra","","","Extinguish target confronting creature. Its controller Picks Up a card at the beginning of the next Maintenance phase.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Every vow carries weight on the field."
-"Beta","Crowned Wave","White","common","{1}{W}","Mudra","","","Glaze target creature you control (+2/+2 until end of Round). Straighten it.
-{2}, Fumble this card from your hand: Pick Up a card.","The dawn asks no permission to rise."
-"Beta","Ivory Twist","White","common","{1}{W}","Mudra","","","Eliminate target Artifact or Seal. Farm +2 Aura.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Every vow carries weight on the field."
-"Beta","Lantern Snare","White","uncommon","{2}{W}","Mudra","","","Prevent all fighting damage creatures you do not control would deal this Round. Pick Up a card at the next Maintenance phase.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","The dawn asks no permission to rise."
-"Beta","Steadfast Strike","White","common","{W}","Mudra","","","Prevent the next 3 damage that would be dealt to target creature or player this Round, and straighten that creature.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","The dawn asks no permission to rise."
-"Beta","Crowned Pulse","White","rare","{1}{W}{W}","Mudra","","","Extinguish target Turned creature. Farm +Aura equal to its toughness.
-{2}, Fumble this card from your hand: Pick Up a card.","Light endures long after the banner falls."
-"Beta","Pure Gesture","White","common","{2}{W}","Mudra","","","Turn up to two target creatures. Farm +2 Aura.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Stand together, and the storm breaks around you."
-"Beta","Gilded Bolt","White","uncommon","{1}{W}","Mudra","","","Target creature you control gains Unbothered (cannot be targeted by opponents' Techniques) until end of Round. Pick Up a card.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Order is not tyranny; it is the shelter where the weak grow strong."
-"Beta","Spire Flash","White","rare","{3}{W}","Mudra","","","Creatures you control get +2/+1 and gain Ten Toes (confronting does not Turn them) until end of Round.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Every vow carries weight on the field."
-"Beta","Bright Veil","White","common","{W}","Mudra","","","Glaze target creature (+1/+3 until end of Round). If it is responding, Farm +2 Aura.
-{2}, Fumble this card from your hand: Pick Up a card.","Light endures long after the banner falls."
-"Beta","Lumen Riposte","White","uncommon","{1}{W}","Mudra","","","Extinguish target confronting creature. Its controller Picks Up a card at the beginning of the next Maintenance phase.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Order is not tyranny; it is the shelter where the weak grow strong."
-"Beta","Radiant Tempest","White","rare","{2}{W}{W}","Mantra","","","Eliminate all creatures with attack 3 or greater. Farm +1 Aura for each creature eliminated this way.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Every vow carries weight on the field."
-"Beta","Bright Reckoning","White","rare","{3}{W}{W}","Mantra","","","Eliminate all creatures and Seals. Each player Farms +3 Aura.
-{2}, Fumble this card from your hand: Pick Up a card.","Light endures long after the banner falls."
-"Beta","Ivory Chant","White","common","{1}{W}","Mantra","","","Pull a Binding or Artifact costing 2 or less from your deck, Flex it, put it into your hand, then shuffle.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Light endures long after the banner falls."
-"Beta","Marble Pact","White","uncommon","{2}{W}","Mantra","","","Return target creature card with Energy cost 3 or less from your Pit to play Turned.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Stand together, and the storm breaks around you."
-"Beta","Bright Awakening","White","common","{1}{W}","Mantra","","","Farm +5 Aura. Scope 2 (look at the top 2 cards of your deck and reorder them).
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","The dawn asks no permission to rise."
-"Beta","Chalice Tempest","White","uncommon","{3}{W}","Mantra","","","Eliminate target Artifact, Seal, or Turned creature. Farm +3 Aura.
-{2}, Fumble this card from your hand: Pick Up a card.","Light endures long after the banner falls."
-"Beta","Bright Rite","White","rare","{2}{W}{W}","Mantra","","","Each player chooses two creatures they control and Extinguishes the rest.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","The dawn asks no permission to rise."
-"Beta","Chalice Invocation","White","rare","{3}{W}{W}","Mantra","","","Eliminate all creatures with attack 3 or greater. Farm +1 Aura for each creature eliminated this way.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Stand together, and the storm breaks around you."
-"Beta","Aegis Ward","White","common","{1}{W}","Seal — Binding","","","Bind to target creature. Bound creature cannot confront or respond, and its controller Farms +1 Aura during their Maintenance phase.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Light endures long after the banner falls."
-"Beta","Crowned Vow","White","common","{W}","Seal — Binding","","","Bind to target creature. Bound creature gets +1/+2 and gains Ten Toes (confronting does not Turn it).
-{2}, Fumble this card from your hand: Pick Up a card.","Every vow carries weight on the field."
-"Beta","Oathbound Shroud","White","rare","{1}{W}{W}","Seal","","","Creatures you control get +1/+1.
-Whenever a creature Pulls Up under your control, Farm +1 Aura.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Every vow carries weight on the field."
-"Beta","Bright Beacon","White","uncommon","{2}{W}","Seal","","","When this Seal Pulls Up, Extinguish target nonland permanent an opponent controls until this Dips.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","The dawn asks no permission to rise."
-"Beta","Aegis Sigil","White","uncommon","{2}{W}","Seal","","","At the beginning of your Maintenance phase, if an opponent controls more Lands than you, Pull a Land from your deck, put it into your hand, then shuffle.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Stand together, and the storm breaks around you."
-"Beta","Chalice Crest","White","common","{1}{W}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+1 and gains Speedblitz (deals fighting damage first).
-{2}, Fumble this card from your hand: Pick Up a card.","Every vow carries weight on the field."
-"Beta","Dawn Dominion","White","rare","{3}{W}","Seal","","","Creatures cannot confront you unless their controller pays {2} for each creature they confront with.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Stand together, and the storm breaks around you."
-"Beta","Cerulean Mirage","Blue","rare","{U}","Creature — Spirit","1","2","Airborne (can only be responded to by Airborne creatures).
+You may pay an extra {2} when playing this. If you do, it comes into play with an Aura Stack (+1/+1) on it.","Stand together, and the storm breaks around you."
+Beta,Bellwing Moth,White,rare,{1}{W},Creature — Insect,2,3,"Confronting does not cause this creature to Turn.
+Once your Maintenance phase begins: if you control 3 or more creatures, Gain 1 Aura.
+Extinguish this card from your Pit and pay {2}{W}: Put two Aura Stacks (+1/+1) on target creature you control. Play only during your Main phase.",Every vow carries weight on the field.
+Beta,Gilded Break,White,uncommon,{W},Mudra,,,"Extinguish target confronting creature. Its controller Picks Up a card once the next Maintenance phase begins.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Every vow carries weight on the field.
+Beta,Crowned Wave,White,common,{1}{W},Mudra,,,"target creature you control gets +2/+2 until end of Round. Straighten it.
+{2}, Put this card from your hand into the Pit: Pick a card.",The dawn asks no permission to rise.
+Beta,Ivory Twist,White,common,{1}{W},Mudra,,,"Eliminate target Artifact or Seal. Gain 2 Aura.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Every vow carries weight on the field.
+Beta,Lantern Snare,White,uncommon,{2}{W},Mudra,,,"Prevent all fighting damage creatures you do not control would deal this Round. Pick a card once the next Maintenance phase begins.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",The dawn asks no permission to rise.
+Beta,Steadfast Strike,White,common,{W},Mudra,,,"Prevent the next 3 damage that would be dealt to target creature or player this Round, and straighten that creature.
+You may pay an extra {2} when playing this. If you do, Pick a card.",The dawn asks no permission to rise.
+Beta,Crowned Pulse,White,rare,{1}{W}{W},Mudra,,,"Extinguish target Turned creature. Gain Aura equal to its toughness.
+{2}, Put this card from your hand into the Pit: Pick a card.",Light endures long after the banner falls.
+Beta,Pure Gesture,White,common,{2}{W},Mudra,,,"Turn up to two target creatures. Gain 2 Aura.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.","Stand together, and the storm breaks around you."
+Beta,Gilded Bolt,White,uncommon,{1}{W},Mudra,,,"Target creature you control gains cannot be targeted by opponents' Techniques or abilities until end of Round. Pick a card.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Order is not tyranny; it is the shelter where the weak grow strong.
+Beta,Spire Flash,White,rare,{3}{W},Mudra,,,"Creatures you control get +2/+1 and gain Confronting does not cause this creature to Turn until end of Round.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Every vow carries weight on the field.
+Beta,Bright Veil,White,common,{W},Mudra,,,"target creature gets +1/+3 until end of Round. If it is responding, Gain 2 Aura.
+{2}, Put this card from your hand into the Pit: Pick a card.",Light endures long after the banner falls.
+Beta,Lumen Riposte,White,uncommon,{1}{W},Mudra,,,"Extinguish target confronting creature. Its controller Picks Up a card once the next Maintenance phase begins.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Order is not tyranny; it is the shelter where the weak grow strong.
+Beta,Radiant Tempest,White,rare,{2}{W}{W},Mantra,,,"Eliminate all creatures with attack 3 or greater. Gain 1 Aura for each creature eliminated this way.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Every vow carries weight on the field.
+Beta,Bright Reckoning,White,rare,{3}{W}{W},Mantra,,,"Eliminate all creatures and Seals. Each player gains 3 Aura.
+{2}, Put this card from your hand into the Pit: Pick a card.",Light endures long after the banner falls.
+Beta,Ivory Chant,White,common,{1}{W},Mantra,,,"Search your deck for a Binding or Artifact costing 2 or less, show it, put it into your hand, then shuffle.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Light endures long after the banner falls.
+Beta,Marble Pact,White,uncommon,{2}{W},Mantra,,,"Return target creature card with Energy cost 3 or less from your Pit to play Turned.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.","Stand together, and the storm breaks around you."
+Beta,Bright Awakening,White,common,{1}{W},Mantra,,,"Gain 5 Aura. Look at the top 2 cards of your deck; put any on the bottom in any order.
+You may pay an extra {2} when playing this. If you do, Pick a card.",The dawn asks no permission to rise.
+Beta,Chalice Tempest,White,uncommon,{3}{W},Mantra,,,"Eliminate target Artifact, Seal, or Turned creature. Gain 3 Aura.
+{2}, Put this card from your hand into the Pit: Pick a card.",Light endures long after the banner falls.
+Beta,Bright Rite,White,rare,{2}{W}{W},Mantra,,,"Each player chooses two creatures they control and Extinguishes the rest.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",The dawn asks no permission to rise.
+Beta,Chalice Invocation,White,rare,{3}{W}{W},Mantra,,,"Eliminate all creatures with attack 3 or greater. Gain 1 Aura for each creature eliminated this way.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.","Stand together, and the storm breaks around you."
+Beta,Aegis Ward,White,common,{1}{W},Seal — Binding,,,"Bind to target creature. Bound creature cannot confront or respond, and its controller gains 1 Aura during their Maintenance phase.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Light endures long after the banner falls.
+Beta,Crowned Vow,White,common,{W},Seal — Binding,,,"Bind to target creature. Bound creature gets +1/+2 and gains Confronting does not cause this creature to Turn.
+{2}, Put this card from your hand into the Pit: Pick a card.",Every vow carries weight on the field.
+Beta,Oathbound Shroud,White,rare,{1}{W}{W},Seal,,,"Creatures you control get +1/+1.
+Whenever a creature comes into play under your control, Gain 1 Aura.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Every vow carries weight on the field.
+Beta,Bright Beacon,White,uncommon,{2}{W},Seal,,,"When this Seal comes into play, Extinguish target nonland permanent an opponent controls until this leaves play.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",The dawn asks no permission to rise.
+Beta,Aegis Sigil,White,uncommon,{2}{W},Seal,,,"Once your Maintenance phase begins: if an opponent controls more Lands than you, Search your deck for a Land, put it into your hand, then shuffle.
+You may pay an extra {2} when playing this. If you do, Pick a card.","Stand together, and the storm breaks around you."
+Beta,Chalice Crest,White,common,{1}{W},Seal — Binding,,,"Bind to target creature. Bound creature gets +2/+1 and gains Deals fighting damage before other creatures.
+{2}, Put this card from your hand into the Pit: Pick a card.",Every vow carries weight on the field.
+Beta,Dawn Dominion,White,rare,{3}{W},Seal,,,"Creatures cannot confront you unless their controller pays {2} for each creature they confront with.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.","Stand together, and the storm breaks around you."
+Beta,Cerulean Mirage,Blue,rare,{U},Creature — Spirit,1,2,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.
 
-Cook {1}{U} (you may pay an additional {1}{U} as you cast this creature). If you do, Pick Up a card when it Pulls Up.",""
-"Beta","Cerulean Leviathan","Blue","common","{U}","Creature — Aquatic","1","1","Unbothered (cannot be targeted by opponents' Techniques during your Round).
-Whenever you play a Mudra, this creature gets +1/+0 until end of Round.",""
-"Beta","Azure Serpent","Blue","common","{1}{U}","Creature — Reptile","1","2","Whenever you play a Mudra, this creature gets +1/+0 until end of Round.",""
-"Beta","Chrono Leviathan","Blue","uncommon","{U}{U}","Creature — Aquatic","1","3","Unbothered (cannot be targeted by opponents' Techniques during your Round).
+You may pay an extra {1}{U} when playing this. If you do, Pick a card when it comes into play.",
+Beta,Cerulean Leviathan,Blue,common,{U},Creature — Aquatic,1,1,"Cannot be targeted by opponents' Techniques or abilities.
+Whenever you play a Mudra, this creature gets +1/+0 until end of Round.",
+Beta,Azure Serpent,Blue,common,{1}{U},Creature — Reptile,1,2,"Whenever you play a Mudra, this creature gets +1/+0 until end of Round.",
+Beta,Chrono Leviathan,Blue,uncommon,{U}{U},Creature — Aquatic,1,3,"Cannot be targeted by opponents' Techniques or abilities.
 Whenever you play a Mudra, this creature gets +1/+0 until end of Round.
 
-Cook {1}{U} (you may pay an additional {1}{U} as you cast this creature). If you do, Pick Up a card when it Pulls Up.",""
-"Beta","Azure Mirage","Blue","common","{1}{U}","Creature — Spirit","1","3","{1}{U}, {TURN}: Return another target creature you control to its owner's hand.",""
-"Beta","Astral Wisp","Blue","common","{2}{U}","Creature — Spirit","1","3","Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.",""
-"Beta","Echoing Leviathan","Blue","uncommon","{2}{U}","Creature — Aquatic","1","3","Unbothered (cannot be targeted by opponents' Techniques during your Round).
-When this creature Pulls Up, target creature gets -2/-0 until your next Round.",""
-"Beta","Echoing Tideweaver","Blue","rare","{2}{U}","Creature — Wizard","3","5","This creature cannot be responded to unless the responding player pays {1}.
-When this creature Pulls Up, target creature gets -2/-0 until your next Round.
-{2}, Fumble this card from your hand: Pick Up a card.",""
-"Beta","Glass Heron","Blue","common","{3}{U}","Creature — Avian","2","5","Airborne (can only be responded to by Airborne creatures).
-{U}, {TURN}: Turn or straighten target Artifact.",""
-"Beta","Horizon Manta","Blue","uncommon","{2}{U}{U}","Creature — Aquatic","2","4","Unbothered (cannot be targeted by opponents' Techniques during your Round).
-When this creature Pulls Up, Scope 2 (look at the top 2 cards of your deck, put one on top and one on the bottom).
-Extinguish this card from your Pit and pay {1}{U}: Return target creature to its owner's hand. Play only during your Main phase.","To know the next move is to already hold victory."
-"Beta","Chrono Echo","Blue","common","{4}{U}","Creature — Spirit","4","5","Airborne (can only be responded to by Airborne creatures).
-{U}, {TURN}: Turn or straighten target Artifact.","A single ripple unravels the grandest design."
-"Beta","Mirror Crab","Blue","common","{5}{U}","Creature — Aquatic","5","7","During even Rounds, this creature cannot be responded to unless the responding player pays {2}.","The tide takes what is offered and returns what it chooses."
-"Beta","Horizon Heron","Blue","uncommon","{U}","Creature — Avian","1","2","Airborne (can only be responded to by Airborne creatures).
+You may pay an extra {1}{U} when playing this. If you do, Pick a card when it comes into play.",
+Beta,Azure Mirage,Blue,common,{1}{U},Creature — Spirit,1,3,"{1}{U}, {TURN}: Return another target creature you control to its owner's hand.",
+Beta,Astral Wisp,Blue,common,{2}{U},Creature — Spirit,1,3,"Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.",
+Beta,Echoing Leviathan,Blue,uncommon,{2}{U},Creature — Aquatic,1,3,"Cannot be targeted by opponents' Techniques or abilities.
+When this creature comes into play, target creature gets -2/-0 until your next Round.",
+Beta,Echoing Tideweaver,Blue,rare,{2}{U},Creature — Wizard,3,5,"This creature cannot be responded to unless the responding player pays {1}.
+When this creature comes into play, target creature gets -2/-0 until your next Round.
+{2}, Put this card from your hand into the Pit: Pick a card.",
+Beta,Glass Heron,Blue,common,{3}{U},Creature — Avian,2,5,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+{U}, {TURN}: Turn or straighten target Artifact.",
+Beta,Horizon Manta,Blue,uncommon,{2}{U}{U},Creature — Aquatic,2,4,"Cannot be targeted by opponents' Techniques or abilities.
+When this creature comes into play, Look at the top 2 cards of your deck; put any on the bottom in any order.
+Extinguish this card from your Pit and pay {1}{U}: Return target creature to its owner's hand. Play only during your Main phase.",To know the next move is to already hold victory.
+Beta,Chrono Echo,Blue,common,{4}{U},Creature — Spirit,4,5,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+{U}, {TURN}: Turn or straighten target Artifact.",A single ripple unravels the grandest design.
+Beta,Mirror Crab,Blue,common,{5}{U},Creature — Aquatic,5,7,"During even Rounds, this creature cannot be responded to unless the responding player pays {2}.",The tide takes what is offered and returns what it chooses.
+Beta,Horizon Heron,Blue,uncommon,{U},Creature — Avian,1,2,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 During even Rounds, this creature cannot be responded to unless the responding player pays {2}.
-Extinguish this card from your Pit and pay {1}{U}: Return target creature to its owner's hand. Play only during your Main phase.","The tide takes what is offered and returns what it chooses."
-"Beta","Glass Mirage","Blue","common","{U}","Creature — Spirit","1","1","{1}{U}, {TURN}: Return another target creature you control to its owner's hand.","Curiosity is the sharpest current in the sea."
-"Beta","Arcane Tideweaver","Blue","rare","{1}{U}","Creature — Wizard","1","3","Unbothered (cannot be targeted by opponents' Techniques during your Round).
-When this creature Pulls Up, target creature gets -2/-0 until your next Round.
-{2}, Fumble this card from your hand: Pick Up a card.",""
-"Beta","Mist Tideweaver","Blue","uncommon","{U}{U}","Creature — Wizard","1","3","Unbothered (cannot be targeted by opponents' Techniques during your Round).
-Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.",""
-"Beta","Mirror Wisp","Blue","common","{1}{U}","Creature — Spirit","1","3","Pop Out (you may cast this any time you could play a Mudra).
-{U}, {TURN}: Turn or straighten target Artifact.","A single ripple unravels the grandest design."
-"Beta","Mist Scholar","Blue","common","{2}{U}","Creature — Wizard","2","4","When this creature Pulls Up, Pick Up a card, then Fumble a card.","Curiosity is the sharpest current in the sea."
-"Beta","Tidal Fox","Blue","uncommon","{2}{U}","Creature — Canine","2","3","Pop Out (you may cast this any time you could play a Mudra).
+Extinguish this card from your Pit and pay {1}{U}: Return target creature to its owner's hand. Play only during your Main phase.",The tide takes what is offered and returns what it chooses.
+Beta,Glass Mirage,Blue,common,{U},Creature — Spirit,1,1,"{1}{U}, {TURN}: Return another target creature you control to its owner's hand.",Curiosity is the sharpest current in the sea.
+Beta,Arcane Tideweaver,Blue,rare,{1}{U},Creature — Wizard,1,3,"Cannot be targeted by opponents' Techniques or abilities.
+When this creature comes into play, target creature gets -2/-0 until your next Round.
+{2}, Put this card from your hand into the Pit: Pick a card.",
+Beta,Mist Tideweaver,Blue,uncommon,{U}{U},Creature — Wizard,1,3,"Cannot be targeted by opponents' Techniques or abilities.
+Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.",
+Beta,Mirror Wisp,Blue,common,{1}{U},Creature — Spirit,1,3,"Can be played any time you could play a Mudra.
+{U}, {TURN}: Turn or straighten target Artifact.",A single ripple unravels the grandest design.
+Beta,Mist Scholar,Blue,common,{2}{U},Creature — Wizard,2,4,"When this creature comes into play, Pick a card, then put a card from your hand into the Pit.",Curiosity is the sharpest current in the sea.
+Beta,Tidal Fox,Blue,uncommon,{2}{U},Creature — Canine,2,3,"Can be played any time you could play a Mudra.
 Whenever you play a Mudra, this creature gets +1/+0 until end of Round.
 
-Cook {1}{U} (you may pay an additional {1}{U} as you cast this creature). If you do, Pick Up a card when it Pulls Up.",""
-"Beta","Crystal Leviathan","Blue","common","{2}{U}","Creature — Aquatic","1","4","Unbothered (cannot be targeted by opponents' Techniques during your Round).
-Whenever you play a Mudra, this creature gets +1/+0 until end of Round.","A single ripple unravels the grandest design."
-"Beta","Ripple Serpent","Blue","common","{3}{U}","Creature — Reptile","3","4","This creature cannot be responded to unless the responding player pays {1}.
-{2}, Fumble this card from your hand: Pick Up a card.",""
-"Beta","Glass Coyote","Blue","rare","{2}{U}{U}","Creature — Canine","3","6","This creature cannot be responded to unless the responding player pays {1}.
+You may pay an extra {1}{U} when playing this. If you do, Pick a card when it comes into play.",
+Beta,Crystal Leviathan,Blue,common,{2}{U},Creature — Aquatic,1,4,"Cannot be targeted by opponents' Techniques or abilities.
+Whenever you play a Mudra, this creature gets +1/+0 until end of Round.",A single ripple unravels the grandest design.
+Beta,Ripple Serpent,Blue,common,{3}{U},Creature — Reptile,3,4,"This creature cannot be responded to unless the responding player pays {1}.
+{2}, Put this card from your hand into the Pit: Pick a card.",
+Beta,Glass Coyote,Blue,rare,{2}{U}{U},Creature — Canine,3,6,"This creature cannot be responded to unless the responding player pays {1}.
 Whenever you play a Mudra, this creature gets +1/+0 until end of Round.
-{2}, Fumble this card from your hand: Pick Up a card.",""
-"Beta","Vapor Tideweaver","Blue","common","{4}{U}","Creature — Wizard","4","5","Unbothered (cannot be targeted by opponents' Techniques during your Round).
-{2}, Fumble this card from your hand: Pick Up a card.",""
-"Beta","Mist Drake","Blue","common","{5}{U}","Creature — Reptile","4","6","Airborne (can only be responded to by Airborne creatures).
-Whenever you play a Mudra, this creature gets +1/+0 until end of Round.","Curiosity is the sharpest current in the sea."
-"Beta","Aether Manta","Blue","uncommon","{U}","Creature — Aquatic","1","2","This creature cannot be responded to unless the responding player pays {1}.
-When this creature Pulls Up, target creature gets -2/-0 until your next Round.",""
-"Beta","Mirror Mirage","Blue","common","{U}","Creature — Spirit","1","2","Unbothered (cannot be targeted by opponents' Techniques during your Round).
-{2}, Fumble this card from your hand: Pick Up a card.","Still water remembers every shadow."
-"Beta","Chrono Mirage","Blue","common","{1}{U}","Creature — Spirit","1","2","Airborne (can only be responded to by Airborne creatures).
-Extinguish this card from your Pit and pay {1}{U}: Return target creature to its owner's hand. Play only during your Main phase.","The tide takes what is offered and returns what it chooses."
-"Beta","Whispering Fox","Blue","uncommon","{U}{U}","Creature — Canine","1","3","This creature cannot be responded to unless the responding player pays {1}.
-When this creature Pulls Up, Pick Up a card, then Fumble a card.","Curiosity is the sharpest current in the sea."
-"Beta","Frost Fox","Blue","rare","{1}{U}","Creature — Canine","1","3","Pop Out (you may cast this any time you could play a Mudra).
+{2}, Put this card from your hand into the Pit: Pick a card.",
+Beta,Vapor Tideweaver,Blue,common,{4}{U},Creature — Wizard,4,5,"Cannot be targeted by opponents' Techniques or abilities.
+{2}, Put this card from your hand into the Pit: Pick a card.",
+Beta,Mist Drake,Blue,common,{5}{U},Creature — Reptile,4,6,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+Whenever you play a Mudra, this creature gets +1/+0 until end of Round.",Curiosity is the sharpest current in the sea.
+Beta,Aether Manta,Blue,uncommon,{U},Creature — Aquatic,1,2,"This creature cannot be responded to unless the responding player pays {1}.
+When this creature comes into play, target creature gets -2/-0 until your next Round.",
+Beta,Mirror Mirage,Blue,common,{U},Creature — Spirit,1,2,"Cannot be targeted by opponents' Techniques or abilities.
+{2}, Put this card from your hand into the Pit: Pick a card.",Still water remembers every shadow.
+Beta,Chrono Mirage,Blue,common,{1}{U},Creature — Spirit,1,2,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+Extinguish this card from your Pit and pay {1}{U}: Return target creature to its owner's hand. Play only during your Main phase.",The tide takes what is offered and returns what it chooses.
+Beta,Whispering Fox,Blue,uncommon,{U}{U},Creature — Canine,1,3,"This creature cannot be responded to unless the responding player pays {1}.
+When this creature comes into play, Pick a card, then put a card from your hand into the Pit.",Curiosity is the sharpest current in the sea.
+Beta,Frost Fox,Blue,rare,{1}{U},Creature — Canine,1,3,"Can be played any time you could play a Mudra.
 During even Rounds, this creature cannot be responded to unless the responding player pays {2}.
-{2}, Fumble this card from your hand: Pick Up a card.",""
-"Beta","Mirror Gesture","Blue","common","{U}{U}","Mudra","","","Ratio target Technique. Scope 1 (look at the top card of your deck).
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","The tide takes what is offered and returns what it chooses."
-"Beta","Deep Snare","Blue","common","{1}{U}","Mudra","","","Ratio target Technique unless its controller pays {2}.
+{2}, Put this card from your hand into the Pit: Pick a card.",
+Beta,Mirror Gesture,Blue,common,{U}{U},Mudra,,,"Cancel target Technique. Look at the top 1 cards of your deck; put any on the bottom in any order.
+You may pay an extra {2} when playing this. If you do, Pick a card.",The tide takes what is offered and returns what it chooses.
+Beta,Deep Snare,Blue,common,{1}{U},Mudra,,,"Cancel target Technique unless its controller pays {2}.
 During even Rounds, they must pay {4} instead.
-{2}, Fumble this card from your hand: Pick Up a card.","To know the next move is to already hold victory."
-"Beta","Glass Rebuke","Blue","common","{U}","Mudra","","","Look at the top three cards of your deck. Put one into your hand, one on top, and one on the bottom.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Curiosity is the sharpest current in the sea."
-"Beta","Sunken Glimpse","Blue","common","{1}{U}","Mudra","","","Return target creature or Artifact to its owner's hand. Scope 1 (look at the top card of your deck).
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","The tide takes what is offered and returns what it chooses."
-"Beta","Vapor Gesture","Blue","common","{2}{U}","Mudra","","","Pick Up two cards, then put a card from your hand on the bottom of your deck.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","A single ripple unravels the grandest design."
-"Beta","Crystal Strike","Blue","uncommon","{1}{U}{U}","Mudra","","","Ratio target Mudra or Mantra. Straighten up to two Lands you control.
-{2}, Fumble this card from your hand: Pick Up a card.","Still water remembers every shadow."
-"Beta","Lucid Flash","Blue","uncommon","{2}{U}","Mudra","","","Change the target of target Technique with a single target to another legal target of your choice. Pick Up a card.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","The tide takes what is offered and returns what it chooses."
-"Beta","Still Deflection","Blue","common","{U}","Mudra","","","Turn or straighten target permanent. If it is a creature, it gets -2/-0 until end of Round.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","A single ripple unravels the grandest design."
-"Beta","Sunken Riposte","Blue","rare","{3}{U}","Mudra","","","Pick Up three cards, then Fumble a card unless you control four or more Lands.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","To know the next move is to already hold victory."
-"Beta","Ripple Surge","Blue","uncommon","{1}{U}","Mudra","","","Humble target player attempting to generate target creature Technique by cancelling that Technique unless its controller pays {3}.
-{2}, Fumble this card from your hand: Pick Up a card.","Curiosity is the sharpest current in the sea."
-"Beta","Still Rebuke","Blue","rare","{2}{U}{U}","Mudra","","","Return up to two target nonland permanents to their owners' hands.
+{2}, Put this card from your hand into the Pit: Pick a card.",To know the next move is to already hold victory.
+Beta,Glass Rebuke,Blue,common,{U},Mudra,,,"Look at the top three cards of your deck. Put one into your hand, one on top, and one on the bottom.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Curiosity is the sharpest current in the sea.
+Beta,Sunken Glimpse,Blue,common,{1}{U},Mudra,,,"Return target creature or Artifact to its owner's hand. Look at the top 1 cards of your deck; put any on the bottom in any order.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",The tide takes what is offered and returns what it chooses.
+Beta,Vapor Gesture,Blue,common,{2}{U},Mudra,,,"Pick two cards, then put a card from your hand on the bottom of your deck.
+You may pay an extra {2} when playing this. If you do, Pick a card.",A single ripple unravels the grandest design.
+Beta,Crystal Strike,Blue,uncommon,{1}{U}{U},Mudra,,,"Cancel target Mudra or Mantra. Straighten up to two Lands you control.
+{2}, Put this card from your hand into the Pit: Pick a card.",Still water remembers every shadow.
+Beta,Lucid Flash,Blue,uncommon,{2}{U},Mudra,,,"Change the target of target Technique with a single target to another legal target of your choice. Pick a card.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",The tide takes what is offered and returns what it chooses.
+Beta,Still Deflection,Blue,common,{U},Mudra,,,"Turn or straighten target permanent. If it is a creature, it gets -2/-0 until end of Round.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",A single ripple unravels the grandest design.
+Beta,Sunken Riposte,Blue,rare,{3}{U},Mudra,,,"Pick three cards, then put a card from your hand into the Pit unless you control four or more Lands.
+You may pay an extra {2} when playing this. If you do, Pick a card.",To know the next move is to already hold victory.
+Beta,Ripple Surge,Blue,uncommon,{1}{U},Mudra,,,"Humble target player attempting to generate target creature Technique by cancelling that Technique unless its controller pays {3}.
+{2}, Put this card from your hand into the Pit: Pick a card.",Curiosity is the sharpest current in the sea.
+Beta,Still Rebuke,Blue,rare,{2}{U}{U},Mudra,,,"Return up to two target nonland permanents to their owners' hands.
 During odd Rounds, straighten two Lands you control.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","The tide takes what is offered and returns what it chooses."
-"Beta","Drifting Omen","Blue","common","{2}{U}","Mantra","","","Pick Up two cards, then Fumble a card unless you played no other Techniques this Round.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","To know the next move is to already hold victory."
-"Beta","Whispering Reckoning","Blue","rare","{3}{U}{U}","Mantra","","","Return all Turned creatures to their owners' hands. Pick Up a card.
-{2}, Fumble this card from your hand: Pick Up a card.","To know the next move is to already hold victory."
-"Beta","Aether Pact","Blue","common","{1}{U}","Mantra","","","Look at the top four cards of your deck. Put a Mudra or Mantra from among them into your hand and the rest on the bottom.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","A single ripple unravels the grandest design."
-"Beta","Echoing Decree","Blue","rare","{4}{U}","Mantra","","","Pick Up three cards and straighten up to two Lands you control.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","A single ripple unravels the grandest design."
-"Beta","Azure Rite","Blue","uncommon","{2}{U}","Mantra","","","Exchange control of target Artifact you control and target Artifact an opponent controls.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Curiosity is the sharpest current in the sea."
-"Beta","Echoing Vision","Blue","common","{1}{U}","Mantra","","","Target player Shreds 4 (sends the top 4 cards of their deck to their Pit). Pick Up a card.
-{2}, Fumble this card from your hand: Pick Up a card.","The tide takes what is offered and returns what it chooses."
-"Beta","Astral Verdict","Blue","uncommon","{3}{U}","Mantra","","","Each player Picks Up two cards if this is an even Round; otherwise look at target opponent's hand and return a permanent they control to their hand.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Still water remembers every shadow."
-"Beta","Lucid Omen","Blue","common","{3}{U}","Mantra","","","Pick Up two cards, then Fumble a card unless you played no other Techniques this Round.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","The tide takes what is offered and returns what it chooses."
-"Beta","Aether Vow","Blue","common","{1}{U}","Seal — Binding","","","Bind to target creature. Bound creature does not straighten during its controller's Straighten phase unless they pay {2}.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Curiosity is the sharpest current in the sea."
-"Beta","Skyward Presence","Blue","rare","{2}{U}{U}","Seal — Binding","","","Bind to target creature with Energy cost 4 or less. You Finesse bound creature.
-{2}, Fumble this card from your hand: Pick Up a card.","Curiosity is the sharpest current in the sea."
-"Beta","Whispering Binding","Blue","uncommon","{1}{U}","Seal","","","Whenever you Ratio a Technique, Pick Up a card, then Fumble a card.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","A single ripple unravels the grandest design."
-"Beta","Glass Presence","Blue","uncommon","{2}{U}","Seal","","","During even Rounds, Mudra Techniques cost {1} less for all players to play.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","To know the next move is to already hold victory."
-"Beta","Mirror Pact","Blue","common","{U}","Seal — Binding","","","Bind to target creature. Bound creature gets +1/+0 and gains Airborne (can only be responded to by Airborne creatures).
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","The tide takes what is offered and returns what it chooses."
-"Beta","Azure Decree","Blue","rare","{3}{U}","Seal","","","At the beginning of each even Round's Maintenance phase, the active player Picks Up an additional card.
-{2}, Fumble this card from your hand: Pick Up a card.","To know the next move is to already hold victory."
-"Beta","Lucid Shroud","Blue","common","{2}{U}","Seal — Binding","","","Bind to target creature. Bound creature does not straighten during its controller's Straighten phase unless they pay {2}.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Still water remembers every shadow."
-"Beta","Mourning Caiman","Black","rare","{B}","Creature — Reptile","2","2","Airborne (can only be responded to by Airborne creatures).
-{1}{B}, Sacrifice another creature: Pick Up a card.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",The tide takes what is offered and returns what it chooses.
+Beta,Drifting Omen,Blue,common,{2}{U},Mantra,,,"Pick two cards, then put a card from your hand into the Pit unless you played no other Techniques this Round.
+You may pay an extra {2} when playing this. If you do, Pick a card.",To know the next move is to already hold victory.
+Beta,Whispering Reckoning,Blue,rare,{3}{U}{U},Mantra,,,"Return all Turned creatures to their owners' hands. Pick a card.
+{2}, Put this card from your hand into the Pit: Pick a card.",To know the next move is to already hold victory.
+Beta,Aether Pact,Blue,common,{1}{U},Mantra,,,"Look at the top four cards of your deck. Put a Mudra or Mantra from among them into your hand and the rest on the bottom.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",A single ripple unravels the grandest design.
+Beta,Echoing Decree,Blue,rare,{4}{U},Mantra,,,"Pick three cards and straighten up to two Lands you control.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",A single ripple unravels the grandest design.
+Beta,Azure Rite,Blue,uncommon,{2}{U},Mantra,,,"Exchange control of target Artifact you control and target Artifact an opponent controls.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Curiosity is the sharpest current in the sea.
+Beta,Echoing Vision,Blue,common,{1}{U},Mantra,,,"Target player puts the top 4 cards of their deck into the Pit (sends the top 4 cards of their deck to their Pit). Pick a card.
+{2}, Put this card from your hand into the Pit: Pick a card.",The tide takes what is offered and returns what it chooses.
+Beta,Astral Verdict,Blue,uncommon,{3}{U},Mantra,,,"Each player Picks two cards if this is an even Round; otherwise look at target opponent's hand and return a permanent they control to their hand.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Still water remembers every shadow.
+Beta,Lucid Omen,Blue,common,{3}{U},Mantra,,,"Pick two cards, then put a card from your hand into the Pit unless you played no other Techniques this Round.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",The tide takes what is offered and returns what it chooses.
+Beta,Aether Vow,Blue,common,{1}{U},Seal — Binding,,,"Bind to target creature. Bound creature does not straighten during its controller's Straighten phase unless they pay {2}.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Curiosity is the sharpest current in the sea.
+Beta,Skyward Presence,Blue,rare,{2}{U}{U},Seal — Binding,,,"Bind to target creature with Energy cost 4 or less. You Take control of bound creature.
+{2}, Put this card from your hand into the Pit: Pick a card.",Curiosity is the sharpest current in the sea.
+Beta,Whispering Binding,Blue,uncommon,{1}{U},Seal,,,"Whenever you cancel a Technique, Pick a card, then put a card from your hand into the Pit.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",A single ripple unravels the grandest design.
+Beta,Glass Presence,Blue,uncommon,{2}{U},Seal,,,"During even Rounds, Mudra Techniques cost {1} less for all players to play.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",To know the next move is to already hold victory.
+Beta,Mirror Pact,Blue,common,{U},Seal — Binding,,,"Bind to target creature. Bound creature gets +1/+0 and gains Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+You may pay an extra {2} when playing this. If you do, Pick a card.",The tide takes what is offered and returns what it chooses.
+Beta,Azure Decree,Blue,rare,{3}{U},Seal,,,"Once each even Round's Maintenance phase begins: the active player Picks Up an additional card.
+{2}, Put this card from your hand into the Pit: Pick a card.",To know the next move is to already hold victory.
+Beta,Lucid Shroud,Blue,common,{2}{U},Seal — Binding,,,"Bind to target creature. Bound creature does not straighten during its controller's Straighten phase unless they pay {2}.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Still water remembers every shadow.
+Beta,Mourning Caiman,Black,rare,{B},Creature — Reptile,2,2,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+{1}{B}, Sacrifice another creature: Pick a card.
 
-Cook {1}{B} (you may pay an additional {1}{B} as you cast this creature). If you do, target opponent Fumbles a card when it Pulls Up.","What falls is seldom finished."
-"Beta","Nocturne Hexer","Black","common","{B}","Creature — Wizard","1","1","Heavy Aura (must be responded to by two or more creatures).
-{2}, Fumble this card from your hand: Pick Up a card and lose 1 Aura.",""
-"Beta","Shadow Caracal","Black","common","{1}{B}","Creature — Feline","2","1","Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
-When this creature Folds, target opponent Fumbles a card.",""
-"Beta","Dusk Binder","Black","uncommon","{B}{B}","Creature — Wizard","1","2","One-Shot (any damage this deals to a creature eliminates it).
-{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.",""
-"Beta","Obsidian Caracal","Black","common","{1}{B}","Creature — Feline","1","2","Heavy Aura (must be responded to by two or more creatures).
-{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.",""
-"Beta","Obsidian Raven","Black","common","{2}{B}","Creature — Avian","2","2","Airborne (can only be responded to by Airborne creatures).
-{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.","Ash remembers the fire that made it."
-"Beta","Dusk Wraith","Black","uncommon","{2}{B}","Creature — Undead","3","2","Heavy Aura (must be responded to by two or more creatures).
-{B}, Pay 1 Aura: This creature gets +1/+0 until end of Round.",""
-"Beta","Fading Viper","Black","rare","{2}{B}","Creature — Reptile","3","3","Heavy Aura (must be responded to by two or more creatures).
-Whenever another creature Folds, Farm +1 Aura.
+You may pay an extra {1}{B} when playing this. If you do, target opponent puts a card from their hand into the Pit when it comes into play.",What falls is seldom finished.
+Beta,Nocturne Hexer,Black,common,{B},Creature — Wizard,1,1,"Must be responded to by two or more creatures.
+{2}, Put this card from your hand into the Pit: Pick a card and lose 1 Aura.",
+Beta,Shadow Caracal,Black,common,{1}{B},Creature — Feline,2,1,"Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
+When this creature is put into the Pit from play, target opponent puts a card from their hand into the Pit.",
+Beta,Dusk Binder,Black,uncommon,{B}{B},Creature — Wizard,1,2,"Any damage this deals to a creature sends it to the Pit.
+{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.",
+Beta,Obsidian Caracal,Black,common,{1}{B},Creature — Feline,1,2,"Must be responded to by two or more creatures.
+{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.",
+Beta,Obsidian Raven,Black,common,{2}{B},Creature — Avian,2,2,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.",Ash remembers the fire that made it.
+Beta,Dusk Wraith,Black,uncommon,{2}{B},Creature — Undead,3,2,"Must be responded to by two or more creatures.
+{B}, Pay 1 Aura: This creature gets +1/+0 until end of Round.",
+Beta,Fading Viper,Black,rare,{2}{B},Creature — Reptile,3,3,"Must be responded to by two or more creatures.
+Whenever another creature is put into the Pit from play, Gain 1 Aura.
 
-Cook {1}{B} (you may pay an additional {1}{B} as you cast this creature). If you do, target opponent Fumbles a card when it Pulls Up.",""
-"Beta","Veiled Hyena","Black","common","{3}{B}","Creature — Canine","3","4","Whenever another creature Folds, Farm +1 Aura.",""
-"Beta","Silent Caiman","Black","uncommon","{2}{B}{B}","Creature — Reptile","4","3","Airborne (can only be responded to by Airborne creatures).
-{1}{B}, Sacrifice another creature: Pick Up a card.
+You may pay an extra {1}{B} when playing this. If you do, target opponent puts a card from their hand into the Pit when it comes into play.",
+Beta,Veiled Hyena,Black,common,{3}{B},Creature — Canine,3,4,"Whenever another creature is put into the Pit from play, Gain 1 Aura.",
+Beta,Silent Caiman,Black,uncommon,{2}{B}{B},Creature — Reptile,4,3,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+{1}{B}, Sacrifice another creature: Pick a card.
 
-Cook {1}{B} (you may pay an additional {1}{B} as you cast this creature). If you do, target opponent Fumbles a card when it Pulls Up.","Ash remembers the fire that made it."
-"Beta","Ash Raven","Black","common","{4}{B}","Creature — Avian","5","4","Airborne (can only be responded to by Airborne creatures).
-Whenever this creature deals fighting damage to a player, that player loses 1 additional Aura.",""
-"Beta","Sable Hexer","Black","common","{5}{B}","Creature — Wizard","5","5","Heavy Aura (must be responded to by two or more creatures).
-When this creature Pulls Up, you may Shred 2 (send the top 2 cards of your deck to your Pit).",""
-"Beta","Withered Binder","Black","uncommon","{B}","Creature — Wizard","1","1","Heavy Aura (must be responded to by two or more creatures).
-Whenever this creature deals fighting damage to a player, that player loses 1 additional Aura.",""
-"Beta","Night Shade","Black","common","{B}","Creature — Undead","1","1","Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
-{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.","What falls is seldom finished."
-"Beta","Fading Vulture","Black","rare","{1}{B}","Creature — Avian","3","2","Airborne (can only be responded to by Airborne creatures).
-When this creature Folds, target opponent Fumbles a card.
+You may pay an extra {1}{B} when playing this. If you do, target opponent puts a card from their hand into the Pit when it comes into play.",Ash remembers the fire that made it.
+Beta,Ash Raven,Black,common,{4}{B},Creature — Avian,5,4,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+Whenever this creature deals fighting damage to a player, that player loses 1 additional Aura.",
+Beta,Sable Hexer,Black,common,{5}{B},Creature — Wizard,5,5,"Must be responded to by two or more creatures.
+When this creature comes into play, you may put the top 2 cards of your deck into the Pit.",
+Beta,Withered Binder,Black,uncommon,{B},Creature — Wizard,1,1,"Must be responded to by two or more creatures.
+Whenever this creature deals fighting damage to a player, that player loses 1 additional Aura.",
+Beta,Night Shade,Black,common,{B},Creature — Undead,1,1,"Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
+{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.",What falls is seldom finished.
+Beta,Fading Vulture,Black,rare,{1}{B},Creature — Avian,3,2,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+When this creature is put into the Pit from play, target opponent puts a card from their hand into the Pit.
 
-Cook {1}{B} (you may pay an additional {1}{B} as you cast this creature). If you do, target opponent Fumbles a card when it Pulls Up.","Survival favors those willing to pay the toll."
-"Beta","Cindered Caracal","Black","uncommon","{B}{B}","Creature — Feline","2","1","Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
-When this creature Pulls Up, you may Shred 2 (send the top 2 cards of your deck to your Pit).",""
-"Beta","Grim Dreadlord","Black","common","{1}{B}","Creature — Fiend","1","1","Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
-{B}, Pay 1 Aura: This creature gets +1/+0 until end of Round.","Survival favors those willing to pay the toll."
-"Beta","Sable Jackal","Black","common","{2}{B}","Creature — Canine","3","2","Heavy Aura (must be responded to by two or more creatures).
+You may pay an extra {1}{B} when playing this. If you do, target opponent puts a card from their hand into the Pit when it comes into play.",Survival favors those willing to pay the toll.
+Beta,Cindered Caracal,Black,uncommon,{B}{B},Creature — Feline,2,1,"Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
+When this creature comes into play, you may put the top 2 cards of your deck into the Pit.",
+Beta,Grim Dreadlord,Black,common,{1}{B},Creature — Fiend,1,1,"Whenever this creature responds or is responded to, the opposing creature gets -1/-1 until end of Round.
+{B}, Pay 1 Aura: This creature gets +1/+0 until end of Round.",Survival favors those willing to pay the toll.
+Beta,Sable Jackal,Black,common,{2}{B},Creature — Canine,3,2,"Must be responded to by two or more creatures.
 
-Cook {1}{B} (you may pay an additional {1}{B} as you cast this creature). If you do, target opponent Fumbles a card when it Pulls Up.",""
-"Beta","Fading Panther","Black","uncommon","{2}{B}","Creature — Feline","3","2","One-Shot (any damage this deals to a creature eliminates it).
+You may pay an extra {1}{B} when playing this. If you do, target opponent puts a card from their hand into the Pit when it comes into play.",
+Beta,Fading Panther,Black,uncommon,{2}{B},Creature — Feline,3,2,"Any damage this deals to a creature sends it to the Pit.
 Whenever this creature deals fighting damage to a player, that player loses 1 additional Aura.
-{2}, Fumble this card from your hand: Pick Up a card and lose 1 Aura.","Ash remembers the fire that made it."
-"Beta","Mire Crow","Black","common","{2}{B}","Creature — Avian","3","3","Airborne (can only be responded to by Airborne creatures).
-When this creature Pulls Up, each opponent loses 1 Aura and Farm +1 Aura.",""
-"Beta","Dusk Shade","Black","common","{3}{B}","Creature — Undead","4","3","{1}{B}, Sacrifice another creature: Pick Up a card.",""
-"Beta","Shadow Binder","Black","rare","{2}{B}{B}","Creature — Wizard","5","5","Heavy Aura (must be responded to by two or more creatures).
+{2}, Put this card from your hand into the Pit: Pick a card and lose 1 Aura.",Ash remembers the fire that made it.
+Beta,Mire Crow,Black,common,{2}{B},Creature — Avian,3,3,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+When this creature comes into play, each opponent loses 1 Aura and Gain 1 Aura.",
+Beta,Dusk Shade,Black,common,{3}{B},Creature — Undead,4,3,"{1}{B}, Sacrifice another creature: Pick a card.",
+Beta,Shadow Binder,Black,rare,{2}{B}{B},Creature — Wizard,5,5,"Must be responded to by two or more creatures.
 {2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.
-Extinguish this card from your Pit and pay {2}{B}: Return another target creature card from your Pit to your hand. Play only during your Main phase.",""
-"Beta","Night Widow","Black","common","{4}{B}","Creature — Insect","5","4","When this creature Pulls Up, you may Shred 2 (send the top 2 cards of your deck to your Pit).",""
-"Beta","Cindered Locust","Black","common","{5}{B}","Creature — Insect","6","5","Airborne (can only be responded to by Airborne creatures).
-Whenever this creature deals fighting damage to a player, that player loses 1 additional Aura.",""
-"Beta","Sable Crow","Black","uncommon","{B}","Creature — Avian","1","1","Airborne (can only be responded to by Airborne creatures).
-{1}{B}, Sacrifice another creature: Pick Up a card.
-{2}, Fumble this card from your hand: Pick Up a card and lose 1 Aura.","Ash remembers the fire that made it."
-"Beta","Ash Caracal","Black","common","{B}","Creature — Feline","1","1","Whenever another creature Folds, Farm +1 Aura.","What falls is seldom finished."
-"Beta","Silent Reaper","Black","common","{1}{B}","Creature — Undead","1","1","{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.","Ash remembers the fire that made it."
-"Beta","Bleak Viper","Black","uncommon","{B}{B}","Creature — Reptile","2","1","Airborne (can only be responded to by Airborne creatures).
+Extinguish this card from your Pit and pay {2}{B}: Return another target creature card from your Pit to your hand. Play only during your Main phase.",
+Beta,Night Widow,Black,common,{4}{B},Creature — Insect,5,4,"When this creature comes into play, you may put the top 2 cards of your deck into the Pit.",
+Beta,Cindered Locust,Black,common,{5}{B},Creature — Insect,6,5,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+Whenever this creature deals fighting damage to a player, that player loses 1 additional Aura.",
+Beta,Sable Crow,Black,uncommon,{B},Creature — Avian,1,1,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+{1}{B}, Sacrifice another creature: Pick a card.
+{2}, Put this card from your hand into the Pit: Pick a card and lose 1 Aura.",Ash remembers the fire that made it.
+Beta,Ash Caracal,Black,common,{B},Creature — Feline,1,1,"Whenever another creature is put into the Pit from play, Gain 1 Aura.",What falls is seldom finished.
+Beta,Silent Reaper,Black,common,{1}{B},Creature — Undead,1,1,"{2}{B}, {TURN}: Target creature gets -1/-1 until end of Round.",Ash remembers the fire that made it.
+Beta,Bleak Viper,Black,uncommon,{B}{B},Creature — Reptile,2,1,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 {B}, Pay 1 Aura: This creature gets +1/+0 until end of Round.
 
-Cook {1}{B} (you may pay an additional {1}{B} as you cast this creature). If you do, target opponent Fumbles a card when it Pulls Up.","Survival favors those willing to pay the toll."
-"Beta","Sable Shade","Black","rare","{1}{B}","Creature — Undead","3","2","Heavy Aura (must be responded to by two or more creatures).
-{1}{B}, Sacrifice another creature: Pick Up a card.
-Extinguish this card from your Pit and pay {2}{B}: Return another target creature card from your Pit to your hand. Play only during your Main phase.","Ash remembers the fire that made it."
-"Beta","Mire Shift","Black","common","{1}{B}","Mudra","","","Eliminate target nonblack creature. You lose 1 Aura.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","What falls is seldom finished."
-"Beta","Dusk Spark","Black","common","{B}","Mudra","","","Target creature gets -2/-2 until end of Round. If it Folds this Round, Farm +1 Aura.
-{2}, Fumble this card from your hand: Pick Up a card.","Ash remembers the fire that made it."
-"Beta","Sable Riposte","Black","uncommon","{B}","Mudra","","","Add {B}{B}{B} to your Energy pool. You lose 2 Aura.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Nothing is truly free; some prices are simply paid later."
-"Beta","Shadow Flash","Black","uncommon","{2}{B}","Mudra","","","Eliminate target creature with attack 3 or greater. Its controller loses 1 Aura.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","What falls is seldom finished."
-"Beta","Nocturne Break","Black","common","{1}{B}","Mudra","","","Target player sacrifices a creature with the lowest attack among creatures they control.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","What falls is seldom finished."
-"Beta","Ash Wave","Black","rare","{1}{B}{B}","Mudra","","","Eliminate target creature. It cannot be regenerated. Pick Up a card and lose 2 Aura.
-{2}, Fumble this card from your hand: Pick Up a card.","What falls is seldom finished."
-"Beta","Dusk Glimpse","Black","common","{2}{B}","Mudra","","","Target creature gets -3/-3 until end of Round. Scope 1 (look at the top card of your deck).
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","In the quiet dark, every ambition grows teeth."
-"Beta","Bleak Veil","Black","common","{B}","Mudra","","","Return target creature card from your Pit to your hand. You lose 1 Aura.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","In the quiet dark, every ambition grows teeth."
-"Beta","Cursed Rebuke","Black","uncommon","{1}{B}","Mudra","","","Target opponent loses 2 Aura and Farm +2 Aura. If a creature Folded this Round, Pick Up a card.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Ash remembers the fire that made it."
-"Beta","Gloom Rebuke","Black","common","{2}{B}","Mudra","","","Eliminate target nonblack creature. You lose 1 Aura.
-{2}, Fumble this card from your hand: Pick Up a card.","What falls is seldom finished."
-"Beta","Crypt Flash","Black","common","{1}{B}","Mudra","","","Target creature gets -2/-2 until end of Round. If it Folds this Round, Farm +1 Aura.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Nothing is truly free; some prices are simply paid later."
-"Beta","Mire Ritual","Black","common","{B}","Mantra","","","Vibe Check target opponent (they reveal their hand; choose a noncreature, nonland card and they Fumble it and lose 1 Aura).
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Ash remembers the fire that made it."
-"Beta","Sable Renewal","Black","uncommon","{1}{B}","Mantra","","","Target opponent Fumbles two cards unless they pay 3 Aura.
-{2}, Fumble this card from your hand: Pick Up a card.","Nothing is truly free; some prices are simply paid later."
-"Beta","Ash Pact","Black","uncommon","{2}{B}","Mantra","","","Return target creature card from your Pit to play. You lose 2 Aura and it Pulls Up Turned.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Survival favors those willing to pay the toll."
-"Beta","Bleak Cataclysm","Black","common","{1}{B}","Mantra","","","Pick Up two cards and lose 2 Aura. You may put a card from your hand into your Pit to Farm +2 Aura.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Ash remembers the fire that made it."
-"Beta","Fading Decree","Black","rare","{2}{B}{B}","Mantra","","","All creatures get -3/-3 until end of Round. Farm +1 Aura for each creature that Folds this way.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","In the quiet dark, every ambition grows teeth."
-"Beta","Bleak Vision","Black","uncommon","{3}{B}","Mantra","","","Pull a card from your deck, put it into your Pit, then Pick Up a card.
-{2}, Fumble this card from your hand: Pick Up a card.","Nothing is truly free; some prices are simply paid later."
-"Beta","Grim Chant","Black","rare","{1}{B}{B}","Mantra","","","Pull any card from your deck, Flex it, put it into your hand, and lose 3 Aura. Then shuffle.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Ash remembers the fire that made it."
-"Beta","Cindered Rite","Black","common","{2}{B}","Mantra","","","Eliminate target creature. Shred 2 (send the top 2 cards of your deck to your Pit).
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","What falls is seldom finished."
-"Beta","Sable Decree","Black","common","{1}{B}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+1.
-At the beginning of your Maintenance phase, you lose 1 Aura.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","In the quiet dark, every ambition grows teeth."
-"Beta","Hollow Mantle","Black","uncommon","{2}{B}","Seal","","","At the beginning of your Maintenance phase, Pick Up an additional card and lose 2 Aura.
-{2}, Fumble this card from your hand: Pick Up a card.","Survival favors those willing to pay the toll."
-"Beta","Withered Shroud","Black","uncommon","{1}{B}","Seal","","","Whenever an opponent Fumbles a card, that player loses 1 Aura and Farm +1 Aura.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Survival favors those willing to pay the toll."
-"Beta","Cursed Blessing","Black","rare","{2}{B}","Seal","","","Whenever a nontoken creature Folds, each opponent loses 1 Aura.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","In the quiet dark, every ambition grows teeth."
-"Beta","Ebon Crest","Black","common","{B}","Seal — Binding","","","Bind to target creature. Bound creature gets -1/-1 and cannot be regenerated.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","In the quiet dark, every ambition grows teeth."
-"Beta","Umbral Dominion","Black","rare","{3}{B}","Seal","","","{2}{B}, Pay 2 Aura: Return target creature card from your Pit to your hand.
-{2}, Fumble this card from your hand: Pick Up a card.","Nothing is truly free; some prices are simply paid later."
-"Beta","Blight Blessing","Black","common","{2}{B}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+1.
-At the beginning of your Maintenance phase, you lose 1 Aura.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Survival favors those willing to pay the toll."
-"Beta","Wildfire Raider","Red","rare","{R}","Creature — Warrior","2","1","On Sight (can confront and Turn the Round it Pulls Up).
+You may pay an extra {1}{B} when playing this. If you do, target opponent puts a card from their hand into the Pit when it comes into play.",Survival favors those willing to pay the toll.
+Beta,Sable Shade,Black,rare,{1}{B},Creature — Undead,3,2,"Must be responded to by two or more creatures.
+{1}{B}, Sacrifice another creature: Pick a card.
+Extinguish this card from your Pit and pay {2}{B}: Return another target creature card from your Pit to your hand. Play only during your Main phase.",Ash remembers the fire that made it.
+Beta,Mire Shift,Black,common,{1}{B},Mudra,,,"Eliminate target nonblack creature. You lose 1 Aura.
+You may pay an extra {2} when playing this. If you do, Pick a card.",What falls is seldom finished.
+Beta,Dusk Spark,Black,common,{B},Mudra,,,"Target creature gets -2/-2 until end of Round. If it is put into the Pit from play this Round, Gain 1 Aura.
+{2}, Put this card from your hand into the Pit: Pick a card.",Ash remembers the fire that made it.
+Beta,Sable Riposte,Black,uncommon,{B},Mudra,,,"Add {B}{B}{B} to your Energy pool. You lose 2 Aura.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Nothing is truly free; some prices are simply paid later.
+Beta,Shadow Flash,Black,uncommon,{2}{B},Mudra,,,"Eliminate target creature with attack 3 or greater. Its controller loses 1 Aura.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",What falls is seldom finished.
+Beta,Nocturne Break,Black,common,{1}{B},Mudra,,,"Target player sacrifices a creature with the lowest attack among creatures they control.
+You may pay an extra {2} when playing this. If you do, Pick a card.",What falls is seldom finished.
+Beta,Ash Wave,Black,rare,{1}{B}{B},Mudra,,,"Eliminate target creature. It cannot be regenerated. Pick a card and lose 2 Aura.
+{2}, Put this card from your hand into the Pit: Pick a card.",What falls is seldom finished.
+Beta,Dusk Glimpse,Black,common,{2}{B},Mudra,,,"Target creature gets -3/-3 until end of Round. Look at the top 1 cards of your deck; put any on the bottom in any order.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.","In the quiet dark, every ambition grows teeth."
+Beta,Bleak Veil,Black,common,{B},Mudra,,,"Return target creature card from your Pit to your hand. You lose 1 Aura.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.","In the quiet dark, every ambition grows teeth."
+Beta,Cursed Rebuke,Black,uncommon,{1}{B},Mudra,,,"Target opponent loses 2 Aura and Gain 2 Aura. If a creature Folded this Round, Pick a card.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Ash remembers the fire that made it.
+Beta,Gloom Rebuke,Black,common,{2}{B},Mudra,,,"Eliminate target nonblack creature. You lose 1 Aura.
+{2}, Put this card from your hand into the Pit: Pick a card.",What falls is seldom finished.
+Beta,Crypt Flash,Black,common,{1}{B},Mudra,,,"Target creature gets -2/-2 until end of Round. If it is put into the Pit from play this Round, Gain 1 Aura.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Nothing is truly free; some prices are simply paid later.
+Beta,Mire Ritual,Black,common,{B},Mantra,,,"Target opponent shows their hand; choose a card and put it into their Pit (they reveal their hand; choose a noncreature, nonland card and put it into their Pit and lose 1 Aura).
+You may pay an extra {2} when playing this. If you do, Pick a card.",Ash remembers the fire that made it.
+Beta,Sable Renewal,Black,uncommon,{1}{B},Mantra,,,"Target opponent puts two cards from their hand into the Pit unless they pay 3 Aura.
+{2}, Put this card from your hand into the Pit: Pick a card.",Nothing is truly free; some prices are simply paid later.
+Beta,Ash Pact,Black,uncommon,{2}{B},Mantra,,,"Return target creature card from your Pit to play. You lose 2 Aura and it comes into play Turned.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Survival favors those willing to pay the toll.
+Beta,Bleak Cataclysm,Black,common,{1}{B},Mantra,,,"Pick two cards and lose 2 Aura. You may put a card from your hand into your Pit to Gain 2 Aura.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Ash remembers the fire that made it.
+Beta,Fading Decree,Black,rare,{2}{B}{B},Mantra,,,"All creatures get -3/-3 until end of Round. Gain 1 Aura for each creature that is put into the Pit from play this way.
+You may pay an extra {2} when playing this. If you do, Pick a card.","In the quiet dark, every ambition grows teeth."
+Beta,Bleak Vision,Black,uncommon,{3}{B},Mantra,,,"Search your deck for a card, put it into your Pit, then Pick a card.
+{2}, Put this card from your hand into the Pit: Pick a card.",Nothing is truly free; some prices are simply paid later.
+Beta,Grim Chant,Black,rare,{1}{B}{B},Mantra,,,"Search your deck for any card, show it, put it into your hand, and lose 3 Aura. Then shuffle.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Ash remembers the fire that made it.
+Beta,Cindered Rite,Black,common,{2}{B},Mantra,,,"Eliminate target creature. put the top 2 cards of your deck into the Pit.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",What falls is seldom finished.
+Beta,Sable Decree,Black,common,{1}{B},Seal — Binding,,,"Bind to target creature. Bound creature gets +2/+1.
+Once your Maintenance phase begins: you lose 1 Aura.
+You may pay an extra {2} when playing this. If you do, Pick a card.","In the quiet dark, every ambition grows teeth."
+Beta,Hollow Mantle,Black,uncommon,{2}{B},Seal,,,"Once your Maintenance phase begins: Pick an additional card and lose 2 Aura.
+{2}, Put this card from your hand into the Pit: Pick a card.",Survival favors those willing to pay the toll.
+Beta,Withered Shroud,Black,uncommon,{1}{B},Seal,,,"Whenever an opponent puts a card from their hand into the Pit, that player loses 1 Aura and Gain 1 Aura.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Survival favors those willing to pay the toll.
+Beta,Cursed Blessing,Black,rare,{2}{B},Seal,,,"Whenever a nontoken creature is put into the Pit from play, each opponent loses 1 Aura.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.","In the quiet dark, every ambition grows teeth."
+Beta,Ebon Crest,Black,common,{B},Seal — Binding,,,"Bind to target creature. Bound creature gets -1/-1 and cannot be regenerated.
+You may pay an extra {2} when playing this. If you do, Pick a card.","In the quiet dark, every ambition grows teeth."
+Beta,Umbral Dominion,Black,rare,{3}{B},Seal,,,"{2}{B}, Pay 2 Aura: Return target creature card from your Pit to your hand.
+{2}, Put this card from your hand into the Pit: Pick a card.",Nothing is truly free; some prices are simply paid later.
+Beta,Blight Blessing,Black,common,{2}{B},Seal — Binding,,,"Bind to target creature. Bound creature gets +2/+1.
+Once your Maintenance phase begins: you lose 1 Aura.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Survival favors those willing to pay the toll.
+Beta,Wildfire Raider,Red,rare,{R},Creature — Warrior,2,1,"Can confront and Turn on the Round it comes into play.
 When this creature confronts, target creature cannot respond this Round if its attack is 2 or less.
-{2}, Fumble this card from your hand: Pick Up a card.","Hesitation is just another word for defeat."
-"Beta","Furious Hawk","Red","common","{R}","Creature — Avian","2","1","Airborne (can only be responded to by Airborne creatures).
-When this creature confronts, target creature cannot respond this Round if its attack is 2 or less.",""
-"Beta","Cinder Stormcaller","Red","common","{1}{R}","Creature — Wizard","3","1","On Sight (can confront and Turn the Round it Pulls Up).
-{2}, Fumble this card from your hand: Pick Up a card.","Hesitation is just another word for defeat."
-"Beta","Brimstone Spark","Red","uncommon","{R}{R}","Creature — Spirit","2","1","Heavy Aura (must be responded to by two or more creatures).
+{2}, Put this card from your hand into the Pit: Pick a card.",Hesitation is just another word for defeat.
+Beta,Furious Hawk,Red,common,{R},Creature — Avian,2,1,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+When this creature confronts, target creature cannot respond this Round if its attack is 2 or less.",
+Beta,Cinder Stormcaller,Red,common,{1}{R},Creature — Wizard,3,1,"Can confront and Turn on the Round it comes into play.
+{2}, Put this card from your hand into the Pit: Pick a card.",Hesitation is just another word for defeat.
+Beta,Brimstone Spark,Red,uncommon,{R}{R},Creature — Spirit,2,1,"Must be responded to by two or more creatures.
 When this creature confronts, target creature cannot respond this Round if its attack is 2 or less.
-{2}, Fumble this card from your hand: Pick Up a card.",""
-"Beta","Brimstone Wyvern","Red","common","{1}{R}","Creature — Reptile","3","1","Airborne (can only be responded to by Airborne creatures).
+{2}, Put this card from your hand into the Pit: Pick a card.",
+Beta,Brimstone Wyvern,Red,common,{1}{R},Creature — Reptile,3,1,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 
-Cook {1}{R} (you may pay an additional {1}{R} as you cast this creature). If you do, it deals 2 damage to target creature when it Pulls Up.",""
-"Beta","Searing Toad","Red","common","{2}{R}","Creature — Reptile","3","2","Speedblitz (deals fighting damage first).
-When this creature Pulls Up, it deals 1 damage to target opponent.",""
-"Beta","Crackling Puma","Red","uncommon","{2}{R}","Creature — Feline","4","2","Heavy Aura (must be responded to by two or more creatures).
-{R}, Fumble a card: Pick Up a card.",""
-"Beta","Flash Hound","Red","rare","{2}{R}","Creature — Canine","5","3","On Sight (can confront and Turn the Round it Pulls Up).
+You may pay an extra {1}{R} when playing this. If you do, it deals 2 damage to target creature when it comes into play.",
+Beta,Searing Toad,Red,common,{2}{R},Creature — Reptile,3,2,"Deals fighting damage before other creatures.
+When this creature comes into play, it deals 1 damage to target opponent.",
+Beta,Crackling Puma,Red,uncommon,{2}{R},Creature — Feline,4,2,"Must be responded to by two or more creatures.
+{R}, put a card from your hand into the Pit: Pick a card.",
+Beta,Flash Hound,Red,rare,{2}{R},Creature — Canine,5,3,"Can confront and Turn on the Round it comes into play.
 {1}{R}, {TURN}: This creature deals 1 damage to target creature or player.
-Extinguish this card from your Pit and pay {1}{R}: Deal 2 damage to target player. Play only during your Main phase.",""
-"Beta","Crackling Boar","Red","common","{3}{R}","Creature — Beast","5","3","Speedblitz (deals fighting damage first).
+Extinguish this card from your Pit and pay {1}{R}: Deal 2 damage to target player. Play only during your Main phase.",
+Beta,Crackling Boar,Red,common,{3}{R},Creature — Beast,5,3,"Deals fighting damage before other creatures.
 
-Cook {1}{R} (you may pay an additional {1}{R} as you cast this creature). If you do, it deals 2 damage to target creature when it Pulls Up.",""
-"Beta","Feral Cinderwisp","Red","uncommon","{2}{R}{R}","Creature — Spirit","5","3","Heavy Aura (must be responded to by two or more creatures).
-During odd Rounds, this creature gets +1/+0 and gains On Sight (can confront and Turn the Round it Pulls Up).",""
-"Beta","Spark Lynx","Red","common","{4}{R}","Creature — Feline","5","3","Heavy Aura (must be responded to by two or more creatures).
-{2}, Fumble this card from your hand: Pick Up a card.",""
-"Beta","Crackling Cinderwisp","Red","common","{5}{R}","Creature — Spirit","7","4","Airborne (can only be responded to by Airborne creatures).
+You may pay an extra {1}{R} when playing this. If you do, it deals 2 damage to target creature when it comes into play.",
+Beta,Feral Cinderwisp,Red,uncommon,{2}{R}{R},Creature — Spirit,5,3,"Must be responded to by two or more creatures.
+During odd Rounds, this creature gets +1/+0 and gains Can confront and Turn on the Round it comes into play.",
+Beta,Spark Lynx,Red,common,{4}{R},Creature — Feline,5,3,"Must be responded to by two or more creatures.
+{2}, Put this card from your hand into the Pit: Pick a card.",
+Beta,Crackling Cinderwisp,Red,common,{5}{R},Creature — Spirit,7,4,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 
-Cook {1}{R} (you may pay an additional {1}{R} as you cast this creature). If you do, it deals 2 damage to target creature when it Pulls Up.",""
-"Beta","Searing Ram","Red","uncommon","{R}","Creature — Beast","2","1","On Sight (can confront and Turn the Round it Pulls Up).
+You may pay an extra {1}{R} when playing this. If you do, it deals 2 damage to target creature when it comes into play.",
+Beta,Searing Ram,Red,uncommon,{R},Creature — Beast,2,1,"Can confront and Turn on the Round it comes into play.
 When this creature confronts, target creature cannot respond this Round if its attack is 2 or less.
 
-Cook {1}{R} (you may pay an additional {1}{R} as you cast this creature). If you do, it deals 2 damage to target creature when it Pulls Up.",""
-"Beta","Blazing Puma","Red","common","{R}","Creature — Feline","2","1","Heavy Aura (must be responded to by two or more creatures).
-Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round.","Freedom burns brightest when cornered."
-"Beta","Ignited Hornet","Red","rare","{1}{R}","Creature — Insect","3","1","Heavy Aura (must be responded to by two or more creatures).
-When this creature Folds, it deals 1 damage to target creature or player.
+You may pay an extra {1}{R} when playing this. If you do, it deals 2 damage to target creature when it comes into play.",
+Beta,Blazing Puma,Red,common,{R},Creature — Feline,2,1,"Must be responded to by two or more creatures.
+Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round.",Freedom burns brightest when cornered.
+Beta,Ignited Hornet,Red,rare,{1}{R},Creature — Insect,3,1,"Must be responded to by two or more creatures.
+When this creature is put into the Pit from play, it deals 1 damage to target creature or player.
 
-Cook {1}{R} (you may pay an additional {1}{R} as you cast this creature). If you do, it deals 2 damage to target creature when it Pulls Up.",""
-"Beta","Storm Firebird","Red","uncommon","{R}{R}","Creature — Avian","2","1","Airborne (can only be responded to by Airborne creatures).
-When this creature Pulls Up, it deals 1 damage to target opponent.
-Extinguish this card from your Pit and pay {1}{R}: Deal 2 damage to target player. Play only during your Main phase.",""
-"Beta","Blazing Boar","Red","common","{1}{R}","Creature — Beast","3","1","On Sight (can confront and Turn the Round it Pulls Up).
-{R}: This creature gets +1/+0 until end of Round.",""
-"Beta","Flash Firebird","Red","common","{2}{R}","Creature — Avian","3","1","Airborne (can only be responded to by Airborne creatures).
-{R}: This creature gets +1/+0 until end of Round.",""
-"Beta","Storm Dingo","Red","uncommon","{2}{R}","Creature — Canine","4","2","Heavy Aura (must be responded to by two or more creatures).
+You may pay an extra {1}{R} when playing this. If you do, it deals 2 damage to target creature when it comes into play.",
+Beta,Storm Firebird,Red,uncommon,{R}{R},Creature — Avian,2,1,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+When this creature comes into play, it deals 1 damage to target opponent.
+Extinguish this card from your Pit and pay {1}{R}: Deal 2 damage to target player. Play only during your Main phase.",
+Beta,Blazing Boar,Red,common,{1}{R},Creature — Beast,3,1,"Can confront and Turn on the Round it comes into play.
+{R}: This creature gets +1/+0 until end of Round.",
+Beta,Flash Firebird,Red,common,{2}{R},Creature — Avian,3,1,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+{R}: This creature gets +1/+0 until end of Round.",
+Beta,Storm Dingo,Red,uncommon,{2}{R},Creature — Canine,4,2,"Must be responded to by two or more creatures.
 When this creature confronts, target creature cannot respond this Round if its attack is 2 or less.
-Extinguish this card from your Pit and pay {1}{R}: Deal 2 damage to target player. Play only during your Main phase.",""
-"Beta","Spark Bison","Red","common","{2}{R}","Creature — Beast","3","2","Heavy Aura (must be responded to by two or more creatures).
-{2}, Fumble this card from your hand: Pick Up a card.","Strike first, and leave the planning to the ashes."
-"Beta","Flash Dingo","Red","common","{3}{R}","Creature — Canine","5","2","On Sight (can confront and Turn the Round it Pulls Up).
-{2}, Fumble this card from your hand: Pick Up a card.",""
-"Beta","Scarlet Firebird","Red","rare","{2}{R}{R}","Creature — Avian","6","3","Airborne (can only be responded to by Airborne creatures).
-During odd Rounds, this creature gets +1/+0 and gains On Sight (can confront and Turn the Round it Pulls Up).
-{2}, Fumble this card from your hand: Pick Up a card.",""
-"Beta","Magma Spark","Red","common","{4}{R}","Creature — Spirit","5","4","Speedblitz (deals fighting damage first).
+Extinguish this card from your Pit and pay {1}{R}: Deal 2 damage to target player. Play only during your Main phase.",
+Beta,Spark Bison,Red,common,{2}{R},Creature — Beast,3,2,"Must be responded to by two or more creatures.
+{2}, Put this card from your hand into the Pit: Pick a card.","Strike first, and leave the planning to the ashes."
+Beta,Flash Dingo,Red,common,{3}{R},Creature — Canine,5,2,"Can confront and Turn on the Round it comes into play.
+{2}, Put this card from your hand into the Pit: Pick a card.",
+Beta,Scarlet Firebird,Red,rare,{2}{R}{R},Creature — Avian,6,3,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+During odd Rounds, this creature gets +1/+0 and gains Can confront and Turn on the Round it comes into play.
+{2}, Put this card from your hand into the Pit: Pick a card.",
+Beta,Magma Spark,Red,common,{4}{R},Creature — Spirit,5,4,"Deals fighting damage before other creatures.
 
-Cook {1}{R} (you may pay an additional {1}{R} as you cast this creature). If you do, it deals 2 damage to target creature when it Pulls Up.",""
-"Beta","Furious Toad","Red","common","{5}{R}","Creature — Reptile","6","5","Speedblitz (deals fighting damage first).
-{2}, Fumble this card from your hand: Pick Up a card.",""
-"Beta","Molten Pyromancer","Red","uncommon","{R}","Creature — Wizard","2","1","Speedblitz (deals fighting damage first).
-During odd Rounds, this creature gets +1/+0 and gains On Sight (can confront and Turn the Round it Pulls Up).",""
-"Beta","Ignited Wyvern","Red","common","{R}","Creature — Reptile","2","1","{R}, Fumble a card: Pick Up a card.",""
-"Beta","Crimson Boar","Red","common","{1}{R}","Creature — Beast","3","1","Heavy Aura (must be responded to by two or more creatures).
-{2}, Fumble this card from your hand: Pick Up a card.","Spark becomes flame; flame becomes legend."
-"Beta","Spark Hawk","Red","uncommon","{R}{R}","Creature — Avian","2","1","Airborne (can only be responded to by Airborne creatures).
+You may pay an extra {1}{R} when playing this. If you do, it deals 2 damage to target creature when it comes into play.",
+Beta,Furious Toad,Red,common,{5}{R},Creature — Reptile,6,5,"Deals fighting damage before other creatures.
+{2}, Put this card from your hand into the Pit: Pick a card.",
+Beta,Molten Pyromancer,Red,uncommon,{R},Creature — Wizard,2,1,"Deals fighting damage before other creatures.
+During odd Rounds, this creature gets +1/+0 and gains Can confront and Turn on the Round it comes into play.",
+Beta,Ignited Wyvern,Red,common,{R},Creature — Reptile,2,1,"{R}, put a card from your hand into the Pit: Pick a card.",
+Beta,Crimson Boar,Red,common,{1}{R},Creature — Beast,3,1,"Must be responded to by two or more creatures.
+{2}, Put this card from your hand into the Pit: Pick a card.",Spark becomes flame; flame becomes legend.
+Beta,Spark Hawk,Red,uncommon,{R}{R},Creature — Avian,2,1,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 {1}{R}, {TURN}: This creature deals 1 damage to target creature or player.
-Extinguish this card from your Pit and pay {1}{R}: Deal 2 damage to target player. Play only during your Main phase.","Hesitation is just another word for defeat."
-"Beta","Cinder Lynx","Red","rare","{1}{R}","Creature — Feline","4","2","On Sight (can confront and Turn the Round it Pulls Up).
-When this creature Folds, it deals 1 damage to target creature or player.
+Extinguish this card from your Pit and pay {1}{R}: Deal 2 damage to target player. Play only during your Main phase.",Hesitation is just another word for defeat.
+Beta,Cinder Lynx,Red,rare,{1}{R},Creature — Feline,4,2,"Can confront and Turn on the Round it comes into play.
+When this creature is put into the Pit from play, it deals 1 damage to target creature or player.
 
-Cook {1}{R} (you may pay an additional {1}{R} as you cast this creature). If you do, it deals 2 damage to target creature when it Pulls Up.","Spark becomes flame; flame becomes legend."
-"Beta","Flash Glimpse","Red","common","{R}","Mudra","","","This Mudra deals 3 damage to target creature, or 2 damage to target player.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","The mountain does not ask before it erupts."
-"Beta","Pyre Spark","Red","common","{1}{R}","Mudra","","","This Mudra deals 2 damage to target creature or player.
+You may pay an extra {1}{R} when playing this. If you do, it deals 2 damage to target creature when it comes into play.",Spark becomes flame; flame becomes legend.
+Beta,Flash Glimpse,Red,common,{R},Mudra,,,"This Mudra deals 3 damage to target creature, or 2 damage to target player.
+You may pay an extra {2} when playing this. If you do, Pick a card.",The mountain does not ask before it erupts.
+Beta,Pyre Spark,Red,common,{1}{R},Mudra,,,"This Mudra deals 2 damage to target creature or player.
 During even Rounds, it deals 3 damage instead.
-{2}, Fumble this card from your hand: Pick Up a card.","Spark becomes flame; flame becomes legend."
-"Beta","Ember Guard","Red","common","{1}{R}","Mudra","","","Eliminate target Artifact. This Mudra deals 1 damage to its controller.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Spark becomes flame; flame becomes legend."
-"Beta","Scarlet Strike","Red","common","{R}","Mudra","","","Target creature gets +3/+0 and gains Speedblitz (deals fighting damage first) until end of Round.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","The mountain does not ask before it erupts."
-"Beta","Roaring Guard","Red","uncommon","{2}{R}","Mudra","","","This Mudra deals 4 damage to target creature or 3 damage to target player.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Hesitation is just another word for defeat."
-"Beta","Ember Break","Red","common","{1}{R}","Mudra","","","Fumble a card, then Pick Up two cards. If you Fumbled a Red card, deal 1 damage to target opponent.
-{2}, Fumble this card from your hand: Pick Up a card.","The mountain does not ask before it erupts."
-"Beta","Molten Bolt","Red","uncommon","{2}{R}","Mudra","","","This Mudra deals 2 damage divided as you choose among one or two targets.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Strike first, and leave the planning to the ashes."
-"Beta","Ember Strike","Red","uncommon","{R}","Mudra","","","This Mudra deals 2 damage to target creature. That creature cannot respond this Round.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Hesitation is just another word for defeat."
-"Beta","Furious Guard","Red","rare","{1}{R}{R}","Mudra","","","Copy target Mudra or Mantra. You may choose new targets for the copy.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Spark becomes flame; flame becomes legend."
-"Beta","Crackling Bolt","Red","rare","{3}{R}","Mudra","","","This Mudra deals 5 damage to target creature. Excess damage is dealt to that creature's controller.
-{2}, Fumble this card from your hand: Pick Up a card.","Hesitation is just another word for defeat."
-"Beta","Pyre Wave","Red","common","{1}{R}","Mudra","","","This Mudra deals 3 damage to target creature, or 2 damage to target player.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Spark becomes flame; flame becomes legend."
-"Beta","Crackling Harvest","Red","uncommon","{2}{R}","Mantra","","","This Mantra deals 2 damage to each creature and 1 damage to each player.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Freedom burns brightest when cornered."
-"Beta","Spark Decree","Red","uncommon","{2}{R}","Mantra","","","Eliminate target nonbasic Land. Its controller takes 1 damage.
-{2}, Fumble this card from your hand: Pick Up a card.","Hesitation is just another word for defeat."
-"Beta","Feral Convergence","Red","common","{1}{R}","Mantra","","","This Mantra deals 3 damage to target creature.
+{2}, Put this card from your hand into the Pit: Pick a card.",Spark becomes flame; flame becomes legend.
+Beta,Ember Guard,Red,common,{1}{R},Mudra,,,"Eliminate target Artifact. This Mudra deals 1 damage to its controller.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Spark becomes flame; flame becomes legend.
+Beta,Scarlet Strike,Red,common,{R},Mudra,,,"Target creature gets +3/+0 and gains Deals fighting damage before other creatures until end of Round.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",The mountain does not ask before it erupts.
+Beta,Roaring Guard,Red,uncommon,{2}{R},Mudra,,,"This Mudra deals 4 damage to target creature or 3 damage to target player.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Hesitation is just another word for defeat.
+Beta,Ember Break,Red,common,{1}{R},Mudra,,,"put a card from your hand into the Pit, then Pick two cards. If you put a Red card into the Pit this way, deal 1 damage to target opponent.
+{2}, Put this card from your hand into the Pit: Pick a card.",The mountain does not ask before it erupts.
+Beta,Molten Bolt,Red,uncommon,{2}{R},Mudra,,,"This Mudra deals 2 damage divided as you choose among one or two targets.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.","Strike first, and leave the planning to the ashes."
+Beta,Ember Strike,Red,uncommon,{R},Mudra,,,"This Mudra deals 2 damage to target creature. That creature cannot respond this Round.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Hesitation is just another word for defeat.
+Beta,Furious Guard,Red,rare,{1}{R}{R},Mudra,,,"Copy target Mudra or Mantra. You may choose new targets for the copy.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Spark becomes flame; flame becomes legend.
+Beta,Crackling Bolt,Red,rare,{3}{R},Mudra,,,"This Mudra deals 5 damage to target creature. Excess damage is dealt to that creature's controller.
+{2}, Put this card from your hand into the Pit: Pick a card.",Hesitation is just another word for defeat.
+Beta,Pyre Wave,Red,common,{1}{R},Mudra,,,"This Mudra deals 3 damage to target creature, or 2 damage to target player.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Spark becomes flame; flame becomes legend.
+Beta,Crackling Harvest,Red,uncommon,{2}{R},Mantra,,,"This Mantra deals 2 damage to each creature and 1 damage to each player.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Freedom burns brightest when cornered.
+Beta,Spark Decree,Red,uncommon,{2}{R},Mantra,,,"Eliminate target nonbasic Land. Its controller takes 1 damage.
+{2}, Put this card from your hand into the Pit: Pick a card.",Hesitation is just another word for defeat.
+Beta,Feral Convergence,Red,common,{1}{R},Mantra,,,"This Mantra deals 3 damage to target creature.
 During odd Rounds, creatures with toughness 1 cannot respond this Round.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","The mountain does not ask before it erupts."
-"Beta","Brimstone Chant","Red","rare","{3}{R}{R}","Mantra","","","This Mantra deals 4 damage to each creature without Airborne.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Strike first, and leave the planning to the ashes."
-"Beta","Flash Reckoning","Red","common","{2}{R}","Mantra","","","Finesse target creature until end of Round. Straighten it. It gains On Sight (can confront and Turn the Round it Pulls Up) until end of Round.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Freedom burns brightest when cornered."
-"Beta","Crackling Vision","Red","common","{1}{R}","Mantra","","","Eliminate up to one target Artifact and deal 2 damage to target player.
-{2}, Fumble this card from your hand: Pick Up a card.","Hesitation is just another word for defeat."
-"Beta","Pyre Omen","Red","uncommon","{3}{R}","Mantra","","","Each player Fumbles their hand and Picks Up three cards.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",The mountain does not ask before it erupts.
+Beta,Brimstone Chant,Red,rare,{3}{R}{R},Mantra,,,"This Mantra deals 4 damage to each creature without Airborne.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.","Strike first, and leave the planning to the ashes."
+Beta,Flash Reckoning,Red,common,{2}{R},Mantra,,,"Take control of target creature until end of Round. Straighten it. It gains Can confront and Turn on the Round it comes into play until end of Round.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Freedom burns brightest when cornered.
+Beta,Crackling Vision,Red,common,{1}{R},Mantra,,,"Eliminate up to one target Artifact and deal 2 damage to target player.
+{2}, Put this card from your hand into the Pit: Pick a card.",Hesitation is just another word for defeat.
+Beta,Pyre Omen,Red,uncommon,{3}{R},Mantra,,,"Each player puts their hand into the Pit and Picks three cards.
 During odd Rounds, deal 2 damage to each opponent.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Hesitation is just another word for defeat."
-"Beta","Magma Ascent","Red","rare","{4}{R}","Mantra","","","This Mantra deals 6 damage to target creature or 4 damage to target player.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Freedom burns brightest when cornered."
-"Beta","Scorching Beacon","Red","common","{1}{R}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+0 and gains On Sight (can confront and Turn the Round it Pulls Up).
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Freedom burns brightest when cornered."
-"Beta","Spark Presence","Red","uncommon","{2}{R}","Seal","","","During odd Rounds, all creatures gain On Sight (can confront and Turn the Round they Pull Up).
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Hesitation is just another word for defeat.
+Beta,Magma Ascent,Red,rare,{4}{R},Mantra,,,"This Mantra deals 6 damage to target creature or 4 damage to target player.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Freedom burns brightest when cornered.
+Beta,Scorching Beacon,Red,common,{1}{R},Seal — Binding,,,"Bind to target creature. Bound creature gets +2/+0 and gains Can confront and Turn on the Round it comes into play.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Freedom burns brightest when cornered.
+Beta,Spark Presence,Red,uncommon,{2}{R},Seal,,,"During odd Rounds, all creatures gain Can confront and Turn on the Round it comes into play.
 During even Rounds, confronting creatures get +1/+0.
-{2}, Fumble this card from your hand: Pick Up a card.","Freedom burns brightest when cornered."
-"Beta","Spark Covenant","Red","rare","{1}{R}{R}","Seal","","","At the beginning of each player's Maintenance phase, that player Extinguishes the top card of their deck and may play it this Round.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Strike first, and leave the planning to the ashes."
-"Beta","Storm Field","Red","rare","{2}{R}","Seal","","","During odd Rounds, if any source would deal damage to a player, it deals that much damage plus 1 instead.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Spark becomes flame; flame becomes legend."
-"Beta","Flint Dominion","Red","common","{R}","Seal — Binding","","","Bind to target creature. {R}: Bound creature gets +1/+0 until end of Round.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Hesitation is just another word for defeat."
-"Beta","Roaring Beacon","Red","common","{2}{R}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+0 and gains On Sight (can confront and Turn the Round it Pulls Up).
-{2}, Fumble this card from your hand: Pick Up a card.","The mountain does not ask before it erupts."
-"Beta","Blazing Mantle","Red","uncommon","{3}{R}","Seal","","","During odd Rounds, all creatures gain On Sight (can confront and Turn the Round they Pull Up).
+{2}, Put this card from your hand into the Pit: Pick a card.",Freedom burns brightest when cornered.
+Beta,Spark Covenant,Red,rare,{1}{R}{R},Seal,,,"Once each player's Maintenance phase begins: that player Extinguishes the top card of their deck and may play it this Round.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.","Strike first, and leave the planning to the ashes."
+Beta,Storm Field,Red,rare,{2}{R},Seal,,,"During odd Rounds, if any source would deal damage to a player, it deals that much damage plus 1 instead.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Spark becomes flame; flame becomes legend.
+Beta,Flint Dominion,Red,common,{R},Seal — Binding,,,"Bind to target creature. {R}: Bound creature gets +1/+0 until end of Round.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Hesitation is just another word for defeat.
+Beta,Roaring Beacon,Red,common,{2}{R},Seal — Binding,,,"Bind to target creature. Bound creature gets +2/+0 and gains Can confront and Turn on the Round it comes into play.
+{2}, Put this card from your hand into the Pit: Pick a card.",The mountain does not ask before it erupts.
+Beta,Blazing Mantle,Red,uncommon,{3}{R},Seal,,,"During odd Rounds, all creatures gain Can confront and Turn on the Round it comes into play.
 During even Rounds, confronting creatures get +1/+0.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Strike first, and leave the planning to the ashes."
-"Beta","Sunbark Sapling","Green","rare","{G}","Creature — Flora","2","2","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.","Strike first, and leave the planning to the ashes."
+Beta,Sunbark Sapling,Green,rare,{G},Creature — Flora,2,2,"Cannot be targeted by opponents' Techniques or abilities.
 {TURN}: Add {G} to your Energy pool.
 
-Cook {2}{G} (you may pay an additional {2}{G} as you cast this creature). If you do, Pull a Land card from your deck, put it into play Turned, then shuffle.",""
-"Beta","Moss Dewspirit","Green","common","{G}","Creature — Spirit","2","1","Ten Toes (confronting does not cause this creature to Turn).
-{2}, Fumble this card from your hand: Pick Up a card.","The wild does not hate the wall; it simply outlives it."
-"Beta","Fern Mantis","Green","common","{1}{G}","Creature — Insect","2","3","When this creature Folds, Pull a basic Land card from your deck, Flex it, put it into your hand, then shuffle.","Every predator is eventually outgrown."
-"Beta","Grove Mantis","Green","uncommon","{G}{G}","Creature — Insect","2","3","Walk Down (excess fighting damage dealt to a responder hits the responding player).
-When this creature Pulls Up, Farm +2 Aura and straighten target Land.","Roots split stone given enough seasons."
-"Beta","Dew Boa","Green","common","{1}{G}","Creature — Reptile","3","3","{TURN}: Add {G} to your Energy pool.","Strength grows deepest where the canopy is oldest."
-"Beta","Rootbound Grizzly","Green","common","{2}{G}","Creature — Beast","3","3","When this creature Pulls Up, put an Aura Stack (+1/+1) on another target creature you control.","Listen to the forest, and you will never run dry."
-"Beta","Blooming Tortoise","Green","uncommon","{2}{G}","Creature — Reptile","3","3","Ten Toes (confronting does not cause this creature to Turn).
-When this creature Pulls Up, Farm +2 Aura and straighten target Land.
+You may pay an extra {2}{G} when playing this. If you do, Search your deck for a Land card, put it into play Turned, then shuffle.",
+Beta,Moss Dewspirit,Green,common,{G},Creature — Spirit,2,1,"Confronting does not cause this creature to Turn.
+{2}, Put this card from your hand into the Pit: Pick a card.",The wild does not hate the wall; it simply outlives it.
+Beta,Fern Mantis,Green,common,{1}{G},Creature — Insect,2,3,"When this creature is put into the Pit from play, Search your deck for a basic Land card, show it, put it into your hand, then shuffle.",Every predator is eventually outgrown.
+Beta,Grove Mantis,Green,uncommon,{G}{G},Creature — Insect,2,3,"Extra fighting damage beyond a responder's defense hits the responding player.
+When this creature comes into play, Gain 2 Aura and straighten target Land.",Roots split stone given enough seasons.
+Beta,Dew Boa,Green,common,{1}{G},Creature — Reptile,3,3,{TURN}: Add {G} to your Energy pool.,Strength grows deepest where the canopy is oldest.
+Beta,Rootbound Grizzly,Green,common,{2}{G},Creature — Beast,3,3,"When this creature comes into play, put an Aura Stack (+1/+1) on another target creature you control.","Listen to the forest, and you will never run dry."
+Beta,Blooming Tortoise,Green,uncommon,{2}{G},Creature — Reptile,3,3,"Confronting does not cause this creature to Turn.
+When this creature comes into play, Gain 2 Aura and straighten target Land.
 
-Cook {2}{G} (you may pay an additional {2}{G} as you cast this creature). If you do, Pull a Land card from your deck, put it into play Turned, then shuffle.","Every predator is eventually outgrown."
-"Beta","Bark Boa","Green","rare","{2}{G}","Creature — Reptile","4","4","Ten Toes (confronting does not cause this creature to Turn).
-Whenever a Land Pulls Up under your control, this creature gets +1/+1 until end of Round.
-Extinguish this card from your Pit and pay {2}{G}: Glaze target creature (+3/+3 until end of Round). Play only during your Main phase.",""
-"Beta","Vine Treant","Green","common","{3}{G}","Creature — Flora","4","4","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
-{2}, Fumble this card from your hand: Pick Up a card.",""
-"Beta","Timber Jaguar","Green","uncommon","{2}{G}{G}","Creature — Feline","4","4","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
-When this creature Folds, Pull a basic Land card from your deck, Flex it, put it into your hand, then shuffle.
-Extinguish this card from your Pit and pay {2}{G}: Glaze target creature (+3/+3 until end of Round). Play only during your Main phase.",""
-"Beta","Sunbark Basilisk","Green","common","{4}{G}","Creature — Reptile","5","5","{2}{G}, {TURN}: Glaze target creature (+2/+2 until end of Round).","Roots split stone given enough seasons."
-"Beta","Moss Tracker","Green","common","{5}{G}","Creature — Warrior","7","7","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
-When this creature Folds, Pull a basic Land card from your deck, Flex it, put it into your hand, then shuffle.",""
-"Beta","Dew Shaper","Green","uncommon","{G}","Creature — Wizard","2","1","Skycheck (can respond to Airborne creatures).
-Whenever a Land Pulls Up under your control, this creature gets +1/+1 until end of Round.","Listen to the forest, and you will never run dry."
-"Beta","Sylvan Dewspirit","Green","common","{G}","Creature — Spirit","2","2","Skycheck (can respond to Airborne creatures).
+You may pay an extra {2}{G} when playing this. If you do, Search your deck for a Land card, put it into play Turned, then shuffle.",Every predator is eventually outgrown.
+Beta,Bark Boa,Green,rare,{2}{G},Creature — Reptile,4,4,"Confronting does not cause this creature to Turn.
+Whenever a Land comes into play under your control, this creature gets +1/+1 until end of Round.
+Extinguish this card from your Pit and pay {2}{G}: target creature gets +3/+3 until end of Round. Play only during your Main phase.",
+Beta,Vine Treant,Green,common,{3}{G},Creature — Flora,4,4,"Cannot be targeted by opponents' Techniques or abilities.
+{2}, Put this card from your hand into the Pit: Pick a card.",
+Beta,Timber Jaguar,Green,uncommon,{2}{G}{G},Creature — Feline,4,4,"Cannot be targeted by opponents' Techniques or abilities.
+When this creature is put into the Pit from play, Search your deck for a basic Land card, show it, put it into your hand, then shuffle.
+Extinguish this card from your Pit and pay {2}{G}: target creature gets +3/+3 until end of Round. Play only during your Main phase.",
+Beta,Sunbark Basilisk,Green,common,{4}{G},Creature — Reptile,5,5,"{2}{G}, {TURN}: target creature gets +2/+2 until end of Round.",Roots split stone given enough seasons.
+Beta,Moss Tracker,Green,common,{5}{G},Creature — Warrior,7,7,"Cannot be targeted by opponents' Techniques or abilities.
+When this creature is put into the Pit from play, Search your deck for a basic Land card, show it, put it into your hand, then shuffle.",
+Beta,Dew Shaper,Green,uncommon,{G},Creature — Wizard,2,1,"Can respond to Airborne creatures.
+Whenever a Land comes into play under your control, this creature gets +1/+1 until end of Round.","Listen to the forest, and you will never run dry."
+Beta,Sylvan Dewspirit,Green,common,{G},Creature — Spirit,2,2,"Can respond to Airborne creatures.
 
-Cook {2}{G} (you may pay an additional {2}{G} as you cast this creature). If you do, Pull a Land card from your deck, put it into play Turned, then shuffle.",""
-"Beta","Dew Grovekeeper","Green","rare","{1}{G}","Creature — Spirit","4","4","Walk Down (excess fighting damage dealt to a responder hits the responding player).
-When this creature Folds, Pull a basic Land card from your deck, Flex it, put it into your hand, then shuffle.
-{2}, Fumble this card from your hand: Pick Up a card.","Roots split stone given enough seasons."
-"Beta","Overgrown Tortoise","Green","uncommon","{G}{G}","Creature — Reptile","3","3","Walk Down (excess fighting damage dealt to a responder hits the responding player).
-Whenever a Land Pulls Up under your control, this creature gets +1/+1 until end of Round.",""
-"Beta","Sunbark Wolf","Green","common","{1}{G}","Creature — Canine","2","3","When this creature Folds, Pull a basic Land card from your deck, Flex it, put it into your hand, then shuffle.",""
-"Beta","Ancient Mantis","Green","common","{2}{G}","Creature — Insect","3","4","When this creature Pulls Up, put an Aura Stack (+1/+1) on another target creature you control.","Strength grows deepest where the canopy is oldest."
-"Beta","Rootbound Beetle","Green","uncommon","{2}{G}","Creature — Insect","4","3","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
-When this creature Pulls Up, put an Aura Stack (+1/+1) on another target creature you control.",""
-"Beta","Heartwood Wolf","Green","common","{2}{G}","Creature — Canine","3","4","Walk Down (excess fighting damage dealt to a responder hits the responding player).
-{2}, Fumble this card from your hand: Pick Up a card.","The wild does not hate the wall; it simply outlives it."
-"Beta","Heartwood Tracker","Green","common","{3}{G}","Creature — Warrior","5","5","Walk Down (excess fighting damage dealt to a responder hits the responding player).
-{2}{G}, {TURN}: Glaze target creature (+2/+2 until end of Round).","Roots split stone given enough seasons."
-"Beta","Moss Basilisk","Green","rare","{2}{G}{G}","Creature — Reptile","5","5","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
-{2}{G}, {TURN}: Glaze target creature (+2/+2 until end of Round).
-{2}, Fumble this card from your hand: Pick Up a card.",""
-"Beta","Blooming Badger","Green","common","{4}{G}","Creature — Beast","5","6","When this creature Folds, Pull a basic Land card from your deck, Flex it, put it into your hand, then shuffle.",""
-"Beta","Vine Grizzly","Green","common","{5}{G}","Creature — Beast","7","7","Walk Down (excess fighting damage dealt to a responder hits the responding player).
-Whenever a Land Pulls Up under your control, this creature gets +1/+1 until end of Round.",""
-"Beta","Primal Yaguareté","Green","uncommon","{G}","Creature — Feline","2","1","Ten Toes (confronting does not cause this creature to Turn).
-When this creature Pulls Up, Farm +2 Aura and straighten target Land.
-{2}, Fumble this card from your hand: Pick Up a card.","Every predator is eventually outgrown."
-"Beta","Living Basilisk","Green","common","{G}","Creature — Reptile","1","1","Skycheck (can respond to Airborne creatures).
-Extinguish this card from your Pit and pay {2}{G}: Glaze target creature (+3/+3 until end of Round). Play only during your Main phase.","Strength grows deepest where the canopy is oldest."
-"Beta","Wild Stag","Green","common","{1}{G}","Creature — Beast","3","3","Whenever this creature responds, it gets +0/+2 until end of Round.",""
-"Beta","Bramble Grizzly","Green","uncommon","{G}{G}","Creature — Beast","3","2","Unbothered (cannot be targeted by Blue or Black Techniques during your Round).
-When this creature Pulls Up, Farm +2 Aura and straighten target Land.","Listen to the forest, and you will never run dry."
-"Beta","Living Jaguar","Green","rare","{1}{G}","Creature — Feline","4","3","Skycheck (can respond to Airborne creatures).
+You may pay an extra {2}{G} when playing this. If you do, Search your deck for a Land card, put it into play Turned, then shuffle.",
+Beta,Dew Grovekeeper,Green,rare,{1}{G},Creature — Spirit,4,4,"Extra fighting damage beyond a responder's defense hits the responding player.
+When this creature is put into the Pit from play, Search your deck for a basic Land card, show it, put it into your hand, then shuffle.
+{2}, Put this card from your hand into the Pit: Pick a card.",Roots split stone given enough seasons.
+Beta,Overgrown Tortoise,Green,uncommon,{G}{G},Creature — Reptile,3,3,"Extra fighting damage beyond a responder's defense hits the responding player.
+Whenever a Land comes into play under your control, this creature gets +1/+1 until end of Round.",
+Beta,Sunbark Wolf,Green,common,{1}{G},Creature — Canine,2,3,"When this creature is put into the Pit from play, Search your deck for a basic Land card, show it, put it into your hand, then shuffle.",
+Beta,Ancient Mantis,Green,common,{2}{G},Creature — Insect,3,4,"When this creature comes into play, put an Aura Stack (+1/+1) on another target creature you control.",Strength grows deepest where the canopy is oldest.
+Beta,Rootbound Beetle,Green,uncommon,{2}{G},Creature — Insect,4,3,"Cannot be targeted by opponents' Techniques or abilities.
+When this creature comes into play, put an Aura Stack (+1/+1) on another target creature you control.",
+Beta,Heartwood Wolf,Green,common,{2}{G},Creature — Canine,3,4,"Extra fighting damage beyond a responder's defense hits the responding player.
+{2}, Put this card from your hand into the Pit: Pick a card.",The wild does not hate the wall; it simply outlives it.
+Beta,Heartwood Tracker,Green,common,{3}{G},Creature — Warrior,5,5,"Extra fighting damage beyond a responder's defense hits the responding player.
+{2}{G}, {TURN}: target creature gets +2/+2 until end of Round.",Roots split stone given enough seasons.
+Beta,Moss Basilisk,Green,rare,{2}{G}{G},Creature — Reptile,5,5,"Cannot be targeted by opponents' Techniques or abilities.
+{2}{G}, {TURN}: target creature gets +2/+2 until end of Round.
+{2}, Put this card from your hand into the Pit: Pick a card.",
+Beta,Blooming Badger,Green,common,{4}{G},Creature — Beast,5,6,"When this creature is put into the Pit from play, Search your deck for a basic Land card, show it, put it into your hand, then shuffle.",
+Beta,Vine Grizzly,Green,common,{5}{G},Creature — Beast,7,7,"Extra fighting damage beyond a responder's defense hits the responding player.
+Whenever a Land comes into play under your control, this creature gets +1/+1 until end of Round.",
+Beta,Primal Yaguareté,Green,uncommon,{G},Creature — Feline,2,1,"Confronting does not cause this creature to Turn.
+When this creature comes into play, Gain 2 Aura and straighten target Land.
+{2}, Put this card from your hand into the Pit: Pick a card.",Every predator is eventually outgrown.
+Beta,Living Basilisk,Green,common,{G},Creature — Reptile,1,1,"Can respond to Airborne creatures.
+Extinguish this card from your Pit and pay {2}{G}: target creature gets +3/+3 until end of Round. Play only during your Main phase.",Strength grows deepest where the canopy is oldest.
+Beta,Wild Stag,Green,common,{1}{G},Creature — Beast,3,3,"Whenever this creature responds, it gets +0/+2 until end of Round.",
+Beta,Bramble Grizzly,Green,uncommon,{G}{G},Creature — Beast,3,2,"Cannot be targeted by opponents' Techniques or abilities.
+When this creature comes into play, Gain 2 Aura and straighten target Land.","Listen to the forest, and you will never run dry."
+Beta,Living Jaguar,Green,rare,{1}{G},Creature — Feline,4,3,"Can respond to Airborne creatures.
 {TURN}: Add {G} to your Energy pool.
 
-Cook {2}{G} (you may pay an additional {2}{G} as you cast this creature). If you do, Pull a Land card from your deck, put it into play Turned, then shuffle.",""
-"Beta","Wild Flash","Green","common","{G}","Mudra","","","Glaze target creature (+3/+3 until end of Round). If it responds to an Airborne creature, straighten it.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Strength grows deepest where the canopy is oldest."
-"Beta","Oaken Glimpse","Green","common","{1}{G}","Mudra","","","Eliminate target Artifact or Seal. Scope 1 (look at the top card of your deck).
-{2}, Fumble this card from your hand: Pick Up a card.","Listen to the forest, and you will never run dry."
-"Beta","Wild Break","Green","common","{1}{G}","Mudra","","","Target creature you control deals damage equal to its attack to target creature you do not control.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Listen to the forest, and you will never run dry."
-"Beta","Grove Break","Green","uncommon","{2}{G}","Mudra","","","Glaze target creature (+4/+4 until end of Round). If it gains Walk Down (excess fighting damage hits the responding player).
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Roots split stone given enough seasons."
-"Beta","Bramble Gesture","Green","common","{G}","Mudra","","","Straighten target creature you control. It gets +1/+2 and gains Skycheck (can respond to Airborne creatures) until end of Round.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Listen to the forest, and you will never run dry."
-"Beta","Emerald Surge","Green","uncommon","{1}{G}","Mudra","","","Prevent all fighting damage that would be dealt this Round. Farm +2 Aura.
-{2}, Fumble this card from your hand: Pick Up a card.","The wild does not hate the wall; it simply outlives it."
-"Beta","Rootbound Guard","Green","rare","{2}{G}","Mudra","","","Pick Up cards equal to the greatest attack among creatures you control, then Fumble a card.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Every predator is eventually outgrown."
-"Beta","Ancient Bolt","Green","common","{1}{G}","Mudra","","","Glaze target creature (+3/+3 until end of Round). If it responds to an Airborne creature, straighten it.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Roots split stone given enough seasons."
-"Beta","Moss Glimpse","Green","common","{2}{G}","Mudra","","","Eliminate target Artifact or Seal. Scope 1 (look at the top card of your deck).
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Listen to the forest, and you will never run dry."
-"Beta","Briar Flash","Green","common","{2}{G}","Mudra","","","Target creature you control deals damage equal to its attack to target creature you do not control.
-{2}, Fumble this card from your hand: Pick Up a card.","Roots split stone given enough seasons."
-"Beta","Emerald Rupture","Green","uncommon","{3}{G}","Mudra","","","Glaze target creature (+4/+4 until end of Round). If it gains Walk Down (excess fighting damage hits the responding player).
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","The wild does not hate the wall; it simply outlives it."
-"Beta","Ancient Omen","Green","common","{1}{G}","Mantra","","","Pull a basic Land card from your deck, put it into play Turned, then shuffle. Farm +1 Aura.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Strength grows deepest where the canopy is oldest."
-"Beta","Thorn Tide","Green","common","{2}{G}","Mantra","","","Pull up to two Land cards from your deck, put one into play Turned and one into your hand, then shuffle.
-{2}, Fumble this card from your hand: Pick Up a card.","Strength grows deepest where the canopy is oldest."
-"Beta","Canopy Awakening","Green","uncommon","{1}{G}","Mantra","","","Return target permanent card from your Pit to your hand. Farm +1 Aura.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Roots split stone given enough seasons."
-"Beta","Timber Tempest","Green","common","{2}{G}","Mantra","","","Look at the top four cards of your deck. Flex a creature or Land from among them, put it into your hand, and the rest on the bottom.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Listen to the forest, and you will never run dry."
-"Beta","Bark Decree","Green","rare","{3}{G}","Mantra","","","Put two Aura Stacks (+1/+1) on each of up to two target creatures you control.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Strength grows deepest where the canopy is oldest."
-"Beta","Canopy Ascent","Green","common","{1}{G}","Mantra","","","Target creature you control gets +2/+2 until end of Round, then deals damage equal to its attack to target creature an opponent controls.
-{2}, Fumble this card from your hand: Pick Up a card.","Roots split stone given enough seasons."
-"Beta","Bark Invocation","Green","rare","{3}{G}{G}","Mantra","","","Pull a creature card from your deck, put it into your hand, then shuffle. Creatures you control get +2/+2 until end of Round.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","The wild does not hate the wall; it simply outlives it."
-"Beta","Canopy Decree","Green","common","{2}{G}","Mantra","","","Pull a basic Land card from your deck, put it into play Turned, then shuffle. Farm +1 Aura.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Roots split stone given enough seasons."
-"Beta","Moss Banner","Green","common","{G}","Seal — Binding","","","Bind to target Land.
+You may pay an extra {2}{G} when playing this. If you do, Search your deck for a Land card, put it into play Turned, then shuffle.",
+Beta,Wild Flash,Green,common,{G},Mudra,,,"target creature gets +3/+3 until end of Round. If it responds to an Airborne creature, straighten it.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Strength grows deepest where the canopy is oldest.
+Beta,Oaken Glimpse,Green,common,{1}{G},Mudra,,,"Eliminate target Artifact or Seal. Look at the top 1 cards of your deck; put any on the bottom in any order.
+{2}, Put this card from your hand into the Pit: Pick a card.","Listen to the forest, and you will never run dry."
+Beta,Wild Break,Green,common,{1}{G},Mudra,,,"Target creature you control deals damage equal to its attack to target creature you do not control.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.","Listen to the forest, and you will never run dry."
+Beta,Grove Break,Green,uncommon,{2}{G},Mudra,,,"target creature gets +4/+4 until end of Round. If it gains Extra fighting damage beyond a responder's defense hits the responding player.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Roots split stone given enough seasons.
+Beta,Bramble Gesture,Green,common,{G},Mudra,,,"Straighten target creature you control. It gets +1/+2 and gains Can respond to Airborne creatures until end of Round.
+You may pay an extra {2} when playing this. If you do, Pick a card.","Listen to the forest, and you will never run dry."
+Beta,Emerald Surge,Green,uncommon,{1}{G},Mudra,,,"Prevent all fighting damage that would be dealt this Round. Gain 2 Aura.
+{2}, Put this card from your hand into the Pit: Pick a card.",The wild does not hate the wall; it simply outlives it.
+Beta,Rootbound Guard,Green,rare,{2}{G},Mudra,,,"Pick cards equal to the greatest attack among creatures you control, then put a card from your hand into the Pit.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Every predator is eventually outgrown.
+Beta,Ancient Bolt,Green,common,{1}{G},Mudra,,,"target creature gets +3/+3 until end of Round. If it responds to an Airborne creature, straighten it.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Roots split stone given enough seasons.
+Beta,Moss Glimpse,Green,common,{2}{G},Mudra,,,"Eliminate target Artifact or Seal. Look at the top 1 cards of your deck; put any on the bottom in any order.
+You may pay an extra {2} when playing this. If you do, Pick a card.","Listen to the forest, and you will never run dry."
+Beta,Briar Flash,Green,common,{2}{G},Mudra,,,"Target creature you control deals damage equal to its attack to target creature you do not control.
+{2}, Put this card from your hand into the Pit: Pick a card.",Roots split stone given enough seasons.
+Beta,Emerald Rupture,Green,uncommon,{3}{G},Mudra,,,"target creature gets +4/+4 until end of Round. If it gains Extra fighting damage beyond a responder's defense hits the responding player.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",The wild does not hate the wall; it simply outlives it.
+Beta,Ancient Omen,Green,common,{1}{G},Mantra,,,"Search your deck for a basic Land card, put it into play Turned, then shuffle. Gain 1 Aura.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Strength grows deepest where the canopy is oldest.
+Beta,Thorn Tide,Green,common,{2}{G},Mantra,,,"Search your deck for up to two Land cards, put one into play Turned and one into your hand, then shuffle.
+{2}, Put this card from your hand into the Pit: Pick a card.",Strength grows deepest where the canopy is oldest.
+Beta,Canopy Awakening,Green,uncommon,{1}{G},Mantra,,,"Return target permanent card from your Pit to your hand. Gain 1 Aura.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Roots split stone given enough seasons.
+Beta,Timber Tempest,Green,common,{2}{G},Mantra,,,"Look at the top four cards of your deck. Show a creature or Land from among them, put it into your hand, and the rest on the bottom.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.","Listen to the forest, and you will never run dry."
+Beta,Bark Decree,Green,rare,{3}{G},Mantra,,,"Put two Aura Stacks (+1/+1) on each of up to two target creatures you control.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Strength grows deepest where the canopy is oldest.
+Beta,Canopy Ascent,Green,common,{1}{G},Mantra,,,"Target creature you control gets +2/+2 until end of Round, then deals damage equal to its attack to target creature an opponent controls.
+{2}, Put this card from your hand into the Pit: Pick a card.",Roots split stone given enough seasons.
+Beta,Bark Invocation,Green,rare,{3}{G}{G},Mantra,,,"Search your deck for a creature card, put it into your hand, then shuffle. Creatures you control get +2/+2 until end of Round.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",The wild does not hate the wall; it simply outlives it.
+Beta,Canopy Decree,Green,common,{2}{G},Mantra,,,"Search your deck for a basic Land card, put it into play Turned, then shuffle. Gain 1 Aura.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Roots split stone given enough seasons.
+Beta,Moss Banner,Green,common,{G},Seal — Binding,,,"Bind to target Land.
 Whenever bound Land is Turned for Energy, add an additional {G} to your Energy pool.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Strength grows deepest where the canopy is oldest."
-"Beta","Primal Oath","Green","uncommon","{G}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+0.
-When this Seal Dips from the field, return it to your hand.
-{2}, Fumble this card from your hand: Pick Up a card.","Strength grows deepest where the canopy is oldest."
-"Beta","Verdant Tether","Green","uncommon","{2}{G}","Seal","","","Whenever a creature with attack 4 or greater Pulls Up under your control, Pick Up a card.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Roots split stone given enough seasons."
-"Beta","Moss Ward","Green","common","{1}{G}","Seal — Binding","","","Bind to target creature. Bound creature gets +2/+2 and gains Skycheck (can respond to Airborne creatures).
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Roots split stone given enough seasons."
-"Beta","Dew Covenant","Green","rare","{2}{G}{G}","Seal","","","You may play an additional Land on each of your Rounds.
-Whenever a Land Pulls Up under your control, Farm +1 Aura.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","The wild does not hate the wall; it simply outlives it."
-"Beta","Timber Pact","Green","uncommon","{1}{G}","Seal","","","At the beginning of your Maintenance phase, you may pay {1}. If you do, put an Aura Stack (+1/+1) on target creature you control.
-{2}, Fumble this card from your hand: Pick Up a card.","Every predator is eventually outgrown."
-"Beta","Blooming Vow","Green","common","{1}{G}","Seal — Binding","","","Bind to target Land.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Strength grows deepest where the canopy is oldest.
+Beta,Primal Oath,Green,uncommon,{G},Seal — Binding,,,"Bind to target creature. Bound creature gets +2/+0.
+When this Seal leaves play, return it to your hand.
+{2}, Put this card from your hand into the Pit: Pick a card.",Strength grows deepest where the canopy is oldest.
+Beta,Verdant Tether,Green,uncommon,{2}{G},Seal,,,"Whenever a creature with attack 4 or greater comes into play under your control, Pick a card.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Roots split stone given enough seasons.
+Beta,Moss Ward,Green,common,{1}{G},Seal — Binding,,,"Bind to target creature. Bound creature gets +2/+2 and gains Can respond to Airborne creatures.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Roots split stone given enough seasons.
+Beta,Dew Covenant,Green,rare,{2}{G}{G},Seal,,,"You may play an additional Land on each of your Rounds.
+Whenever a Land comes into play under your control, Gain 1 Aura.
+You may pay an extra {2} when playing this. If you do, Pick a card.",The wild does not hate the wall; it simply outlives it.
+Beta,Timber Pact,Green,uncommon,{1}{G},Seal,,,"Once your Maintenance phase begins: you may pay {1}. If you do, put an Aura Stack (+1/+1) on target creature you control.
+{2}, Put this card from your hand into the Pit: Pick a card.",Every predator is eventually outgrown.
+Beta,Blooming Vow,Green,common,{1}{G},Seal — Binding,,,"Bind to target Land.
 Whenever bound Land is Turned for Energy, add an additional {G} to your Energy pool.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Strength grows deepest where the canopy is oldest."
-"Beta","Resonant Colossus","Artifact","rare","{1}","Artifact Creature — Construct","1","2","Ten Toes (confronting does not cause this creature to Turn).
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Strength grows deepest where the canopy is oldest.
+Beta,Resonant Colossus,Artifact,rare,{1},Artifact Creature — Construct,1,2,"Confronting does not cause this creature to Turn.
 {TURN}: Add {1} to your Energy pool.
-{2}, Fumble this card from your hand: Pick Up a card.","No pulse, no fear, no fatigue."
-"Beta","Runic Stag","Artifact","common","{2}","Artifact Creature — Construct","1","2","When this creature Pulls Up, Scope 1 (look at the top card of your deck).","No pulse, no fear, no fatigue."
-"Beta","Bellframe Colossus","Artifact","common","{3}","Artifact Creature — Construct","2","3","On Sight (can confront and Turn the Round it Pulls Up).
+{2}, Put this card from your hand into the Pit: Pick a card.","No pulse, no fear, no fatigue."
+Beta,Runic Stag,Artifact,common,{2},Artifact Creature — Construct,1,2,"When this creature comes into play, Look at the top 1 cards of your deck; put any on the bottom in any order.","No pulse, no fear, no fatigue."
+Beta,Bellframe Colossus,Artifact,common,{3},Artifact Creature — Construct,2,3,"Can confront and Turn on the Round it comes into play.
 
-Cook {2} (you may pay an additional {2} as you cast this creature). If you do, it Pulls Up with two Aura Stacks (+1/+1) on it.","Crafted from brass, bound by geometry."
-"Beta","Etched Moth","Artifact","uncommon","{4}","Artifact Creature — Construct","3","5","Walk Down (excess fighting damage dealt to a responder hits the responding player).
-When this creature Pulls Up, Scope 1 (look at the top card of your deck).","No pulse, no fear, no fatigue."
-"Beta","Prism Stag","Artifact","common","{5}","Artifact Creature — Construct","4","5","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+You may pay an extra {2} when playing this. If you do, it comes into play with two Aura Stacks (+1/+1) on it.","Crafted from brass, bound by geometry."
+Beta,Etched Moth,Artifact,uncommon,{4},Artifact Creature — Construct,3,5,"Extra fighting damage beyond a responder's defense hits the responding player.
+When this creature comes into play, Look at the top 1 cards of your deck; put any on the bottom in any order.","No pulse, no fear, no fatigue."
+Beta,Prism Stag,Artifact,common,{5},Artifact Creature — Construct,4,5,"Extra fighting damage beyond a responder's defense hits the responding player.
 {2}: This creature gets +1/+1 until end of Round.","No pulse, no fear, no fatigue."
-"Beta","Arcane Strider","Artifact","common","{6}","Artifact Creature — Construct","5","7","Skycheck (can respond to Airborne creatures).
-At the beginning of your Maintenance phase, if you control three or more Artifacts, this creature gets +1/+1 until end of Round.","A quiet hum marks a steady conduit."
-"Beta","Runic Sentinel","Artifact","rare","{1}","Artifact Creature — Construct","1","2","Ten Toes (confronting does not cause this creature to Turn).
-When this creature Pulls Up, Scope 1 (look at the top card of your deck).
+Beta,Arcane Strider,Artifact,common,{6},Artifact Creature — Construct,5,7,"Can respond to Airborne creatures.
+Once your Maintenance phase begins: if you control three or more Artifacts, this creature gets +1/+1 until end of Round.",A quiet hum marks a steady conduit.
+Beta,Runic Sentinel,Artifact,rare,{1},Artifact Creature — Construct,1,2,"Confronting does not cause this creature to Turn.
+When this creature comes into play, Look at the top 1 cards of your deck; put any on the bottom in any order.
 
-Cook {2} (you may pay an additional {2} as you cast this creature). If you do, it Pulls Up with two Aura Stacks (+1/+1) on it.","Crafted from brass, bound by geometry."
-"Beta","Iron Hound","Artifact","common","{2}","Artifact Creature — Construct","1","3","Walk Down (excess fighting damage dealt to a responder hits the responding player).
-When this creature Pulls Up, Scope 1 (look at the top card of your deck).","Precision is its own kind of craft."
-"Beta","Tempered Sentinel","Artifact","common","{3}","Artifact Creature — Construct","3","3","Ten Toes (confronting does not cause this creature to Turn).
+You may pay an extra {2} when playing this. If you do, it comes into play with two Aura Stacks (+1/+1) on it.","Crafted from brass, bound by geometry."
+Beta,Iron Hound,Artifact,common,{2},Artifact Creature — Construct,1,3,"Extra fighting damage beyond a responder's defense hits the responding player.
+When this creature comes into play, Look at the top 1 cards of your deck; put any on the bottom in any order.",Precision is its own kind of craft.
+Beta,Tempered Sentinel,Artifact,common,{3},Artifact Creature — Construct,3,3,"Confronting does not cause this creature to Turn.
 
-Cook {2} (you may pay an additional {2} as you cast this creature). If you do, it Pulls Up with two Aura Stacks (+1/+1) on it.","Crafted from brass, bound by geometry."
-"Beta","Voltaic Sentinel","Artifact","uncommon","{4}","Artifact Creature — Construct","3","5","Skycheck (can respond to Airborne creatures).
-When this creature Folds, Pick Up a card.","Crafted from brass, bound by geometry."
-"Beta","Kinetic Strider","Artifact","common","{5}","Artifact Creature — Construct","4","6","When this creature Folds, Pick Up a card.","Crafted from brass, bound by geometry."
-"Beta","Opal Hound","Artifact","common","{6}","Artifact Creature — Construct","5","7","When this creature Folds, Pick Up a card.","No pulse, no fear, no fatigue."
-"Beta","Glass Colossus","Artifact","rare","{1}","Artifact Creature — Construct","1","1","Walk Down (excess fighting damage dealt to a responder hits the responding player).
+You may pay an extra {2} when playing this. If you do, it comes into play with two Aura Stacks (+1/+1) on it.","Crafted from brass, bound by geometry."
+Beta,Voltaic Sentinel,Artifact,uncommon,{4},Artifact Creature — Construct,3,5,"Can respond to Airborne creatures.
+When this creature is put into the Pit from play, Pick a card.","Crafted from brass, bound by geometry."
+Beta,Kinetic Strider,Artifact,common,{5},Artifact Creature — Construct,4,6,"When this creature is put into the Pit from play, Pick a card.","Crafted from brass, bound by geometry."
+Beta,Opal Hound,Artifact,common,{6},Artifact Creature — Construct,5,7,"When this creature is put into the Pit from play, Pick a card.","No pulse, no fear, no fatigue."
+Beta,Glass Colossus,Artifact,rare,{1},Artifact Creature — Construct,1,1,"Extra fighting damage beyond a responder's defense hits the responding player.
 {TURN}: Add {1} to your Energy pool.
 
-Cook {2} (you may pay an additional {2} as you cast this creature). If you do, it Pulls Up with two Aura Stacks (+1/+1) on it.","Crafted from brass, bound by geometry."
-"Beta","Gilded Colossus","Artifact","common","{2}","Artifact Creature — Construct","1","3","Skycheck (can respond to Airborne creatures).
+You may pay an extra {2} when playing this. If you do, it comes into play with two Aura Stacks (+1/+1) on it.","Crafted from brass, bound by geometry."
+Beta,Gilded Colossus,Artifact,common,{2},Artifact Creature — Construct,1,3,"Can respond to Airborne creatures.
 
-Cook {2} (you may pay an additional {2} as you cast this creature). If you do, it Pulls Up with two Aura Stacks (+1/+1) on it.","Precision is its own kind of craft."
-"Beta","Gear Spider","Artifact","common","{3}","Artifact Creature — Construct","3","3","When this creature Folds, Pick Up a card.","Built to outlast the hands that shaped it."
-"Beta","Gilded Watcher","Artifact","uncommon","{4}","Artifact Creature — Construct","4","5","Skycheck (can respond to Airborne creatures).
-When this creature Folds, Pick Up a card.","No pulse, no fear, no fatigue."
-"Beta","Resonant Lens","Artifact","common","{1}","Artifact","","","{1}, {TURN}: Add one Energy of any color to your Energy pool. Farm +1 Aura if this is Round 5 or later.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Crafted from brass, bound by geometry."
-"Beta","Gear Scepter","Artifact","uncommon","{2}","Artifact","","","{TURN}: Add {1} to your Energy pool.
-{2}, Sacrifice this: Pick Up a card.
-{2}, Fumble this card from your hand: Pick Up a card.","Crafted from brass, bound by geometry."
-"Beta","Tempered Core","Artifact","rare","{3}","Artifact","","","As long as this artifact is Straightened, players cannot straighten more than two permanents during their Straighten phases.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","No pulse, no fear, no fatigue."
-"Beta","Kinetic Chalice","Artifact","uncommon","{1}","Artifact","","","{1}, {TURN}: Scope 2 (look at the top 2 cards of your deck and reorder them).
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Built to outlast the hands that shaped it."
-"Beta","Prism Idol","Artifact","common","{2}","Artifact","","","{2}, {TURN}: Glaze target creature (+1/+1 until end of Round).
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","No pulse, no fear, no fatigue."
-"Beta","Brass Anchor","Artifact","uncommon","{3}","Artifact","","","{TURN}: Add one Energy of any color to your Energy pool.
-{2}, Fumble this card from your hand: Pick Up a card.","Precision is its own kind of craft."
-"Beta","Clockwork Chalice","Artifact","rare","{4}","Artifact","","","At the beginning of your Maintenance phase, Pick Up an additional card. Skip your Pick Up phase if you have five or more cards in hand.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Precision is its own kind of craft."
-"Beta","Iron Chalice","Artifact","uncommon","{2}","Artifact","","","Techniques your opponents play during your Round cost {1} more to play.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Precision is its own kind of craft."
-"Beta","Votive Prism","Artifact","rare","{4}","Artifact","","","{3}, {TURN}: This artifact deals 2 damage to target creature or player if you have two or fewer cards in hand.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Crafted from brass, bound by geometry."
-"Beta","Cogwork Key","Artifact","common","{2}","Artifact","","","{TURN}, Sacrifice this: Extinguish target card in a Pit. Pick Up a card.
-{2}, Fumble this card from your hand: Pick Up a card.","Crafted from brass, bound by geometry."
-"Beta","Resonant Crown","Artifact","common","{3}","Artifact","","","Whenever a creature Pulls Up under your control, you may pay {1}. If you do, Farm +2 Aura.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Built to outlast the hands that shaped it."
-"Beta","Arcane Dynamo","Artifact","rare","{5}","Artifact","","","{TURN}: Straighten target Artifact or Land. Play this ability only during your Round.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Precision is its own kind of craft."
-"Beta","Silvered Lens","Artifact","uncommon","{4}","Artifact","","","Creatures you control get +1/+0 as long as you control three or more Artifacts.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Precision is its own kind of craft."
-"Beta","Polished Idol","Artifact","uncommon","{3}","Artifact","","","{1}, {TURN}: Prevent the next 1 damage that would be dealt to any target this Round.
-{2}, Fumble this card from your hand: Pick Up a card.","Precision is its own kind of craft."
-"Beta","Runic Chalice","Artifact","rare","{6}","Artifact","","","At the beginning of your End phase, straighten all Lands you control.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Built to outlast the hands that shaped it."
-"Beta","Etched Prism","Artifact","common","{2}","Artifact","","","{1}, {TURN}: Add one Energy of any color to your Energy pool. Farm +1 Aura if this is Round 5 or later.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Precision is its own kind of craft."
-"Beta","Gear Monolith","Artifact","uncommon","{3}","Artifact","","","{TURN}: Add {1} to your Energy pool.
-{2}, Sacrifice this: Pick Up a card.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","Precision is its own kind of craft."
-"Beta","Bellframe Lantern","Artifact","rare","{4}","Artifact","","","As long as this artifact is Straightened, players cannot straighten more than two permanents during their Straighten phases.
-{2}, Fumble this card from your hand: Pick Up a card.","A quiet hum marks a steady conduit."
-"Beta","Etched Orb","Artifact","uncommon","{2}","Artifact","","","{1}, {TURN}: Scope 2 (look at the top 2 cards of your deck and reorder them).
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","A quiet hum marks a steady conduit."
-"Beta","Voltaic Censer","Artifact","common","{3}","Artifact","","","{2}, {TURN}: Glaze target creature (+1/+1 until end of Round).
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Built to outlast the hands that shaped it."
-"Beta","Gear Idol","Artifact","uncommon","{4}","Artifact","","","{TURN}: Add one Energy of any color to your Energy pool.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","No pulse, no fear, no fatigue."
-"Beta","Votive Censer","Artifact","rare","{5}","Artifact","","","At the beginning of your Maintenance phase, Pick Up an additional card. Skip your Pick Up phase if you have five or more cards in hand.
-{2}, Fumble this card from your hand: Pick Up a card.","Crafted from brass, bound by geometry."
-"Beta","Votive Idol","Artifact","uncommon","{3}","Artifact","","","Techniques your opponents play during your Round cost {1} more to play.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Precision is its own kind of craft."
-"Beta","Loom Compass","Artifact","rare","{5}","Artifact","","","{3}, {TURN}: This artifact deals 2 damage to target creature or player if you have two or fewer cards in hand.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Precision is its own kind of craft."
-"Beta","Kinetic Orb","Artifact","common","{3}","Artifact","","","{TURN}, Sacrifice this: Extinguish target card in a Pit. Pick Up a card.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","No pulse, no fear, no fatigue."
-"Beta","Arcane Prism","Artifact","common","{4}","Artifact","","","Whenever a creature Pulls Up under your control, you may pay {1}. If you do, Farm +2 Aura.
-{2}, Fumble this card from your hand: Pick Up a card.","Crafted from brass, bound by geometry."
-"Beta","Iron Lens","Artifact","rare","{6}","Artifact","","","{TURN}: Straighten target Artifact or Land. Play this ability only during your Round.
-Extinguish this card from your Pit and pay {3}: Pick Up a card. Play only during your Main phase.","Built to outlast the hands that shaped it."
-"Beta","Prism Chalice","Artifact","uncommon","{5}","Artifact","","","Creatures you control get +1/+0 as long as you control three or more Artifacts.
-Cook {1} (you may pay an additional {1} as you play this Technique). If you do, Scope 2 (look at the top 2 cards of your deck and put one on the bottom).","Precision is its own kind of craft."
-"Beta","Voltaic Scepter","Artifact","uncommon","{4}","Artifact","","","{1}, {TURN}: Prevent the next 1 damage that would be dealt to any target this Round.
-Cook {2} (you may pay an additional {2} as you play this Technique). If you do, Pick Up a card.","No pulse, no fear, no fatigue."
-"Beta","Crystal Crossing","Land","rare","","Land","","","This land Pulls Up Turned.
+You may pay an extra {2} when playing this. If you do, it comes into play with two Aura Stacks (+1/+1) on it.",Precision is its own kind of craft.
+Beta,Gear Spider,Artifact,common,{3},Artifact Creature — Construct,3,3,"When this creature is put into the Pit from play, Pick a card.",Built to outlast the hands that shaped it.
+Beta,Gilded Watcher,Artifact,uncommon,{4},Artifact Creature — Construct,4,5,"Can respond to Airborne creatures.
+When this creature is put into the Pit from play, Pick a card.","No pulse, no fear, no fatigue."
+Beta,Resonant Lens,Artifact,common,{1},Artifact,,,"{1}, {TURN}: Add one Energy of any color to your Energy pool. Gain 1 Aura if this is Round 5 or later.
+You may pay an extra {2} when playing this. If you do, Pick a card.","Crafted from brass, bound by geometry."
+Beta,Gear Scepter,Artifact,uncommon,{2},Artifact,,,"{TURN}: Add {1} to your Energy pool.
+{2}, Sacrifice this: Pick a card.
+{2}, Put this card from your hand into the Pit: Pick a card.","Crafted from brass, bound by geometry."
+Beta,Tempered Core,Artifact,rare,{3},Artifact,,,"As long as this artifact is Straightened, players cannot straighten more than two permanents during their Straighten phases.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.","No pulse, no fear, no fatigue."
+Beta,Kinetic Chalice,Artifact,uncommon,{1},Artifact,,,"{1}, {TURN}: Look at the top 2 cards of your deck; put any on the bottom in any order.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Built to outlast the hands that shaped it.
+Beta,Prism Idol,Artifact,common,{2},Artifact,,,"{2}, {TURN}: target creature gets +1/+1 until end of Round.
+You may pay an extra {2} when playing this. If you do, Pick a card.","No pulse, no fear, no fatigue."
+Beta,Brass Anchor,Artifact,uncommon,{3},Artifact,,,"{TURN}: Add one Energy of any color to your Energy pool.
+{2}, Put this card from your hand into the Pit: Pick a card.",Precision is its own kind of craft.
+Beta,Clockwork Chalice,Artifact,rare,{4},Artifact,,,"Once your Maintenance phase begins: Pick an additional card. Skip your Pick phase if you have five or more cards in hand.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Precision is its own kind of craft.
+Beta,Iron Chalice,Artifact,uncommon,{2},Artifact,,,"Techniques your opponents play during your Round cost {1} more to play.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Precision is its own kind of craft.
+Beta,Votive Prism,Artifact,rare,{4},Artifact,,,"{3}, {TURN}: This artifact deals 2 damage to target creature or player if you have two or fewer cards in hand.
+You may pay an extra {2} when playing this. If you do, Pick a card.","Crafted from brass, bound by geometry."
+Beta,Cogwork Key,Artifact,common,{2},Artifact,,,"{TURN}, Sacrifice this: Extinguish target card in a Pit. Pick a card.
+{2}, Put this card from your hand into the Pit: Pick a card.","Crafted from brass, bound by geometry."
+Beta,Resonant Crown,Artifact,common,{3},Artifact,,,"Whenever a creature comes into play under your control, you may pay {1}. If you do, Gain 2 Aura.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Built to outlast the hands that shaped it.
+Beta,Arcane Dynamo,Artifact,rare,{5},Artifact,,,"{TURN}: Straighten target Artifact or Land. Play this ability only during your Round.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Precision is its own kind of craft.
+Beta,Silvered Lens,Artifact,uncommon,{4},Artifact,,,"Creatures you control get +1/+0 as long as you control three or more Artifacts.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Precision is its own kind of craft.
+Beta,Polished Idol,Artifact,uncommon,{3},Artifact,,,"{1}, {TURN}: Prevent the next 1 damage that would be dealt to any target this Round.
+{2}, Put this card from your hand into the Pit: Pick a card.",Precision is its own kind of craft.
+Beta,Runic Chalice,Artifact,rare,{6},Artifact,,,"Once your End of Round phase begins: straighten all Lands you control.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Built to outlast the hands that shaped it.
+Beta,Etched Prism,Artifact,common,{2},Artifact,,,"{1}, {TURN}: Add one Energy of any color to your Energy pool. Gain 1 Aura if this is Round 5 or later.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Precision is its own kind of craft.
+Beta,Gear Monolith,Artifact,uncommon,{3},Artifact,,,"{TURN}: Add {1} to your Energy pool.
+{2}, Sacrifice this: Pick a card.
+You may pay an extra {2} when playing this. If you do, Pick a card.",Precision is its own kind of craft.
+Beta,Bellframe Lantern,Artifact,rare,{4},Artifact,,,"As long as this artifact is Straightened, players cannot straighten more than two permanents during their Straighten phases.
+{2}, Put this card from your hand into the Pit: Pick a card.",A quiet hum marks a steady conduit.
+Beta,Etched Orb,Artifact,uncommon,{2},Artifact,,,"{1}, {TURN}: Look at the top 2 cards of your deck; put any on the bottom in any order.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",A quiet hum marks a steady conduit.
+Beta,Voltaic Censer,Artifact,common,{3},Artifact,,,"{2}, {TURN}: target creature gets +1/+1 until end of Round.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Built to outlast the hands that shaped it.
+Beta,Gear Idol,Artifact,uncommon,{4},Artifact,,,"{TURN}: Add one Energy of any color to your Energy pool.
+You may pay an extra {2} when playing this. If you do, Pick a card.","No pulse, no fear, no fatigue."
+Beta,Votive Censer,Artifact,rare,{5},Artifact,,,"Once your Maintenance phase begins: Pick an additional card. Skip your Pick phase if you have five or more cards in hand.
+{2}, Put this card from your hand into the Pit: Pick a card.","Crafted from brass, bound by geometry."
+Beta,Votive Idol,Artifact,uncommon,{3},Artifact,,,"Techniques your opponents play during your Round cost {1} more to play.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Precision is its own kind of craft.
+Beta,Loom Compass,Artifact,rare,{5},Artifact,,,"{3}, {TURN}: This artifact deals 2 damage to target creature or player if you have two or fewer cards in hand.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Precision is its own kind of craft.
+Beta,Kinetic Orb,Artifact,common,{3},Artifact,,,"{TURN}, Sacrifice this: Extinguish target card in a Pit. Pick a card.
+You may pay an extra {2} when playing this. If you do, Pick a card.","No pulse, no fear, no fatigue."
+Beta,Arcane Prism,Artifact,common,{4},Artifact,,,"Whenever a creature comes into play under your control, you may pay {1}. If you do, Gain 2 Aura.
+{2}, Put this card from your hand into the Pit: Pick a card.","Crafted from brass, bound by geometry."
+Beta,Iron Lens,Artifact,rare,{6},Artifact,,,"{TURN}: Straighten target Artifact or Land. Play this ability only during your Round.
+Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Built to outlast the hands that shaped it.
+Beta,Prism Chalice,Artifact,uncommon,{5},Artifact,,,"Creatures you control get +1/+0 as long as you control three or more Artifacts.
+You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Precision is its own kind of craft.
+Beta,Voltaic Scepter,Artifact,uncommon,{4},Artifact,,,"{1}, {TURN}: Prevent the next 1 damage that would be dealt to any target this Round.
+You may pay an extra {2} when playing this. If you do, Pick a card.","No pulse, no fear, no fatigue."
+Beta,Crystal Crossing,Land,rare,,Land,,,"This land comes into play Turned.
 {TURN}: Add {W} or {U} to your Energy pool.
-{2}, Fumble this card from your hand: Pick Up a card.","Where the currents gather, power lingers."
-"Beta","Solstice Crag","Land","rare","","Land","","","This land Pulls Up Turned.
+{2}, Put this card from your hand into the Pit: Pick a card.","Where the currents gather, power lingers."
+Beta,Solstice Crag,Land,rare,,Land,,,"This land comes into play Turned.
 {TURN}: Add {U} or {B} to your Energy pool.
-{2}, Fumble this card from your hand: Pick Up a card.","Where the currents gather, power lingers."
-"Beta","Stormfront Sanctuary","Land","rare","","Land","","","This land Pulls Up Turned.
+{2}, Put this card from your hand into the Pit: Pick a card.","Where the currents gather, power lingers."
+Beta,Stormfront Sanctuary,Land,rare,,Land,,,"This land comes into play Turned.
 {TURN}: Add {B} or {R} to your Energy pool.
-{2}, Fumble this card from your hand: Pick Up a card.","Every path across the realm leaves a trace."
-"Beta","Ashhollow Nexus","Land","rare","","Land","","","This land Pulls Up Turned.
+{2}, Put this card from your hand into the Pit: Pick a card.",Every path across the realm leaves a trace.
+Beta,Ashhollow Nexus,Land,rare,,Land,,,"This land comes into play Turned.
 {TURN}: Add {R} or {G} to your Energy pool.
-{2}, Fumble this card from your hand: Pick Up a card.","Where the currents gather, power lingers."
-"Beta","Sunspire Shrine","Land","rare","","Land","","","This land Pulls Up Turned.
+{2}, Put this card from your hand into the Pit: Pick a card.","Where the currents gather, power lingers."
+Beta,Sunspire Shrine,Land,rare,,Land,,,"This land comes into play Turned.
 {TURN}: Add {G} or {W} to your Energy pool.
-{2}, Fumble this card from your hand: Pick Up a card.","Old stones hold older energy."
-"Beta","Stormfront Nexus","Land","rare","","Land","","","This land Pulls Up Turned.
+{2}, Put this card from your hand into the Pit: Pick a card.",Old stones hold older energy.
+Beta,Stormfront Nexus,Land,rare,,Land,,,"This land comes into play Turned.
 {TURN}: Add {W} or {B} to your Energy pool.
-{2}, Fumble this card from your hand: Pick Up a card.","Draw deeply, for the earth remembers."
-"Beta","Tidewall Atoll","Land","rare","","Land","","","This land Pulls Up Turned.
+{2}, Put this card from your hand into the Pit: Pick a card.","Draw deeply, for the earth remembers."
+Beta,Tidewall Atoll,Land,rare,,Land,,,"This land comes into play Turned.
 {TURN}: Add {U} or {R} to your Energy pool.
-{2}, Fumble this card from your hand: Pick Up a card.","Where the currents gather, power lingers."
-"Beta","Ancient Terrace","Land","rare","","Land","","","This land Pulls Up Turned.
+{2}, Put this card from your hand into the Pit: Pick a card.","Where the currents gather, power lingers."
+Beta,Ancient Terrace,Land,rare,,Land,,,"This land comes into play Turned.
 {TURN}: Add {B} or {G} to your Energy pool.
-{2}, Fumble this card from your hand: Pick Up a card.","Old stones hold older energy."
-"Beta","Rootvale Mire","Land","rare","","Land","","","This land Pulls Up Turned.
+{2}, Put this card from your hand into the Pit: Pick a card.",Old stones hold older energy.
+Beta,Rootvale Mire,Land,rare,,Land,,,"This land comes into play Turned.
 {TURN}: Add {R} or {W} to your Energy pool.
-{2}, Fumble this card from your hand: Pick Up a card.","Every path across the realm leaves a trace."
-"Beta","Emberpeak Mire","Land","rare","","Land","","","This land Pulls Up Turned.
+{2}, Put this card from your hand into the Pit: Pick a card.",Every path across the realm leaves a trace.
+Beta,Emberpeak Mire,Land,rare,,Land,,,"This land comes into play Turned.
 {TURN}: Add {G} or {U} to your Energy pool.
-{2}, Fumble this card from your hand: Pick Up a card.","Draw deeply, for the earth remembers."
-"Beta","Craggy Citadel","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
-{3}, {TURN}: Glaze target creature (+1/+1 until end of Round).
-Scope 1 (look at the top card of your deck).","Every path across the realm leaves a trace."
-"Beta","Gilded Vault","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+{2}, Put this card from your hand into the Pit: Pick a card.","Draw deeply, for the earth remembers."
+Beta,Craggy Citadel,Land,rare,,Land,,,"{TURN}: Add {1} to your Energy pool.
+{3}, {TURN}: target creature gets +1/+1 until end of Round.
+Look at the top 1 cards of your deck; put any on the bottom in any order.",Every path across the realm leaves a trace.
+Beta,Gilded Vault,Land,rare,,Land,,,"{TURN}: Add {1} to your Energy pool.
 {2}, {TURN}, Sacrifice this: Eliminate target nonbasic Land.
-Scope 1 (look at the top card of your deck).","Every path across the realm leaves a trace."
-"Beta","Tidewall Grove","Land","uncommon","","Land","","","{TURN}: Add {1} to your Energy pool.
+Look at the top 1 cards of your deck; put any on the bottom in any order.",Every path across the realm leaves a trace.
+Beta,Tidewall Grove,Land,uncommon,,Land,,,"{TURN}: Add {1} to your Energy pool.
 {1}, {TURN}: Extinguish target card in a Pit.
-Scope 1 (look at the top card of your deck).","Every path across the realm leaves a trace."
-"Beta","Emberpeak Reach","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+Look at the top 1 cards of your deck; put any on the bottom in any order.",Every path across the realm leaves a trace.
+Beta,Emberpeak Reach,Land,rare,,Land,,,"{TURN}: Add {1} to your Energy pool.
 {3}, {TURN}: This land becomes a 3/3 Construct creature until end of Round.
-Scope 1 (look at the top card of your deck).","Where the currents gather, power lingers."
-"Beta","Whispering Refuge","Land","uncommon","","Land","","","{TURN}: Add {1} to your Energy pool.
-{2}, {TURN}: Farm +1 Aura.
-Scope 1 (look at the top card of your deck).","Draw deeply, for the earth remembers."
-"Beta","Craggy Sanctuary","Land","rare","","Land","","","{TURN}: Add {1} to your Energy pool.
+Look at the top 1 cards of your deck; put any on the bottom in any order.","Where the currents gather, power lingers."
+Beta,Whispering Refuge,Land,uncommon,,Land,,,"{TURN}: Add {1} to your Energy pool.
+{2}, {TURN}: Gain 1 Aura.
+Look at the top 1 cards of your deck; put any on the bottom in any order.","Draw deeply, for the earth remembers."
+Beta,Craggy Sanctuary,Land,rare,,Land,,,"{TURN}: Add {1} to your Energy pool.
 {1}, Pay 1 Aura, {TURN}: Add one Energy of any color to your Energy pool.
-Scope 1 (look at the top card of your deck).","Where the currents gather, power lingers."
-"Beta","Cinder Vista","Land","uncommon","","Land","","","{TURN}: Add {1} to your Energy pool.
-{2}, {TURN}: Scope 1 (look at the top card of your deck).
-Scope 1 (look at the top card of your deck).","The horizon shifts with those who claim it."
-"Beta","Sovereign Terrace","Land","uncommon","","Land","","","{TURN}: Add {1} to your Energy pool.
-{1}, {TURN}, Sacrifice this: Pick Up a card.
-Scope 1 (look at the top card of your deck).","The horizon shifts with those who claim it."
-"Beta","Windswept Grove","Land","rare","","Land","","","This land Pulls Up Turned.
+Look at the top 1 cards of your deck; put any on the bottom in any order.","Where the currents gather, power lingers."
+Beta,Cinder Vista,Land,uncommon,,Land,,,"{TURN}: Add {1} to your Energy pool.
+{2}, {TURN}: Look at the top 1 cards of your deck; put any on the bottom in any order.
+Look at the top 1 cards of your deck; put any on the bottom in any order.",The horizon shifts with those who claim it.
+Beta,Sovereign Terrace,Land,uncommon,,Land,,,"{TURN}: Add {1} to your Energy pool.
+{1}, {TURN}, Sacrifice this: Pick a card.
+Look at the top 1 cards of your deck; put any on the bottom in any order.",The horizon shifts with those who claim it.
+Beta,Windswept Grove,Land,rare,,Land,,,"This land comes into play Turned.
 {TURN}: Add {R} to your Energy pool.
-{3}, {TURN}: Glaze target creature (+1/+1 until end of Round).
-Scope 1 (look at the top card of your deck).","Every path across the realm leaves a trace."
-"Beta","Ancient Hollow","Land","rare","","Land","","","This land Pulls Up Turned.
+{3}, {TURN}: target creature gets +1/+1 until end of Round.
+Look at the top 1 cards of your deck; put any on the bottom in any order.",Every path across the realm leaves a trace.
+Beta,Ancient Hollow,Land,rare,,Land,,,"This land comes into play Turned.
 {TURN}: Add {G} to your Energy pool.
 {2}, {TURN}, Sacrifice this: Eliminate target nonbasic Land.
-Scope 1 (look at the top card of your deck).","Every path across the realm leaves a trace."
-"Beta","Hollow Crag","Land","uncommon","","Land","","","This land Pulls Up Turned.
+Look at the top 1 cards of your deck; put any on the bottom in any order.",Every path across the realm leaves a trace.
+Beta,Hollow Crag,Land,uncommon,,Land,,,"This land comes into play Turned.
 {TURN}: Add {W} to your Energy pool.
 {1}, {TURN}: Extinguish target card in a Pit.
-Scope 1 (look at the top card of your deck).","Where the currents gather, power lingers."
-"Beta","Verdant Atoll","Land","rare","","Land","","","This land Pulls Up Turned.
+Look at the top 1 cards of your deck; put any on the bottom in any order.","Where the currents gather, power lingers."
+Beta,Verdant Atoll,Land,rare,,Land,,,"This land comes into play Turned.
 {TURN}: Add {U} to your Energy pool.
 {3}, {TURN}: This land becomes a 3/3 Construct creature until end of Round.
-Scope 1 (look at the top card of your deck).","Where the currents gather, power lingers."
-"Beta","Aether Terrace","Land","uncommon","","Land","","","This land Pulls Up Turned.
+Look at the top 1 cards of your deck; put any on the bottom in any order.","Where the currents gather, power lingers."
+Beta,Aether Terrace,Land,uncommon,,Land,,,"This land comes into play Turned.
 {TURN}: Add {B} to your Energy pool.
-{2}, {TURN}: Farm +1 Aura.
-Scope 1 (look at the top card of your deck).","Old stones hold older energy."
-"Beta","Quiet Crag","Land","rare","","Land","","","This land Pulls Up Turned.
+{2}, {TURN}: Gain 1 Aura.
+Look at the top 1 cards of your deck; put any on the bottom in any order.",Old stones hold older energy.
+Beta,Quiet Crag,Land,rare,,Land,,,"This land comes into play Turned.
 {TURN}: Add {R} to your Energy pool.
 {1}, Pay 1 Aura, {TURN}: Add one Energy of any color to your Energy pool.
-Scope 1 (look at the top card of your deck).","Where the currents gather, power lingers."
-"Beta","Solstice Nexus","Land","uncommon","","Land","","","This land Pulls Up Turned.
+Look at the top 1 cards of your deck; put any on the bottom in any order.","Where the currents gather, power lingers."
+Beta,Solstice Nexus,Land,uncommon,,Land,,,"This land comes into play Turned.
 {TURN}: Add {G} to your Energy pool.
-{2}, {TURN}: Scope 1 (look at the top card of your deck).
-Scope 1 (look at the top card of your deck).","Old stones hold older energy."
-"Beta","Ancient Spire","Land","uncommon","","Land","","","This land Pulls Up Turned.
+{2}, {TURN}: Look at the top 1 cards of your deck; put any on the bottom in any order.
+Look at the top 1 cards of your deck; put any on the bottom in any order.",Old stones hold older energy.
+Beta,Ancient Spire,Land,uncommon,,Land,,,"This land comes into play Turned.
 {TURN}: Add {W} to your Energy pool.
-{1}, {TURN}, Sacrifice this: Pick Up a card.
-Scope 1 (look at the top card of your deck).","Where the currents gather, power lingers."
-"Beta","Obsidian Shrine","Land","rare","","Land","","","This land Pulls Up Turned.
+{1}, {TURN}, Sacrifice this: Pick a card.
+Look at the top 1 cards of your deck; put any on the bottom in any order.","Where the currents gather, power lingers."
+Beta,Obsidian Shrine,Land,rare,,Land,,,"This land comes into play Turned.
 {TURN}: Add {U} to your Energy pool.
-{3}, {TURN}: Glaze target creature (+1/+1 until end of Round).
-Scope 1 (look at the top card of your deck).","The horizon shifts with those who claim it."
-"Beta","Starlit Hollow","Land","rare","","Land","","","This land Pulls Up Turned.
+{3}, {TURN}: target creature gets +1/+1 until end of Round.
+Look at the top 1 cards of your deck; put any on the bottom in any order.",The horizon shifts with those who claim it.
+Beta,Starlit Hollow,Land,rare,,Land,,,"This land comes into play Turned.
 {TURN}: Add {B} to your Energy pool.
 {2}, {TURN}, Sacrifice this: Eliminate target nonbasic Land.
-Scope 1 (look at the top card of your deck).","The horizon shifts with those who claim it."
-"Beta","Ancient Reach","Land","uncommon","","Land","","","This land Pulls Up Turned.
+Look at the top 1 cards of your deck; put any on the bottom in any order.",The horizon shifts with those who claim it.
+Beta,Ancient Reach,Land,uncommon,,Land,,,"This land comes into play Turned.
 {TURN}: Add {R} to your Energy pool.
 {1}, {TURN}: Extinguish target card in a Pit.
-Scope 1 (look at the top card of your deck).","The horizon shifts with those who claim it."
-"Beta","Sunspire Sanctuary","Land","rare","","Land","","","This land Pulls Up Turned.
+Look at the top 1 cards of your deck; put any on the bottom in any order.",The horizon shifts with those who claim it.
+Beta,Sunspire Sanctuary,Land,rare,,Land,,,"This land comes into play Turned.
 {TURN}: Add {G} to your Energy pool.
 {3}, {TURN}: This land becomes a 3/3 Construct creature until end of Round.
-Scope 1 (look at the top card of your deck).","Old stones hold older energy."
+Look at the top 1 cards of your deck; put any on the bottom in any order.",Old stones hold older energy.

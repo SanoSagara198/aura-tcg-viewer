@@ -424,6 +424,17 @@ button[kind="primary"] *, button[data-testid="stBaseButton-primary"] * { color: 
   box-shadow: 3px 3px 0 var(--ink); font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800; font-size: 0.8rem; letter-spacing: 0.12em; padding: 3px 12px; transform: skewX(-6deg);
 }
+
+.aura-card-scene, .aura-card-scene.compact {position:relative;width:100%;aspect-ratio:5/7;min-height:0;container-type:inline-size}
+.aura-card-scene .card-flipper, .aura-card-scene.compact .card-flipper {width:100%;height:100%;min-height:0}
+.aura-card-scene .card-face, .aura-card-scene.compact .card-face {position:absolute;inset:0;width:100%;height:100%;min-height:0;border:0;border-radius:4%;overflow:hidden;box-shadow:0 4px 15px #0009}
+.aura-front {--glow:#f2c65c;--a:#fff3cf;--b:#c99a3a;--accent:#9a5b00;background:#0e0e12;color:#161210}
+.aura-Blue {--glow:#5cb8f2;--a:#cdebff;--b:#1d4f8f;--accent:#1c5fa8}.aura-Black {--glow:#b07ce8;--a:#6b5a7e;--b:#15101c;--accent:#6a2fa0}.aura-Red {--glow:#ff7a45;--a:#ffc9a8;--b:#8f2410;--accent:#b3300f}.aura-Green {--glow:#7fd86a;--a:#d8f5c8;--b:#235a22;--accent:#2f7a26}.aura-Multicolor {--glow:#f5d36b;--a:#ffe9a6;--b:#7a3d8f;--accent:#8a5a00}.aura-Artifact {--glow:#b8c4cf;--a:#e3e8ee;--b:#4b5663;--accent:#4b5663}.aura-Land {--glow:#c9a77a;--a:#eadbc2;--b:#5a4630;--accent:#6e5332}
+.aura-art,.aura-art-placeholder {position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.aura-art-placeholder {display:grid;place-items:center;background:radial-gradient(circle at 50% 37%,var(--a),var(--b))}.aura-art-placeholder span {color:#fff6;font:italic 800 9cqw 'Barlow Condensed',sans-serif}.aura-art-shade {position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#1a120699);pointer-events:none}.aura-frame {position:absolute;inset:0;border:1.7cqw solid transparent;border-image:url('/app/static/brush_frame_9slice.png') 32 fill / 2.8cqw / 0 stretch;pointer-events:none}
+.aura-name {position:absolute;left:2.3%;top:2%;width:70%;height:9%;background:#17120e url('/app/static/brush_header_banner.png') center/100% 100%;background-blend-mode:multiply;color:#ffe9a6;font:4.8cqw Bangers,cursive;display:flex;align-items:center;padding:0 5%;box-sizing:border-box;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:1px 2px #161210}.aura-costs {position:absolute;right:1%;top:1%;height:11%;display:flex;align-items:center}.aura-cost {display:grid;place-items:center;width:8.5cqw;height:8.5cqw;background:#fff4d6 url('/app/static/brush_aura_burst.png') center/100% 100%;color:#161210;font:5cqw Bangers,cursive;border-radius:50%}
+.aura-type {position:absolute;top:51.4%;left:3.3%;width:93.4%;height:6.7%;background:url('/app/static/brush_header_banner.png') center/100% 100%,#fef8e8;display:flex;align-items:center;justify-content:space-between;padding:0 5%;box-sizing:border-box;gap:2%;font:700 2.8cqw Arial,sans-serif}.aura-type span {overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.aura-type b {background:#161210;color:var(--glow);padding:1% 2%;font:800 2.3cqw Arial,sans-serif;white-space:nowrap}
+.aura-rules {position:absolute;top:58.7%;left:2.7%;width:94.6%;height:30%;background:url('/app/static/brush_rules_wash.png') center/100% 100%;display:flex;align-items:center;justify-content:center}.aura-rules-content {width:82%;max-height:84%;overflow:hidden;font:500 2.7cqw/1.2 Arial,sans-serif;color:#161210}.aura-rules-content p {margin:0 0 .25em;font:inherit;line-height:inherit;color:inherit}.aura-rules-content .pip {display:inline;font:inherit;padding:0;border:0;background:none;box-shadow:none}.aura-rules-content .rem {font-size:.85em;font-style:italic;color:#6b5d48}.aura-rules-content .kw {color:var(--accent);font-weight:800}.aura-flavor {font:italic 2.2cqw/1.15 Georgia,serif;color:#645646;margin-top:.45em}
+.aura-footer {position:absolute;left:3%;top:90%;width:68%;height:7.4%;box-sizing:border-box;padding:2% 5%;background:#17120e url('/app/static/brush_header_banner.png') center/100% 100%;background-blend-mode:multiply;color:#ffe9a6;font:800 2.1cqw Arial,sans-serif;display:flex;justify-content:space-between}.aura-stats {position:absolute;right:1%;bottom:1%;width:24%;height:14%;display:grid;place-items:center;background:url('/app/static/brush_aura_burst.png') center/contain no-repeat;color:#161210;font:7cqw Bangers,cursive}.aura-qty {position:absolute;right:2%;top:15%;background:#161210;color:#ffe9a6;border-radius:1em;padding:.2em .5em;font:800 3cqw Arial,sans-serif}.aura-basic .aura-type {top:82.5%}.aura-basic .aura-rules {top:69%;height:13%}.aura-back {transform:rotateY(180deg);background:#0e0e12}.aura-back img {width:100%;height:100%;object-fit:cover}
 </style>"""
 
 
@@ -487,10 +498,11 @@ def load_cards() -> pd.DataFrame:
             df["produces"] = ""
             frames.append(df)
 
-    basic_df = pd.DataFrame(BASIC_LANDS)
+    basic_df = pd.DataFrame(json.loads((ROOT / "basic_lands.json").read_text(encoding="utf-8")))
     frames.append(basic_df)
 
     all_df = pd.concat(frames, ignore_index=True)
+    all_df["variant"] = all_df["variant"].fillna(0)
     all_df["energy_value"] = all_df["energy_cost"].map(energy_value)
     all_df["atk_num"] = all_df["power"].map(safe_int)
     all_df["base_type"] = all_df["card_type"].map(lambda t: str(t).split("—")[0].strip())
@@ -557,100 +569,51 @@ def render_rules(raw: str) -> str:
     return "".join(paragraphs)
 
 
-def render_card_html(
-    row: pd.Series,
-    flip_all: bool,
-    uid: str,
-    in_deck_qty: int = 0,
-    compact: bool = False,
-) -> str:
+def card_art(row: pd.Series) -> str:
+    card_id = str(row["id"])
+    named = {"A001": "gilded_scarab_art.png", "A008": "A008-haloed-seraph.png", "A035": "A035-ivory-rupture-v2.png"}
+    if card_id in named:
+        return "/app/static/" + named[card_id]
+    if (ROOT / "static" / "rares" / f"{card_id}.png").exists():
+        return f"/app/static/rares/{card_id}.png"
+    if bool(row.get("basic", False)):
+        name = str(row["name"]).lower()
+        variant = int(row.get("variant", 1) or 1)
+        if name == "gloomfen" and variant == 4: variant = 1
+        if name == "cinderpeak" and variant > 2: variant -= 2
+        if name == "wildgrove": variant = 1
+        if (ROOT / "static" / "lands" / f"{name}_v{variant}.jpg").exists():
+            return f"/app/static/lands/{name}_v{variant}.jpg"
+    return ""
+
+
+def render_card_html(row: pd.Series, flip_all: bool, uid: str, in_deck_qty: int = 0, compact: bool = False) -> str:
     name = html.escape(str(row["name"]))
     color = html.escape(str(row["color"]))
-    rarity = html.escape(str(row["rarity"]).lower())
-    card_type = html.escape(str(row["card_type"]))
-    card_id = html.escape(str(row["id"]))
-    set_label = html.escape(str(row["set"] or "ALPHA").upper())
-    pips_html = render_pips(html.escape(str(row["energy_cost"])))
-    rar_icon = "★" if rarity == "rare" else ("◆" if rarity == "uncommon" else "●")
-    rules_html = render_rules(str(row["rules_text"]))
+    basic = bool(row.get("basic", False))
+    art = card_art(row)
+    art_html = f'<img class="aura-art" src="{html.escape(art, quote=True)}" alt="" loading="lazy">' if art else f'<div class="aura-art-placeholder"><span>{html.escape(str(row["category"]).upper())}</span></div>'
+    tokens = re.findall(r"\{([^}]+)\}", str(row["energy_cost"]))
+    pips = "".join(f'<span class="aura-cost pip-{html.escape(t)}">{html.escape(t)}</span>' for t in tokens)
+    raw = str(row["rules_text"])
+    size = max(1.5, min(2.7, 2.7 - max(0, len(raw) - 110) / 180))
     flavor = str(row["flavor_text"]).strip()
-    flavor_html = f'<div class="flavor-caption">“{html.escape(flavor)}”</div>' if flavor else ""
-
-    pow_str = str(row["power"]).strip()
-    tgh_str = str(row["toughness"]).strip()
-    stats_html = ""
-    if pow_str != "":
-        stats_html = (
-            '<div class="stat-cluster">'
-            f'<div class="stat-badge stat-pow"><span class="lbl">ATK</span><span class="val">{html.escape(pow_str)}</span></div>'
-            f'<div class="stat-badge stat-tgh"><span class="lbl">DEF</span><span class="val">{html.escape(tgh_str)}</span></div>'
-            "</div>"
-        )
-
-    qty_pill = f'<div class="deck-count-pill">IN DECK ×{in_deck_qty}</div>' if in_deck_qty > 0 else ""
-    checked_attr = "checked" if flip_all else ""
-    empty_cls = "" if pips_html else " empty"
-    scene_cls = "card-scene compact" if compact else "card-scene"
-
-    # For Multicolor cards, blend their actual 2+ component colors simultaneously!
-    multi_style = ""
-    art_label = color
-    c_list = [c for c in row["color_list"] if c != "Multicolor"] if "color_list" in row else [color]
-    if color == "Multicolor" and len(c_list) >= 2:
-        t1 = COLOR_CARD_TONE.get(c_list[0], ("#fde047", "#eab308"))
-        t2 = COLOR_CARD_TONE.get(c_list[1], ("#ec4899", "#9d174d"))
-        multi_style = (
-            f' style="--c-bg1:{t1[0]};--c-bg2:{t2[1]};--c-art1:{t1[0]};--c-art2:{t2[1]};"'
-        )
-        art_label = " / ".join(c_list[:2])
-
+    flavor_html = f'<div class="aura-flavor">“{html.escape(flavor)}”</div>' if flavor else ""
+    power = str(row["power"]).strip()
+    stats = f'<div class="aura-stats">{html.escape(power)}/{html.escape(str(row["toughness"]))}</div>' if power else ""
+    number = f'{int(row["set_number"]):03d}/350' if not basic else ""
+    qty = f'<div class="aura-qty">×{in_deck_qty}</div>' if in_deck_qty else ""
+    checked = "checked" if flip_all else ""
     return (
-        f'<label class="{scene_cls}" for="{uid}">'
-        f'<input class="flip-chk" type="checkbox" id="{uid}" {checked_attr} />'
-        '<div class="card-flipper">'
-        f'<article class="card-face card-front {color} rarity-{rarity}"{multi_style}>'
-        '<div class="brush-halftone"></div>'
-        '<div class="brush-frame-9slice"></div>'
-        '<div class="comic-header">'
-        f'<div class="energy-burst{empty_cls}">{pips_html}</div>'
-        f'<div class="title-plate"><span class="card-name" title="{name}">{name}</span></div>'
-        "</div>"
-        '<div class="art-panel">'
-        f"{qty_pill}"
-        f'<div class="art-burst"><span>{html.escape(art_label)}<br/>ART</span></div>'
-        '<div class="annex-stamp" title="Card Info">?</div>'
-        "</div>"
-        '<div class="comic-type-strip">'
-        f'<span class="type-text">{card_type}</span>'
-        f'<span class="rarity-stamp {rarity}">{rar_icon} {rarity}</span>'
-        "</div>"
-        '<div class="comic-rules-box">'
-        f'<div class="rules-lines">{rules_html}</div>'
-        f"{flavor_html}"
-        "</div>"
-        '<div class="comic-footer">'
-        f'<span class="issue-stamp">{set_label} · {card_id}</span>'
-        f"{stats_html}"
-        "</div>"
-        "</article>"
-        '<div class="card-face card-back">'
-        '<div class="back-inner">'
-        '<div class="back-issue">ISSUE № 01 · 1ST ED</div>'
-        '<div class="back-emblem">'
-        '<div class="back-logo">AURA!</div>'
-        '<div class="back-wheel">'
-        '<span class="pip pip-W">W</span>'
-        '<span class="pip pip-U">U</span>'
-        '<span class="pip pip-B">B</span>'
-        '<span class="pip pip-R">R</span>'
-        '<span class="pip pip-G">G</span>'
-        "</div>"
-        "</div>"
-        '<div class="back-tagline">TRADING CARD GAME</div>'
-        "</div>"
-        "</div>"
-        "</div>"
-        "</label>"
+        f'<label class="card-scene aura-card-scene{" compact" if compact else ""}" for="{html.escape(uid, quote=True)}">'
+        f'<input class="flip-chk" type="checkbox" id="{html.escape(uid, quote=True)}" {checked}><div class="card-flipper">'
+        f'<article class="card-face aura-front aura-{color}{" aura-basic" if basic else ""}">'
+        f'{art_html}<div class="aura-art-shade"></div><div class="aura-frame"></div>'
+        f'<div class="aura-name">{name}</div><div class="aura-costs">{pips}</div>'
+        f'<div class="aura-type"><span>{html.escape(str(row["card_type"]).upper())}</span><b>★ {"BASIC" if basic else html.escape(str(row["rarity"]).upper())}</b></div>'
+        f'<div class="aura-rules"><div class="aura-rules-content" style="font-size:{size:.2f}cqw">{render_rules(raw)}{flavor_html}</div></div>'
+        f'<div class="aura-footer">{html.escape(str(row["set"]).upper())} · 1ST ED. <span>{number}</span></div>{stats}{qty}</article>'
+        '<div class="card-face aura-back"><img src="/app/static/aura_card_back_upright.png" alt="Aura card back" loading="lazy"></div></div></label>'
     )
 
 
@@ -842,8 +805,8 @@ st.html(
       <div class="aura-banner-left">
         <div class="aura-logo">AURA!</div>
         <div class="aura-title">
-          <h1>Comic Edition · Card Viewer &amp; Deck Editor</h1>
-          <p>1,055 Cards (Alpha · Beta · Delta + 5 Basic Lands) · Pop-Art Ink Frame · Roblox Deck Export</p>
+          <h1>Card Viewer &amp; Deck Editor</h1>
+          <p>Alpha · Beta · Delta · Basic Lands · Roblox Deck Export</p>
         </div>
       </div>
       <div class="aura-tip">Click any card to flip Front ↔ Back</div>
@@ -857,7 +820,7 @@ with st.sidebar:
     selected_sets = st.multiselect(
         "Sets",
         ["Alpha", "Beta", "Delta", "Core"],
-        default=["Alpha", "Beta", "Delta"],
+        default=["Alpha", "Beta", "Delta", "Core"],
         placeholder="All sets",
     )
     color_options = ["White", "Blue", "Black", "Red", "Green", "Multicolor", "Artifact", "Land"]
