@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import base64
 import html
 import json
 import math
@@ -105,6 +106,28 @@ MIN_DECK = 40
 MAX_DECK = 200
 MAX_COPIES = 4
 OPENING_HAND = 7
+
+@st.cache_data(show_spinner=False)
+def build_ui_texture_css() -> str:
+    """Base64-encode the Roblox 9-slice and softbrush UI PNGs from assets/ into CSS custom properties."""
+    assets_dir = ROOT / "assets"
+    files = {
+        "--tex-frame-9slice": "brush_frame_9slice.png",
+        "--tex-header-brush": "brush_header_banner.png",
+        "--tex-rules-wash": "brush_rules_wash_v2.png",
+        "--tex-aura-burst": "brush_aura_burst.png",
+        "--tex-halftone": "comic_halftone_overlay.png",
+    }
+    decls: list[str] = []
+    for var_name, filename in files.items():
+        path = assets_dir / filename
+        if path.exists():
+            b64 = base64.b64encode(path.read_bytes()).decode("ascii")
+            decls.append(f'{var_name}: url("data:image/png;base64,{b64}");')
+        else:
+            decls.append(f"{var_name}: none;")
+    return "<style>:root { " + " ".join(decls) + " }</style>"
+
 
 COMIC_CSS = """<style>
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=Chakra+Petch:ital,wght@0,500;0,600;0,700;1,600&family=Comic+Neue:ital,wght@0,700;1,700&display=swap');
@@ -237,7 +260,21 @@ button[kind="primary"] *, button[data-testid="stBaseButton-primary"] * { color: 
 .card-front.Multicolor { --c-bg1: #fde047; --c-bg2: #ec4899; --c-art1: #f9a8d4; --c-art2: #7e22ce; --c-tag-bg: #ffe24a; --c-dot: rgba(255,255,255,0.2); }
 .card-front.rarity-rare::before {
   content: ""; position: absolute; inset: 3px; border-radius: 7px;
-  border: 2.5px dashed rgba(255, 250, 205, 0.72); pointer-events: none;
+  border: 2.5px dashed rgba(255, 250, 205, 0.72); pointer-events: none; z-index: 5;
+}
+/* Roblox 9-slice softbrush perimeter & comic halftone layers */
+.brush-halftone {
+  position: absolute; inset: 0; border-radius: 10px; pointer-events: none; z-index: 1;
+  background-image: var(--tex-halftone); background-size: 100% 100%; background-repeat: no-repeat;
+  opacity: 0.28;
+}
+.brush-frame-9slice {
+  position: absolute; inset: -3px; pointer-events: none; z-index: 6;
+  border-style: solid; border-width: 24px;
+  border-image-source: var(--tex-frame-9slice);
+  border-image-slice: 56;
+  border-image-repeat: stretch;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.45));
 }
 .comic-header { display: flex; align-items: center; gap: 7px; margin-bottom: 8px; position: relative; z-index: 3; }
 .energy-burst {
@@ -261,9 +298,11 @@ button[kind="primary"] *, button[data-testid="stBaseButton-primary"] * { color: 
 .pip-N { background: #94a3b8; }
 .pip-T { background: #f59e0b; font-size: 0.78rem; }
 .title-plate {
-  flex: 1; min-width: 0; background: var(--ink); border: 2.5px solid #ffffff;
-  outline: 2.5px solid var(--ink); box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.45);
-  padding: 4px 10px 3px; transform: skewX(-6deg);
+  flex: 1; min-width: 0; background: transparent;
+  background-image: var(--tex-header-brush); background-size: 100% 100%; background-repeat: no-repeat;
+  border: none; outline: none; box-shadow: none;
+  padding: 6px 14px 5px; transform: skewX(-4deg);
+  filter: drop-shadow(2px 3px 0 rgba(0, 0, 0, 0.45));
 }
 .card-name {
   display: block; font-family: 'Bangers', Impact, sans-serif; font-size: 1.28rem;
@@ -272,8 +311,8 @@ button[kind="primary"] *, button[data-testid="stBaseButton-primary"] * { color: 
   transform: skewX(6deg); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .art-panel {
-  position: relative; height: 146px; border: 3.5px solid var(--ink); border-radius: 6px;
-  background: repeating-conic-gradient(from 0deg at 50% 48%, rgba(255, 255, 255, 0.18) 0deg 8deg, transparent 8deg 18deg), radial-gradient(circle at 50% 48%, var(--c-art1) 0%, var(--c-art2) 78%, #090b12 100%);
+  position: relative; z-index: 2; height: 146px; border: 3px solid var(--ink); border-radius: 6px;
+  background: var(--tex-aura-burst) center/135% 135% no-repeat, repeating-conic-gradient(from 0deg at 50% 48%, rgba(255, 255, 255, 0.16) 0deg 8deg, transparent 8deg 18deg), radial-gradient(circle at 50% 48%, var(--c-art1) 0%, var(--c-art2) 78%, #090b12 100%);
   overflow: hidden; box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
   display: flex; align-items: center; justify-content: center; margin-bottom: -14px;
   clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
@@ -318,10 +357,11 @@ button[kind="primary"] *, button[data-testid="stBaseButton-primary"] * { color: 
 .rarity-stamp.uncommon { background: #0284c7; }
 .rarity-stamp.rare     { background: #d97706; }
 .comic-rules-box {
-  position: relative; flex: 1; background-color: var(--paper);
-  background-image: radial-gradient(rgba(10, 11, 16, 0.055) 1.2px, transparent 1.2px);
-  background-size: 8px 8px; border: 3px solid var(--ink); border-radius: 6px;
-  box-shadow: 4px 4px 0 var(--ink); padding: 9px 10px 10px;
+  position: relative; z-index: 3; flex: 1; background-color: transparent;
+  background-image: var(--tex-rules-wash);
+  background-size: 100% 100%; background-repeat: no-repeat;
+  border: none; border-radius: 6px;
+  box-shadow: none; padding: 13px 14px 12px;
   display: flex; flex-direction: column; justify-content: space-between; gap: 7px; color: #14161f;
 }
 .rules-lines {
@@ -569,6 +609,8 @@ def render_card_html(
         f'<input class="flip-chk" type="checkbox" id="{uid}" {checked_attr} />'
         '<div class="card-flipper">'
         f'<article class="card-face card-front {color} rarity-{rarity}"{multi_style}>'
+        '<div class="brush-halftone"></div>'
+        '<div class="brush-frame-9slice"></div>'
         '<div class="comic-header">'
         f'<div class="energy-burst{empty_cls}">{pips_html}</div>'
         f'<div class="title-plate"><span class="card-name" title="{name}">{name}</span></div>'
@@ -784,7 +826,7 @@ def deck_to_luau(deck_name: str, deck_cards: dict[str, int]) -> str:
 
 
 # ==================== INIT STATE & LOAD DATA ====================
-st.html(COMIC_CSS)
+st.html(build_ui_texture_css() + COMIC_CSS)
 df = load_cards()
 id_map = {row["id"]: row for _, row in df.iterrows()}
 
@@ -1117,7 +1159,7 @@ with tab_deck:
                 st.session_state.test_hand = []
                 st.rerun()
         with b_hand:
-            if st.button(f"🎲 Pick Up {OPENING_HAND}-Card Hand", use_container_width=True, disabled=(total_cards < OPENING_HAND)):
+            if st.button(f"🎲 Pick {OPENING_HAND}-Card Hand", use_container_width=True, disabled=(total_cards < OPENING_HAND)):
                 expanded = [cid for cid, qty in st.session_state.deck_cards.items() for _ in range(qty)]
                 random.shuffle(expanded)
                 st.session_state.test_hand = expanded[:OPENING_HAND]
