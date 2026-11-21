@@ -708,17 +708,20 @@
     <div class="brand">
       <div class="brand-logo">AURA!</div>
       <div class="brand-sub">
-        <h1>Comic Edition · Alpha · Beta · Delta</h1>
-        <p>1,050 Original Cards · Pop-Art Ink Frame · Energy · Mudra · Mantra · Seal</p>
+        <h1>Comic Edition · Alpha · Beta · Delta · Chi · Psi · Omega</h1>
+        <p>1,095 Original Cards · Pop-Art Ink Frame · Energy · Mudra · Mantra · Seal</p>
       </div>
     </div>
     <div class="controls">
       <input type="search" id="search" placeholder="Search name, type, or rules..." />
       <select id="setFilter">
-        <option value="All">All Sets (1,050)</option>
+        <option value="All">All Sets (1,095)</option>
         <option value="Alpha">Alpha (350)</option>
         <option value="Beta">Beta (350)</option>
         <option value="Delta">Delta (350)</option>
+        <option value="Chi">Chi (15)</option>
+        <option value="Psi">Psi (15)</option>
+        <option value="Omega">Omega (15)</option>
       </select>
       <select id="colorFilter">
         <option value="All">All Colors</option>
@@ -935,7 +938,10 @@ Alpha,"Sunlit Sanctuary",Land,common,"","Land",,,"Sunlit Sanctuary enters play T
     Promise.all([
       fetch('aura_alpha_set.csv?v=' + Date.now()).then(r => r.ok ? r.text() : ''),
       fetch('aura_beta_set.csv?v=' + Date.now()).then(r => r.ok ? r.text() : ''),
-      fetch('aura_delta_set.csv?v=' + Date.now()).then(r => r.ok ? r.text() : '')
+      fetch('aura_delta_set.csv?v=' + Date.now()).then(r => r.ok ? r.text() : ''),
+      fetch('aura_chi_set.csv?v=' + Date.now()).then(r => r.ok ? r.text() : ''),
+      fetch('aura_psi_set.csv?v=' + Date.now()).then(r => r.ok ? r.text() : ''),
+      fetch('aura_omega_set.csv?v=' + Date.now()).then(r => r.ok ? r.text() : '')
     ])
       .then(texts => {
         const loaded = texts.flatMap(t => t ? parseCSV(t) : []);

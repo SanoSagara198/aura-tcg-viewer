@@ -27,6 +27,9 @@ CSV_FILES = [
     ("Alpha", "A", ROOT / "aura_alpha_set.csv"),
     ("Beta", "B", ROOT / "aura_beta_set.csv"),
     ("Delta", "D", ROOT / "aura_delta_set.csv"),
+    ("Chi", "X", ROOT / "aura_chi_set.csv"),
+    ("Psi", "Y", ROOT / "aura_psi_set.csv"),
+    ("Omega", "Z", ROOT / "aura_omega_set.csv"),
 ]
 
 # Exact Basic Lands from src/shared/BasicLands.luau (unlimited copies in any deck)
@@ -641,7 +644,8 @@ def render_card_html(row: pd.Series, flip_all: bool, uid: str, in_deck_qty: int 
     flavor_html = f'<div class="aura-divider"></div><div class="aura-flavor" style="font-size:{flavor_px / 6:.2f}cqw">“{html.escape(flavor)}”</div>' if flavor and not basic else ""
     power = str(row["power"]).strip()
     stats = f'<div class="aura-stats"><span>{html.escape(power)}/{html.escape(str(row["toughness"]))}</span></div>' if power else ""
-    number = f'{int(row["set_number"]):03d}/350' if not basic else ""
+    set_size = {"Chi": 15, "Psi": 15, "Omega": 15}.get(row["set"], 350)
+    number = f'{int(row["set_number"]):03d}/{set_size}' if not basic else ""
     qty = f'<div class="aura-qty">×{in_deck_qty}</div>' if in_deck_qty else ""
     checked = "checked" if flip_all else ""
     rarity = "basic" if basic else str(row["rarity"]).lower()
@@ -859,7 +863,7 @@ st.html(
         <div class="aura-logo">AURA!</div>
         <div class="aura-title">
           <h1>Card Viewer &amp; Deck Editor</h1>
-          <p>Alpha · Beta · Delta · Basic Lands · Roblox Deck Export</p>
+          <p>Alpha · Beta · Delta · Chi · Psi · Omega · Basic Lands · Roblox Deck Export</p>
         </div>
       </div>
       <div class="aura-tip">Click a card to flip · Inspect to enlarge</div>
@@ -872,8 +876,8 @@ with st.sidebar:
     search = st.text_input("Search", placeholder="Name, ID, type, rules, or flavor...")
     selected_sets = st.multiselect(
         "Sets",
-        ["Alpha", "Beta", "Delta", "Core"],
-        default=["Alpha", "Beta", "Delta", "Core"],
+        ["Alpha", "Beta", "Delta", "Chi", "Psi", "Omega", "Core"],
+        default=["Alpha", "Beta", "Delta", "Chi", "Psi", "Omega", "Core"],
         placeholder="All sets",
     )
     color_options = ["White", "Blue", "Black", "Red", "Green", "Multicolor", "Artifact", "Land"]
@@ -1154,8 +1158,8 @@ with tab_deck:
         with g4:
             gen_sets = st.multiselect(
                 "Pool Sets",
-                ["Alpha", "Beta", "Delta"],
-                default=[s for s in selected_sets if s != "Core"] or ["Alpha", "Beta", "Delta"],
+                ["Alpha", "Beta", "Delta", "Chi", "Psi", "Omega"],
+                default=[s for s in selected_sets if s != "Core"] or ["Alpha", "Beta", "Delta", "Chi", "Psi", "Omega"],
                 key="gen_sets",
             )
 
