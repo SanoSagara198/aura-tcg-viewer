@@ -104,7 +104,7 @@ A044,Alpha,44,Gleaming Harvest,White,uncommon,{2}{W},Mantra,,,Return target crea
 A045,Alpha,45,Marble Reckoning,White,common,{1}{W},Mantra,,,Gain 5 Aura. Look at the top 2 cards of your deck; put any on the bottom in any order.,Gain 5 Aura. Look at the top 2 cards of your deck; put any on the bottom in any order.,"Stand together, and the storm breaks around you.",false,,,
 A046,Alpha,46,Morning Awakening,White,uncommon,{3}{W},Mantra,,,"Eliminate target Artifact, Seal, or Turned creature. Gain 3 Aura.","Eliminate target Artifact, Seal, or Turned creature. Gain 3 Aura.",Order is not tyranny; it is the shelter where the weak grow strong.,false,,,
 A047,Alpha,47,Bellwing Awakening,White,rare,{2}{W}{W},Mantra,,,Each player chooses two creatures they control and Extinguishes the rest.,Each player chooses two creatures they control and Extinguishes the rest.,Order is not tyranny; it is the shelter where the weak grow strong.,false,,,
-A048,Alpha,48,Sovereign Collapse,White,rare,{3}{W}{W},Mantra,,,Eliminate all creatures with attack 3 or greater. Gain 1 Aura for each creature eliminated this way. Pick a card once the next Maintenance phase begins.,Eliminate all creatures with attack 3 or greater. Gain 1 Aura for each creature eliminated this way. Pick a card once the next Maintenance phase begins.,"Stand together, and the storm breaks around you.",false,,,
+A048,Alpha,48,Sovereign Collapse,White,rare,{3}{W}{W},Mantra,,,Eliminate all Turned creatures. Each player gains 2 Aura.,Eliminate all Turned creatures. Each player gains 2 Aura.,"Stand together, and the storm breaks around you.",false,,,
 A049,Alpha,49,Silver Tether,White,common,{1}{W},Seal — Binding,,,"Bind to target creature. Bound creature cannot confront or respond, and its controller gains 1 Aura during their Maintenance phase.","Bind to target creature. Bound creature cannot confront or respond, and its controller gains 1 Aura during their Maintenance phase.","Stand together, and the storm breaks around you.",false,,,
 A050,Alpha,50,Just Blessing,White,common,{W},Seal — Binding,,,Bind to target creature. Bound creature gets +1/+2 and gains Confronting does not cause this creature to Turn.,Bind to target creature. Bound creature gets +1/+2 and gains Confronting does not cause this creature to Turn.,Order is not tyranny; it is the shelter where the weak grow strong.,false,,,
 A051,Alpha,51,Gilded Banner,White,rare,{1}{W}{W},Seal,,,"Creatures you control get +1/+1.
@@ -175,9 +175,7 @@ When this creature comes into play, target creature gets -2/-0 until your next R
 A074,Alpha,74,Astral Serpent,Blue,uncommon,{2}{U},Creature — Reptile,2,4,"Cannot be targeted by opponents' Techniques or abilities.
 Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.","Cannot be targeted by opponents' Techniques or abilities.
 Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.",,false,,,
-A075,Alpha,75,Arcane Dragonfly,Blue,common,{2}{U},Creature — Insect,2,4,"Cannot be targeted by opponents' Techniques or abilities.
-Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.","Cannot be targeted by opponents' Techniques or abilities.
-Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.",,false,,,
+A075,Alpha,75,Arcane Dragonfly,Blue,common,{2}{U},Creature — Insect,2,3,"When this creature comes into play, target creature gets -2/-0 until your next Round.","When this creature comes into play, target creature gets -2/-0 until your next Round.",,false,,,
 A076,Alpha,76,Lucid Albatross,Blue,common,{3}{U},Creature — Avian,3,5,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 During even Rounds, this creature cannot be responded to unless the responding player pays {2}.","Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 During even Rounds, this creature cannot be responded to unless the responding player pays {2}.",The tide takes what is offered and returns what it chooses.,false,,,
@@ -225,7 +223,7 @@ A099,Alpha,99,Still Renewal,Blue,rare,{4}{U},Mantra,,,Pick three cards and strai
 A100,Alpha,100,Deep Chant,Blue,uncommon,{2}{U},Mantra,,,Exchange control of target Artifact you control and target Artifact an opponent controls.,Exchange control of target Artifact you control and target Artifact an opponent controls.,The tide takes what is offered and returns what it chooses.,false,,,
 A101,Alpha,101,Tidal Convergence,Blue,common,{1}{U},Mantra,,,Target player puts the top 4 cards of their deck into the Pit (sends the top 4 cards of their deck to their Pit). Pick a card.,Target player puts the top 4 cards of their deck into the Pit (sends the top 4 cards of their deck to their Pit). Pick a card.,Curiosity is the sharpest current in the sea.,false,,,
 A102,Alpha,102,Skyward Tide,Blue,uncommon,{3}{U},Mantra,,,Each player Picks two cards if this is an even Round; otherwise look at target opponent's hand and return a permanent they control to their hand.,Each player Picks two cards if this is an even Round; otherwise look at target opponent's hand and return a permanent they control to their hand.,To know the next move is to already hold victory.,false,,,
-A103,Alpha,103,Chrono Omen,Blue,common,{3}{U},Mantra,,,"Pick two cards, then put a card from your hand into the Pit unless you played no other Techniques this Round. Pick a card once the next Maintenance phase begins.","Pick two cards, then put a card from your hand into the Pit unless you played no other Techniques this Round. Pick a card once the next Maintenance phase begins.",To know the next move is to already hold victory.,false,,,
+A103,Alpha,103,Chrono Omen,Blue,common,{3}{U},Mantra,,,"Pick two cards. If you played another Technique this Round, look at the top card of your deck; you may put it on the bottom.","Pick two cards. If you played another Technique this Round, look at the top card of your deck; you may put it on the bottom.",To know the next move is to already hold victory.,false,,,
 A104,Alpha,104,Astral Pact,Blue,common,{1}{U},Seal — Binding,,,Bind to target creature. Bound creature does not straighten during its controller's Straighten phase unless they pay {2}.,Bind to target creature. Bound creature does not straighten during its controller's Straighten phase unless they pay {2}.,The tide takes what is offered and returns what it chooses.,false,,,
 A105,Alpha,105,Lucid Beacon,Blue,rare,{2}{U}{U},Seal — Binding,,,Bind to target creature with Energy cost 4 or less. You Take control of bound creature.,Bind to target creature with Energy cost 4 or less. You Take control of bound creature.,Curiosity is the sharpest current in the sea.,false,,,
 A106,Alpha,106,Sunken Tether,Blue,uncommon,{1}{U},Seal,,,"Whenever you cancel a Technique, Pick a card, then put a card from your hand into the Pit.","Whenever you cancel a Technique, Pick a card, then put a card from your hand into the Pit.",Still water remembers every shadow.,false,,,
@@ -327,8 +325,8 @@ A145,Alpha,145,Obsidian Snare,Black,rare,{1}{B}{B},Mudra,,,Eliminate target crea
 A146,Alpha,146,Ruinous Riposte,Black,common,{2}{B},Mudra,,,Target creature gets -3/-3 until end of Round. Look at the top 1 cards of your deck; put any on the bottom in any order.,Target creature gets -3/-3 until end of Round. Look at the top 1 cards of your deck; put any on the bottom in any order.,"In the quiet dark, every ambition grows teeth.",false,,,
 A147,Alpha,147,Obsidian Twist,Black,common,{B},Mudra,,,Return target creature card from your Pit to your hand. You lose 1 Aura.,Return target creature card from your Pit to your hand. You lose 1 Aura.,What falls is seldom finished.,false,,,
 A148,Alpha,148,Sable Pulse,Black,uncommon,{1}{B},Mudra,,,"Target opponent loses 2 Aura and Gain 2 Aura. If a creature Folded this Round, Pick a card.","Target opponent loses 2 Aura and Gain 2 Aura. If a creature Folded this Round, Pick a card.",Nothing is truly free; some prices are simply paid later.,false,,,
-A149,Alpha,149,Cindered Surge,Black,common,{2}{B},Mudra,,,Eliminate target nonblack creature. You lose 1 Aura. Pick a card once the next Maintenance phase begins.,Eliminate target nonblack creature. You lose 1 Aura. Pick a card once the next Maintenance phase begins.,Nothing is truly free; some prices are simply paid later.,false,,,
-A150,Alpha,150,Blight Flash,Black,common,{1}{B},Mudra,,,"Target creature gets -2/-2 until end of Round. If it is put into the Pit from play this Round, Gain 1 Aura. Pick a card once the next Maintenance phase begins.","Target creature gets -2/-2 until end of Round. If it is put into the Pit from play this Round, Gain 1 Aura. Pick a card once the next Maintenance phase begins.",Survival favors those willing to pay the toll.,false,,,
+A149,Alpha,149,Cindered Surge,Black,common,{2}{B},Mudra,,,Eliminate target creature that was dealt damage this Round. Gain 2 Aura.,Eliminate target creature that was dealt damage this Round. Gain 2 Aura.,Nothing is truly free; some prices are simply paid later.,false,,,
+A150,Alpha,150,Blight Flash,Black,common,{1}{B},Mudra,,,Target creature gets -1/-3 until end of Round.,Target creature gets -1/-3 until end of Round.,Survival favors those willing to pay the toll.,false,,,
 A151,Alpha,151,Pale Verdict,Black,common,{B},Mantra,,,"Target opponent shows their hand; choose a card and put it into their Pit (they reveal their hand; choose a noncreature, nonland card and put it into their Pit and lose 1 Aura).","Target opponent shows their hand; choose a card and put it into their Pit (they reveal their hand; choose a noncreature, nonland card and put it into their Pit and lose 1 Aura).","In the quiet dark, every ambition grows teeth.",false,,,
 A152,Alpha,152,Crypt Renewal,Black,uncommon,{1}{B},Mantra,,,Target opponent puts two cards from their hand into the Pit unless they pay 3 Aura.,Target opponent puts two cards from their hand into the Pit unless they pay 3 Aura.,Nothing is truly free; some prices are simply paid later.,false,,,
 A153,Alpha,153,Veiled Tide,Black,uncommon,{2}{B},Mantra,,,Return target creature card from your Pit to play. You lose 2 Aura and it comes into play Turned.,Return target creature card from your Pit to play. You lose 2 Aura and it comes into play Turned.,Survival favors those willing to pay the toll.,false,,,
@@ -432,9 +430,7 @@ A194,Alpha,194,Pyre Hawk,Red,rare,{1}{R},Creature — Avian,4,2,"Airborne (can o
 Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round.","Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round.",The mountain does not ask before it erupts.,false,,,
 A195,Alpha,195,Pyre Strike,Red,common,{R},Mudra,,,"This Mudra deals 3 damage to target creature, or 2 damage to target player.","This Mudra deals 3 damage to target creature, or 2 damage to target player.",Freedom burns brightest when cornered.,false,,,
-A196,Alpha,196,Spark Twist,Red,common,{1}{R},Mudra,,,"This Mudra deals 2 damage to target creature or player.
-During even Rounds, it deals 3 damage instead.","This Mudra deals 2 damage to target creature or player.
-During even Rounds, it deals 3 damage instead.",Freedom burns brightest when cornered.,false,,,
+A196,Alpha,196,Spark Twist,Red,common,{1}{R},Mudra,,,This Mudra deals 1 damage to up to two target creatures.,This Mudra deals 1 damage to up to two target creatures.,Freedom burns brightest when cornered.,false,,,
 A197,Alpha,197,Crackling Spark,Red,common,{1}{R},Mudra,,,Eliminate target Artifact. This Mudra deals 1 damage to its controller.,Eliminate target Artifact. This Mudra deals 1 damage to its controller.,"Strike first, and leave the planning to the ashes.",false,,,
 A198,Alpha,198,Cinder Spark,Red,common,{R},Mudra,,,Target creature gets +3/+0 and gains Deals fighting damage before other creatures until end of Round.,Target creature gets +3/+0 and gains Deals fighting damage before other creatures until end of Round.,The mountain does not ask before it erupts.,false,,,
 A199,Alpha,199,Ignited Bolt,Red,uncommon,{2}{R},Mudra,,,This Mudra deals 4 damage to target creature or 3 damage to target player.,This Mudra deals 4 damage to target creature or 3 damage to target player.,Spark becomes flame; flame becomes legend.,false,,,
@@ -443,7 +439,7 @@ A201,Alpha,201,Spark Veil,Red,uncommon,{2}{R},Mudra,,,This Mudra deals 2 damage 
 A202,Alpha,202,Crackling Flash,Red,uncommon,{R},Mudra,,,This Mudra deals 2 damage to target creature. That creature cannot respond this Round.,This Mudra deals 2 damage to target creature. That creature cannot respond this Round.,The mountain does not ask before it erupts.,false,,,
 A203,Alpha,203,Ember Snare,Red,rare,{1}{R}{R},Mudra,,,Copy target Mudra or Mantra. You may choose new targets for the copy.,Copy target Mudra or Mantra. You may choose new targets for the copy.,Hesitation is just another word for defeat.,false,,,
 A204,Alpha,204,Feral Veil,Red,rare,{3}{R},Mudra,,,This Mudra deals 5 damage to target creature. Excess damage is dealt to that creature's controller.,This Mudra deals 5 damage to target creature. Excess damage is dealt to that creature's controller.,Hesitation is just another word for defeat.,false,,,
-A205,Alpha,205,Feral Shatter,Red,common,{1}{R},Mudra,,,"This Mudra deals 3 damage to target creature, or 2 damage to target player. Pick a card once the next Maintenance phase begins.","This Mudra deals 3 damage to target creature, or 2 damage to target player. Pick a card once the next Maintenance phase begins.",The mountain does not ask before it erupts.,false,,,
+A205,Alpha,205,Feral Shatter,Red,common,{1}{R},Mudra,,,This Mudra deals 3 damage to target confronting creature. Its controller loses 1 Aura.,This Mudra deals 3 damage to target confronting creature. Its controller loses 1 Aura.,The mountain does not ask before it erupts.,false,,,
 A206,Alpha,206,Molten Reckoning,Red,uncommon,{2}{R},Mantra,,,This Mantra deals 2 damage to each creature and 1 damage to each player.,This Mantra deals 2 damage to each creature and 1 damage to each player.,Freedom burns brightest when cornered.,false,,,
 A207,Alpha,207,Feral Command,Red,uncommon,{2}{R},Mantra,,,Eliminate target nonbasic Land. Its controller takes 1 damage.,Eliminate target nonbasic Land. Its controller takes 1 damage.,The mountain does not ask before it erupts.,false,,,
 A208,Alpha,208,Molten Harvest,Red,common,{1}{R},Mantra,,,"This Mantra deals 3 damage to target creature.
@@ -472,7 +468,7 @@ When this creature is put into the Pit from play, Search your deck for a basic L
 {1}{G}: This creature gets +1/+1 until end of Round. Play this ability only once each Round.","Extra fighting damage beyond a responder's defense hits the responding player.
 When this creature is put into the Pit from play, Search your deck for a basic Land card, show it, put it into your hand, then shuffle.
 {1}{G}: This creature gets +1/+1 until end of Round. Play this ability only once each Round.",Strength grows deepest where the canopy is oldest.,false,,,
-A222,Alpha,222,Overgrown Grizzly,Green,common,{G},Creature — Beast,2,2,"When this creature comes into play, Gain 2 Aura and straighten target Land.","When this creature comes into play, Gain 2 Aura and straighten target Land.",,false,,,
+A222,Alpha,222,Overgrown Grizzly,Green,common,{G},Creature — Beast,2,2,"When this creature comes into play, Gain 1 Aura.","When this creature comes into play, Gain 1 Aura.",,false,,,
 A223,Alpha,223,Vine Jaguar,Green,common,{1}{G},Creature — Feline,2,3,"Extra fighting damage beyond a responder's defense hits the responding player.
 {1}{G}: This creature gets +1/+1 until end of Round. Play this ability only once each Round.","Extra fighting damage beyond a responder's defense hits the responding player.
 {1}{G}: This creature gets +1/+1 until end of Round. Play this ability only once each Round.",,false,,,
@@ -540,7 +536,7 @@ A244,Alpha,244,Emerald Tortoise,Green,common,{5}{G},Creature — Reptile,6,7,"Wh
 A245,Alpha,245,Timber Tracker,Green,uncommon,{G},Creature — Warrior,1,1,"Extra fighting damage beyond a responder's defense hits the responding player.
 When this creature comes into play, Gain 2 Aura and straighten target Land.","Extra fighting damage beyond a responder's defense hits the responding player.
 When this creature comes into play, Gain 2 Aura and straighten target Land.",,false,,,
-A246,Alpha,246,Rootbound Elderwood,Green,common,{G},Creature — Flora,2,2,"When this creature comes into play, Gain 2 Aura and straighten target Land.","When this creature comes into play, Gain 2 Aura and straighten target Land.",,false,,,
+A246,Alpha,246,Rootbound Elderwood,Green,common,{1}{G},Creature — Flora,1,3,"When this creature is put into the Pit from play, Search your deck for a basic Land card, show it, put it into your hand, then shuffle.","When this creature is put into the Pit from play, Search your deck for a basic Land card, show it, put it into your hand, then shuffle.",,false,,,
 A247,Alpha,247,Emerald Basilisk,Green,common,{1}{G},Creature — Reptile,3,3,"Cannot be targeted by opponents' Techniques or abilities.
 Whenever a Land comes into play under your control, this creature gets +1/+1 until end of Round.","Cannot be targeted by opponents' Techniques or abilities.
 Whenever a Land comes into play under your control, this creature gets +1/+1 until end of Round.",Every predator is eventually outgrown.,false,,,
@@ -559,9 +555,9 @@ A253,Alpha,253,Fern Bolt,Green,uncommon,{2}{G},Mudra,,,target creature gets +4/+
 A254,Alpha,254,Primal Snare,Green,common,{G},Mudra,,,Straighten target creature you control. It gets +1/+2 and gains Can respond to Airborne creatures until end of Round.,Straighten target creature you control. It gets +1/+2 and gains Can respond to Airborne creatures until end of Round.,Strength grows deepest where the canopy is oldest.,false,,,
 A255,Alpha,255,Verdant Break,Green,uncommon,{1}{G},Mudra,,,Prevent all fighting damage that would be dealt this Round. Gain 2 Aura.,Prevent all fighting damage that would be dealt this Round. Gain 2 Aura.,Roots split stone given enough seasons.,false,,,
 A256,Alpha,256,Wild Pulse,Green,rare,{2}{G},Mudra,,,"Pick cards equal to the greatest attack among creatures you control, then put a card from your hand into the Pit.","Pick cards equal to the greatest attack among creatures you control, then put a card from your hand into the Pit.",The wild does not hate the wall; it simply outlives it.,false,,,
-A257,Alpha,257,Heartwood Wave,Green,common,{1}{G},Mudra,,,"target creature gets +3/+3 until end of Round. If it responds to an Airborne creature, straighten it. Pick a card once the next Maintenance phase begins.","target creature gets +3/+3 until end of Round. If it responds to an Airborne creature, straighten it. Pick a card once the next Maintenance phase begins.","Listen to the forest, and you will never run dry.",false,,,
+A257,Alpha,257,Heartwood Wave,Green,common,{1}{G},Mudra,,,Target creature you control gets +1/+3 and gains Can respond to Airborne creatures until end of Round.,Target creature you control gets +1/+3 and gains Can respond to Airborne creatures until end of Round.,"Listen to the forest, and you will never run dry.",false,,,
 A258,Alpha,258,Heartwood Rupture,Green,common,{2}{G},Mudra,,,Eliminate target Artifact or Seal. Look at the top 1 cards of your deck; put any on the bottom in any order. Pick a card once the next Maintenance phase begins.,Eliminate target Artifact or Seal. Look at the top 1 cards of your deck; put any on the bottom in any order. Pick a card once the next Maintenance phase begins.,The wild does not hate the wall; it simply outlives it.,false,,,
-A259,Alpha,259,Grove Twist,Green,common,{2}{G},Mudra,,,Target creature you control deals damage equal to its attack to target creature you do not control. Pick a card once the next Maintenance phase begins.,Target creature you control deals damage equal to its attack to target creature you do not control. Pick a card once the next Maintenance phase begins.,Roots split stone given enough seasons.,false,,,
+A259,Alpha,259,Grove Twist,Green,common,{2}{G},Mudra,,,Target creature you control deals damage equal to its attack to target Airborne creature an opponent controls. Put an Aura Stack (+1/+1) on your creature.,Target creature you control deals damage equal to its attack to target Airborne creature an opponent controls. Put an Aura Stack (+1/+1) on your creature.,Roots split stone given enough seasons.,false,,,
 A260,Alpha,260,Dew Twist,Green,uncommon,{3}{G},Mudra,,,target creature gets +4/+4 until end of Round. If it gains Extra fighting damage beyond a responder's defense hits the responding player. Pick a card once the next Maintenance phase begins.,target creature gets +4/+4 until end of Round. If it gains Extra fighting damage beyond a responder's defense hits the responding player. Pick a card once the next Maintenance phase begins.,Strength grows deepest where the canopy is oldest.,false,,,
 A261,Alpha,261,Bramble Reckoning,Green,common,{1}{G},Mantra,,,"Search your deck for a basic Land card, put it into play Turned, then shuffle. Gain 1 Aura.","Search your deck for a basic Land card, put it into play Turned, then shuffle. Gain 1 Aura.","Listen to the forest, and you will never run dry.",false,,,
 A262,Alpha,262,Vine Ascent,Green,common,{2}{G},Mantra,,,"Search your deck for up to two Land cards, put one into play Turned and one into your hand, then shuffle.","Search your deck for up to two Land cards, put one into play Turned and one into your hand, then shuffle.",Strength grows deepest where the canopy is oldest.,false,,,
@@ -570,7 +566,7 @@ A264,Alpha,264,Ancient Cataclysm,Green,common,{2}{G},Mantra,,,"Look at the top f
 A265,Alpha,265,Oaken Chant,Green,rare,{3}{G},Mantra,,,Put two Aura Stacks (+1/+1) on each of up to two target creatures you control.,Put two Aura Stacks (+1/+1) on each of up to two target creatures you control.,"Listen to the forest, and you will never run dry.",false,,,
 A266,Alpha,266,Bramble Ascent,Green,common,{1}{G},Mantra,,,"Target creature you control gets +2/+2 until end of Round, then deals damage equal to its attack to target creature an opponent controls.","Target creature you control gets +2/+2 until end of Round, then deals damage equal to its attack to target creature an opponent controls.",The wild does not hate the wall; it simply outlives it.,false,,,
 A267,Alpha,267,Rootbound Pact,Green,rare,{3}{G}{G},Mantra,,,"Search your deck for a creature card, put it into your hand, then shuffle. Creatures you control get +2/+2 until end of Round.","Search your deck for a creature card, put it into your hand, then shuffle. Creatures you control get +2/+2 until end of Round.","Listen to the forest, and you will never run dry.",false,,,
-A268,Alpha,268,Thorn Invocation,Green,common,{2}{G},Mantra,,,"Search your deck for a basic Land card, put it into play Turned, then shuffle. Gain 1 Aura. Pick a card once the next Maintenance phase begins.","Search your deck for a basic Land card, put it into play Turned, then shuffle. Gain 1 Aura. Pick a card once the next Maintenance phase begins.",The wild does not hate the wall; it simply outlives it.,false,,,
+A268,Alpha,268,Thorn Invocation,Green,common,{2}{G},Mantra,,,"Return target Land card from your Pit to play Turned. If you control a creature with attack 4 or greater, Pick a card.","Return target Land card from your Pit to play Turned. If you control a creature with attack 4 or greater, Pick a card.",The wild does not hate the wall; it simply outlives it.,false,,,
 A269,Alpha,269,Verdant Pact,Green,common,{G},Seal — Binding,,,"Bind to target Land.
 Whenever bound Land is Turned for Energy, add an additional {G} to your Energy pool.","Bind to target Land.
 Whenever bound Land is Turned for Energy, add an additional {G} to your Energy pool.",Every predator is eventually outgrown.,false,,,
@@ -917,9 +913,7 @@ B039,Beta,39,Bright Veil,White,common,{W},Mudra,,,"target creature gets +1/+3 un
 B040,Beta,40,Lumen Riposte,White,uncommon,{1}{W},Mudra,,,"Extinguish target confronting creature. Its controller Picks Up a card once the next Maintenance phase begins.
 Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.","Extinguish target confronting creature. Its controller Picks Up a card once the next Maintenance phase begins.
 Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Order is not tyranny; it is the shelter where the weak grow strong.,false,,,
-B041,Beta,41,Radiant Tempest,White,rare,{2}{W}{W},Mantra,,,"Eliminate all creatures with attack 3 or greater. Gain 1 Aura for each creature eliminated this way.
-You may pay an extra {2} when playing this. If you do, Pick a card.","Eliminate all creatures with attack 3 or greater. Gain 1 Aura for each creature eliminated this way.
-You may pay an extra {2} when playing this. If you do, Pick a card.",Every vow carries weight on the field.,false,,,
+B041,Beta,41,Radiant Tempest,White,rare,{2}{W}{W},Mantra,,,"Eliminate all creatures with attack 4 or greater. You may pay an extra {1} when playing this. If you do, Eliminate all creatures with attack 3 or greater instead.","Eliminate all creatures with attack 4 or greater. You may pay an extra {1} when playing this. If you do, Eliminate all creatures with attack 3 or greater instead.",Every vow carries weight on the field.,false,,,
 B042,Beta,42,Bright Reckoning,White,rare,{3}{W}{W},Mantra,,,"Eliminate all creatures and Seals. Each player gains 3 Aura.
 {2}, Put this card from your hand into the Pit: Pick a card.","Eliminate all creatures and Seals. Each player gains 3 Aura.
 {2}, Put this card from your hand into the Pit: Pick a card.",Light endures long after the banner falls.,false,,,
@@ -938,9 +932,7 @@ B046,Beta,46,Chalice Tempest,White,uncommon,{3}{W},Mantra,,,"Eliminate target Ar
 B047,Beta,47,Bright Rite,White,rare,{2}{W}{W},Mantra,,,"Each player chooses two creatures they control and Extinguishes the rest.
 Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.","Each player chooses two creatures they control and Extinguishes the rest.
 Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",The dawn asks no permission to rise.,false,,,
-B048,Beta,48,Chalice Invocation,White,rare,{3}{W}{W},Mantra,,,"Eliminate all creatures with attack 3 or greater. Gain 1 Aura for each creature eliminated this way.
-You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.","Eliminate all creatures with attack 3 or greater. Gain 1 Aura for each creature eliminated this way.
-You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.","Stand together, and the storm breaks around you.",false,,,
+B048,Beta,48,Chalice Invocation,White,rare,{3}{W}{W},Mantra,,,"Eliminate all Seals. You may pay an extra {2} when playing this. If you do, also Eliminate all Artifacts.","Eliminate all Seals. You may pay an extra {2} when playing this. If you do, also Eliminate all Artifacts.","Stand together, and the storm breaks around you.",false,,,
 B049,Beta,49,Aegis Ward,White,common,{1}{W},Seal — Binding,,,"Bind to target creature. Bound creature cannot confront or respond, and its controller gains 1 Aura during their Maintenance phase.
 You may pay an extra {2} when playing this. If you do, Pick a card.","Bind to target creature. Bound creature cannot confront or respond, and its controller gains 1 Aura during their Maintenance phase.
 You may pay an extra {2} when playing this. If you do, Pick a card.",Light endures long after the banner falls.,false,,,
@@ -1063,9 +1055,7 @@ During even Rounds, this creature cannot be responded to unless the responding p
 {2}, Put this card from your hand into the Pit: Pick a card.","Can be played any time you could play a Mudra.
 During even Rounds, this creature cannot be responded to unless the responding player pays {2}.
 {2}, Put this card from your hand into the Pit: Pick a card.",,false,,,
-B085,Beta,85,Mirror Gesture,Blue,common,{U}{U},Mudra,,,"Cancel target Technique. Look at the top 1 cards of your deck; put any on the bottom in any order.
-You may pay an extra {2} when playing this. If you do, Pick a card.","Cancel target Technique. Look at the top 1 cards of your deck; put any on the bottom in any order.
-You may pay an extra {2} when playing this. If you do, Pick a card.",The tide takes what is offered and returns what it chooses.,false,,,
+B085,Beta,85,Mirror Gesture,Blue,common,{1}{U}{U},Mudra,,,"Cancel target Technique. You may pay an extra {1} when playing this. If you do, Pick a card.","Cancel target Technique. You may pay an extra {1} when playing this. If you do, Pick a card.",The tide takes what is offered and returns what it chooses.,false,,,
 B086,Beta,86,Deep Snare,Blue,common,{1}{U},Mudra,,,"Cancel target Technique unless its controller pays {2}.
 During even Rounds, they must pay {4} instead.
 {2}, Put this card from your hand into the Pit: Pick a card.","Cancel target Technique unless its controller pays {2}.
@@ -1074,9 +1064,7 @@ During even Rounds, they must pay {4} instead.
 B087,Beta,87,Glass Rebuke,Blue,common,{U},Mudra,,,"Look at the top three cards of your deck. Put one into your hand, one on top, and one on the bottom.
 Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.","Look at the top three cards of your deck. Put one into your hand, one on top, and one on the bottom.
 Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Curiosity is the sharpest current in the sea.,false,,,
-B088,Beta,88,Sunken Glimpse,Blue,common,{1}{U},Mudra,,,"Return target creature or Artifact to its owner's hand. Look at the top 1 cards of your deck; put any on the bottom in any order.
-You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.","Return target creature or Artifact to its owner's hand. Look at the top 1 cards of your deck; put any on the bottom in any order.
-You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",The tide takes what is offered and returns what it chooses.,false,,,
+B088,Beta,88,Sunken Glimpse,Blue,common,{1}{U},Mudra,,,"Return target creature to its owner's hand. You may pay an extra {1} when playing this. If you do, also return up to one target Artifact to its owner's hand.","Return target creature to its owner's hand. You may pay an extra {1} when playing this. If you do, also return up to one target Artifact to its owner's hand.",The tide takes what is offered and returns what it chooses.,false,,,
 B089,Beta,89,Vapor Gesture,Blue,common,{2}{U},Mudra,,,"Pick two cards, then put a card from your hand on the bottom of your deck.
 You may pay an extra {2} when playing this. If you do, Pick a card.","Pick two cards, then put a card from your hand on the bottom of your deck.
 You may pay an extra {2} when playing this. If you do, Pick a card.",A single ripple unravels the grandest design.,false,,,
@@ -1297,9 +1285,7 @@ Extinguish this card from your Pit and pay {3}: Pick a card. Play only during yo
 B154,Beta,154,Bleak Cataclysm,Black,common,{1}{B},Mantra,,,"Pick two cards and lose 2 Aura. You may put a card from your hand into your Pit to Gain 2 Aura.
 You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.","Pick two cards and lose 2 Aura. You may put a card from your hand into your Pit to Gain 2 Aura.
 You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Ash remembers the fire that made it.,false,,,
-B155,Beta,155,Fading Decree,Black,rare,{2}{B}{B},Mantra,,,"All creatures get -3/-3 until end of Round. Gain 1 Aura for each creature that is put into the Pit from play this way.
-You may pay an extra {2} when playing this. If you do, Pick a card.","All creatures get -3/-3 until end of Round. Gain 1 Aura for each creature that is put into the Pit from play this way.
-You may pay an extra {2} when playing this. If you do, Pick a card.","In the quiet dark, every ambition grows teeth.",false,,,
+B155,Beta,155,Fading Decree,Black,rare,{2}{B}{B},Mantra,,,"All creatures get -2/-2 until end of Round. You may pay an extra {1} when playing this. If you do, all creatures get -3/-3 until end of Round instead.","All creatures get -2/-2 until end of Round. You may pay an extra {1} when playing this. If you do, all creatures get -3/-3 until end of Round instead.","In the quiet dark, every ambition grows teeth.",false,,,
 B156,Beta,156,Bleak Vision,Black,uncommon,{3}{B},Mantra,,,"Search your deck for a card, put it into your Pit, then Pick a card.
 {2}, Put this card from your hand into the Pit: Pick a card.","Search your deck for a card, put it into your Pit, then Pick a card.
 {2}, Put this card from your hand into the Pit: Pick a card.",Nothing is truly free; some prices are simply paid later.,false,,,
@@ -1488,9 +1474,7 @@ B204,Beta,204,Crackling Bolt,Red,rare,{3}{R},Mudra,,,"This Mudra deals 5 damage 
 B205,Beta,205,Pyre Wave,Red,common,{1}{R},Mudra,,,"This Mudra deals 3 damage to target creature, or 2 damage to target player.
 Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.","This Mudra deals 3 damage to target creature, or 2 damage to target player.
 Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Spark becomes flame; flame becomes legend.,false,,,
-B206,Beta,206,Crackling Harvest,Red,uncommon,{2}{R},Mantra,,,"This Mantra deals 2 damage to each creature and 1 damage to each player.
-You may pay an extra {2} when playing this. If you do, Pick a card.","This Mantra deals 2 damage to each creature and 1 damage to each player.
-You may pay an extra {2} when playing this. If you do, Pick a card.",Freedom burns brightest when cornered.,false,,,
+B206,Beta,206,Crackling Harvest,Red,uncommon,{2}{R},Mantra,,,"This Mantra deals 2 damage to each creature. You may pay an extra {1} when playing this. If you do, it also deals 2 damage to each player.","This Mantra deals 2 damage to each creature. You may pay an extra {1} when playing this. If you do, it also deals 2 damage to each player.",Freedom burns brightest when cornered.,false,,,
 B207,Beta,207,Spark Decree,Red,uncommon,{2}{R},Mantra,,,"Eliminate target nonbasic Land. Its controller takes 1 damage.
 {2}, Put this card from your hand into the Pit: Pick a card.","Eliminate target nonbasic Land. Its controller takes 1 damage.
 {2}, Put this card from your hand into the Pit: Pick a card.",Hesitation is just another word for defeat.,false,,,
@@ -1597,7 +1581,7 @@ When this creature is put into the Pit from play, Search your deck for a basic L
 B236,Beta,236,Overgrown Tortoise,Green,uncommon,{G}{G},Creature — Reptile,3,3,"Extra fighting damage beyond a responder's defense hits the responding player.
 Whenever a Land comes into play under your control, this creature gets +1/+1 until end of Round.","Extra fighting damage beyond a responder's defense hits the responding player.
 Whenever a Land comes into play under your control, this creature gets +1/+1 until end of Round.",,false,,,
-B237,Beta,237,Sunbark Wolf,Green,common,{1}{G},Creature — Canine,2,3,"When this creature is put into the Pit from play, Search your deck for a basic Land card, show it, put it into your hand, then shuffle.","When this creature is put into the Pit from play, Search your deck for a basic Land card, show it, put it into your hand, then shuffle.",,false,,,
+B237,Beta,237,Sunbark Wolf,Green,common,{1}{G},Creature — Canine,3,1,"You may pay an extra {1} when playing this. If you do, it comes into play with an Aura Stack (+1/+1) on it.","You may pay an extra {1} when playing this. If you do, it comes into play with an Aura Stack (+1/+1) on it.",,false,,,
 B238,Beta,238,Ancient Mantis,Green,common,{2}{G},Creature — Insect,3,4,"When this creature comes into play, put an Aura Stack (+1/+1) on another target creature you control.","When this creature comes into play, put an Aura Stack (+1/+1) on another target creature you control.",Strength grows deepest where the canopy is oldest.,false,,,
 B239,Beta,239,Rootbound Beetle,Green,uncommon,{2}{G},Creature — Insect,4,3,"Cannot be targeted by opponents' Techniques or abilities.
 When this creature comes into play, put an Aura Stack (+1/+1) on another target creature you control.","Cannot be targeted by opponents' Techniques or abilities.
@@ -1681,9 +1665,7 @@ Extinguish this card from your Pit and pay {3}: Pick a card. Play only during yo
 B264,Beta,264,Timber Tempest,Green,common,{2}{G},Mantra,,,"Look at the top four cards of your deck. Show a creature or Land from among them, put it into your hand, and the rest on the bottom.
 You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.","Look at the top four cards of your deck. Show a creature or Land from among them, put it into your hand, and the rest on the bottom.
 You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.","Listen to the forest, and you will never run dry.",false,,,
-B265,Beta,265,Bark Decree,Green,rare,{3}{G},Mantra,,,"Put two Aura Stacks (+1/+1) on each of up to two target creatures you control.
-You may pay an extra {2} when playing this. If you do, Pick a card.","Put two Aura Stacks (+1/+1) on each of up to two target creatures you control.
-You may pay an extra {2} when playing this. If you do, Pick a card.",Strength grows deepest where the canopy is oldest.,false,,,
+B265,Beta,265,Bark Decree,Green,rare,{2}{G},Mantra,,,"Put two Aura Stacks (+1/+1) on target creature you control. You may pay an extra {2} when playing this. If you do, put two Aura Stacks (+1/+1) on another target creature you control.","Put two Aura Stacks (+1/+1) on target creature you control. You may pay an extra {2} when playing this. If you do, put two Aura Stacks (+1/+1) on another target creature you control.",Strength grows deepest where the canopy is oldest.,false,,,
 B266,Beta,266,Canopy Ascent,Green,common,{1}{G},Mantra,,,"Target creature you control gets +2/+2 until end of Round, then deals damage equal to its attack to target creature an opponent controls.
 {2}, Put this card from your hand into the Pit: Pick a card.","Target creature you control gets +2/+2 until end of Round, then deals damage equal to its attack to target creature an opponent controls.
 {2}, Put this card from your hand into the Pit: Pick a card.",Roots split stone given enough seasons.,false,,,
@@ -2043,11 +2025,9 @@ Look at the top 1 cards of your deck; put any on the bottom in any order.","This
 {TURN}: Add {G} to your Energy pool.
 {3}, {TURN}: This land becomes a 3/3 Construct creature until end of Round.
 Look at the top 1 cards of your deck; put any on the bottom in any order.",Old stones hold older energy.,false,,,
-D001,Delta,1,Gilded Ram,White,rare,{W},Creature — Beast,2,2,"Confronting does not cause this creature to Turn.
-{1}{W}, {TURN}: Prevent the next 2 damage that would be dealt to target creature this Round.
-When this creature leaves play, straighten target Land you control.","Confronting does not cause this creature to Turn.
-{1}{W}, {TURN}: Prevent the next 2 damage that would be dealt to target creature this Round.
-When this creature leaves play, straighten target Land you control.",,false,,,
+D001,Delta,1,Gilded Ram,White,rare,{1}{W},Creature — Beast,2,2,"Confronting does not cause this creature to Turn.
+{1}{W}, {TURN}: Prevent the next 2 damage that would be dealt to target creature this Round.","Confronting does not cause this creature to Turn.
+{1}{W}, {TURN}: Prevent the next 2 damage that would be dealt to target creature this Round.",,false,,,
 D002,Delta,2,Sunmane Panther,White,common,{W},Creature — Feline,1,1,"Deals fighting damage before other creatures.
 Whenever you gain Aura, this creature gets +1/+0 until end of Round.","Deals fighting damage before other creatures.
 Whenever you gain Aura, this creature gets +1/+0 until end of Round.",,false,,,
@@ -2110,9 +2090,7 @@ When this creature leaves play, straighten target Land you control.",,false,,,
 D023,Delta,23,Steadfast Crane,White,common,{4}{W},Creature — Avian,5,4,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 {2}{W}: target creature you control gets +0/+2 until end of Round.","Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 {2}{W}: target creature you control gets +0/+2 until end of Round.",Light endures long after the banner falls.,false,,,
-D024,Delta,24,Dawn Twist,White,uncommon,{W},Mudra,,,"Extinguish target confronting creature. Its controller Picks Up a card once the next Maintenance phase begins.
-If you spent Energy of two or more colors to play this Technique, Pick a card.","Extinguish target confronting creature. Its controller Picks Up a card once the next Maintenance phase begins.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",Light endures long after the banner falls.,false,,,
+D024,Delta,24,Dawn Twist,White,uncommon,{W},Mudra,,,Extinguish target confronting creature. Its controller Picks Up a card once the next Maintenance phase begins.,Extinguish target confronting creature. Its controller Picks Up a card once the next Maintenance phase begins.,Light endures long after the banner falls.,false,,,
 D025,Delta,25,Bellwing Rupture,White,common,{1}{W},Mudra,,,"target creature you control gets +2/+2 until end of Round. Straighten it.
 If you control two or more nonbasic Lands, Gain 2 Aura.","target creature you control gets +2/+2 until end of Round. Straighten it.
 If you control two or more nonbasic Lands, Gain 2 Aura.","Stand together, and the storm breaks around you.",false,,,
@@ -2120,9 +2098,7 @@ D026,Delta,26,Haloed Bolt,White,common,{1}{W},Mudra,,,"Eliminate target Artifact
 If you control an Artifact, this Technique costs {1} less to play.","Eliminate target Artifact or Seal. Gain 2 Aura.
 If you control an Artifact, this Technique costs {1} less to play.","Stand together, and the storm breaks around you.",false,,,
 D027,Delta,27,Spire Twist,White,uncommon,{2}{W},Mudra,,,Prevent all fighting damage creatures you do not control would deal this Round. Pick a card once the next Maintenance phase begins. Look at the top card of your deck; you may put it into your Pit.,Prevent all fighting damage creatures you do not control would deal this Round. Pick a card once the next Maintenance phase begins. Look at the top card of your deck; you may put it into your Pit.,The dawn asks no permission to rise.,false,,,
-D028,Delta,28,Marble Pulse,White,common,{W},Mudra,,,"Prevent the next 3 damage that would be dealt to target creature or player this Round, and straighten that creature.
-If you spent Energy of two or more colors to play this Technique, Pick a card.","Prevent the next 3 damage that would be dealt to target creature or player this Round, and straighten that creature.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",The dawn asks no permission to rise.,false,,,
+D028,Delta,28,Marble Pulse,White,common,{W},Mudra,,,"Prevent the next 3 damage that would be dealt to target creature this Round. If you control an Artifact, straighten that creature.","Prevent the next 3 damage that would be dealt to target creature this Round. If you control an Artifact, straighten that creature.",The dawn asks no permission to rise.,false,,,
 D029,Delta,29,Silver Pulse,White,rare,{1}{W}{W},Mudra,,,"Extinguish target Turned creature. Gain Aura equal to its toughness.
 If you control two or more nonbasic Lands, Gain 2 Aura.","Extinguish target Turned creature. Gain Aura equal to its toughness.
 If you control two or more nonbasic Lands, Gain 2 Aura.",Light endures long after the banner falls.,false,,,
@@ -2133,9 +2109,7 @@ D031,Delta,31,Dawn Break,White,uncommon,{1}{W},Mudra,,,Target creature you contr
 D032,Delta,32,Vigilant Pulse,White,rare,{3}{W},Mudra,,,"Creatures you control get +2/+1 and gain Confronting does not cause this creature to Turn until end of Round.
 If you spent Energy of two or more colors to play this Technique, Pick a card.","Creatures you control get +2/+1 and gain Confronting does not cause this creature to Turn until end of Round.
 If you spent Energy of two or more colors to play this Technique, Pick a card.",Light endures long after the banner falls.,false,,,
-D033,Delta,33,Aegis Decree,White,rare,{2}{W}{W},Mantra,,,"Eliminate all creatures with attack 3 or greater. Gain 1 Aura for each creature eliminated this way.
-If you spent Energy of two or more colors to play this Technique, Pick a card.","Eliminate all creatures with attack 3 or greater. Gain 1 Aura for each creature eliminated this way.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",The dawn asks no permission to rise.,false,,,
+D033,Delta,33,Aegis Decree,White,rare,{2}{W}{W},Mantra,,,"Eliminate all confronting creatures. If you spent Energy of two or more colors to play this Technique, straighten up to two target creatures you control.","Eliminate all confronting creatures. If you spent Energy of two or more colors to play this Technique, straighten up to two target creatures you control.",The dawn asks no permission to rise.,false,,,
 D034,Delta,34,Bright Harvest,White,rare,{3}{W}{W},Mantra,,,"Eliminate all creatures and Seals. Each player gains 3 Aura.
 If you control two or more nonbasic Lands, Gain 2 Aura.","Eliminate all creatures and Seals. Each player gains 3 Aura.
 If you control two or more nonbasic Lands, Gain 2 Aura.",Every vow carries weight on the field.,false,,,
@@ -2243,9 +2217,7 @@ Whenever this creature deals fighting damage to a player, look at the top card o
 D068,Delta,68,Horizon Owl,Blue,common,{4}{U},Creature — Avian,3,5,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 When this creature comes into play, Pick a card, then put a card from your hand into the Pit.","Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 When this creature comes into play, Pick a card, then put a card from your hand into the Pit.",Still water remembers every shadow.,false,,,
-D069,Delta,69,Crystal Shatter,Blue,common,{U}{U},Mudra,,,"Cancel target Technique. Look at the top 1 cards of your deck; put any on the bottom in any order.
-If you spent Energy of two or more colors to play this Technique, Pick a card.","Cancel target Technique. Look at the top 1 cards of your deck; put any on the bottom in any order.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",The tide takes what is offered and returns what it chooses.,false,,,
+D069,Delta,69,Crystal Shatter,Blue,common,{1}{U}{U},Mudra,,,"Cancel target Technique. If you spent Energy of two or more colors to play this Technique, return up to one target Artifact to its owner's hand.","Cancel target Technique. If you spent Energy of two or more colors to play this Technique, return up to one target Artifact to its owner's hand.",The tide takes what is offered and returns what it chooses.,false,,,
 D070,Delta,70,Frost Snare,Blue,common,{1}{U},Mudra,,,"Cancel target Technique unless its controller pays {2}.
 During even Rounds, they must pay {4} instead.
 If you control two or more nonbasic Lands, Gain 2 Aura.","Cancel target Technique unless its controller pays {2}.
@@ -2297,9 +2269,7 @@ D087,Delta,87,Drifting Dominion,Blue,uncommon,{1}{U},Seal,,,"Whenever you cancel
 If you control an Artifact, this Technique costs {1} less to play.","Whenever you cancel a Technique, Pick a card, then put a card from your hand into the Pit.
 If you control an Artifact, this Technique costs {1} less to play.",A single ripple unravels the grandest design.,false,,,
 D088,Delta,88,Glimmering Pact,Blue,uncommon,{2}{U},Seal,,,"During even Rounds, Mudra Techniques cost {1} less for all players to play. Look at the top card of your deck; you may put it into your Pit.","During even Rounds, Mudra Techniques cost {1} less for all players to play. Look at the top card of your deck; you may put it into your Pit.",To know the next move is to already hold victory.,false,,,
-D089,Delta,89,Chrono Tether,Blue,common,{U},Seal — Binding,,,"Bind to target creature. Bound creature gets +1/+0 and gains Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
-If you spent Energy of two or more colors to play this Technique, Pick a card.","Bind to target creature. Bound creature gets +1/+0 and gains Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
-If you spent Energy of two or more colors to play this Technique, Pick a card.",The tide takes what is offered and returns what it chooses.,false,,,
+D089,Delta,89,Chrono Tether,Blue,common,{U},Seal — Binding,,,Bind to target creature. Bound creature gets +1/+0 and gains Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).,Bind to target creature. Bound creature gets +1/+0 and gains Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).,The tide takes what is offered and returns what it chooses.,false,,,
 D090,Delta,90,Still Presence,Blue,rare,{3}{U},Seal,,,"Once each even Round's Maintenance phase begins: the active player Picks Up an additional card.
 If you control two or more nonbasic Lands, Gain 2 Aura.","Once each even Round's Maintenance phase begins: the active player Picks Up an additional card.
 If you control two or more nonbasic Lands, Gain 2 Aura.",The tide takes what is offered and returns what it chooses.,false,,,
@@ -2385,9 +2355,7 @@ D121,Delta,121,Obsidian Wave,Black,common,{B},Mudra,,,Return target creature car
 D122,Delta,122,Cindered Gesture,Black,uncommon,{1}{B},Mudra,,,"Target opponent loses 2 Aura and Gain 2 Aura. If a creature Folded this Round, Pick a card.
 If you spent Energy of two or more colors to play this Technique, Pick a card.","Target opponent loses 2 Aura and Gain 2 Aura. If a creature Folded this Round, Pick a card.
 If you spent Energy of two or more colors to play this Technique, Pick a card.","In the quiet dark, every ambition grows teeth.",false,,,
-D123,Delta,123,Hollow Ascent,Black,common,{B},Mantra,,,"Target opponent shows their hand; choose a card and put it into their Pit (they reveal their hand; choose a noncreature, nonland card and put it into their Pit and lose 1 Aura).
-If you spent Energy of two or more colors to play this Technique, Pick a card.","Target opponent shows their hand; choose a card and put it into their Pit (they reveal their hand; choose a noncreature, nonland card and put it into their Pit and lose 1 Aura).
-If you spent Energy of two or more colors to play this Technique, Pick a card.",Ash remembers the fire that made it.,false,,,
+D123,Delta,123,Hollow Ascent,Black,common,{B},Mantra,,,"Target opponent shows their hand; choose a card and put it into their Pit (they reveal their hand; choose a noncreature, nonland card and put it into their Pit and lose 1 Aura).","Target opponent shows their hand; choose a card and put it into their Pit (they reveal their hand; choose a noncreature, nonland card and put it into their Pit and lose 1 Aura).",Ash remembers the fire that made it.,false,,,
 D124,Delta,124,Gloom Invocation,Black,uncommon,{1}{B},Mantra,,,"Target opponent puts two cards from their hand into the Pit unless they pay 3 Aura.
 If you control two or more nonbasic Lands, Gain 2 Aura.","Target opponent puts two cards from their hand into the Pit unless they pay 3 Aura.
 If you control two or more nonbasic Lands, Gain 2 Aura.",What falls is seldom finished.,false,,,
@@ -2395,9 +2363,7 @@ D125,Delta,125,Gloom Tide,Black,uncommon,{2}{B},Mantra,,,"Return target creature
 If you control an Artifact, this Technique costs {1} less to play.","Return target creature card from your Pit to play. You lose 2 Aura and it comes into play Turned.
 If you control an Artifact, this Technique costs {1} less to play.",What falls is seldom finished.,false,,,
 D126,Delta,126,Fading Harvest,Black,common,{1}{B},Mantra,,,Pick two cards and lose 2 Aura. You may put a card from your hand into your Pit to Gain 2 Aura. Look at the top card of your deck; you may put it into your Pit.,Pick two cards and lose 2 Aura. You may put a card from your hand into your Pit to Gain 2 Aura. Look at the top card of your deck; you may put it into your Pit.,What falls is seldom finished.,false,,,
-D127,Delta,127,Grim Vision,Black,rare,{2}{B}{B},Mantra,,,"All creatures get -3/-3 until end of Round. Gain 1 Aura for each creature that is put into the Pit from play this way.
-If you spent Energy of two or more colors to play this Technique, Pick a card.","All creatures get -3/-3 until end of Round. Gain 1 Aura for each creature that is put into the Pit from play this way.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",What falls is seldom finished.,false,,,
+D127,Delta,127,Grim Vision,Black,rare,{2}{B}{B},Mantra,,,"All creatures get -2/-2 until end of Round. If you spent Energy of two or more colors to play this Technique, each opponent loses 1 Aura for each creature they controlled that is put into the Pit from play this way.","All creatures get -2/-2 until end of Round. If you spent Energy of two or more colors to play this Technique, each opponent loses 1 Aura for each creature they controlled that is put into the Pit from play this way.",What falls is seldom finished.,false,,,
 D128,Delta,128,Silent Renewal,Black,uncommon,{3}{B},Mantra,,,"Search your deck for a card, put it into your Pit, then Pick a card.
 If you control two or more nonbasic Lands, Gain 2 Aura.","Search your deck for a card, put it into your Pit, then Pick a card.
 If you control two or more nonbasic Lands, Gain 2 Aura.",Nothing is truly free; some prices are simply paid later.,false,,,
@@ -2416,9 +2382,7 @@ D132,Delta,132,Dusk Dominion,Black,uncommon,{1}{B},Seal,,,"Whenever an opponent 
 If you control an Artifact, this Technique costs {1} less to play.","Whenever an opponent puts a card from their hand into the Pit, that player loses 1 Aura and Gain 1 Aura.
 If you control an Artifact, this Technique costs {1} less to play.",Nothing is truly free; some prices are simply paid later.,false,,,
 D133,Delta,133,Mourning Blessing,Black,rare,{2}{B},Seal,,,"Whenever a nontoken creature is put into the Pit from play, each opponent loses 1 Aura. Look at the top card of your deck; you may put it into your Pit.","Whenever a nontoken creature is put into the Pit from play, each opponent loses 1 Aura. Look at the top card of your deck; you may put it into your Pit.",Ash remembers the fire that made it.,false,,,
-D134,Delta,134,Withered Mark,Black,common,{B},Seal — Binding,,,"Bind to target creature. Bound creature gets -1/-1 and cannot be regenerated.
-If you spent Energy of two or more colors to play this Technique, Pick a card.","Bind to target creature. Bound creature gets -1/-1 and cannot be regenerated.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",Nothing is truly free; some prices are simply paid later.,false,,,
+D134,Delta,134,Withered Mark,Black,common,{B},Seal — Binding,,,Bind to target creature. Bound creature gets -1/-1 and cannot be regenerated.,Bind to target creature. Bound creature gets -1/-1 and cannot be regenerated.,Nothing is truly free; some prices are simply paid later.,false,,,
 D135,Delta,135,Nocturne Presence,Black,rare,{3}{B},Seal,,,"{2}{B}, Pay 2 Aura: Return target creature card from your Pit to your hand.
 If you control two or more nonbasic Lands, Gain 2 Aura.","{2}{B}, Pay 2 Aura: Return target creature card from your Pit to your hand.
 If you control two or more nonbasic Lands, Gain 2 Aura.","In the quiet dark, every ambition grows teeth.",false,,,
@@ -2491,9 +2455,7 @@ Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round
 D158,Delta,158,Magma Raider,Red,common,{4}{R},Creature — Warrior,6,4,"Must be responded to by two or more creatures.
 {R}, put a card from your hand into the Pit: Pick a card.","Must be responded to by two or more creatures.
 {R}, put a card from your hand into the Pit: Pick a card.",,false,,,
-D159,Delta,159,Crackling Glimpse,Red,common,{R},Mudra,,,"This Mudra deals 3 damage to target creature, or 2 damage to target player.
-If you spent Energy of two or more colors to play this Technique, Pick a card.","This Mudra deals 3 damage to target creature, or 2 damage to target player.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",The mountain does not ask before it erupts.,false,,,
+D159,Delta,159,Crackling Glimpse,Red,common,{1}{R},Mudra,,,"This Mudra deals 2 damage to target creature. If you control an Artifact, it deals 3 damage instead.","This Mudra deals 2 damage to target creature. If you control an Artifact, it deals 3 damage instead.",The mountain does not ask before it erupts.,false,,,
 D160,Delta,160,Brimstone Shift,Red,common,{1}{R},Mudra,,,"This Mudra deals 2 damage to target creature or player.
 During even Rounds, it deals 3 damage instead.
 If you control two or more nonbasic Lands, Gain 2 Aura.","This Mudra deals 2 damage to target creature or player.
@@ -2516,9 +2478,7 @@ D166,Delta,166,Cinder Flash,Red,uncommon,{R},Mudra,,,This Mudra deals 2 damage t
 D167,Delta,167,Scarlet Rebuke,Red,rare,{1}{R}{R},Mudra,,,"Copy target Mudra or Mantra. You may choose new targets for the copy.
 If you spent Energy of two or more colors to play this Technique, Pick a card.","Copy target Mudra or Mantra. You may choose new targets for the copy.
 If you spent Energy of two or more colors to play this Technique, Pick a card.","Strike first, and leave the planning to the ashes.",false,,,
-D168,Delta,168,Roaring Collapse,Red,uncommon,{2}{R},Mantra,,,"This Mantra deals 2 damage to each creature and 1 damage to each player.
-If you spent Energy of two or more colors to play this Technique, Pick a card.","This Mantra deals 2 damage to each creature and 1 damage to each player.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",The mountain does not ask before it erupts.,false,,,
+D168,Delta,168,Roaring Collapse,Red,uncommon,{2}{R},Mantra,,,"This Mantra deals 2 damage to each creature without Airborne. If you control an Artifact, it also deals 1 damage to each opponent.","This Mantra deals 2 damage to each creature without Airborne. If you control an Artifact, it also deals 1 damage to each opponent.",The mountain does not ask before it erupts.,false,,,
 D169,Delta,169,Crimson Chant,Red,uncommon,{2}{R},Mantra,,,"Eliminate target nonbasic Land. Its controller takes 1 damage.
 If you control two or more nonbasic Lands, Gain 2 Aura.","Eliminate target nonbasic Land. Its controller takes 1 damage.
 If you control two or more nonbasic Lands, Gain 2 Aura.",The mountain does not ask before it erupts.,false,,,
@@ -2551,9 +2511,7 @@ D177,Delta,177,Feral Field,Red,rare,{1}{R}{R},Seal,,,"Once each player's Mainten
 If you control an Artifact, this Technique costs {1} less to play.","Once each player's Maintenance phase begins: that player Extinguishes the top card of their deck and may play it this Round.
 If you control an Artifact, this Technique costs {1} less to play.","Strike first, and leave the planning to the ashes.",false,,,
 D178,Delta,178,Magma Crest,Red,rare,{2}{R},Seal,,,"During odd Rounds, if any source would deal damage to a player, it deals that much damage plus 1 instead. Look at the top card of your deck; you may put it into your Pit.","During odd Rounds, if any source would deal damage to a player, it deals that much damage plus 1 instead. Look at the top card of your deck; you may put it into your Pit.",The mountain does not ask before it erupts.,false,,,
-D179,Delta,179,Ignited Shroud,Red,common,{R},Seal — Binding,,,"Bind to target creature. {R}: Bound creature gets +1/+0 until end of Round.
-If you spent Energy of two or more colors to play this Technique, Pick a card.","Bind to target creature. {R}: Bound creature gets +1/+0 until end of Round.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",Hesitation is just another word for defeat.,false,,,
+D179,Delta,179,Ignited Shroud,Red,common,{R},Seal — Binding,,,Bind to target creature. {R}: Bound creature gets +1/+0 until end of Round.,Bind to target creature. {R}: Bound creature gets +1/+0 until end of Round.,Hesitation is just another word for defeat.,false,,,
 D180,Delta,180,Brimstone Tether,Red,common,{2}{R},Seal — Binding,,,"Bind to target creature. Bound creature gets +2/+0 and gains Can confront and Turn on the Round it comes into play.
 If you control two or more nonbasic Lands, Gain 2 Aura.","Bind to target creature. Bound creature gets +2/+0 and gains Can confront and Turn on the Round it comes into play.
 If you control two or more nonbasic Lands, Gain 2 Aura.",Freedom burns brightest when cornered.,false,,,
@@ -2569,9 +2527,7 @@ D183,Delta,183,Deepwood Grovekeeper,Green,common,{1}{G},Creature — Spirit,3,2,
 D184,Delta,184,Bramble Treant,Green,uncommon,{G}{G},Creature — Flora,3,2,"Can respond to Airborne creatures.
 {2}{G}, {TURN}: target creature gets +2/+2 until end of Round.","Can respond to Airborne creatures.
 {2}{G}, {TURN}: target creature gets +2/+2 until end of Round.",,false,,,
-D185,Delta,185,Oaken Treant,Green,common,{1}{G},Creature — Flora,3,2,"Cannot be targeted by opponents' Techniques or abilities.
-{TURN}: Add {G} to your Energy pool.","Cannot be targeted by opponents' Techniques or abilities.
-{TURN}: Add {G} to your Energy pool.",,false,,,
+D185,Delta,185,Oaken Treant,Green,common,{1}{G},Creature — Flora,2,3,{TURN}: Add {G} to your Energy pool. Activate only if you control two or more nonbasic Lands.,{TURN}: Add {G} to your Energy pool. Activate only if you control two or more nonbasic Lands.,,false,,,
 D186,Delta,186,Blooming Briar,Green,common,{2}{G},Creature — Flora,4,4,"Can respond to Airborne creatures.
 {TURN}: Add {G} to your Energy pool.","Can respond to Airborne creatures.
 {TURN}: Add {G} to your Energy pool.",,false,,,
@@ -2626,9 +2582,7 @@ Whenever this creature responds, it gets +0/+2 until end of Round.",,false,,,
 D203,Delta,203,Blooming Yaguareté,Green,common,{4}{G},Creature — Feline,6,5,"Confronting does not cause this creature to Turn.
 Whenever a Land comes into play under your control, this creature gets +1/+1 until end of Round.","Confronting does not cause this creature to Turn.
 Whenever a Land comes into play under your control, this creature gets +1/+1 until end of Round.",,false,,,
-D204,Delta,204,Timber Strike,Green,common,{G},Mudra,,,"target creature gets +3/+3 until end of Round. If it responds to an Airborne creature, straighten it.
-If you spent Energy of two or more colors to play this Technique, Pick a card.","target creature gets +3/+3 until end of Round. If it responds to an Airborne creature, straighten it.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",Roots split stone given enough seasons.,false,,,
+D204,Delta,204,Timber Strike,Green,common,{G},Mudra,,,"target creature gets +3/+3 until end of Round. If it responds to an Airborne creature, straighten it.","target creature gets +3/+3 until end of Round. If it responds to an Airborne creature, straighten it.",Roots split stone given enough seasons.,false,,,
 D205,Delta,205,Rootbound Shatter,Green,common,{1}{G},Mudra,,,"Eliminate target Artifact or Seal. Look at the top 1 cards of your deck; put any on the bottom in any order.
 If you control two or more nonbasic Lands, Gain 2 Aura.","Eliminate target Artifact or Seal. Look at the top 1 cards of your deck; put any on the bottom in any order.
 If you control two or more nonbasic Lands, Gain 2 Aura.",Every predator is eventually outgrown.,false,,,
@@ -2636,9 +2590,7 @@ D206,Delta,206,Rootbound Rebuke,Green,common,{1}{G},Mudra,,,"Target creature you
 If you control an Artifact, this Technique costs {1} less to play.","Target creature you control deals damage equal to its attack to target creature you do not control.
 If you control an Artifact, this Technique costs {1} less to play.",Roots split stone given enough seasons.,false,,,
 D207,Delta,207,Living Surge,Green,uncommon,{2}{G},Mudra,,,target creature gets +4/+4 until end of Round. If it gains Extra fighting damage beyond a responder's defense hits the responding player. Look at the top card of your deck; you may put it into your Pit.,target creature gets +4/+4 until end of Round. If it gains Extra fighting damage beyond a responder's defense hits the responding player. Look at the top card of your deck; you may put it into your Pit.,Roots split stone given enough seasons.,false,,,
-D208,Delta,208,Deepwood Strike,Green,common,{G},Mudra,,,"Straighten target creature you control. It gets +1/+2 and gains Can respond to Airborne creatures until end of Round.
-If you spent Energy of two or more colors to play this Technique, Pick a card.","Straighten target creature you control. It gets +1/+2 and gains Can respond to Airborne creatures until end of Round.
-If you spent Energy of two or more colors to play this Technique, Pick a card.","Listen to the forest, and you will never run dry.",false,,,
+D208,Delta,208,Deepwood Strike,Green,common,{G},Mudra,,,Straighten target creature you control. It gets +1/+2 and gains Can respond to Airborne creatures until end of Round.,Straighten target creature you control. It gets +1/+2 and gains Can respond to Airborne creatures until end of Round.,"Listen to the forest, and you will never run dry.",false,,,
 D209,Delta,209,Briar Twist,Green,uncommon,{1}{G},Mudra,,,"Prevent all fighting damage that would be dealt this Round. Gain 2 Aura.
 If you control two or more nonbasic Lands, Gain 2 Aura.","Prevent all fighting damage that would be dealt this Round. Gain 2 Aura.
 If you control two or more nonbasic Lands, Gain 2 Aura.",The wild does not hate the wall; it simply outlives it.,false,,,
@@ -2659,9 +2611,7 @@ D215,Delta,215,Blooming Command,Green,uncommon,{1}{G},Mantra,,,"Return target pe
 If you control an Artifact, this Technique costs {1} less to play.","Return target permanent card from your Pit to your hand. Gain 1 Aura.
 If you control an Artifact, this Technique costs {1} less to play.",Every predator is eventually outgrown.,false,,,
 D216,Delta,216,Blooming Cataclysm,Green,common,{2}{G},Mantra,,,"Look at the top four cards of your deck. Show a creature or Land from among them, put it into your hand, and the rest on the bottom. Look at the top card of your deck; you may put it into your Pit.","Look at the top four cards of your deck. Show a creature or Land from among them, put it into your hand, and the rest on the bottom. Look at the top card of your deck; you may put it into your Pit.",Roots split stone given enough seasons.,false,,,
-D217,Delta,217,Overgrown Collapse,Green,rare,{3}{G},Mantra,,,"Put two Aura Stacks (+1/+1) on each of up to two target creatures you control.
-If you spent Energy of two or more colors to play this Technique, Pick a card.","Put two Aura Stacks (+1/+1) on each of up to two target creatures you control.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",Every predator is eventually outgrown.,false,,,
+D217,Delta,217,Overgrown Collapse,Green,rare,{3}{G},Mantra,,,"Put two Aura Stacks (+1/+1) on target creature you control. If you spent Energy of two or more colors to play this Technique, that creature deals damage equal to its attack to up to one target creature you do not control.","Put two Aura Stacks (+1/+1) on target creature you control. If you spent Energy of two or more colors to play this Technique, that creature deals damage equal to its attack to up to one target creature you do not control.",Every predator is eventually outgrown.,false,,,
 D218,Delta,218,Rootbound Ascent,Green,common,{1}{G},Mantra,,,"Target creature you control gets +2/+2 until end of Round, then deals damage equal to its attack to target creature an opponent controls.
 If you control two or more nonbasic Lands, Gain 2 Aura.","Target creature you control gets +2/+2 until end of Round, then deals damage equal to its attack to target creature an opponent controls.
 If you control two or more nonbasic Lands, Gain 2 Aura.","Listen to the forest, and you will never run dry.",false,,,
@@ -2669,10 +2619,8 @@ D219,Delta,219,Wild Renewal,Green,rare,{3}{G}{G},Mantra,,,"Search your deck for 
 If you control an Artifact, this Technique costs {1} less to play.","Search your deck for a creature card, put it into your hand, then shuffle. Creatures you control get +2/+2 until end of Round.
 If you control an Artifact, this Technique costs {1} less to play.",The wild does not hate the wall; it simply outlives it.,false,,,
 D220,Delta,220,Bark Crest,Green,common,{G},Seal — Binding,,,"Bind to target Land.
-Whenever bound Land is Turned for Energy, add an additional {G} to your Energy pool.
-If you spent Energy of two or more colors to play this Technique, Pick a card.","Bind to target Land.
-Whenever bound Land is Turned for Energy, add an additional {G} to your Energy pool.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",The wild does not hate the wall; it simply outlives it.,false,,,
+Whenever bound Land is Turned for Energy, add an additional {G} to your Energy pool.","Bind to target Land.
+Whenever bound Land is Turned for Energy, add an additional {G} to your Energy pool.",The wild does not hate the wall; it simply outlives it.,false,,,
 D221,Delta,221,Emerald Blessing,Green,uncommon,{G},Seal — Binding,,,"Bind to target creature. Bound creature gets +2/+0.
 When this Seal leaves play, return it to your hand.
 If you control two or more nonbasic Lands, Gain 2 Aura.","Bind to target creature. Bound creature gets +2/+0.
@@ -2782,18 +2730,14 @@ Whenever another creature comes into play under your control, put an Aura Stack 
 D261,Delta,261,Tidebound Stag,Multicolor,rare,{3}{W}{B},Creature — Beast,5,5,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 Once your Maintenance phase begins: each opponent loses 1 Aura and Gain 1 Aura.","Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 Once your Maintenance phase begins: each opponent loses 1 Aura and Gain 1 Aura.","At the seam of opposing forces, miracles ignite.",false,,,
-D262,Delta,262,Emberlight Sovereign,Multicolor,rare,{3}{U}{R},Creature — Spirit,5,5,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
-During odd Rounds, whenever any player plays a Mudra, it deals 1 damage to any target.
-During even Rounds, whenever any player plays a Mantra, that player Picks Up a card and puts a card from their hand into the Pit.","Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
-During odd Rounds, whenever any player plays a Mudra, it deals 1 damage to any target.
-During even Rounds, whenever any player plays a Mantra, that player Picks Up a card and puts a card from their hand into the Pit.",Balance is not compromise; it is mastery.,false,,,
-D263,Delta,263,Sunash Crow,Multicolor,rare,{3}{B}{G},Creature — Avian,5,5,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
-Once your Maintenance phase begins: put the top 2 cards of your deck into the Pit; you may return a Land from your Pit to your hand.","Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
-Once your Maintenance phase begins: put the top 2 cards of your deck into the Pit; you may return a Land from your Pit to your hand.","At the seam of opposing forces, miracles ignite.",false,,,
-D264,Delta,264,Oathbreaker Seer,Multicolor,rare,{3}{R}{W},Creature — Wizard,5,5,Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures). Confronting creatures you control get +1/+0 and gain Confronting does not cause this creature to Turn.,Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures). Confronting creatures you control get +1/+0 and gain Confronting does not cause this creature to Turn.,"At the seam of opposing forces, miracles ignite.",false,,,
-D265,Delta,265,Twinfire Lion,Multicolor,rare,{3}{G}{U},Creature — Feline,5,5,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
-Whenever a Land comes into play under your control, look at the top card of your deck; if it is a Land, you may show it and put it into your hand.","Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
-Whenever a Land comes into play under your control, look at the top card of your deck; if it is a Land, you may show it and put it into your hand.","At the seam of opposing forces, miracles ignite.",false,,,
+D262,Delta,262,Emberlight Sovereign,Multicolor,rare,{3}{U}{R},Creature — Spirit,4,4,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+Whenever you play your first Mudra each Round, this creature gets +2/+0 until end of Round.","Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+Whenever you play your first Mudra each Round, this creature gets +2/+0 until end of Round.",Balance is not compromise; it is mastery.,false,,,
+D263,Delta,263,Sunash Crow,Multicolor,rare,{3}{B}{G},Creature — Avian,3,4,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+Whenever a Land comes into play under your control, you may return target creature card from your Pit to your hand.","Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+Whenever a Land comes into play under your control, you may return target creature card from your Pit to your hand.","At the seam of opposing forces, miracles ignite.",false,,,
+D264,Delta,264,Oathbreaker Seer,Multicolor,rare,{3}{R}{W},Creature — Wizard,4,4,"Whenever this creature confronts, Turn target creature an opponent controls. Confronting creatures you control get +1/+0.","Whenever this creature confronts, Turn target creature an opponent controls. Confronting creatures you control get +1/+0.","At the seam of opposing forces, miracles ignite.",false,,,
+D265,Delta,265,Twinfire Lion,Multicolor,rare,{3}{G}{U},Creature — Feline,4,5,"Whenever a Land comes into play under your control, target creature you control gains Can respond to Airborne creatures until end of Round. If that Land is nonbasic, put an Aura Stack (+1/+1) on that creature.","Whenever a Land comes into play under your control, target creature you control gains Can respond to Airborne creatures until end of Round. If that Land is nonbasic, put an Aura Stack (+1/+1) on that creature.","At the seam of opposing forces, miracles ignite.",false,,,
 D266,Delta,266,Aether Colossus,Artifact,rare,{1},Artifact Creature — Construct,1,1,"Extra fighting damage beyond a responder's defense hits the responding player.
 {1}, {TURN}: Turn target Artifact or creature with attack 1 or less.
 When this creature is put into the Pit from play, Pick a card.","Extra fighting damage beyond a responder's defense hits the responding player.

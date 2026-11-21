@@ -1,7 +1,6 @@
 ﻿set,name,color,rarity,energy_cost,card_type,power,toughness,rules_text,flavor_text
-Delta,Gilded Ram,White,rare,{W},Creature — Beast,2,2,"Confronting does not cause this creature to Turn.
-{1}{W}, {TURN}: Prevent the next 2 damage that would be dealt to target creature this Round.
-When this creature leaves play, straighten target Land you control.",
+Delta,Gilded Ram,White,rare,{1}{W},Creature — Beast,2,2,"Confronting does not cause this creature to Turn.
+{1}{W}, {TURN}: Prevent the next 2 damage that would be dealt to target creature this Round.",
 Delta,Sunmane Panther,White,common,{W},Creature — Feline,1,1,"Deals fighting damage before other creatures.
 Whenever you gain Aura, this creature gets +1/+0 until end of Round.",
 Delta,Chalice Stag,White,common,{1}{W},Creature — Beast,2,1,"Deals fighting damage before other creatures.
@@ -44,15 +43,13 @@ Delta,Bellwing Owl,White,rare,{2}{W}{W},Creature — Avian,5,5,"Airborne (can on
 When this creature leaves play, straighten target Land you control.",
 Delta,Steadfast Crane,White,common,{4}{W},Creature — Avian,5,4,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 {2}{W}: target creature you control gets +0/+2 until end of Round.",Light endures long after the banner falls.
-Delta,Dawn Twist,White,uncommon,{W},Mudra,,,"Extinguish target confronting creature. Its controller Picks Up a card once the next Maintenance phase begins.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",Light endures long after the banner falls.
+Delta,Dawn Twist,White,uncommon,{W},Mudra,,,Extinguish target confronting creature. Its controller Picks Up a card once the next Maintenance phase begins.,Light endures long after the banner falls.
 Delta,Bellwing Rupture,White,common,{1}{W},Mudra,,,"target creature you control gets +2/+2 until end of Round. Straighten it.
 If you control two or more nonbasic Lands, Gain 2 Aura.","Stand together, and the storm breaks around you."
 Delta,Haloed Bolt,White,common,{1}{W},Mudra,,,"Eliminate target Artifact or Seal. Gain 2 Aura.
 If you control an Artifact, this Technique costs {1} less to play.","Stand together, and the storm breaks around you."
 Delta,Spire Twist,White,uncommon,{2}{W},Mudra,,,Prevent all fighting damage creatures you do not control would deal this Round. Pick a card once the next Maintenance phase begins. Look at the top card of your deck; you may put it into your Pit.,The dawn asks no permission to rise.
-Delta,Marble Pulse,White,common,{W},Mudra,,,"Prevent the next 3 damage that would be dealt to target creature or player this Round, and straighten that creature.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",The dawn asks no permission to rise.
+Delta,Marble Pulse,White,common,{W},Mudra,,,"Prevent the next 3 damage that would be dealt to target creature this Round. If you control an Artifact, straighten that creature.",The dawn asks no permission to rise.
 Delta,Silver Pulse,White,rare,{1}{W}{W},Mudra,,,"Extinguish target Turned creature. Gain Aura equal to its toughness.
 If you control two or more nonbasic Lands, Gain 2 Aura.",Light endures long after the banner falls.
 Delta,Vigilant Wave,White,common,{2}{W},Mudra,,,"Turn up to two target creatures. Gain 2 Aura.
@@ -60,8 +57,7 @@ If you control an Artifact, this Technique costs {1} less to play.","Stand toget
 Delta,Dawn Break,White,uncommon,{1}{W},Mudra,,,Target creature you control gains cannot be targeted by opponents' Techniques or abilities until end of Round. Pick a card. Look at the top card of your deck; you may put it into your Pit.,Every vow carries weight on the field.
 Delta,Vigilant Pulse,White,rare,{3}{W},Mudra,,,"Creatures you control get +2/+1 and gain Confronting does not cause this creature to Turn until end of Round.
 If you spent Energy of two or more colors to play this Technique, Pick a card.",Light endures long after the banner falls.
-Delta,Aegis Decree,White,rare,{2}{W}{W},Mantra,,,"Eliminate all creatures with attack 3 or greater. Gain 1 Aura for each creature eliminated this way.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",The dawn asks no permission to rise.
+Delta,Aegis Decree,White,rare,{2}{W}{W},Mantra,,,"Eliminate all confronting creatures. If you spent Energy of two or more colors to play this Technique, straighten up to two target creatures you control.",The dawn asks no permission to rise.
 Delta,Bright Harvest,White,rare,{3}{W}{W},Mantra,,,"Eliminate all creatures and Seals. Each player gains 3 Aura.
 If you control two or more nonbasic Lands, Gain 2 Aura.",Every vow carries weight on the field.
 Delta,Sovereign Harvest,White,common,{1}{W},Mantra,,,"Search your deck for a Binding or Artifact costing 2 or less, show it, put it into your hand, then shuffle.
@@ -133,8 +129,7 @@ Delta,Frost Wisp,Blue,rare,{2}{U}{U},Creature — Spirit,3,5,"Cannot be targeted
 Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.",To know the next move is to already hold victory.
 Delta,Horizon Owl,Blue,common,{4}{U},Creature — Avian,3,5,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 When this creature comes into play, Pick a card, then put a card from your hand into the Pit.",Still water remembers every shadow.
-Delta,Crystal Shatter,Blue,common,{U}{U},Mudra,,,"Cancel target Technique. Look at the top 1 cards of your deck; put any on the bottom in any order.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",The tide takes what is offered and returns what it chooses.
+Delta,Crystal Shatter,Blue,common,{1}{U}{U},Mudra,,,"Cancel target Technique. If you spent Energy of two or more colors to play this Technique, return up to one target Artifact to its owner's hand.",The tide takes what is offered and returns what it chooses.
 Delta,Frost Snare,Blue,common,{1}{U},Mudra,,,"Cancel target Technique unless its controller pays {2}.
 During even Rounds, they must pay {4} instead.
 If you control two or more nonbasic Lands, Gain 2 Aura.",Curiosity is the sharpest current in the sea.
@@ -170,8 +165,7 @@ If you control two or more nonbasic Lands, Gain 2 Aura.",A single ripple unravel
 Delta,Drifting Dominion,Blue,uncommon,{1}{U},Seal,,,"Whenever you cancel a Technique, Pick a card, then put a card from your hand into the Pit.
 If you control an Artifact, this Technique costs {1} less to play.",A single ripple unravels the grandest design.
 Delta,Glimmering Pact,Blue,uncommon,{2}{U},Seal,,,"During even Rounds, Mudra Techniques cost {1} less for all players to play. Look at the top card of your deck; you may put it into your Pit.",To know the next move is to already hold victory.
-Delta,Chrono Tether,Blue,common,{U},Seal — Binding,,,"Bind to target creature. Bound creature gets +1/+0 and gains Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
-If you spent Energy of two or more colors to play this Technique, Pick a card.",The tide takes what is offered and returns what it chooses.
+Delta,Chrono Tether,Blue,common,{U},Seal — Binding,,,Bind to target creature. Bound creature gets +1/+0 and gains Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).,The tide takes what is offered and returns what it chooses.
 Delta,Still Presence,Blue,rare,{3}{U},Seal,,,"Once each even Round's Maintenance phase begins: the active player Picks Up an additional card.
 If you control two or more nonbasic Lands, Gain 2 Aura.",The tide takes what is offered and returns what it chooses.
 Delta,Umbral Devourer,Black,rare,{B},Creature — Fiend,1,1,"Any damage this deals to a creature sends it to the Pit.
@@ -231,15 +225,13 @@ If you control an Artifact, this Technique costs {1} less to play.",Ash remember
 Delta,Obsidian Wave,Black,common,{B},Mudra,,,Return target creature card from your Pit to your hand. You lose 1 Aura. Look at the top card of your deck; you may put it into your Pit.,Survival favors those willing to pay the toll.
 Delta,Cindered Gesture,Black,uncommon,{1}{B},Mudra,,,"Target opponent loses 2 Aura and Gain 2 Aura. If a creature Folded this Round, Pick a card.
 If you spent Energy of two or more colors to play this Technique, Pick a card.","In the quiet dark, every ambition grows teeth."
-Delta,Hollow Ascent,Black,common,{B},Mantra,,,"Target opponent shows their hand; choose a card and put it into their Pit (they reveal their hand; choose a noncreature, nonland card and put it into their Pit and lose 1 Aura).
-If you spent Energy of two or more colors to play this Technique, Pick a card.",Ash remembers the fire that made it.
+Delta,Hollow Ascent,Black,common,{B},Mantra,,,"Target opponent shows their hand; choose a card and put it into their Pit (they reveal their hand; choose a noncreature, nonland card and put it into their Pit and lose 1 Aura).",Ash remembers the fire that made it.
 Delta,Gloom Invocation,Black,uncommon,{1}{B},Mantra,,,"Target opponent puts two cards from their hand into the Pit unless they pay 3 Aura.
 If you control two or more nonbasic Lands, Gain 2 Aura.",What falls is seldom finished.
 Delta,Gloom Tide,Black,uncommon,{2}{B},Mantra,,,"Return target creature card from your Pit to play. You lose 2 Aura and it comes into play Turned.
 If you control an Artifact, this Technique costs {1} less to play.",What falls is seldom finished.
 Delta,Fading Harvest,Black,common,{1}{B},Mantra,,,Pick two cards and lose 2 Aura. You may put a card from your hand into your Pit to Gain 2 Aura. Look at the top card of your deck; you may put it into your Pit.,What falls is seldom finished.
-Delta,Grim Vision,Black,rare,{2}{B}{B},Mantra,,,"All creatures get -3/-3 until end of Round. Gain 1 Aura for each creature that is put into the Pit from play this way.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",What falls is seldom finished.
+Delta,Grim Vision,Black,rare,{2}{B}{B},Mantra,,,"All creatures get -2/-2 until end of Round. If you spent Energy of two or more colors to play this Technique, each opponent loses 1 Aura for each creature they controlled that is put into the Pit from play this way.",What falls is seldom finished.
 Delta,Silent Renewal,Black,uncommon,{3}{B},Mantra,,,"Search your deck for a card, put it into your Pit, then Pick a card.
 If you control two or more nonbasic Lands, Gain 2 Aura.",Nothing is truly free; some prices are simply paid later.
 Delta,Nocturne Renewal,Black,rare,{1}{B}{B},Mantra,,,"Search your deck for any card, show it, put it into your hand, and lose 3 Aura. Then shuffle.
@@ -252,8 +244,7 @@ If you control two or more nonbasic Lands, Gain 2 Aura.",Ash remembers the fire 
 Delta,Dusk Dominion,Black,uncommon,{1}{B},Seal,,,"Whenever an opponent puts a card from their hand into the Pit, that player loses 1 Aura and Gain 1 Aura.
 If you control an Artifact, this Technique costs {1} less to play.",Nothing is truly free; some prices are simply paid later.
 Delta,Mourning Blessing,Black,rare,{2}{B},Seal,,,"Whenever a nontoken creature is put into the Pit from play, each opponent loses 1 Aura. Look at the top card of your deck; you may put it into your Pit.",Ash remembers the fire that made it.
-Delta,Withered Mark,Black,common,{B},Seal — Binding,,,"Bind to target creature. Bound creature gets -1/-1 and cannot be regenerated.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",Nothing is truly free; some prices are simply paid later.
+Delta,Withered Mark,Black,common,{B},Seal — Binding,,,Bind to target creature. Bound creature gets -1/-1 and cannot be regenerated.,Nothing is truly free; some prices are simply paid later.
 Delta,Nocturne Presence,Black,rare,{3}{B},Seal,,,"{2}{B}, Pay 2 Aura: Return target creature card from your Pit to your hand.
 If you control two or more nonbasic Lands, Gain 2 Aura.","In the quiet dark, every ambition grows teeth."
 Delta,Brimstone Hound,Red,rare,{R},Creature — Canine,2,1,"Can confront and Turn on the Round it comes into play.
@@ -302,8 +293,7 @@ When this creature comes into play, it deals 1 damage to target opponent.
 Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round.",
 Delta,Magma Raider,Red,common,{4}{R},Creature — Warrior,6,4,"Must be responded to by two or more creatures.
 {R}, put a card from your hand into the Pit: Pick a card.",
-Delta,Crackling Glimpse,Red,common,{R},Mudra,,,"This Mudra deals 3 damage to target creature, or 2 damage to target player.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",The mountain does not ask before it erupts.
+Delta,Crackling Glimpse,Red,common,{1}{R},Mudra,,,"This Mudra deals 2 damage to target creature. If you control an Artifact, it deals 3 damage instead.",The mountain does not ask before it erupts.
 Delta,Brimstone Shift,Red,common,{1}{R},Mudra,,,"This Mudra deals 2 damage to target creature or player.
 During even Rounds, it deals 3 damage instead.
 If you control two or more nonbasic Lands, Gain 2 Aura.",The mountain does not ask before it erupts.
@@ -319,8 +309,7 @@ If you control an Artifact, this Technique costs {1} less to play.",Spark become
 Delta,Cinder Flash,Red,uncommon,{R},Mudra,,,This Mudra deals 2 damage to target creature. That creature cannot respond this Round. Look at the top card of your deck; you may put it into your Pit.,The mountain does not ask before it erupts.
 Delta,Scarlet Rebuke,Red,rare,{1}{R}{R},Mudra,,,"Copy target Mudra or Mantra. You may choose new targets for the copy.
 If you spent Energy of two or more colors to play this Technique, Pick a card.","Strike first, and leave the planning to the ashes."
-Delta,Roaring Collapse,Red,uncommon,{2}{R},Mantra,,,"This Mantra deals 2 damage to each creature and 1 damage to each player.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",The mountain does not ask before it erupts.
+Delta,Roaring Collapse,Red,uncommon,{2}{R},Mantra,,,"This Mantra deals 2 damage to each creature without Airborne. If you control an Artifact, it also deals 1 damage to each opponent.",The mountain does not ask before it erupts.
 Delta,Crimson Chant,Red,uncommon,{2}{R},Mantra,,,"Eliminate target nonbasic Land. Its controller takes 1 damage.
 If you control two or more nonbasic Lands, Gain 2 Aura.",The mountain does not ask before it erupts.
 Delta,Pyre Collapse,Red,common,{1}{R},Mantra,,,"This Mantra deals 3 damage to target creature.
@@ -342,8 +331,7 @@ If you control two or more nonbasic Lands, Gain 2 Aura.",The mountain does not a
 Delta,Feral Field,Red,rare,{1}{R}{R},Seal,,,"Once each player's Maintenance phase begins: that player Extinguishes the top card of their deck and may play it this Round.
 If you control an Artifact, this Technique costs {1} less to play.","Strike first, and leave the planning to the ashes."
 Delta,Magma Crest,Red,rare,{2}{R},Seal,,,"During odd Rounds, if any source would deal damage to a player, it deals that much damage plus 1 instead. Look at the top card of your deck; you may put it into your Pit.",The mountain does not ask before it erupts.
-Delta,Ignited Shroud,Red,common,{R},Seal — Binding,,,"Bind to target creature. {R}: Bound creature gets +1/+0 until end of Round.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",Hesitation is just another word for defeat.
+Delta,Ignited Shroud,Red,common,{R},Seal — Binding,,,Bind to target creature. {R}: Bound creature gets +1/+0 until end of Round.,Hesitation is just another word for defeat.
 Delta,Brimstone Tether,Red,common,{2}{R},Seal — Binding,,,"Bind to target creature. Bound creature gets +2/+0 and gains Can confront and Turn on the Round it comes into play.
 If you control two or more nonbasic Lands, Gain 2 Aura.",Freedom burns brightest when cornered.
 Delta,Timber Sapling,Green,rare,{G},Creature — Flora,2,2,"Extra fighting damage beyond a responder's defense hits the responding player.
@@ -354,8 +342,7 @@ Delta,Deepwood Grovekeeper,Green,common,{1}{G},Creature — Spirit,3,2,"Cannot b
 {TURN}: Add {G} to your Energy pool.",
 Delta,Bramble Treant,Green,uncommon,{G}{G},Creature — Flora,3,2,"Can respond to Airborne creatures.
 {2}{G}, {TURN}: target creature gets +2/+2 until end of Round.",
-Delta,Oaken Treant,Green,common,{1}{G},Creature — Flora,3,2,"Cannot be targeted by opponents' Techniques or abilities.
-{TURN}: Add {G} to your Energy pool.",
+Delta,Oaken Treant,Green,common,{1}{G},Creature — Flora,2,3,{TURN}: Add {G} to your Energy pool. Activate only if you control two or more nonbasic Lands.,
 Delta,Blooming Briar,Green,common,{2}{G},Creature — Flora,4,4,"Can respond to Airborne creatures.
 {TURN}: Add {G} to your Energy pool.",
 Delta,Sunbark Mantis,Green,uncommon,{2}{G},Creature — Insect,4,4,"Cannot be targeted by opponents' Techniques or abilities.
@@ -392,15 +379,13 @@ Delta,Ancient Wolf,Green,rare,{2}{G}{G},Creature — Canine,6,6,"Extra fighting 
 Whenever this creature responds, it gets +0/+2 until end of Round.",
 Delta,Blooming Yaguareté,Green,common,{4}{G},Creature — Feline,6,5,"Confronting does not cause this creature to Turn.
 Whenever a Land comes into play under your control, this creature gets +1/+1 until end of Round.",
-Delta,Timber Strike,Green,common,{G},Mudra,,,"target creature gets +3/+3 until end of Round. If it responds to an Airborne creature, straighten it.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",Roots split stone given enough seasons.
+Delta,Timber Strike,Green,common,{G},Mudra,,,"target creature gets +3/+3 until end of Round. If it responds to an Airborne creature, straighten it.",Roots split stone given enough seasons.
 Delta,Rootbound Shatter,Green,common,{1}{G},Mudra,,,"Eliminate target Artifact or Seal. Look at the top 1 cards of your deck; put any on the bottom in any order.
 If you control two or more nonbasic Lands, Gain 2 Aura.",Every predator is eventually outgrown.
 Delta,Rootbound Rebuke,Green,common,{1}{G},Mudra,,,"Target creature you control deals damage equal to its attack to target creature you do not control.
 If you control an Artifact, this Technique costs {1} less to play.",Roots split stone given enough seasons.
 Delta,Living Surge,Green,uncommon,{2}{G},Mudra,,,target creature gets +4/+4 until end of Round. If it gains Extra fighting damage beyond a responder's defense hits the responding player. Look at the top card of your deck; you may put it into your Pit.,Roots split stone given enough seasons.
-Delta,Deepwood Strike,Green,common,{G},Mudra,,,"Straighten target creature you control. It gets +1/+2 and gains Can respond to Airborne creatures until end of Round.
-If you spent Energy of two or more colors to play this Technique, Pick a card.","Listen to the forest, and you will never run dry."
+Delta,Deepwood Strike,Green,common,{G},Mudra,,,Straighten target creature you control. It gets +1/+2 and gains Can respond to Airborne creatures until end of Round.,"Listen to the forest, and you will never run dry."
 Delta,Briar Twist,Green,uncommon,{1}{G},Mudra,,,"Prevent all fighting damage that would be dealt this Round. Gain 2 Aura.
 If you control two or more nonbasic Lands, Gain 2 Aura.",The wild does not hate the wall; it simply outlives it.
 Delta,Overgrown Rebuke,Green,rare,{2}{G},Mudra,,,"Pick cards equal to the greatest attack among creatures you control, then put a card from your hand into the Pit.
@@ -415,15 +400,13 @@ If you control two or more nonbasic Lands, Gain 2 Aura.",The wild does not hate 
 Delta,Blooming Command,Green,uncommon,{1}{G},Mantra,,,"Return target permanent card from your Pit to your hand. Gain 1 Aura.
 If you control an Artifact, this Technique costs {1} less to play.",Every predator is eventually outgrown.
 Delta,Blooming Cataclysm,Green,common,{2}{G},Mantra,,,"Look at the top four cards of your deck. Show a creature or Land from among them, put it into your hand, and the rest on the bottom. Look at the top card of your deck; you may put it into your Pit.",Roots split stone given enough seasons.
-Delta,Overgrown Collapse,Green,rare,{3}{G},Mantra,,,"Put two Aura Stacks (+1/+1) on each of up to two target creatures you control.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",Every predator is eventually outgrown.
+Delta,Overgrown Collapse,Green,rare,{3}{G},Mantra,,,"Put two Aura Stacks (+1/+1) on target creature you control. If you spent Energy of two or more colors to play this Technique, that creature deals damage equal to its attack to up to one target creature you do not control.",Every predator is eventually outgrown.
 Delta,Rootbound Ascent,Green,common,{1}{G},Mantra,,,"Target creature you control gets +2/+2 until end of Round, then deals damage equal to its attack to target creature an opponent controls.
 If you control two or more nonbasic Lands, Gain 2 Aura.","Listen to the forest, and you will never run dry."
 Delta,Wild Renewal,Green,rare,{3}{G}{G},Mantra,,,"Search your deck for a creature card, put it into your hand, then shuffle. Creatures you control get +2/+2 until end of Round.
 If you control an Artifact, this Technique costs {1} less to play.",The wild does not hate the wall; it simply outlives it.
 Delta,Bark Crest,Green,common,{G},Seal — Binding,,,"Bind to target Land.
-Whenever bound Land is Turned for Energy, add an additional {G} to your Energy pool.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",The wild does not hate the wall; it simply outlives it.
+Whenever bound Land is Turned for Energy, add an additional {G} to your Energy pool.",The wild does not hate the wall; it simply outlives it.
 Delta,Emerald Blessing,Green,uncommon,{G},Seal — Binding,,,"Bind to target creature. Bound creature gets +2/+0.
 When this Seal leaves play, return it to your hand.
 If you control two or more nonbasic Lands, Gain 2 Aura.",Strength grows deepest where the canopy is oldest.
@@ -499,14 +482,12 @@ Delta,Skyroot Crow,Multicolor,rare,{3}{G}{W},Creature — Avian,5,5,"Airborne (c
 Whenever another creature comes into play under your control, put an Aura Stack (+1/+1) on it and Gain 1 Aura.",Balance is not compromise; it is mastery.
 Delta,Tidebound Stag,Multicolor,rare,{3}{W}{B},Creature — Beast,5,5,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 Once your Maintenance phase begins: each opponent loses 1 Aura and Gain 1 Aura.","At the seam of opposing forces, miracles ignite."
-Delta,Emberlight Sovereign,Multicolor,rare,{3}{U}{R},Creature — Spirit,5,5,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
-During odd Rounds, whenever any player plays a Mudra, it deals 1 damage to any target.
-During even Rounds, whenever any player plays a Mantra, that player Picks Up a card and puts a card from their hand into the Pit.",Balance is not compromise; it is mastery.
-Delta,Sunash Crow,Multicolor,rare,{3}{B}{G},Creature — Avian,5,5,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
-Once your Maintenance phase begins: put the top 2 cards of your deck into the Pit; you may return a Land from your Pit to your hand.","At the seam of opposing forces, miracles ignite."
-Delta,Oathbreaker Seer,Multicolor,rare,{3}{R}{W},Creature — Wizard,5,5,Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures). Confronting creatures you control get +1/+0 and gain Confronting does not cause this creature to Turn.,"At the seam of opposing forces, miracles ignite."
-Delta,Twinfire Lion,Multicolor,rare,{3}{G}{U},Creature — Feline,5,5,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
-Whenever a Land comes into play under your control, look at the top card of your deck; if it is a Land, you may show it and put it into your hand.","At the seam of opposing forces, miracles ignite."
+Delta,Emberlight Sovereign,Multicolor,rare,{3}{U}{R},Creature — Spirit,4,4,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+Whenever you play your first Mudra each Round, this creature gets +2/+0 until end of Round.",Balance is not compromise; it is mastery.
+Delta,Sunash Crow,Multicolor,rare,{3}{B}{G},Creature — Avian,3,4,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
+Whenever a Land comes into play under your control, you may return target creature card from your Pit to your hand.","At the seam of opposing forces, miracles ignite."
+Delta,Oathbreaker Seer,Multicolor,rare,{3}{R}{W},Creature — Wizard,4,4,"Whenever this creature confronts, Turn target creature an opponent controls. Confronting creatures you control get +1/+0.","At the seam of opposing forces, miracles ignite."
+Delta,Twinfire Lion,Multicolor,rare,{3}{G}{U},Creature — Feline,4,5,"Whenever a Land comes into play under your control, target creature you control gains Can respond to Airborne creatures until end of Round. If that Land is nonbasic, put an Aura Stack (+1/+1) on that creature.","At the seam of opposing forces, miracles ignite."
 Delta,Aether Colossus,Artifact,rare,{1},Artifact Creature — Construct,1,1,"Extra fighting damage beyond a responder's defense hits the responding player.
 {1}, {TURN}: Turn target Artifact or creature with attack 1 or less.
 When this creature is put into the Pit from play, Pick a card.",Built to outlast the hands that shaped it.

@@ -75,7 +75,7 @@ Alpha,Gleaming Harvest,White,uncommon,{2}{W},Mantra,,,Return target creature car
 Alpha,Marble Reckoning,White,common,{1}{W},Mantra,,,Gain 5 Aura. Look at the top 2 cards of your deck; put any on the bottom in any order.,"Stand together, and the storm breaks around you."
 Alpha,Morning Awakening,White,uncommon,{3}{W},Mantra,,,"Eliminate target Artifact, Seal, or Turned creature. Gain 3 Aura.",Order is not tyranny; it is the shelter where the weak grow strong.
 Alpha,Bellwing Awakening,White,rare,{2}{W}{W},Mantra,,,Each player chooses two creatures they control and Extinguishes the rest.,Order is not tyranny; it is the shelter where the weak grow strong.
-Alpha,Sovereign Collapse,White,rare,{3}{W}{W},Mantra,,,Eliminate all creatures with attack 3 or greater. Gain 1 Aura for each creature eliminated this way. Pick a card once the next Maintenance phase begins.,"Stand together, and the storm breaks around you."
+Alpha,Sovereign Collapse,White,rare,{3}{W}{W},Mantra,,,Eliminate all Turned creatures. Each player gains 2 Aura.,"Stand together, and the storm breaks around you."
 Alpha,Silver Tether,White,common,{1}{W},Seal — Binding,,,"Bind to target creature. Bound creature cannot confront or respond, and its controller gains 1 Aura during their Maintenance phase.","Stand together, and the storm breaks around you."
 Alpha,Just Blessing,White,common,{W},Seal — Binding,,,Bind to target creature. Bound creature gets +1/+2 and gains Confronting does not cause this creature to Turn.,Order is not tyranny; it is the shelter where the weak grow strong.
 Alpha,Gilded Banner,White,rare,{1}{W}{W},Seal,,,"Creatures you control get +1/+1.
@@ -124,8 +124,7 @@ Alpha,Chrono Tideweaver,Blue,common,{2}{U},Creature — Wizard,1,4,"Can be playe
 When this creature comes into play, target creature gets -2/-0 until your next Round.",Curiosity is the sharpest current in the sea.
 Alpha,Astral Serpent,Blue,uncommon,{2}{U},Creature — Reptile,2,4,"Cannot be targeted by opponents' Techniques or abilities.
 Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.",
-Alpha,Arcane Dragonfly,Blue,common,{2}{U},Creature — Insect,2,4,"Cannot be targeted by opponents' Techniques or abilities.
-Whenever this creature deals fighting damage to a player, look at the top card of your deck; you may put it on the bottom.",
+Alpha,Arcane Dragonfly,Blue,common,{2}{U},Creature — Insect,2,3,"When this creature comes into play, target creature gets -2/-0 until your next Round.",
 Alpha,Lucid Albatross,Blue,common,{3}{U},Creature — Avian,3,5,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 During even Rounds, this creature cannot be responded to unless the responding player pays {2}.",The tide takes what is offered and returns what it chooses.
 Alpha,Mist Leviathan,Blue,rare,{2}{U}{U},Creature — Aquatic,4,5,"This creature cannot be responded to unless the responding player pays {1}.
@@ -163,7 +162,7 @@ Alpha,Still Renewal,Blue,rare,{4}{U},Mantra,,,Pick three cards and straighten up
 Alpha,Deep Chant,Blue,uncommon,{2}{U},Mantra,,,Exchange control of target Artifact you control and target Artifact an opponent controls.,The tide takes what is offered and returns what it chooses.
 Alpha,Tidal Convergence,Blue,common,{1}{U},Mantra,,,Target player puts the top 4 cards of their deck into the Pit (sends the top 4 cards of their deck to their Pit). Pick a card.,Curiosity is the sharpest current in the sea.
 Alpha,Skyward Tide,Blue,uncommon,{3}{U},Mantra,,,Each player Picks two cards if this is an even Round; otherwise look at target opponent's hand and return a permanent they control to their hand.,To know the next move is to already hold victory.
-Alpha,Chrono Omen,Blue,common,{3}{U},Mantra,,,"Pick two cards, then put a card from your hand into the Pit unless you played no other Techniques this Round. Pick a card once the next Maintenance phase begins.",To know the next move is to already hold victory.
+Alpha,Chrono Omen,Blue,common,{3}{U},Mantra,,,"Pick two cards. If you played another Technique this Round, look at the top card of your deck; you may put it on the bottom.",To know the next move is to already hold victory.
 Alpha,Astral Pact,Blue,common,{1}{U},Seal — Binding,,,Bind to target creature. Bound creature does not straighten during its controller's Straighten phase unless they pay {2}.,The tide takes what is offered and returns what it chooses.
 Alpha,Lucid Beacon,Blue,rare,{2}{U}{U},Seal — Binding,,,Bind to target creature with Energy cost 4 or less. You Take control of bound creature.,Curiosity is the sharpest current in the sea.
 Alpha,Sunken Tether,Blue,uncommon,{1}{U},Seal,,,"Whenever you cancel a Technique, Pick a card, then put a card from your hand into the Pit.",Still water remembers every shadow.
@@ -237,8 +236,8 @@ Alpha,Obsidian Snare,Black,rare,{1}{B}{B},Mudra,,,Eliminate target creature. It 
 Alpha,Ruinous Riposte,Black,common,{2}{B},Mudra,,,Target creature gets -3/-3 until end of Round. Look at the top 1 cards of your deck; put any on the bottom in any order.,"In the quiet dark, every ambition grows teeth."
 Alpha,Obsidian Twist,Black,common,{B},Mudra,,,Return target creature card from your Pit to your hand. You lose 1 Aura.,What falls is seldom finished.
 Alpha,Sable Pulse,Black,uncommon,{1}{B},Mudra,,,"Target opponent loses 2 Aura and Gain 2 Aura. If a creature Folded this Round, Pick a card.",Nothing is truly free; some prices are simply paid later.
-Alpha,Cindered Surge,Black,common,{2}{B},Mudra,,,Eliminate target nonblack creature. You lose 1 Aura. Pick a card once the next Maintenance phase begins.,Nothing is truly free; some prices are simply paid later.
-Alpha,Blight Flash,Black,common,{1}{B},Mudra,,,"Target creature gets -2/-2 until end of Round. If it is put into the Pit from play this Round, Gain 1 Aura. Pick a card once the next Maintenance phase begins.",Survival favors those willing to pay the toll.
+Alpha,Cindered Surge,Black,common,{2}{B},Mudra,,,Eliminate target creature that was dealt damage this Round. Gain 2 Aura.,Nothing is truly free; some prices are simply paid later.
+Alpha,Blight Flash,Black,common,{1}{B},Mudra,,,Target creature gets -1/-3 until end of Round.,Survival favors those willing to pay the toll.
 Alpha,Pale Verdict,Black,common,{B},Mantra,,,"Target opponent shows their hand; choose a card and put it into their Pit (they reveal their hand; choose a noncreature, nonland card and put it into their Pit and lose 1 Aura).","In the quiet dark, every ambition grows teeth."
 Alpha,Crypt Renewal,Black,uncommon,{1}{B},Mantra,,,Target opponent puts two cards from their hand into the Pit unless they pay 3 Aura.,Nothing is truly free; some prices are simply paid later.
 Alpha,Veiled Tide,Black,uncommon,{2}{B},Mantra,,,Return target creature card from your Pit to play. You lose 2 Aura and it comes into play Turned.,Survival favors those willing to pay the toll.
@@ -313,8 +312,7 @@ Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round
 Alpha,Pyre Hawk,Red,rare,{1}{R},Creature — Avian,4,2,"Airborne (can only be responded to by Airborne creatures or creatures that can respond to Airborne creatures).
 Whenever you play a Mudra or Mantra, this creature gets +1/+0 until end of Round.",The mountain does not ask before it erupts.
 Alpha,Pyre Strike,Red,common,{R},Mudra,,,"This Mudra deals 3 damage to target creature, or 2 damage to target player.",Freedom burns brightest when cornered.
-Alpha,Spark Twist,Red,common,{1}{R},Mudra,,,"This Mudra deals 2 damage to target creature or player.
-During even Rounds, it deals 3 damage instead.",Freedom burns brightest when cornered.
+Alpha,Spark Twist,Red,common,{1}{R},Mudra,,,This Mudra deals 1 damage to up to two target creatures.,Freedom burns brightest when cornered.
 Alpha,Crackling Spark,Red,common,{1}{R},Mudra,,,Eliminate target Artifact. This Mudra deals 1 damage to its controller.,"Strike first, and leave the planning to the ashes."
 Alpha,Cinder Spark,Red,common,{R},Mudra,,,Target creature gets +3/+0 and gains Deals fighting damage before other creatures until end of Round.,The mountain does not ask before it erupts.
 Alpha,Ignited Bolt,Red,uncommon,{2}{R},Mudra,,,This Mudra deals 4 damage to target creature or 3 damage to target player.,Spark becomes flame; flame becomes legend.
@@ -323,7 +321,7 @@ Alpha,Spark Veil,Red,uncommon,{2}{R},Mudra,,,This Mudra deals 2 damage divided a
 Alpha,Crackling Flash,Red,uncommon,{R},Mudra,,,This Mudra deals 2 damage to target creature. That creature cannot respond this Round.,The mountain does not ask before it erupts.
 Alpha,Ember Snare,Red,rare,{1}{R}{R},Mudra,,,Copy target Mudra or Mantra. You may choose new targets for the copy.,Hesitation is just another word for defeat.
 Alpha,Feral Veil,Red,rare,{3}{R},Mudra,,,This Mudra deals 5 damage to target creature. Excess damage is dealt to that creature's controller.,Hesitation is just another word for defeat.
-Alpha,Feral Shatter,Red,common,{1}{R},Mudra,,,"This Mudra deals 3 damage to target creature, or 2 damage to target player. Pick a card once the next Maintenance phase begins.",The mountain does not ask before it erupts.
+Alpha,Feral Shatter,Red,common,{1}{R},Mudra,,,This Mudra deals 3 damage to target confronting creature. Its controller loses 1 Aura.,The mountain does not ask before it erupts.
 Alpha,Molten Reckoning,Red,uncommon,{2}{R},Mantra,,,This Mantra deals 2 damage to each creature and 1 damage to each player.,Freedom burns brightest when cornered.
 Alpha,Feral Command,Red,uncommon,{2}{R},Mantra,,,Eliminate target nonbasic Land. Its controller takes 1 damage.,The mountain does not ask before it erupts.
 Alpha,Molten Harvest,Red,common,{1}{R},Mantra,,,"This Mantra deals 3 damage to target creature.
@@ -346,7 +344,7 @@ During even Rounds, confronting creatures get +1/+0. Pick a card once the next M
 Alpha,Heartwood Sapling,Green,rare,{G},Creature — Flora,2,2,"Extra fighting damage beyond a responder's defense hits the responding player.
 When this creature is put into the Pit from play, Search your deck for a basic Land card, show it, put it into your hand, then shuffle.
 {1}{G}: This creature gets +1/+1 until end of Round. Play this ability only once each Round.",Strength grows deepest where the canopy is oldest.
-Alpha,Overgrown Grizzly,Green,common,{G},Creature — Beast,2,2,"When this creature comes into play, Gain 2 Aura and straighten target Land.",
+Alpha,Overgrown Grizzly,Green,common,{G},Creature — Beast,2,2,"When this creature comes into play, Gain 1 Aura.",
 Alpha,Vine Jaguar,Green,common,{1}{G},Creature — Feline,2,3,"Extra fighting damage beyond a responder's defense hits the responding player.
 {1}{G}: This creature gets +1/+1 until end of Round. Play this ability only once each Round.",
 Alpha,Vine Grovekeeper,Green,uncommon,{G}{G},Creature — Spirit,3,3,"Extra fighting damage beyond a responder's defense hits the responding player.
@@ -392,7 +390,7 @@ Alpha,Fern Briar,Green,common,{4}{G},Creature — Flora,6,6,{1}{G}: This creatur
 Alpha,Emerald Tortoise,Green,common,{5}{G},Creature — Reptile,6,7,"When this creature comes into play, put an Aura Stack (+1/+1) on another target creature you control.",
 Alpha,Timber Tracker,Green,uncommon,{G},Creature — Warrior,1,1,"Extra fighting damage beyond a responder's defense hits the responding player.
 When this creature comes into play, Gain 2 Aura and straighten target Land.",
-Alpha,Rootbound Elderwood,Green,common,{G},Creature — Flora,2,2,"When this creature comes into play, Gain 2 Aura and straighten target Land.",
+Alpha,Rootbound Elderwood,Green,common,{1}{G},Creature — Flora,1,3,"When this creature is put into the Pit from play, Search your deck for a basic Land card, show it, put it into your hand, then shuffle.",
 Alpha,Emerald Basilisk,Green,common,{1}{G},Creature — Reptile,3,3,"Cannot be targeted by opponents' Techniques or abilities.
 Whenever a Land comes into play under your control, this creature gets +1/+1 until end of Round.",Every predator is eventually outgrown.
 Alpha,Canopy Dewspirit,Green,uncommon,{G}{G},Creature — Spirit,2,3,"Cannot be targeted by opponents' Techniques or abilities.
@@ -407,9 +405,9 @@ Alpha,Fern Bolt,Green,uncommon,{2}{G},Mudra,,,target creature gets +4/+4 until e
 Alpha,Primal Snare,Green,common,{G},Mudra,,,Straighten target creature you control. It gets +1/+2 and gains Can respond to Airborne creatures until end of Round.,Strength grows deepest where the canopy is oldest.
 Alpha,Verdant Break,Green,uncommon,{1}{G},Mudra,,,Prevent all fighting damage that would be dealt this Round. Gain 2 Aura.,Roots split stone given enough seasons.
 Alpha,Wild Pulse,Green,rare,{2}{G},Mudra,,,"Pick cards equal to the greatest attack among creatures you control, then put a card from your hand into the Pit.",The wild does not hate the wall; it simply outlives it.
-Alpha,Heartwood Wave,Green,common,{1}{G},Mudra,,,"target creature gets +3/+3 until end of Round. If it responds to an Airborne creature, straighten it. Pick a card once the next Maintenance phase begins.","Listen to the forest, and you will never run dry."
+Alpha,Heartwood Wave,Green,common,{1}{G},Mudra,,,Target creature you control gets +1/+3 and gains Can respond to Airborne creatures until end of Round.,"Listen to the forest, and you will never run dry."
 Alpha,Heartwood Rupture,Green,common,{2}{G},Mudra,,,Eliminate target Artifact or Seal. Look at the top 1 cards of your deck; put any on the bottom in any order. Pick a card once the next Maintenance phase begins.,The wild does not hate the wall; it simply outlives it.
-Alpha,Grove Twist,Green,common,{2}{G},Mudra,,,Target creature you control deals damage equal to its attack to target creature you do not control. Pick a card once the next Maintenance phase begins.,Roots split stone given enough seasons.
+Alpha,Grove Twist,Green,common,{2}{G},Mudra,,,Target creature you control deals damage equal to its attack to target Airborne creature an opponent controls. Put an Aura Stack (+1/+1) on your creature.,Roots split stone given enough seasons.
 Alpha,Dew Twist,Green,uncommon,{3}{G},Mudra,,,target creature gets +4/+4 until end of Round. If it gains Extra fighting damage beyond a responder's defense hits the responding player. Pick a card once the next Maintenance phase begins.,Strength grows deepest where the canopy is oldest.
 Alpha,Bramble Reckoning,Green,common,{1}{G},Mantra,,,"Search your deck for a basic Land card, put it into play Turned, then shuffle. Gain 1 Aura.","Listen to the forest, and you will never run dry."
 Alpha,Vine Ascent,Green,common,{2}{G},Mantra,,,"Search your deck for up to two Land cards, put one into play Turned and one into your hand, then shuffle.",Strength grows deepest where the canopy is oldest.
@@ -418,7 +416,7 @@ Alpha,Ancient Cataclysm,Green,common,{2}{G},Mantra,,,"Look at the top four cards
 Alpha,Oaken Chant,Green,rare,{3}{G},Mantra,,,Put two Aura Stacks (+1/+1) on each of up to two target creatures you control.,"Listen to the forest, and you will never run dry."
 Alpha,Bramble Ascent,Green,common,{1}{G},Mantra,,,"Target creature you control gets +2/+2 until end of Round, then deals damage equal to its attack to target creature an opponent controls.",The wild does not hate the wall; it simply outlives it.
 Alpha,Rootbound Pact,Green,rare,{3}{G}{G},Mantra,,,"Search your deck for a creature card, put it into your hand, then shuffle. Creatures you control get +2/+2 until end of Round.","Listen to the forest, and you will never run dry."
-Alpha,Thorn Invocation,Green,common,{2}{G},Mantra,,,"Search your deck for a basic Land card, put it into play Turned, then shuffle. Gain 1 Aura. Pick a card once the next Maintenance phase begins.",The wild does not hate the wall; it simply outlives it.
+Alpha,Thorn Invocation,Green,common,{2}{G},Mantra,,,"Return target Land card from your Pit to play Turned. If you control a creature with attack 4 or greater, Pick a card.",The wild does not hate the wall; it simply outlives it.
 Alpha,Verdant Pact,Green,common,{G},Seal — Binding,,,"Bind to target Land.
 Whenever bound Land is Turned for Energy, add an additional {G} to your Energy pool.",Every predator is eventually outgrown.
 Alpha,Emerald Beacon,Green,uncommon,{G},Seal — Binding,,,"Bind to target creature. Bound creature gets +2/+0.

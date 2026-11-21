@@ -88,8 +88,7 @@ Beta,Bright Veil,White,common,{W},Mudra,,,"target creature gets +1/+3 until end 
 {2}, Put this card from your hand into the Pit: Pick a card.",Light endures long after the banner falls.
 Beta,Lumen Riposte,White,uncommon,{1}{W},Mudra,,,"Extinguish target confronting creature. Its controller Picks Up a card once the next Maintenance phase begins.
 Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Order is not tyranny; it is the shelter where the weak grow strong.
-Beta,Radiant Tempest,White,rare,{2}{W}{W},Mantra,,,"Eliminate all creatures with attack 3 or greater. Gain 1 Aura for each creature eliminated this way.
-You may pay an extra {2} when playing this. If you do, Pick a card.",Every vow carries weight on the field.
+Beta,Radiant Tempest,White,rare,{2}{W}{W},Mantra,,,"Eliminate all creatures with attack 4 or greater. You may pay an extra {1} when playing this. If you do, Eliminate all creatures with attack 3 or greater instead.",Every vow carries weight on the field.
 Beta,Bright Reckoning,White,rare,{3}{W}{W},Mantra,,,"Eliminate all creatures and Seals. Each player gains 3 Aura.
 {2}, Put this card from your hand into the Pit: Pick a card.",Light endures long after the banner falls.
 Beta,Ivory Chant,White,common,{1}{W},Mantra,,,"Search your deck for a Binding or Artifact costing 2 or less, show it, put it into your hand, then shuffle.
@@ -102,8 +101,7 @@ Beta,Chalice Tempest,White,uncommon,{3}{W},Mantra,,,"Eliminate target Artifact, 
 {2}, Put this card from your hand into the Pit: Pick a card.",Light endures long after the banner falls.
 Beta,Bright Rite,White,rare,{2}{W}{W},Mantra,,,"Each player chooses two creatures they control and Extinguishes the rest.
 Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",The dawn asks no permission to rise.
-Beta,Chalice Invocation,White,rare,{3}{W}{W},Mantra,,,"Eliminate all creatures with attack 3 or greater. Gain 1 Aura for each creature eliminated this way.
-You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.","Stand together, and the storm breaks around you."
+Beta,Chalice Invocation,White,rare,{3}{W}{W},Mantra,,,"Eliminate all Seals. You may pay an extra {2} when playing this. If you do, also Eliminate all Artifacts.","Stand together, and the storm breaks around you."
 Beta,Aegis Ward,White,common,{1}{W},Seal — Binding,,,"Bind to target creature. Bound creature cannot confront or respond, and its controller gains 1 Aura during their Maintenance phase.
 You may pay an extra {2} when playing this. If you do, Pick a card.",Light endures long after the banner falls.
 Beta,Crowned Vow,White,common,{W},Seal — Binding,,,"Bind to target creature. Bound creature gets +1/+2 and gains Confronting does not cause this creature to Turn.
@@ -183,15 +181,13 @@ When this creature comes into play, Pick a card, then put a card from your hand 
 Beta,Frost Fox,Blue,rare,{1}{U},Creature — Canine,1,3,"Can be played any time you could play a Mudra.
 During even Rounds, this creature cannot be responded to unless the responding player pays {2}.
 {2}, Put this card from your hand into the Pit: Pick a card.",
-Beta,Mirror Gesture,Blue,common,{U}{U},Mudra,,,"Cancel target Technique. Look at the top 1 cards of your deck; put any on the bottom in any order.
-You may pay an extra {2} when playing this. If you do, Pick a card.",The tide takes what is offered and returns what it chooses.
+Beta,Mirror Gesture,Blue,common,{1}{U}{U},Mudra,,,"Cancel target Technique. You may pay an extra {1} when playing this. If you do, Pick a card.",The tide takes what is offered and returns what it chooses.
 Beta,Deep Snare,Blue,common,{1}{U},Mudra,,,"Cancel target Technique unless its controller pays {2}.
 During even Rounds, they must pay {4} instead.
 {2}, Put this card from your hand into the Pit: Pick a card.",To know the next move is to already hold victory.
 Beta,Glass Rebuke,Blue,common,{U},Mudra,,,"Look at the top three cards of your deck. Put one into your hand, one on top, and one on the bottom.
 Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Curiosity is the sharpest current in the sea.
-Beta,Sunken Glimpse,Blue,common,{1}{U},Mudra,,,"Return target creature or Artifact to its owner's hand. Look at the top 1 cards of your deck; put any on the bottom in any order.
-You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",The tide takes what is offered and returns what it chooses.
+Beta,Sunken Glimpse,Blue,common,{1}{U},Mudra,,,"Return target creature to its owner's hand. You may pay an extra {1} when playing this. If you do, also return up to one target Artifact to its owner's hand.",The tide takes what is offered and returns what it chooses.
 Beta,Vapor Gesture,Blue,common,{2}{U},Mudra,,,"Pick two cards, then put a card from your hand on the bottom of your deck.
 You may pay an extra {2} when playing this. If you do, Pick a card.",A single ripple unravels the grandest design.
 Beta,Crystal Strike,Blue,uncommon,{1}{U}{U},Mudra,,,"Cancel target Mudra or Mantra. Straighten up to two Lands you control.
@@ -335,8 +331,7 @@ Beta,Ash Pact,Black,uncommon,{2}{B},Mantra,,,"Return target creature card from y
 Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Survival favors those willing to pay the toll.
 Beta,Bleak Cataclysm,Black,common,{1}{B},Mantra,,,"Pick two cards and lose 2 Aura. You may put a card from your hand into your Pit to Gain 2 Aura.
 You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.",Ash remembers the fire that made it.
-Beta,Fading Decree,Black,rare,{2}{B}{B},Mantra,,,"All creatures get -3/-3 until end of Round. Gain 1 Aura for each creature that is put into the Pit from play this way.
-You may pay an extra {2} when playing this. If you do, Pick a card.","In the quiet dark, every ambition grows teeth."
+Beta,Fading Decree,Black,rare,{2}{B}{B},Mantra,,,"All creatures get -2/-2 until end of Round. You may pay an extra {1} when playing this. If you do, all creatures get -3/-3 until end of Round instead.","In the quiet dark, every ambition grows teeth."
 Beta,Bleak Vision,Black,uncommon,{3}{B},Mantra,,,"Search your deck for a card, put it into your Pit, then Pick a card.
 {2}, Put this card from your hand into the Pit: Pick a card.",Nothing is truly free; some prices are simply paid later.
 Beta,Grim Chant,Black,rare,{1}{B}{B},Mantra,,,"Search your deck for any card, show it, put it into your hand, and lose 3 Aura. Then shuffle.
@@ -456,8 +451,7 @@ Beta,Crackling Bolt,Red,rare,{3}{R},Mudra,,,"This Mudra deals 5 damage to target
 {2}, Put this card from your hand into the Pit: Pick a card.",Hesitation is just another word for defeat.
 Beta,Pyre Wave,Red,common,{1}{R},Mudra,,,"This Mudra deals 3 damage to target creature, or 2 damage to target player.
 Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Spark becomes flame; flame becomes legend.
-Beta,Crackling Harvest,Red,uncommon,{2}{R},Mantra,,,"This Mantra deals 2 damage to each creature and 1 damage to each player.
-You may pay an extra {2} when playing this. If you do, Pick a card.",Freedom burns brightest when cornered.
+Beta,Crackling Harvest,Red,uncommon,{2}{R},Mantra,,,"This Mantra deals 2 damage to each creature. You may pay an extra {1} when playing this. If you do, it also deals 2 damage to each player.",Freedom burns brightest when cornered.
 Beta,Spark Decree,Red,uncommon,{2}{R},Mantra,,,"Eliminate target nonbasic Land. Its controller takes 1 damage.
 {2}, Put this card from your hand into the Pit: Pick a card.",Hesitation is just another word for defeat.
 Beta,Feral Convergence,Red,common,{1}{R},Mantra,,,"This Mantra deals 3 damage to target creature.
@@ -526,7 +520,7 @@ When this creature is put into the Pit from play, Search your deck for a basic L
 {2}, Put this card from your hand into the Pit: Pick a card.",Roots split stone given enough seasons.
 Beta,Overgrown Tortoise,Green,uncommon,{G}{G},Creature — Reptile,3,3,"Extra fighting damage beyond a responder's defense hits the responding player.
 Whenever a Land comes into play under your control, this creature gets +1/+1 until end of Round.",
-Beta,Sunbark Wolf,Green,common,{1}{G},Creature — Canine,2,3,"When this creature is put into the Pit from play, Search your deck for a basic Land card, show it, put it into your hand, then shuffle.",
+Beta,Sunbark Wolf,Green,common,{1}{G},Creature — Canine,3,1,"You may pay an extra {1} when playing this. If you do, it comes into play with an Aura Stack (+1/+1) on it.",
 Beta,Ancient Mantis,Green,common,{2}{G},Creature — Insect,3,4,"When this creature comes into play, put an Aura Stack (+1/+1) on another target creature you control.",Strength grows deepest where the canopy is oldest.
 Beta,Rootbound Beetle,Green,uncommon,{2}{G},Creature — Insect,4,3,"Cannot be targeted by opponents' Techniques or abilities.
 When this creature comes into play, put an Aura Stack (+1/+1) on another target creature you control.",
@@ -582,8 +576,7 @@ Beta,Canopy Awakening,Green,uncommon,{1}{G},Mantra,,,"Return target permanent ca
 Extinguish this card from your Pit and pay {3}: Pick a card. Play only during your Main phase.",Roots split stone given enough seasons.
 Beta,Timber Tempest,Green,common,{2}{G},Mantra,,,"Look at the top four cards of your deck. Show a creature or Land from among them, put it into your hand, and the rest on the bottom.
 You may pay an extra {1} when playing this. If you do, Look at the top 2 cards of your deck; put any on the bottom in any order.","Listen to the forest, and you will never run dry."
-Beta,Bark Decree,Green,rare,{3}{G},Mantra,,,"Put two Aura Stacks (+1/+1) on each of up to two target creatures you control.
-You may pay an extra {2} when playing this. If you do, Pick a card.",Strength grows deepest where the canopy is oldest.
+Beta,Bark Decree,Green,rare,{2}{G},Mantra,,,"Put two Aura Stacks (+1/+1) on target creature you control. You may pay an extra {2} when playing this. If you do, put two Aura Stacks (+1/+1) on another target creature you control.",Strength grows deepest where the canopy is oldest.
 Beta,Canopy Ascent,Green,common,{1}{G},Mantra,,,"Target creature you control gets +2/+2 until end of Round, then deals damage equal to its attack to target creature an opponent controls.
 {2}, Put this card from your hand into the Pit: Pick a card.",Roots split stone given enough seasons.
 Beta,Bark Invocation,Green,rare,{3}{G}{G},Mantra,,,"Search your deck for a creature card, put it into your hand, then shuffle. Creatures you control get +2/+2 until end of Round.
