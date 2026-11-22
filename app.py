@@ -488,6 +488,20 @@ button[kind="primary"] *, button[data-testid="stBaseButton-primary"] * { color: 
 .aura-front:not(.aura-basic).aura-inspect-face .aura-type {top:53.71%}
 .aura-front:not(.aura-basic).aura-inspect-face .aura-rules {top:57.14%;height:32.38%}
 
+/* Studio uses the soft v2 wash, not the header's brush texture. */
+.aura-front:not(.aura-basic) .aura-rules::before {-webkit-mask-image:var(--tex-rules-wash);mask-image:var(--tex-rules-wash);filter:drop-shadow(0 0 1cqw var(--glow))}
+.aura-front:not(.aura-basic) .aura-rules-content {position:absolute;left:7.04%;top:13.53%;margin:0;width:var(--rules-width);height:78.24%;max-height:none;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.aura-rules-content p {flex:none;margin:0 0 .8cqw}
+.aura-rules-content .inline-symbol {display:inline-block;position:relative;width:1.15em;height:1.15em;vertical-align:-.22em;white-space:nowrap}
+.aura-rules-content .inline-symbol img {display:block;width:100%;height:100%;object-fit:contain}
+.inline-symbol-value {position:absolute;inset:0;display:grid;place-items:center;font:700 .7em Bangers,cursive;color:#3a342c}
+.aura-front:not(.aura-basic) .aura-stats {color:white;-webkit-text-stroke:.53cqw #000;paint-order:stroke fill;text-shadow:none}
+.aura-front:not(.aura-basic) .aura-footer {padding:0;display:block}
+.aura-footer-icon {position:absolute;left:6.67%;top:22.73%;width:6.67%;height:54.55%;object-fit:contain}
+.aura-front:not(.aura-basic) .aura-footer span:first-of-type {position:absolute;left:15.19%;top:0;width:51.85%;height:100%;display:flex;align-items:center;white-space:nowrap}
+.aura-front:not(.aura-basic) .aura-footer span:last-child {position:absolute;left:67.04%;top:0;width:24.07%;height:100%;display:flex;align-items:center;justify-content:flex-end;white-space:nowrap}
+
+
 .aura-basic .aura-halftone,.aura-basic .aura-frame {display:none}
 .aura-basic {border: .7cqw solid #8a6a3e!important;box-sizing:border-box}
 .aura-basic .aura-name {left:3.2%;top:88.95%;width:93.6%;height:7.05%;padding-left:3.5%;background:#0e0e12b8;border:.4cqw solid var(--glow);border-radius:1.8cqw;box-sizing:border-box;font-size:8cqw}
@@ -605,18 +619,25 @@ def interleave_by_color(df: pd.DataFrame, colors: list[str]) -> pd.DataFrame:
     return df.loc[ordered]
 
 
-def render_pips(text: str) -> str:
-    if not text:
-        return ""
+def symbol_asset(sym: str) -> tuple[str, bool]:
+    """Use the same baked symbols as CardBuilder, with a blank-gem fallback."""
+    if sym == "TURN":
+        return local_art_data("icons/symbol_turn.png"), False
+    if sym in {"W", "U", "B", "R", "G"}:
+        return local_art_data(f"icons/sigil_{sym}.png"), False
+    if sym in {str(n) for n in range(13)} | {"X"}:
+        return local_art_data(f"icons/sigil_n{sym}.png"), False
+    return local_art_data("icons/sigil_generic.png"), True
 
+
+def render_pips(text: str) -> str:
     def repl(m: re.Match[str]) -> str:
         sym = m.group(1)
-        if sym == "TURN":
-            return '<span class="pip pip-T" title="Turn">↻</span>'
-        cls = f"pip-{sym}" if sym in {"W", "U", "B", "R", "G"} else "pip-N"
-        return f'<span class="pip {cls}">{html.escape(sym)}</span>'
-
-    return re.sub(r"\{([^}]+)\}", repl, text)
+        src, fallback = symbol_asset(sym)
+        label = "Turn" if sym == "TURN" else f"{sym} Energy"
+        value = f'<span class="inline-symbol-value">{html.escape(sym)}</span>' if fallback else ""
+        return f'<span class="inline-symbol" role="img" aria-label="{html.escape(label, quote=True)}"><img src="{src}" alt="">{value}</span>'
+    return re.sub(r"\{([^}]+)\}", repl, text) if text else ""
 
 
 def render_rules(raw: str) -> str:
@@ -673,10 +694,9 @@ def render_card_html(row: pd.Series, flip_all: bool, uid: str, in_deck_qty: int 
     tokens = re.findall(r"\{([^}]+)\}", str(row["energy_cost"]))
     pip_size = 82 / 750 * 100
     def cost_icon(token: str) -> str:
-        icon = token if token in {"W", "U", "B", "R", "G"} else "generic"
-        src = local_art_data(f"icons/sigil_{icon}.png")
-        value = "" if icon != "generic" else html.escape(token)
-        return f'<span class="aura-cost pip-{html.escape(token)}"><img src="{src}" alt=""><span class="aura-cost-value">{value}</span></span>'
+        src, fallback = symbol_asset(token)
+        value = html.escape(token) if fallback else ""
+        return f'<span class="aura-cost" role="img" aria-label="{html.escape(token, quote=True)} Energy"><img src="{src}" alt=""><span class="aura-cost-value">{value}</span></span>'
     pips = "".join(cost_icon(t) for t in tokens)
     row_width = (len(tokens) - 1) * 70 + 82 if tokens else 0
     gx0 = 734 - row_width
@@ -712,13 +732,14 @@ def render_card_html(row: pd.Series, flip_all: bool, uid: str, in_deck_qty: int 
         land_sigil = local_art_data(f"icons/sigil_{str(row.get('produces', 'W'))}.png") if basic else ""
         land_overlay = f'<div class="aura-land-badge"><img src="{icon}" alt=""></div><img class="aura-land-sigil" src="{land_sigil}" alt="">' if basic else ""
         medallion = f'<div class="aura-medallion"><img src="{icon}" alt="{html.escape(rarity)}"></div>' if not basic else ""
+        footer_icon = f'<img class="aura-footer-icon" src="{icon}" alt="">' if not basic else ""
         return (
             f'<article class="card-face aura-front aura-{color} rarity-{html.escape(rarity)}{" aura-basic" if basic else ""}{" aura-inspect-face" if inspect else ""}" style="--pip-size:{pip_size:.2f}cqw;--name-width:{name_width:.2f}%;--name-size:{name_size:.2f}cqw;--type-size:{type_size:.2f}cqw;--rules-width:{rules_width:.2f}%">'
             f'{art_html}<div class="aura-halftone"></div><div class="aura-art-shade"></div><div class="aura-frame"></div>{land_overlay}'
             f'<div class="aura-name"><span>{name}</span></div><div class="aura-costs">{pips}</div>'
             f'<div class="aura-type"><span>{type_label}</span>{f"<b>★ {html.escape(rarity.upper())}</b>" if basic else ""}</div>{medallion}'
-            f'<div class="aura-rules"><div class="aura-rules-content" style="font-size:{text_size:.2f}cqw">{render_rules(rules)}{flavor_html if not inspect else ""}</div></div>'
-            f'<div class="aura-footer"><span>{html.escape(str(row["set"]).upper())} · 1ST ED.</span><span>{number}</span></div>{stats}{qty}</article>'
+            f'<div class="aura-rules"><div class="aura-rules-content" style="font-size:{text_size:.2f}cqw">{render_rules(rules)}{flavor_html}</div></div>'
+            f'<div class="aura-footer">{footer_icon}<span>{html.escape(str(row["set"]).upper())} · 1ST ED.</span><span>{number}</span></div>{stats}{qty}</article>'
         )
     return (
         f'<div class="aura-card-wrap"><label class="card-scene aura-card-scene{" compact" if compact else ""}" for="{safe_uid}">'
