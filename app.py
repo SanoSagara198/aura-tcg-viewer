@@ -602,21 +602,28 @@ def render_rules(raw: str) -> str:
     return "".join(paragraphs)
 
 
+@st.cache_data(show_spinner=False)
+def local_art_data(relative_path: str) -> str:
+    """Embed bundled art so Cloud does not depend on static hosting or a GitHub revision."""
+    path = ROOT / "static" / relative_path
+    if not path.is_file():
+        return ""
+    mime = "image/jpeg" if path.suffix.lower() in {".jpg", ".jpeg"} else "image/png"
+    return f"data:{mime};base64,{base64.b64encode(path.read_bytes()).decode('ascii')}"
+
+
 def card_art(row: pd.Series) -> str:
     card_id = str(row["id"])
-    named = {"A001": "gilded_scarab_art.png", "A008": "A008-haloed-seraph.png", "A035": "A035-ivory-rupture-v2.png"}
-    if card_id in named:
-        return ASSET_BASE + named[card_id]
-    if (ROOT / "static" / "rares" / f"{card_id}.png").exists():
-        return f"{ASSET_BASE}rares/{card_id}.png"
+    art = local_art_data(f"card-art/{card_id}.jpg")
+    if art:
+        return art
     if bool(row.get("basic", False)):
         name = str(row["name"]).lower()
         variant = int(row.get("variant", 1) or 1)
         if name == "gloomfen" and variant == 4: variant = 1
         if name == "cinderpeak" and variant > 2: variant -= 2
         if name == "wildgrove": variant = 1
-        if (ROOT / "static" / "lands" / f"{name}_v{variant}.jpg").exists():
-            return f"{ASSET_BASE}lands/{name}_v{variant}.jpg"
+        return local_art_data(f"lands/{name}_v{variant}.jpg")
     return ""
 
 
