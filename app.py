@@ -133,7 +133,7 @@ def build_ui_texture_css() -> str:
 
 
 COMIC_CSS = """<style>
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=Chakra+Petch:ital,wght@0,500;0,600;0,700;1,600&family=Comic+Neue:ital,wght@0,700;1,700&family=Montserrat:wght@500;700;800&family=Merriweather:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=Chakra+Petch:ital,wght@0,500;0,600;0,700;1,600&family=Comic+Neue:ital,wght@0,700;1,700&family=Montserrat:wght@500;700;800;900&family=Oswald:wght@400;500;700&family=Merriweather:ital@1&display=swap');
 :root { --ink: #0a0b10; --paper: #fffdf4; --yellow: #ffe24a; }
 .stApp {
   background-color: #11131b;
@@ -468,6 +468,42 @@ button[kind="primary"] *, button[data-testid="stBaseButton-primary"] * { color: 
 .aura-rules-content .pip::before {content:"("}.aura-rules-content .pip::after {content:")"}
 .aura-rules-content .pip-W {color:#9a5b00}.aura-rules-content .pip-U {color:#1c5fa8}.aura-rules-content .pip-B {color:#3a1f57}.aura-rules-content .pip-R {color:#b3300f}.aura-rules-content .pip-G {color:#2f7a26}.aura-rules-content .pip-N {color:#3a342c}
 .aura-inspect-face .aura-rules-content {overflow-y:auto;scrollbar-width:thin}
+
+/* Studio CardBuilder: 750 x 1050, with measurements expressed in card widths. */
+.aura-front:not(.aura-basic) .aura-name {left:2.4%;top:2%;height:9.43%;padding-left:5.33%;}
+.aura-front:not(.aura-basic) .aura-costs {right:2.13%;top:2.29%;height:10.93cqw;align-items:start}
+.aura-front:not(.aura-basic) .aura-cost {width:10.93cqw;height:10.93cqw;margin-left:-1.6cqw;background:none}
+.aura-front:not(.aura-basic) .aura-cost:first-child {margin-left:0}
+.aura-front:not(.aura-basic) .aura-cost::before {display:none}
+.aura-cost img {width:100%;height:100%;object-fit:contain}.aura-cost-value {position:absolute;inset:0;display:grid;place-items:center;font:5.33cqw Bangers,cursive;color:#3a342c}
+.aura-front:not(.aura-basic) .aura-type {left:3.33%;top:53.71%;width:93.33%;height:6.67%;padding:0 14% 0 6%;--paint:#17120e;color:#ffe9a6;font-family:Montserrat,sans-serif;font-size:var(--type-size);font-weight:700;justify-content:start}
+.aura-front:not(.aura-basic) .aura-medallion {position:absolute;z-index:5;left:82.4%;top:52.29%;width:13.33%;aspect-ratio:1;border-radius:50%;background:#1b1610;border:.4cqw solid var(--glow);box-sizing:border-box;display:grid;place-items:center}
+.aura-medallion img {width:70%;height:70%;object-fit:contain}
+.aura-front:not(.aura-basic) .aura-rules {left:2.67%;top:57.14%;width:94.67%;height:32.38%;justify-content:flex-start}
+.aura-front:not(.aura-basic) .aura-rules-content {margin-left:7.04%;width:var(--rules-width);max-height:78.24%;font-family:Oswald,sans-serif;font-weight:400;line-height:1.12}
+.aura-front:not(.aura-basic) .aura-flavor {font-family:Merriweather,serif;line-height:1.15}
+.aura-front:not(.aura-basic) .aura-footer {left:2.4%;top:91.05%;width:72%;height:6.29%;padding:0 6% 0 11%;font-size:3.33cqw;align-items:center}
+.aura-front:not(.aura-basic) .aura-footer span:last-child {font-size:3.07cqw}
+.aura-front:not(.aura-basic) .aura-stats {right:2.13%;bottom:1.33%;width:20%;height:14.29%;font-size:7.6cqw}
+.aura-front:not(.aura-basic).aura-inspect-face .aura-type {top:53.71%}
+.aura-front:not(.aura-basic).aura-inspect-face .aura-rules {top:57.14%;height:32.38%}
+
+.aura-basic .aura-halftone,.aura-basic .aura-frame {display:none}
+.aura-basic {border: .7cqw solid #8a6a3e!important;box-sizing:border-box}
+.aura-basic .aura-name {left:3.2%;top:88.95%;width:93.6%;height:7.05%;padding-left:3.5%;background:#0e0e12b8;border:.4cqw solid var(--glow);border-radius:1.8cqw;box-sizing:border-box;font-size:8cqw}
+.aura-basic .aura-name::before,.aura-basic .aura-type::before,.aura-basic .aura-rules::before {display:none}
+.aura-basic .aura-type,.aura-inspect-face.aura-basic .aura-type {left:25%;top:86.1%;width:50%;height:3.62%;padding:0;justify-content:center;background:#0e0e12e8;border:.25cqw solid var(--glow);border-radius:1cqw;color:#fff6da;font:900 2.93cqw Montserrat,sans-serif}
+.aura-basic .aura-type b {display:none}
+.aura-basic .aura-rules,.aura-inspect-face.aura-basic .aura-rules {left:5.33%;top:78.1%;width:89.33%;height:6.67%;background:none;color:white;text-align:center}
+.aura-basic .aura-rules-content {width:100%;max-height:100%;font-family:Oswald,sans-serif;color:white;text-shadow:0 1px 2px #000}
+.aura-basic .aura-rules-content .pip {color:#fff6da;text-shadow:0 1px 3px #000}
+.aura-basic .aura-footer {left:0;top:96.76%;width:100%;height:2.48%;padding:0;justify-content:center;background:none;font:700 1.73cqw Montserrat,sans-serif;color:#cbbfa6}
+.aura-basic .aura-footer::before {display:none}
+.aura-land-sigil {position:absolute;z-index:3;left:41.47%;top:65.71%;width:17.07%;height:12.19%;object-fit:contain}
+.aura-land-badge {position:absolute;z-index:3;left:2.93%;top:1.9%;width:10.67%;aspect-ratio:1;padding:1.6%;box-sizing:border-box;border-radius:50%;background:#0e0e128c}
+.aura-land-badge img {width:100%;height:100%;object-fit:contain}
+
+
 </style>"""
 
 
@@ -635,17 +671,23 @@ def render_card_html(row: pd.Series, flip_all: bool, uid: str, in_deck_qty: int 
     subtype = str(row["card_type"]).split("—")[-1].strip().upper()
     art_html = f'<img class="aura-art" src="{html.escape(art, quote=True)}" alt="" loading="lazy">' if art else f'<div class="aura-art-placeholder"><i></i><span>{html.escape(subtype)}</span></div>'
     tokens = re.findall(r"\{([^}]+)\}", str(row["energy_cost"]))
-    pip_sizes = (20.33, 18.33, 15.33, 13.33, 11.67)
-    pip_size = pip_sizes[min(max(len(tokens), 1), 5) - 1]
-    pips = "".join(f'<span class="aura-cost pip-{html.escape(t)}">{html.escape(t)}</span>' for t in tokens)
-    cost_width = len(tokens) * pip_size * .84 + (pip_size * .16 if tokens else 0)
-    name_width = max(50, min(93.3, (590 - cost_width * 6 - 14 + 30) / 6))
-    name_size = max(3.67, min(9.33, (name_width * 6 - 68) / (max(1, len(str(row["name"]))) * .48) / 6))
+    pip_size = 82 / 750 * 100
+    def cost_icon(token: str) -> str:
+        icon = token if token in {"W", "U", "B", "R", "G"} else "generic"
+        src = local_art_data(f"icons/sigil_{icon}.png")
+        value = "" if icon != "generic" else html.escape(token)
+        return f'<span class="aura-cost pip-{html.escape(token)}"><img src="{src}" alt=""><span class="aura-cost-value">{value}</span></span>'
+    pips = "".join(cost_icon(t) for t in tokens)
+    row_width = (len(tokens) - 1) * 70 + 82 if tokens else 0
+    gx0 = 734 - row_width
+    name_w = min(700, (gx0 if tokens else 734) - 22 + 34)
+    name_width = name_w / 750 * 100
+    name_size = max(25, min(62, int((name_w - 80) / max(len(str(row["name"])) * .51, 1)))) / 750 * 100
     raw = str(row["rules_text"])
     flavor = str(row["flavor_text"]).strip()
     n = len(raw) + (0 if basic else len(flavor) * .7)
-    body_px, flavor_px = next((body, fl) for limit, body, fl in [(110,27,21), (190,24,19), (280,21,17), (380,19,16), (float("inf"),17,14)] if n < limit)
-    flavor_html = f'<div class="aura-divider"></div><div class="aura-flavor" style="font-size:{flavor_px / 6:.2f}cqw">“{html.escape(flavor)}”</div>' if flavor and not basic else ""
+    body_px, flavor_px = next((body, fl) for limit, body, fl in [(110,43,25), (190,38,23), (280,32,21), (380,28,19), (float("inf"),23,16)] if n < limit)
+    flavor_html = f'<div class="aura-divider"></div><div class="aura-flavor" style="font-size:{flavor_px / 750 * 100:.2f}cqw">“{html.escape(flavor)}”</div>' if flavor and not basic else ""
     power = str(row["power"]).strip()
     stats = f'<div class="aura-stats"><span>{html.escape(power)}/{html.escape(str(row["toughness"]))}</span></div>' if power else ""
     number = f'{int(row["set_number"]):03d}/350' if not basic else ""
@@ -656,12 +698,25 @@ def render_card_html(row: pd.Series, flip_all: bool, uid: str, in_deck_qty: int 
     def face(inspect: bool = False) -> str:
         rules = re.sub(r"\(([^()]*)\)", lambda m: m.group(1) if re.match(r"\s*[+-]\d+\s*/\s*[+-]\d+", m.group(1)) else "", raw) if inspect else raw
         rules = re.sub(r" +([.,;:])", r"\1", rules)
-        text_size = max(2.2, min(6.0, 6.0 - len(rules) / 85)) if inspect and not basic else body_px / 6
+        length = len(rules) + (len(flavor) * .7 if flavor and not basic else 0)
+        body = next(body for limit, body in [(110,43), (190,38), (280,32), (380,28), (float("inf"),23)] if length < limit)
+        text_size = (body + (2 if inspect else 0)) / 750 * 100
+        card_type = str(row["card_type"])
+        type_size = max(15, min(32, int(540 / max(len(card_type) * .63, 1)))) / 750 * 100
+        rules_width = (532 if power else 612) / 710 * 100
+        set_name = str(row["set"])
+        icon_set = set_name if set_name in {"Alpha", "Beta", "Delta"} else "Alpha"
+        icon_rarity = rarity if rarity in {"common", "uncommon", "rare"} else "rare"
+        icon = local_art_data(f"icons/set_{icon_set}_{icon_rarity}.png")
+        type_label = html.escape(card_type.upper()).replace(" — ", " · ")
+        land_sigil = local_art_data(f"icons/sigil_{str(row.get('produces', 'W'))}.png") if basic else ""
+        land_overlay = f'<div class="aura-land-badge"><img src="{icon}" alt=""></div><img class="aura-land-sigil" src="{land_sigil}" alt="">' if basic else ""
+        medallion = f'<div class="aura-medallion"><img src="{icon}" alt="{html.escape(rarity)}"></div>' if not basic else ""
         return (
-            f'<article class="card-face aura-front aura-{color} rarity-{html.escape(rarity)}{" aura-basic" if basic else ""}{" aura-inspect-face" if inspect else ""}" style="--pip-size:{pip_size:.2f}cqw;--name-width:{name_width:.2f}%;--name-size:{name_size:.2f}cqw">'
-            f'{art_html}<div class="aura-halftone"></div><div class="aura-art-shade"></div><div class="aura-frame"></div>'
+            f'<article class="card-face aura-front aura-{color} rarity-{html.escape(rarity)}{" aura-basic" if basic else ""}{" aura-inspect-face" if inspect else ""}" style="--pip-size:{pip_size:.2f}cqw;--name-width:{name_width:.2f}%;--name-size:{name_size:.2f}cqw;--type-size:{type_size:.2f}cqw;--rules-width:{rules_width:.2f}%">'
+            f'{art_html}<div class="aura-halftone"></div><div class="aura-art-shade"></div><div class="aura-frame"></div>{land_overlay}'
             f'<div class="aura-name"><span>{name}</span></div><div class="aura-costs">{pips}</div>'
-            f'<div class="aura-type"><span>{html.escape(str(row["card_type"]).upper())}</span><b>★ {html.escape(rarity.upper())}</b></div>'
+            f'<div class="aura-type"><span>{type_label}</span>{f"<b>★ {html.escape(rarity.upper())}</b>" if basic else ""}</div>{medallion}'
             f'<div class="aura-rules"><div class="aura-rules-content" style="font-size:{text_size:.2f}cqw">{render_rules(rules)}{flavor_html if not inspect else ""}</div></div>'
             f'<div class="aura-footer"><span>{html.escape(str(row["set"]).upper())} · 1ST ED.</span><span>{number}</span></div>{stats}{qty}</article>'
         )
