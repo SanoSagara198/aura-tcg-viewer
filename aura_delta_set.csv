@@ -1,4 +1,4 @@
-﻿set,name,color,rarity,energy_cost,card_type,power,toughness,rules_text,flavor_text
+set,name,color,rarity,energy_cost,card_type,power,toughness,rules_text,flavor_text
 Delta,Gilded Ram,White,rare,{W},Creature — Beast,2,2,"Confronting does not cause this creature to Turn.
 {1}{W}, {TURN}: Prevent the next 2 damage that would be dealt to target creature this Round.
 When this creature leaves play, straighten target Land you control.",
@@ -546,51 +546,45 @@ If you spent Energy of two or more colors to play this Technique, Pick a card.",
 Delta,Cogwork Vault,Artifact,uncommon,{2},Artifact,,,"{TURN}: Add {1} to your Energy pool.
 {2}, Sacrifice this: Pick a card.
 If you control two or more nonbasic Lands, Gain 2 Aura.",Precision is its own kind of craft.
-Delta,Harmonic Orb,Artifact,rare,{3},Artifact,,,"As long as this artifact is Straightened, players cannot straighten more than two permanents during their Straighten phases.
-If you control an Artifact, this Technique costs {1} less to play.",A quiet hum marks a steady conduit.
+Delta,Solar Engine,Artifact,rare,{4},Artifact,,,Once your Maintenance phase begins: Pick an additional card. Skip your Pick phase if you have five or more cards in hand.,A quiet hum marks a steady conduit.
 Delta,Tempered Engine,Artifact,uncommon,{1},Artifact,,,"{1}, {TURN}: Look at the top 2 cards of your deck; put any on the bottom in any order. Look at the top card of your deck; you may put it into your Pit.",Built to outlast the hands that shaped it.
 Delta,Gilded Monolith,Artifact,common,{2},Artifact,,,"{2}, {TURN}: target creature gets +1/+1 until end of Round.
 If you spent Energy of two or more colors to play this Technique, Pick a card.",A quiet hum marks a steady conduit.
 Delta,Clockwork Anchor,Artifact,uncommon,{3},Artifact,,,"{TURN}: Add one Energy of any color to your Energy pool.
 If you control two or more nonbasic Lands, Gain 2 Aura.",A quiet hum marks a steady conduit.
-Delta,Arcane Orb,Artifact,rare,{4},Artifact,,,"Once your Maintenance phase begins: Pick an additional card. Skip your Pick phase if you have five or more cards in hand.
-If you control an Artifact, this Technique costs {1} less to play.","Crafted from brass, bound by geometry."
+Delta,Obsidian Siphon,Artifact,rare,{5},Artifact,,,"{2}, {TURN}: Target opponent loses 2 Aura. Look at the top card of your deck; you may put it into your Pit.","Crafted from brass, bound by geometry."
 Delta,Gear Anchor,Artifact,uncommon,{2},Artifact,,,Techniques your opponents play during your Round cost {1} more to play. Look at the top card of your deck; you may put it into your Pit.,A quiet hum marks a steady conduit.
-Delta,Etched Engine,Artifact,rare,{4},Artifact,,,"{3}, {TURN}: This artifact deals 2 damage to target creature or player if you have two or fewer cards in hand.
-If you spent Energy of two or more colors to play this Technique, Pick a card.",A quiet hum marks a steady conduit.
+Delta,Crimson Totem,Artifact,rare,{4},Artifact,,,Creatures you control get +1/+0 as long as you control three or more Artifacts.,A quiet hum marks a steady conduit.
 Delta,Clockwork Lens,Artifact,common,{2},Artifact,,,"{TURN}, Sacrifice this: Extinguish target card in a Pit. Pick a card.
 If you control two or more nonbasic Lands, Gain 2 Aura.","No pulse, no fear, no fatigue."
 Delta,Clockwork Monolith,Artifact,common,{3},Artifact,,,"Whenever a creature comes into play under your control, you may pay {1}. If you do, Gain 2 Aura.
 If you control an Artifact, this Technique costs {1} less to play.","No pulse, no fear, no fatigue."
-Delta,Tempered Vault,Artifact,rare,{5},Artifact,,,{TURN}: Straighten target Artifact or Land. Play this ability only during your Round. Look at the top card of your deck; you may put it into your Pit.,A quiet hum marks a steady conduit.
+Delta,Ember Siege Engine,Artifact,rare,{5},Artifact,,,"{3}, {TURN}: This artifact deals 3 damage to target creature.",A quiet hum marks a steady conduit.
 Delta,Votive Relic,Artifact,uncommon,{4},Artifact,,,"Creatures you control get +1/+0 as long as you control three or more Artifacts.
 If you spent Energy of two or more colors to play this Technique, Pick a card.",Built to outlast the hands that shaped it.
 Delta,Resonant Prism,Artifact,uncommon,{3},Artifact,,,"{1}, {TURN}: Prevent the next 1 damage that would be dealt to any target this Round.
 If you control two or more nonbasic Lands, Gain 2 Aura.",A quiet hum marks a steady conduit.
-Delta,Glass Conduit,Artifact,rare,{6},Artifact,,,"Once your End of Round phase begins: straighten all Lands you control.
-If you control an Artifact, this Technique costs {1} less to play.","Crafted from brass, bound by geometry."
+Delta,Solar Anchor,Artifact,rare,{5},Artifact,,,{TURN}: Straighten target Artifact or Land. Play this ability only during your Round.,"Crafted from brass, bound by geometry."
 Delta,Lattice Core,Artifact,common,{2},Artifact,,,"{1}, {TURN}: Add one Energy of any color to your Energy pool. Gain 1 Aura if this is Round 5 or later. Look at the top card of your deck; you may put it into your Pit.","No pulse, no fear, no fatigue."
 Delta,Runic Lens,Artifact,uncommon,{3},Artifact,,,"{TURN}: Add {1} to your Energy pool.
 {2}, Sacrifice this: Pick a card.
 If you spent Energy of two or more colors to play this Technique, Pick a card.","Crafted from brass, bound by geometry."
-Delta,Polished Censer,Artifact,rare,{4},Artifact,,,"As long as this artifact is Straightened, players cannot straighten more than two permanents during their Straighten phases.
-If you control two or more nonbasic Lands, Gain 2 Aura.",Built to outlast the hands that shaped it.
+Delta,Amber Chalice,Artifact,rare,{4},Artifact,,,"{1}, {TURN}, Pay 1 Aura: Pick a card.",Built to outlast the hands that shaped it.
 Delta,Opal Scepter,Artifact,uncommon,{2},Artifact,,,"{1}, {TURN}: Look at the top 2 cards of your deck; put any on the bottom in any order.
 If you control an Artifact, this Technique costs {1} less to play.",Precision is its own kind of craft.
 Delta,Iron Monolith,Artifact,common,{3},Artifact,,,"{2}, {TURN}: target creature gets +1/+1 until end of Round. Look at the top card of your deck; you may put it into your Pit.","No pulse, no fear, no fatigue."
 Delta,Lattice Crown,Artifact,uncommon,{4},Artifact,,,"{TURN}: Add one Energy of any color to your Energy pool.
 If you spent Energy of two or more colors to play this Technique, Pick a card.",A quiet hum marks a steady conduit.
-Delta,Lattice Orb,Artifact,rare,{5},Artifact,,,"Once your Maintenance phase begins: Pick an additional card. Skip your Pick phase if you have five or more cards in hand.
-If you control two or more nonbasic Lands, Gain 2 Aura.",A quiet hum marks a steady conduit.
+Delta,Verdant Heart,Artifact,rare,{3},Artifact,,,"{TURN}: Add one Energy of any color to your Energy pool.
+{2}, Sacrifice this: Pick a card.",A quiet hum marks a steady conduit.
 Delta,Opal Orb,Artifact,uncommon,{3},Artifact,,,"Techniques your opponents play during your Round cost {1} more to play.
 If you control an Artifact, this Technique costs {1} less to play.",Built to outlast the hands that shaped it.
-Delta,Aether Engine,Artifact,rare,{5},Artifact,,,"{3}, {TURN}: This artifact deals 2 damage to target creature or player if you have two or fewer cards in hand. Look at the top card of your deck; you may put it into your Pit.","No pulse, no fear, no fatigue."
+Delta,Ember Orrery,Artifact,rare,{6},Artifact,,,Once your End of Round phase begins: straighten all Lands you control.,"No pulse, no fear, no fatigue."
 Delta,Opal Dynamo,Artifact,common,{3},Artifact,,,"{TURN}, Sacrifice this: Extinguish target card in a Pit. Pick a card.
 If you spent Energy of two or more colors to play this Technique, Pick a card.",Built to outlast the hands that shaped it.
 Delta,Polished Scepter,Artifact,common,{4},Artifact,,,"Whenever a creature comes into play under your control, you may pay {1}. If you do, Gain 2 Aura.
 If you control two or more nonbasic Lands, Gain 2 Aura.",A quiet hum marks a steady conduit.
-Delta,Aether Anchor,Artifact,rare,{6},Artifact,,,"{TURN}: Straighten target Artifact or Land. Play this ability only during your Round.
-If you control an Artifact, this Technique costs {1} less to play.",Built to outlast the hands that shaped it.
+Delta,Solar Gate,Artifact,rare,{4},Artifact,,,"{2}, {TURN}: Return target creature you control to its owner's hand. Gain 2 Aura.",Built to outlast the hands that shaped it.
 Delta,Resonant Lantern,Artifact,uncommon,{5},Artifact,,,Creatures you control get +1/+0 as long as you control three or more Artifacts. Look at the top card of your deck; you may put it into your Pit.,A quiet hum marks a steady conduit.
 Delta,Opal Censer,Artifact,uncommon,{4},Artifact,,,"{1}, {TURN}: Prevent the next 1 damage that would be dealt to any target this Round.
 If you spent Energy of two or more colors to play this Technique, Pick a card.","No pulse, no fear, no fatigue."

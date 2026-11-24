@@ -1,4 +1,4 @@
-﻿set,name,color,rarity,energy_cost,card_type,power,toughness,rules_text,flavor_text
+set,name,color,rarity,energy_cost,card_type,power,toughness,rules_text,flavor_text
 Alpha,Gilded Scarab,White,rare,{W},Creature — Insect,1,1,"Deals fighting damage before other creatures.
 When this creature comes into play, Gain 2 Aura.
 Once your Maintenance phase begins: if you control 3 or more creatures, Gain 1 Aura.",
@@ -464,32 +464,33 @@ Once your Maintenance phase begins: if you control three or more Artifacts, this
 Alpha,Aether Conduit,Artifact,common,{1},Artifact,,,"{1}, {TURN}: Add one Energy of any color to your Energy pool. Gain 1 Aura if this is Round 5 or later.",A quiet hum marks a steady conduit.
 Alpha,Cogwork Scepter,Artifact,uncommon,{2},Artifact,,,"{TURN}: Add {1} to your Energy pool.
 {2}, Sacrifice this: Pick a card.","No pulse, no fear, no fatigue."
-Alpha,Clockwork Censer,Artifact,rare,{3},Artifact,,,"As long as this artifact is Straightened, players cannot straighten more than two permanents during their Straighten phases.","Crafted from brass, bound by geometry."
+Alpha,Harmonic Censer,Artifact,rare,{3},Artifact,,,"As long as this artifact is Straightened, players cannot straighten more than two permanents during their Straighten phases.","Crafted from brass, bound by geometry."
 Alpha,Resonant Monolith,Artifact,uncommon,{1},Artifact,,,"{1}, {TURN}: Look at the top 2 cards of your deck; put any on the bottom in any order.","Crafted from brass, bound by geometry."
 Alpha,Arcane Lens,Artifact,common,{2},Artifact,,,"{2}, {TURN}: target creature gets +1/+1 until end of Round.",Precision is its own kind of craft.
 Alpha,Runic Scepter,Artifact,uncommon,{3},Artifact,,,{TURN}: Add one Energy of any color to your Energy pool.,A quiet hum marks a steady conduit.
-Alpha,Voltaic Dynamo,Artifact,rare,{4},Artifact,,,Once your Maintenance phase begins: Pick an additional card. Skip your Pick phase if you have five or more cards in hand.,"Crafted from brass, bound by geometry."
+Alpha,Prism Monolith,Artifact,rare,{4},Artifact,,,"{3}, {TURN}: This artifact deals 2 damage to target creature or player if you have two or fewer cards in hand.","Crafted from brass, bound by geometry."
 Alpha,Lattice Relic,Artifact,uncommon,{2},Artifact,,,Techniques your opponents play during your Round cost {1} more to play.,A quiet hum marks a steady conduit.
-Alpha,Kinetic Monolith,Artifact,rare,{4},Artifact,,,"{3}, {TURN}: This artifact deals 2 damage to target creature or player if you have two or fewer cards in hand.","Crafted from brass, bound by geometry."
+Alpha,Cogwork Dynamo,Artifact,rare,{4},Artifact,,,Once your Maintenance phase begins: Pick an additional card. Skip your Pick phase if you have five or more cards in hand.,"Crafted from brass, bound by geometry."
 Alpha,Resonant Vault,Artifact,common,{2},Artifact,,,"{TURN}, Sacrifice this: Extinguish target card in a Pit. Pick a card.",Built to outlast the hands that shaped it.
 Alpha,Arcane Scepter,Artifact,common,{3},Artifact,,,"Whenever a creature comes into play under your control, you may pay {1}. If you do, Gain 2 Aura.",Precision is its own kind of craft.
 Alpha,Opal Vault,Artifact,rare,{5},Artifact,,,{TURN}: Straighten target Artifact or Land. Play this ability only during your Round.,"Crafted from brass, bound by geometry."
 Alpha,Runic Relic,Artifact,uncommon,{4},Artifact,,,Creatures you control get +1/+0 as long as you control three or more Artifacts.,Precision is its own kind of craft.
 Alpha,Kinetic Relic,Artifact,uncommon,{3},Artifact,,,"{1}, {TURN}: Prevent the next 1 damage that would be dealt to any target this Round.",Built to outlast the hands that shaped it.
-Alpha,Voltaic Lens,Artifact,rare,{6},Artifact,,,Once your End of Round phase begins: straighten all Lands you control.,Built to outlast the hands that shaped it.
+Alpha,Harmonic Lens,Artifact,rare,{6},Artifact,,,Once your End of Round phase begins: straighten all Lands you control.,Built to outlast the hands that shaped it.
 Alpha,Glass Idol,Artifact,common,{2},Artifact,,,"{1}, {TURN}: Add one Energy of any color to your Energy pool. Gain 1 Aura if this is Round 5 or later.",Built to outlast the hands that shaped it.
 Alpha,Opal Chalice,Artifact,uncommon,{3},Artifact,,,"{TURN}: Add {1} to your Energy pool.
 {2}, Sacrifice this: Pick a card.",A quiet hum marks a steady conduit.
-Alpha,Voltaic Core,Artifact,rare,{4},Artifact,,,"As long as this artifact is Straightened, players cannot straighten more than two permanents during their Straighten phases.","Crafted from brass, bound by geometry."
+Alpha,Clockwork Cistern,Artifact,rare,{4},Artifact,,,"{1}, {TURN}, Pay 1 Aura: Pick a card.","Crafted from brass, bound by geometry."
 Alpha,Iron Dynamo,Artifact,uncommon,{2},Artifact,,,"{1}, {TURN}: Look at the top 2 cards of your deck; put any on the bottom in any order.","Crafted from brass, bound by geometry."
 Alpha,Brass Lantern,Artifact,common,{3},Artifact,,,"{2}, {TURN}: target creature gets +1/+1 until end of Round.",A quiet hum marks a steady conduit.
 Alpha,Opal Core,Artifact,uncommon,{4},Artifact,,,{TURN}: Add one Energy of any color to your Energy pool.,Precision is its own kind of craft.
-Alpha,Brass Idol,Artifact,rare,{5},Artifact,,,Once your Maintenance phase begins: Pick an additional card. Skip your Pick phase if you have five or more cards in hand.,Built to outlast the hands that shaped it.
+Alpha,Votive Cannon,Artifact,rare,{5},Artifact,,,"{3}, {TURN}: This artifact deals 3 damage to target creature.",Built to outlast the hands that shaped it.
 Alpha,Brass Spire,Artifact,uncommon,{3},Artifact,,,Techniques your opponents play during your Round cost {1} more to play.,"Crafted from brass, bound by geometry."
-Alpha,Brass Vault,Artifact,rare,{5},Artifact,,,"{3}, {TURN}: This artifact deals 2 damage to target creature or player if you have two or fewer cards in hand.",Precision is its own kind of craft.
+Alpha,Opal Reactor,Artifact,rare,{3},Artifact,,,"{TURN}: Add one Energy of any color to your Energy pool.
+{2}, Sacrifice this: Pick a card.",Precision is its own kind of craft.
 Alpha,Clockwork Conduit,Artifact,common,{3},Artifact,,,"{TURN}, Sacrifice this: Extinguish target card in a Pit. Pick a card.","Crafted from brass, bound by geometry."
 Alpha,Etched Conduit,Artifact,common,{4},Artifact,,,"Whenever a creature comes into play under your control, you may pay {1}. If you do, Gain 2 Aura.",Built to outlast the hands that shaped it.
-Alpha,Bellframe Vault,Artifact,rare,{6},Artifact,,,{TURN}: Straighten target Artifact or Land. Play this ability only during your Round.,Built to outlast the hands that shaped it.
+Alpha,Harmonic Obelisk,Artifact,rare,{4},Artifact,,,"{2}, {TURN}: Return target creature you control to its owner's hand. Gain 2 Aura.",Built to outlast the hands that shaped it.
 Alpha,Arcane Spire,Artifact,uncommon,{5},Artifact,,,Creatures you control get +1/+0 as long as you control three or more Artifacts.,Built to outlast the hands that shaped it.
 Alpha,Gilded Censer,Artifact,uncommon,{4},Artifact,,,"{1}, {TURN}: Prevent the next 1 damage that would be dealt to any target this Round.",Precision is its own kind of craft.
 Alpha,Whispering Vault,Land,rare,,Land,,,"This land comes into play Turned. When it comes into play, Gain 1 Aura.
