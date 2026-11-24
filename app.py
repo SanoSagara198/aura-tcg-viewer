@@ -1058,7 +1058,7 @@ with st.sidebar:
         data=filtered[export_cols].to_csv(index=False).encode("utf-8"),
         file_name="aura_filtered_cards.csv",
         mime="text/csv",
-        use_container_width=True,
+        width="stretch",
     )
 
 # ==================== MAIN TABS (STATIC LABELS SO STREAMLIT NEVER RESETS ACTIVE TAB ON RERUN!) ====================
@@ -1167,7 +1167,7 @@ def render_interactive_card_grid(
                         key=f"{key_prefix}_add0_{cid}_{row_start + col_idx}",
                         on_click=adjust_deck_card,
                         args=(cid, 1),
-                        use_container_width=True,
+                        width="stretch",
                         help=f"Add 1 copy of {row['name']}",
                     )
                 else:
@@ -1178,7 +1178,7 @@ def render_interactive_card_grid(
                             key=f"{key_prefix}_sub_{cid}_{row_start + col_idx}",
                             on_click=adjust_deck_card,
                             args=(cid, -1),
-                            use_container_width=True,
+                            width="stretch",
                             help="Remove 1 copy",
                         )
                     with b2:
@@ -1196,7 +1196,7 @@ def render_interactive_card_grid(
                             on_click=adjust_deck_card,
                             args=(cid, 1),
                             disabled=(qty >= cap),
-                            use_container_width=True,
+                            width="stretch",
                             help="Add 1 copy",
                         )
 
@@ -1244,7 +1244,7 @@ with tab_deck:
 
         b_gen, b_clear, b_hand = st.columns([1.4, 1, 1.4])
         with b_gen:
-            if st.button("⚡ Auto-Generate Deck", type="primary", use_container_width=True):
+            if st.button("⚡ Auto-Generate Deck", type="primary", width="stretch"):
                 st.session_state.deck_cards = auto_generate_deck(
                     df, gen_colors, gen_sets, int(gen_size), gen_archetype
                 )
@@ -1253,12 +1253,12 @@ with tab_deck:
                 st.session_state.deck_view_mode = "🃏 My Deck Gallery"
                 st.rerun()
         with b_clear:
-            if st.button("🗑️ Clear Deck", use_container_width=True):
+            if st.button("🗑️ Clear Deck", width="stretch"):
                 st.session_state.deck_cards = {}
                 st.session_state.test_hand = []
                 st.rerun()
         with b_hand:
-            if st.button(f"🎲 Pick {OPENING_HAND}-Card Hand", use_container_width=True, disabled=(total_cards < OPENING_HAND)):
+            if st.button(f"🎲 Pick {OPENING_HAND}-Card Hand", width="stretch", disabled=(total_cards < OPENING_HAND)):
                 expanded = [cid for cid, qty in st.session_state.deck_cards.items() for _ in range(qty)]
                 random.shuffle(expanded)
                 st.session_state.test_hand = expanded[:OPENING_HAND]
@@ -1294,7 +1294,7 @@ with tab_deck:
                     key=f"quickland_{lid}",
                     on_click=adjust_deck_card,
                     args=(lid, 2),
-                    use_container_width=True,
+                    width="stretch",
                 )
 
         add_pool = filtered if len(filtered) > 0 else df
@@ -1434,12 +1434,12 @@ with tab_deck:
                         "Type": st.column_config.TextColumn("Type", disabled=True),
                         "Rarity": st.column_config.TextColumn("Rarity", disabled=True),
                     },
-                    use_container_width=True,
+                    width="stretch",
                     hide_index=True,
                     height=380,
                     key="deck_table_editor",
                 )
-                if st.button("💾 Apply Quantity Changes (set Qty=0 to remove)", use_container_width=True):
+                if st.button("💾 Apply Quantity Changes (set Qty=0 to remove)", width="stretch"):
                     updated: dict[str, int] = {}
                     for _, erow in edited_df.iterrows():
                         q_new = int(erow["Qty"])
@@ -1472,11 +1472,11 @@ with tab_deck:
                 csv_src = pd.DataFrame(full_csv_rows).to_csv(index=False)
 
                 with ex1:
-                    st.download_button("🎮 Luau", data=luau_src.encode("utf-8"), file_name=f"{safe_slug}.luau", mime="text/plain", use_container_width=True)
+                    st.download_button("🎮 Luau", data=luau_src.encode("utf-8"), file_name=f"{safe_slug}.luau", mime="text/plain", width="stretch")
                 with ex2:
-                    st.download_button("📄 JSON", data=json_src.encode("utf-8"), file_name=f"{safe_slug}.json", mime="application/json", use_container_width=True)
+                    st.download_button("📄 JSON", data=json_src.encode("utf-8"), file_name=f"{safe_slug}.json", mime="application/json", width="stretch")
                 with ex3:
-                    st.download_button("📊 CSV", data=csv_src.encode("utf-8"), file_name=f"{safe_slug}.csv", mime="text/csv", use_container_width=True)
+                    st.download_button("📊 CSV", data=csv_src.encode("utf-8"), file_name=f"{safe_slug}.csv", mime="text/csv", width="stretch")
 
             st.markdown("#### 📤 Import Saved Deck (JSON)")
             uploaded = st.file_uploader("Load saved deck .json", type=["json"], label_visibility="collapsed")
@@ -1485,7 +1485,7 @@ with tab_deck:
                     payload = json.load(uploaded)
                     if isinstance(payload, dict) and isinstance(payload.get("cards"), dict):
                         valid_cards = {k: int(v) for k, v in payload["cards"].items() if k in id_map and int(v) > 0}
-                        if st.button("Apply Imported Deck", use_container_width=True):
+                        if st.button("Apply Imported Deck", width="stretch"):
                             st.session_state.deck_name = str(payload.get("name", "Imported Deck"))
                             st.session_state.deck_cards = valid_cards
                             st.session_state.deck_view_mode = "🃏 My Deck Gallery"
@@ -1526,7 +1526,7 @@ with tab_analytics:
 with tab_table:
     st.dataframe(
         filtered[export_cols],
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
         height=640,
     )
